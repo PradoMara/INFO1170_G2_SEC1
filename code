@@ -1,1 +1,12 @@
+import random as ra
 print("Hola Mundo")
+a = 1
+b = 2
+
+c = a + b 
+print(c)
+
+def ramdon():
+    return ra.randint(1, 100)
+
+ramdon()
