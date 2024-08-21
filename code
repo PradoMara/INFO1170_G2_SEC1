@@ -20,3 +20,6 @@ class Libro:
         return f"El libro {self.titulo} fue escrito por {self.autor}"
     
 mi_libro = Libro("El principito", "Antoine de Saint-Exupéry")
+
+lista = [1, 2, 3, 4, 5]
+print(lista)
