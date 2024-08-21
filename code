@@ -10,3 +10,13 @@ def ramdon():
     return ra.randint(1, 100)
 
 ramdon()
+
+class Libro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+
+    def __str__(self):
+        return f"El libro {self.titulo} fue escrito por {self.autor}"
+    
+mi_libro = Libro("El principito", "Antoine de Saint-Exupéry")
