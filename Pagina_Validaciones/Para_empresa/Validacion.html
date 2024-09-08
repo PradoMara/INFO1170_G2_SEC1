@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Empresa</title>
+    <link rel="stylesheet" href="Validacion.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h2>Validación de Empresa</h2>
+        <form id="formularioValidacion" action="#" method="post" enctype="multipart/form-data" novalidate>
+            <div class="grupo-input">
+                <label for="razonSocial">Razón Social</label>
+                <input type="text" id="razonSocial" name="razonSocial" required>
+                <span class="mensaje-error" id="errorRazonSocial"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="registroTributario">Número de Registro Tributario (RUT)</label>
+                <input type="text" id="registroTributario" name="registroTributario" required>
+                <span class="mensaje-error" id="errorRegistroTributario"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="direccionFiscal">Dirección Fiscal</label>
+                <input type="text" id="direccionFiscal" name="direccionFiscal" required>
+                <span class="mensaje-error" id="errorDireccionFiscal"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="emailEmpresa">Correo Electrónico Corporativo</label>
+                <input type="email" id="emailEmpresa" name="emailEmpresa" required>
+                <span class="mensaje-error" id="errorEmailEmpresa"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="logoEmpresa">Subir Logo o Documento de Verificación</label>
+                <input type="file" id="logoEmpresa" name="logoEmpresa" accept="image/*, application/pdf" required>
+                <span class="mensaje-error" id="errorLogoEmpresa"></span>
+            </div>
+
+            <button type="submit">Validar Empresa</button>
+        </form>
+    </div>
+
+    <script src="Validacion.css"></script>
+
+</body>
+</html>
