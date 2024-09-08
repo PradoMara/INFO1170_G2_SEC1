@@ -1,28 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma laboral para conectar a empleadores y buscadores de empleo en la región de La Araucanía.">
     <title>Araucania Laboral Main</title>
     <link rel="stylesheet" href="css/styleMain.css">
     <link rel="icon" type="image/png" href="/Images/loguito1.png">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <section class="logo-container">
-                <img src="/Images/loguito.jpg" alt="Logo" class="logo">
-            </section> 
-            <nav class="menu-container">
-                <ul class="menu">
-                    <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Home</a></li>
-                    <li><a href="https://chat.openai.com/">Buscar Empleado</a></li>
-                </ul>
-                <button class="boton-Login">imagen usuario</button>
-                <button class="boton-empleador">Empresa</button>
-            </nav>
-        </header>
-        <hr>
-    </div>
-
+    <header id="header">
+        <div class="container">
+            <div class="header-row">
+                <div class="logo-container">
+                    <a href="main.html">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7a3ec529632909.55fc107b84b8c.png" alt="Logo" class="logo">
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Buscar Empleo</a></li>
+                        <li><a href="services.html">Empresa</a></li>
+                    </ul>
+                </nav>
+                <div class="user-account">
+                    <div class="user-dropdown">
+                        <a href="login.html">
+                            <img src="https://s3.amazonaws.com/cht2/public/img/account.png" alt="Usuario" class="user-img">
+                        </a>
+                        <a href="login.html" class="dropdown-toggle" aria-expanded="false">Nombre usuario</a>
+                        <div class="dropdown-menu">
+                            <a href="cv.html">Editar CV</a>
+                            <a href="perfil.html"> Mi cuenta</a>
+                            <a href="#">Recomendaciones</a>
+                            <a href="#">Salir</a>
+                        </div>                          
+                    </div>
+                </div>
+                <button class="menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+                    
+    <main id="content" class="main-home">
+        <section class="buscador-container">
+            <h1>Encuentra tu nuevo empleo</h1>
+            <form id="BuscadorForm">
+                <input type="text" name="buscador" id="buscador" placeholder="Buscar empleo" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div id="copy">
+            <p>&copy; 2024 Araucania Laboral. Todos los derechos reservados.</p>
+        </div>
+    </footer>      
 </body>
 </html>
