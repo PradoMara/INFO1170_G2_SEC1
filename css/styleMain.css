@@ -17,6 +17,13 @@ body, html {
     background-color:             #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding:                         10px 0; 
+    position:                         fixed;
+    top:                                  0;
+    width:                             100%;
+    z-index:                           1000;
+}
+#conten{
+    margin-top: 120px;
 }
 .header-row{
     display:                  flex;
@@ -25,9 +32,14 @@ body, html {
 }
 
 .logo-container img {
-    height: 50px;
-    width:  auto;
+    height:                    50px;
+    width:                     auto;
+    transition: transform 0.3s ease;
 
+}
+
+.logo-container img.hover{
+    transform: scale(1.3);
 }
 
 .nav-menu{
@@ -90,19 +102,28 @@ body, html {
     padding:                            10px;
     border-radius:                       5px;
     z-index:                               1;
+    opacity:                               0;
+    transform:             translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
 }
 
 .user-dropdown:hover .dropdown-menu{
-    display: block;
+    display:           block;
+    opacity:               1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a{
+    display:              block;
+    padding:              5px 0;
+    text-decoration:       none;
+    color:               #000;
+    transition: color 0.3s ease;
 }
 
 .dropdown-menu a:hover{
-    
-    display:         block;
-    padding:         5px 0;
-    text-decoration:  none;
-    color:          #000;
+    color:          #0e6dd1;
 }
 
 .menu-toggle{
@@ -119,20 +140,107 @@ body, html {
     align-items:     center;
     justify-content: center;
     text-align:      center;
-    padding:         50px 0;
+    padding:        100px 0;
     color:          white;
 
 
 }
 
 .buscador-container h1{
-    font-size:      2em;
-    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size:                     2em;
+    margin-bottom:                30px;
+
 }
 
+.ofertas-destacadas{
+    background-color: #f9f9f9;
+    padding:             50px 0;
+    text-align:          center;
+
+}
+
+.ofertas-destacadas h2{
+    font-size:      2em;
+    margin-bottom: 30px;
+    color:       #333;
+}
+
+.ofertas-container{
+    display:                  flex;
+    justify-content: space-between;
+    flex-wrap:                wrap;
+    gap:                      20px;
+}
+
+.tarjeta-oferta{
+    background-color:    #faf9f9;
+    width:                     30%;
+    padding:                  20px;
+    border:   1px solid  #e0e0e0;
+    border-radius:            10px;
+
+}
+
+.tarjeta-oferta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.titulo-oferta{
+    font-size:  1.5em;
+    color:     #333;
+    margin:     5px 0;
+    font-weight: bold;
+
+}
+
+.empresa-oferta, .ubicaion-oferta{
+    font-size: 1em;
+    color:    #666;
+    margin:    5px 0;
+
+}
+
+.fecha-publicacion{
+    display:              block;
+    margin-top:            10px;
+    padding:           5px 10px;
+    background-color: #eee;
+    color:            #999;
+
+}
+
+.boton-ver-mas{
+    display: inline-block;
+    margin-top:      15px;
+    padding:    10px 20px;
+    background-color: #0e6dd1;
+    color:            #ffffff;
+    text-decoration:       none;
+    border-radius:          5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-ver-mas:hover{
+    background-color: #063a72;
+}
+
+.footer{
+    background-color: #091420;
+    color:              white;
+    text-align:          center;
+    padding:             20px 0;    
+}
+.footer p{
+    margin:        0;
+    font-size: 0.9em;
+}
 #BuscadorForm{
-    display: flex;
-    gap:     10px;
+    display:       flex;
+    gap:           10px;
+    margin-bottom: 50px;
 
 }
 
@@ -140,8 +248,8 @@ body, html {
     padding:            10px;
     width:             300px;
     height:             40px;
-    border: 1px solid #ccc;
-    border-radius:       5px;
+    border: 1px solid #0e6dd1;
+    border-radius:          20px;
 
 }
 
@@ -156,7 +264,7 @@ body, html {
     color:   rgb(0, 0, 0);
     border:            none;
     cursor:         pointer;
-    border-radius:      5px;
+    border-radius:      20px;
     transition: background-color 0.3s ease;
 
 }
@@ -165,6 +273,7 @@ body, html {
     background-color: #0056b3;
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: scale(1.05)
 
 }
 
