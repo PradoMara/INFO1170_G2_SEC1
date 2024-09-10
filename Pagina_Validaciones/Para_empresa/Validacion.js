@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (esValido) {
-            alert('Formulario enviado correctamente');
+            alert('Formulario enviado correctamente.');
             formulario.submit();
+        } else {
+            alert('Por favor, complete todos los campos obligatorios antes de enviar.');
         }
     });
 });
