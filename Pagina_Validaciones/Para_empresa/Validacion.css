@@ -7,7 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eef2f7;
-    background: linear-gradient(135deg, rgb(29, 8, 144), #d0e);
+    background: linear-gradient(135deg, rgb(29, 8, 144), rgb(50, 7, 131));
     background-size: cover;
     background-attachment: fixed;
     padding-top: 80px; 
@@ -20,7 +20,7 @@ body {
     background-color: #007bff;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 15px 30px;
     position: fixed;
@@ -55,6 +55,22 @@ body {
 .barra-superior ul li a:hover {
     text-decoration: underline;
 }
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.sitio-titulo{
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 
 .contenedor {
     background-color: #ffffff;
