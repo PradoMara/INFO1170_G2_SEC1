@@ -1,92 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a, nav ul li button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+nav ul li button {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul li button:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    height: calc(100vh - 100px);
+    background-color: #fff;
+}
+
+.text-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 100px; 
+    margin-bottom: 20px;
+}
+
+.form-container {
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
     height: 100vh;
+}
+
+header {
+    background-color: #000;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
     margin: 0;
 }
 
-.login-container {
-    background-color: white;
-    padding: 20px;
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a, nav ul li button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
+
+nav ul li button {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul li button:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); 
+    margin-top: 80px; 
+}
+
+.form-container {
+    background-color: #f5f5f5;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
 }
 
-.logo {
-    width: 50px;
+.form-container h2 {
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #333;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.login-form input {
-    width: 100%;
+form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input {
     padding: 10px;
-    margin: 8px 0;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.login-form .options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    margin-bottom: 20px;
-}
-
-.login-form button {
-    background-color: #000;
-    color: white;
+form button {
     padding: 10px;
+    background-color: #000;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
 }
 
-.login-form button:hover {
-    background-color: #333;
+form button:hover {
+    background-color: #444;
 }
 
-.continue-google {
-    margin-top: 20px;
-}
-
-.continue-google p {
-    margin: 10px 0;
-}
-
-.continue-google button {
-    background-color: white;
-    color: #555;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.continue-google button:hover {
-    background-color: #f0f0f0;
-}
-
-.text-center {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.footer {
-    font-size: 12px;
-    margin-top: 20px;
-    color: #888;
-}
