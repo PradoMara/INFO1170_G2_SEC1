@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Empleado</title>
+    <link rel="stylesheet" href="EstiloValidacion.css">
+</head>
+<body>
+    <div class="container">
+        <img src="AraucaniaLaboralLogo.png" alt="Logo Araucania Laboral" class="logo">
+        <h1>Validación de Empleado</h1>
+        <form action="procesar-validacion-empleado.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut" name="rut" required>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="18" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carnet-frontal">Foto del Carnet (Frontal):</label>
+                <input type="file" id="carnet-frontal" name="carnet-frontal" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carnet-reverso">Foto del Carnet (Reverso):</label>
+                <input type="file" id="carnet-reverso" name="carnet-reverso" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar Validación</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
