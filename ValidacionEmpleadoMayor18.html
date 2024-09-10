@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validación de Empleado</title>
     <link rel="stylesheet" href="EstiloValidacion.css">
+    <script src="ValidacionEmpleadoMayor18.js"></script>
 </head>
 <body>
+    <div class="header">
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de</a>
+    </div>
+
     <div class="container">
         <img src="AraucaniaLaboralLogo.png" alt="Logo Araucania Laboral" class="logo">
         <h1>Validación de Empleado</h1>
@@ -47,9 +53,26 @@
             </div>
 
             <div class="form-group">
-                <button type="submit">Enviar Validación</button>
+                <button type="submit" class="submit-btn">Enviar Validación</button>
             </div>
         </form>
+        
+        <!-- Enlace de ayuda -->
+        <div class="help-link">
+            <a href="javascript:void(0)" onclick="toggleHelp()">¿Necesitas Ayuda?</a>
+        </div>
+
+        <!-- Sección de ayuda oculta -->
+        <div id="help-section" style="display: none; margin-top: 20px;">
+            <p>Contacto: <a href="mailto:info@araucaniaboral.cl">info@araucaniaboral.cl</a></p>
+            <p>Teléfono: +56 9 1234 5678</p>
+        </div>
+    </div>
+
+    <!-- Barra de contacto inferior -->
+    <div class="footer">
+        <a href="#">Política de Privacidad</a>
+        <a href="terminos_condiciones.html">Términos de Condiciones</a>
     </div>
 </body>
 </html>
