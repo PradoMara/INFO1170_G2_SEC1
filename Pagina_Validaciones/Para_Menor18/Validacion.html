@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Menor de Edad</title>
+    <link rel="stylesheet" href="Validacion.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="sitio-titulo">AraucaniaLaboral</h1>            
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <h2>Validación de Menor de Edad</h2>
+        <form id="formularioMenor" action="#" method="post" enctype="multipart/form-data" novalidate>
+            <div class="grupo-input">
+                <label for="nombreCompleto">Nombre Completo</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+                <span class="mensaje-error" id="errorNombreCompleto"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" required min="0" max="17">
+                <span class="mensaje-error" id="errorEdad"></span>
+            </div>            
+
+            <div class="grupo-input">
+                <label for="permisoFirmado">Permiso Firmado por el Tutor</label>
+                <input type="file" id="permisoFirmado" name="permisoFirmado" accept="image/*, application/pdf" required>
+                <span class="mensaje-error" id="errorPermisoFirmado"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="fotoCedula">Foto de Cédula de Identidad</label>
+                <input type="file" id="fotoCedula" name="fotoCedula" accept="image/*" required>
+                <span class="mensaje-error" id="errorFotoCedula"></span>
+            </div>
+
+            <div class="grupo-input">
+                <label for="fotoMenor">Foto del Menor de Edad</label>
+                <input type="file" id="fotoMenor" name="fotoMenor" accept="image/*" required>
+                <span class="mensaje-error" id="errorFotoMenor"></span>
+            </div>
+
+            <button type="submit">Validar Menor de Edad</button>
+            <div class="enlaces-ayuda">
+                <p>¿Necesitas ayuda? <a href="Pagina_Soporte.html">Visita nuestra página de soporte</a>.</p>   
+                <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+            </div>
+        </form>
+    </div>
+    <footer class="barra-contacto">
+        <p>Contacto: <a href="mailto:integracion58@gmail.com">integracion58@gmail.com</a> | Teléfono: +56 9 9992 9342</p>
+    </footer>
+
+    <script src="Validacion.js"></script>
+</body>
+</html>
