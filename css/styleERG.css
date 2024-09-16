@@ -1,0 +1,128 @@
+body, html {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+    margin:0;
+
+}
+#header {
+    background-color:             #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding:                         10px 0; 
+    position:                         fixed;
+    top:                                  0;
+    width:                             100%;
+    z-index:                           1000;
+}
+
+#conten{
+    margin-top: 120px;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-row{
+    display:                  flex;
+    justify-content: space-between;
+    align-items:            center;
+}
+
+.logo-container img {
+    height:                    50px;
+    width:                     auto;
+    transition: transform 0.3s ease;
+
+}
+
+.logo-container img.hover{
+    transform: scale(1.3);
+}
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    background-color: #fffdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.password-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+.password-container input{
+    flex: 1;
+}
+
+.password-container img{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: auto;
+}
+#registro-empresa {
+    display: flex;
+    flex-direction: column;
+}
+
+#registro-empresa label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#registro-empresa input,
+#registro-empresa textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#registro-empresa button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#registro-empresa button:hover {
+    background-color: #0056b3;
+}
+
+#terminos-condiciones, #politica-privacidad {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#terminos-condiciones:hover, #politica-privacidad:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    #registro-empresa {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+    }
+}

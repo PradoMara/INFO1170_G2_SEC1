@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de empresa en Araucania Laboral.">
+    <title>Registro de empresas</title>
+    <link rel="stylesheet" href="css/styleERG.css">
+    <link rel="icon" type="image/png" href="/Images/loguito1.png">
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="header-row">
+                    <div class="logo-container">
+                        <a href="main.html">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7a3ec529632909.55fc107b84b8c.png" alt="Logo" class="logo" id="logo-home">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="form-container">
+            <form id="registro-empresa" action="/registro" method="POST">
+                <label for="nombre-empresa">Nombre de la Empresa:</label>
+                <input type="text" id="nombre-empresa" name="nombre-empresa" required>
+                
+                <label for="rut">RUT / ID Fiscal:</label>
+                <input type="text" id="rut" name="rut" required>
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                
+                <label for="codigo-postal">Código Postal:</label>
+                <input type="text" id="codigo-postal" name="codigo-postal" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="contacto">Nombre del Contacto Principal:</label>
+                <input type="text" id="contacto" name="contacto" required>
+                
+                <label for="puesto">Puesto del Contacto Principal:</label>
+                <input type="text" id="puesto" name="puesto">
+                
+                <label for="descripcion">Descripción de la Empresa:</label>
+                <textarea id="descripcion" name="descripcion"></textarea>
+                
+                <label for="contrasena">Contraseña:</label>
+                <div class="password-container">
+                    <input type="password" id="contraseña" name="contraseña" required>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvoL9LwhbsUKXafCbVk59Wv_ghuX0L8T7nQ&s" alt="Mostrar" class="toggle-password" data-target="#contrasena">
+                    <img src="https://w7.pngwing.com/pngs/112/16/png-transparent-computer-icons-finance-drawing-hide-logo-smiley-%D0%B3%D0%BB%D0%B0%D0%B7-icon-thumbnail.png" alt="Ocultar" class="toggle-password" data-target="#contrasena" style="display: none;">
+                </div>
+                <label for="confirmar-contrasena">Confirmar Contraseña:</label>
+                <div class="password-container">
+                    <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvoL9LwhbsUKXafCbVk59Wv_ghuX0L8T7nQ&s" alt="Mostrar" class="toggle-password" data-target="#contrasena">
+                    <img src="https://w7.pngwing.com/pngs/112/16/png-transparent-computer-icons-finance-drawing-hide-logo-smiley-%D0%B3%D0%BB%D0%B0%D0%B7-icon-thumbnail.png" alt="Ocultar" class="toggle-password" data-target="#contrasena" style="display: none;">
+                </div>
+                <label>
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los <a id="terminos-condiciones" href="#" target="_blank">términos y condiciones</a> y la <a id="politica-privacidad" href="#" target="_blank">política de privacidad</a>.
+                </label>
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                <div class="g-recaptcha" data-sitekey="6LcNyUUqAAAAAK-5ecc7e0cPU0pHc0EhaqF7PXPs"></div>
+                
+                <button type="submit">Registrarse</button>
+                <script src="js/link-ERG.js"></script>
+            </form>
+        </div>
+    </body>
+</html>
