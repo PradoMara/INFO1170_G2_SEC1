@@ -70,6 +70,7 @@ body, html {
     display:         flex;
     align-items:   center; 
     position:    relative;
+    gap:20px;
 
 }
 .user-dropdown{
@@ -152,78 +153,69 @@ body, html {
     margin-bottom:                30px;
 
 }
-
-.ofertas-destacadas{
-    background-color: #f9f9f9;
-    padding:             50px 0;
-    text-align:          center;
-
+.section{
+    background-color: white;
+    text-align: center;
 }
 
-.ofertas-destacadas h2{
-    font-size:      2em;
+.ofertas-destacadas {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+.ofertas-destacadas h2 {
+    font-size: 2em;
     margin-bottom: 30px;
-    color:       #333;
+    color: #333;
+    text-align: center;
 }
 
-.ofertas-container{
-    display:                  flex;
-    justify-content: space-between;
-    flex-wrap:                wrap;
-    gap:                      20px;
+.ofertas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
-
-.tarjeta-oferta{
-    background-color:    #faf9f9;
-    width:                     30%;
-    padding:                  20px;
-    border:   1px solid  #e0e0e0;
-    border-radius:            10px;
-
+.tarjeta-oferta {
+    height: auto;
+    width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 auto;
 }
 
 .tarjeta-oferta:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.titulo-oferta{
-    font-size:  1.5em;
-    color:     #333;
-    margin:     5px 0;
+.titulo-oferta {
+    font-size: 1.4em;
+    color: #333;
     font-weight: bold;
-
 }
 
-.empresa-oferta, .ubicaion-oferta{
+.empresa-oferta, .ubicacion-oferta, .fecha-publicacion {
     font-size: 1em;
-    color:    #666;
-    margin:    5px 0;
-
+    color: #666;
+    margin: 5px 0;
 }
 
-.fecha-publicacion{
-    display:              block;
-    margin-top:            10px;
-    padding:           5px 10px;
-    background-color: #eee;
-    color:            #999;
-
-}
-
-.boton-ver-mas{
+.boton-ver-mas {
     display: inline-block;
-    margin-top:      15px;
-    padding:    10px 20px;
+    margin-top: 15px;
+    padding: 10px 20px;
     background-color: #0e6dd1;
-    color:            #ffffff;
-    text-decoration:       none;
-    border-radius:          5px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.boton-ver-mas:hover{
+.boton-ver-mas:hover {
     background-color: #063a72;
 }
 
@@ -236,6 +228,81 @@ body, html {
 .footer p{
     margin:        0;
     font-size: 0.9em;
+
+}
+.Not-post{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+.postulaciones{
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0,);
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-top: 10px;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+.postulaciones:hover{
+    background-color: #d5d9dd;
+}
+.notificaciones{
+    height: 28px;
+    width: auto;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+}
+
+.notificaciones{
+    transform: scale(1.1);
+}
+.barra-navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.barra-navegacion button {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.barra.navegacion button:hover{
+    background-color: #063a72;
+
+}
+
+.ofertas-destacadas {
+    height: auto;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    
+}
+
+.oferta {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.oferta h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.oferta p {
+    font-size: 1em;
+    color: #333;
 }
 #BuscadorForm{
     display:       flex;
