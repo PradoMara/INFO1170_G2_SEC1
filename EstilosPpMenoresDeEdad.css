@@ -39,13 +39,16 @@ body {
     height: 30px;
     margin-left: 10px;
     cursor: pointer;
-    /* Asegúrate de que los íconos se vean bien en su contexto */
+
 }
 
 .search-section {
     text-align: center;
     padding: 100px 0;
-    background-color: #000000;
+    background: url('https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg ') no-repeat center center; 
+    background-size: cover; 
+    position: relative;
+    height: 250px; 
 }
 
 .search-section h1 {
@@ -77,8 +80,9 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #e0e0e0; /* Añadir efecto hover para el botón */
+    background-color: #e0e0e0; 
 }
+
 
 .featured-jobs {
     padding: 20px;
@@ -96,7 +100,7 @@ body {
     margin: 10px 0;
     border-radius: 10px;
     border: 2px solid #000000; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para destacar la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .job-card h3 {
