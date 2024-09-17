@@ -10,12 +10,12 @@ document.getElementById("logo-user").addEventListener("click", function() {
 });
 
 document.getElementById("cv-btn").addEventListener("click", function() {
-    window.location.href = "cv.html"; // Redirecciona a la página de postulaciones
+    window.location.href = "cv.html"; // Redirecciona a la página del cv
 });
 
 document.getElementById("perfil-btn").addEventListener("click", function() {
-    window.location.href = "perfil.html"; // Redirecciona a la página de postulaciones
+    window.location.href = "perfil.html"; // Redirecciona a la página del perfil
 });
 document.getElementById("cerrar-btn").addEventListener("click", function() {
-    window.location.href = "cerrrar.html"; // Redirecciona a la página de postulaciones
+    window.location.href = "cerrrar.html"; // Redirecciona a la página de inicio 
 });
