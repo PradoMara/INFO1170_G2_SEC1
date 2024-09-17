@@ -15,6 +15,7 @@ body {
 
 .logo img {
     height: 60px;
+    background-color: transparent;
 }
 
 .nav-links a {

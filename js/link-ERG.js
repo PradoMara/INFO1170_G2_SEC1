@@ -22,11 +22,11 @@ togglePasswordVisibility('confirmar-contraseña', 'show-confirmar-contraseña', 
 
 
 document.getElementById("terminos-condiciones").addEventListener("click", function() {
-    window.location.href = "terminos-condiciones.html"; // Redirecciona a la página de terminos y condiciones
+    window.location.href = "terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
 });
 
 document.getElementById("politica-privacidad").addEventListener("click", function() {
-    window.location.href = "privacidad.html"; // Redirecciona a la página de politica de privacidad
+    window.location.href = "PoliticaDePrivacidad.html"; // Redirecciona a la página de politica de privacidad
 });
 
 document.getElementById("ayuda").addEventListener("click", function() {
@@ -34,7 +34,7 @@ document.getElementById("ayuda").addEventListener("click", function() {
 });
 
 document.getElementById("terminos-footer").addEventListener("click", function() {
-    window.location.href = "terminos-condiciones.html"; // Redirecciona a la página de terminos y condiciones
+    window.location.href = "terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
 });
 
 document.getElementById("home").addEventListener("click", function() {

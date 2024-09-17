@@ -70,6 +70,7 @@ nav ul li button:hover {
 .logo {
     width: 100px; 
     margin-bottom: 20px;
+    background-color: transparent;
 }
 
 .form-container {
