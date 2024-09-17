@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Araucanía Laboral</title>
+    <link rel="stylesheet" href="Pagina_Admin.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <div class="logo-nombre">
+                <img src="img/logo.png" alt="Logo Araucanía Laboral" class="logo">
+                <span class="nombre-sitio">Araucanía Laboral</span>
+            </div>
+            <a href="Perfil_Admin.html" class="perfil-enlace">  
+                <div class="perfil-usuario">
+                    <img src="img/perfil.png" alt="Perfil" class="icono-perfil">
+                    <span class="nombre-usuario">Administrador</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contenedor">
+        <h1 class="texto-bienvenida">Bienvenido al Panel de Administración</h1>
+        
+        <div class="fila">
+            <div class="tarjeta">
+                <div class="cuerpo-tarjeta">
+                    <h5 class="titulo-tarjeta">Gestión de Postulantes</h5>
+                    <p class="texto-tarjeta">Administra los Postulantes registrados en la plataforma.</p>
+                    <button class="btn" onclick="mostrarAlerta('Postulantes')">Ver Postulantes</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="cuerpo-tarjeta">
+                    <h5 class="titulo-tarjeta">Gestión de Empresa</h5>
+                    <p class="texto-tarjeta">Administra los Empresa registrados en la plataforma.</p>
+                    <button class="btn" onclick="mostrarAlerta('Empresa')">Ver Empresa</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="cuerpo-tarjeta">
+                    <h5 class="titulo-tarjeta">Gestion de Validaciones de Postulantes</h5>
+                    <p class="texto-tarjeta">Verifica las cuentas de los Postulantes.</p>
+                    <button class="btn" onclick="mostrarAlerta('Verificar Validaciones')">Verificar Validaciones</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="cuerpo-tarjeta">
+                    <h5 class="titulo-tarjeta">Gestion de Validaciones de Empresas</h5>
+                    <p class="texto-tarjeta">Verifica las cuentas de las Empresas.</p>
+                    <button class="btn" onclick="mostrarAlerta('Verificar Validaciones')">Verificar Validaciones</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="cuerpo-tarjeta">
+                    <h5 class="titulo-tarjeta">Gestion de dudas y consultas</h5>
+                    <p class="texto-tarjeta">Visualiza las dudas y consultas .</p>
+                    <button class="btn" onclick="mostrarAlerta('dudas y consultas')">Ver dudas y consultas</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="cuerpo-tarjeta">
+                    <h5 class="titulo-tarjeta">Gestion de comentarios</h5>
+                    <p class="texto-tarjeta">Visualiza los comentarios .</p>
+                    <button class="btn" onclick="mostrarAlerta('comentarios')">Ver comentarios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Pagina_Admin.js"></script>
+</body>
+</html>
