@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1e1e2f; 
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3a3f5c; 
+    background-color: #ffffff;
     padding: 10px 20px;
 }
 
@@ -19,32 +19,37 @@ body {
 
 .nav-links a {
     margin: 0 15px;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
 }
 
 .user-options a {
     margin-right: 20px;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
 }
 
-.bell-icon, .user-icon {
-    width: 24px;
-    height: 24px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    /* Asegúrate de que los íconos se vean bien en su contexto */
 }
 
 .search-section {
     text-align: center;
-    padding: 40px 0;
-    background-color: #1e1e2f;
+    padding: 100px 0;
+    background-color: #000000;
 }
 
 .search-section h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #ffffff;
 }
 
@@ -53,25 +58,26 @@ body {
 }
 
 .search-bar input {
-    padding: 10px;
-    width: 300px;
-    border: 2px solid #5a63d4; 
-    border-radius: 5px;
-    background-color: #2d2d44; 
-    color: #f5f5f5; 
+    padding: 20px;
+    width: 400px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .search-bar button {
-    padding: 10px 20px;
-    background-color: #5a63d4;
+    padding: 20px 20px;
+    background-color: #ffffff;
     border: none;
-    color: #ffffff;
-    border-radius: 5px;
+    color: #000000;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
-    background-color: #4751a3; 
+    background-color: #e0e0e0; /* Añadir efecto hover para el botón */
 }
 
 .featured-jobs {
@@ -81,28 +87,30 @@ body {
 }
 
 .featured-jobs h2 {
-    color: #1e1e2f;
+    color: #000000;
 }
 
 .job-card {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
+    border: 2px solid #000000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra para destacar la tarjeta */
 }
 
 .job-card h3 {
     margin: 0;
-    color: #1e1e2f;
+    color: #000000;
 }
 
 .job-card p {
     margin: 5px 0;
-    color: #1e1e2f;
+    color: #000000;
 }
 
 .job-button {
-    background-color: #5a63d4; 
+    background-color: #1e1616;
     color: #ffffff;
     padding: 10px;
     border: none;
@@ -112,46 +120,26 @@ body {
 }
 
 .job-button:hover {
-    background-color: #4751a3; 
-}
-
-.footer-bar {
-    background-color: #3a3f5c;
-    text-align: center;
-    padding: 10px;
-    color: #ffffff;
-}
-
-.user-options {
-    display: flex;
-    align-items: center;
-}
-
-.user-options a {
-    margin-right: 50px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    cursor: pointer;
+    background-color: #000000;
 }
 
 footer {
-    background-color: #3a3f5c; 
+    background-color: #000000;
     padding: 15px;
     text-align: center;
 }
 
 footer a {
-    color: #ffffff; 
+    color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
 }
 
 footer a:hover {
     color: #5a63d4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
