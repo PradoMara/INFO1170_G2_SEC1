@@ -14,9 +14,8 @@
         </div>
         <nav class="nav-links">
             <a href="#">Inicio</a>
-            <a href="#">Ofertas de Trabajo</a>
-            <a href="#">Mensajes</a>
-            <a href="#">Notificaciones</a>
+            <a href="PaginaPrincipalMenoresDeEdad.html">Ofertas de Trabajo</a>
+            <a href="notificaciones.html">Notificaciones</a>
         </nav>
     </header>
 
@@ -26,10 +25,11 @@
                 <img src="Perfil-Icono.png" alt="Imagen de perfil del usuario" class="profile-picture"> 
             </div>
             <div class="profile-info">
-                <h1>Nombre del Menor</h1>
-                <p>Edad: ???</p>
-                <p>Ubicación: ???</p>
-                <button class="edit-button">Editar Perfil</button>
+                <h1><input type="text" id="nombre" value="Nombre del Menor" disabled></h1>
+                <p>Edad: <input type="number" id="edad" value="16" disabled></p>
+                <p>Ubicación: <input type="text" id="ubicacion" value="Temuco" disabled></p>
+                <button class="edit-button" id="editButton">Editar Perfil</button>
+                <button class="save-button" id="saveButton" style="display:none;">Guardar Cambios</button>
             </div>
         </div>
     </section>
@@ -77,6 +77,6 @@
         </div>
     </footer>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="perfilMenordeEdad.js"></script>
 </body>
 </html>
