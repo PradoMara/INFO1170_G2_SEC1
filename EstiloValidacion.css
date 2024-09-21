@@ -1,24 +1,21 @@
-/* Ajustar la posición del logo */
 .logo {
     width: 100px;
     margin-bottom: 20px;
-    margin-top: 20px; /* Agrega espacio superior */
+    margin-top: 20px; 
 }
 
-/* General body styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #ece9e6, #ffffff); /* Fondo degradado */
+    background: linear-gradient(to bottom right, #ece9e6, #ffffff);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Altura mínima de la ventana */
-    padding: 20px; /* Asegura que no esté pegado a los bordes */
-    overflow-y: auto; /* Permite el scroll si es necesario */
+    min-height: 100vh; 
+    padding: 20px; 
+    overflow-y: auto; 
 }
 
-/* Barra superior */
 .header {
     background-color: #333;
     color: white;
@@ -41,7 +38,6 @@ body {
     text-decoration: underline;
 }
 
-/* Container for the content */
 .container {
     background-color: #e5edef;
     padding: 50px;
@@ -50,10 +46,9 @@ body {
     text-align: center;
     width: 400px;
     max-width: 90%;
-    margin: 100px 0 20px 0; /* Para evitar que el contenido se solape con la barra superior */
+    margin: 100px 0 20px 0;
 }
 
-/* Main heading styling */
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -61,7 +56,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* Form group styling */
 .form-group {
     margin-bottom: 15px;
     text-align: left;
@@ -81,7 +75,6 @@ h1 {
     font-size: 14px;
 }
 
-/* Submit button styling */
 button {
     width: 100%;
     padding: 10px;
@@ -98,23 +91,21 @@ button:hover {
     background-color: #555;
 }
 
-/* Estilo del enlace de ayuda */
 .help-link {
     text-align: center;
     margin-top: 20px;
 }
 
 .help-link a {
-    color: #333; /* Color del texto del enlace */
+    color: #333; 
     font-size: 14px;
-    text-decoration: none; /* Quitar el subrayado */
+    text-decoration: none; 
 }
 
 .help-link a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
+    text-decoration: underline; 
 }
 
-/* Barra de contacto inferior */
 .footer {
     background-color: #333;
     color: white;

@@ -1,10 +1,8 @@
 import sqlite3
 
-# Conectar a la base de datos (o crearla si no existe)
 conn = sqlite3.connect('mi_base_de_datos.db')
 cursor = conn.cursor()
 
-# Crear las tablas
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS Region (
     id_Region INTEGER PRIMARY KEY,
@@ -167,6 +165,5 @@ CREATE TABLE IF NOT EXISTS Especialidad (
 )
 ''')
 
-# Confirmar los cambios y cerrar la conexión
 conn.commit()
 conn.close() 

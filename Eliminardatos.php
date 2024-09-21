@@ -5,7 +5,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$id = $_POST['id']; // ID del dato a eliminar, proporcionado por el usuario
+$id = $_POST['id']; 
 $sql = "DELETE FROM tabla WHERE id = ?";
 
 $stmt = $conn->prepare($sql);
