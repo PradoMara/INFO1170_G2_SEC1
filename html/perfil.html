@@ -24,15 +24,16 @@
                     </div>
                     <nav class="nav">
                         <ul class="nav-menu">
-                            <li><a href="#">Inicio</a></li>
+                            <li><a href="main.html">Inicio</a></li>
                             <li><a href="#">Ofertas de Trabajo</a></li>
-                            <li><a href="#">Mensajes</a></li>
-                            <li><a href="#">Notificaciones</a></li>
+                            <li><a href="">Mensajes</a></li>
+                            <li><a href="buzon-notificaciones.html">Notificaciones</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+
         <div class="portada-perfil">
             <img src="https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg" alt="Portada" class="portada">
         </div>
@@ -72,8 +73,59 @@
                     </div>
                 </div>
             </section>
+            <section class="cambiar-contraseña container">
+                <a href="#" class="cambiar-password-btn">Cambiar Contraseña</a>
+                <div class="password-form">
+                    <input type="password" placeholder="Nueva Contraseña" id="new-password">
+                    <input type="password" placeholder="Confirmar Contraseña" id="confirm-password">
+                    <button id="guardar-password">Guardar Contraseña</button>
+                </div>
+                
+            </section>
+            <section class="publicar-cv container">
+                <button class="subir-cv-btn">Publicar CV</button>
+                <input type="file" id="upload-cv" style="display: none;" accept=".pdf">
+            </section>
+            <section class="informacion-personal container">
+                <div class="informacion-contacto">
+                    <h2>Información de Contacto</h2>
+                    <p><strong>Nacionalidad:</strong> Chilena</p>
+                    <p><strong>RUT:</strong> 12.345.678-9</p>
+                    <p><strong>Fecha de Nacimiento:</strong> 01/01/1990</p>
+                    <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+                    <p><strong>Estado Civil:</strong> Soltero</p>
+                    <a href="#" class="editar-info-contacto-btn">Editar Información</a>
+                </div>
+                <div class="form-editar-contacto" style="display: none;">
+                    <input type="text" placeholder="Nacionalidad" id="nacionalidad">
+                    <input type="text" placeholder="RUT" id="rut">
+                    <input type="date" id="fecha-nacimiento">
+                    <input type="tel" placeholder="Teléfono" id="telefono">
+                    <select id="estado-civil">
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                    </select>
+                    <button id="guardar-contacto">Guardar</button>
+                </div>
+            </section>
+            <section class="modificar-exp container">
+                <ul class="experiencia-lista">
+                    <li><strong id="puesto">Desarrollador Web</strong> en <span id="empresa">Empresa X</span><br> Enero 2020 - Actual
+                        <button class="editar-experiencia-btn">Editar</button>
+                    </li>
+                </ul>
+                <div class="form-editar-experiencia" style="display: none;">
+                    <input type="text" placeholder="Puesto" id="edit-puesto">
+                    <input type="text" placeholder="Empresa" id="edit-empresa">
+                    <button id="guardar-experiencia">Guardar</button>
+                </div>
+                <div class="primer-trabajo">
+                    <label for="primer-trabajo">¿Buscas tu primer trabajo?</label>
+                    <input type="checkbox" id="primer-trabajo">
+                </div>
+                
+            </section>
         </main>
-    
         <!-- Footer -->
         <footer>
             <div class="container">

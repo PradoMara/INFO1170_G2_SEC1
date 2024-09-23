@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #f3f2ef;
+    color: #333;
 }
 
 .container {
@@ -34,7 +35,7 @@ body, html {
 }
 
 .search-input {
-    padding: 14px;
+    padding: 10px 15px;
     border: none;
     border-radius: 20px;
     width: 250px;
@@ -125,7 +126,7 @@ body, html {
 
 .perfil-detalles h1 {
     margin: 0;
-    color: #fafafa;
+    color: #333;
     font-size: 2em;
 }
 
@@ -139,9 +140,11 @@ body, html {
     background-color: #5cabff;
     color: white;
     text-decoration: none;
+    border:none;
     border-radius: 5px;
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: bold;
+
 }
 
 .editar-perfil-btn:hover {
@@ -149,28 +152,20 @@ body, html {
 }
 
 /* Información adicional */
-.perfil-info {
-    margin-top: 30px;
+.informacion-personal, .modificar-exp {
+    margin: 40px 0;
 }
 
-.perfil-info h2 {
+.informacion-contacto h2, .perfil-info h2 {
+    font-size: 1.5em;
     color: #333;
+
 }
 
-.experiencia-lista, .educacion-lista {
-    list-style: none;
-    padding: 0;
+.informacion-contacto p, .perfil-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
-
-.experiencia-lista li, .educacion-lista li {
-    padding: 10px 0;
-    border-bottom: 1px solid #e1e1e1;
-}
-
-.experiencia-lista li strong {
-    color: #007bff;
-}
-
 
 footer {
     background-color: #375475;
