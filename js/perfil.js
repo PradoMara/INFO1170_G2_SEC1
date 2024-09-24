@@ -67,3 +67,51 @@ document.querySelector('#primer-trabajo').addEventListener('change', function() 
         alert('Ya tienes experiencia laboral.');
     }
 });
+
+const modal = document.getElementById("modal-contraseña");
+const openModalBtn = document.querySelector(".cambiar-password-btn");
+const closeModalBtn = document.querySelector(".close");
+
+openModalBtn.addEventListener("click", () => {
+    modal.classList.add("show");
+    document.body.classList.add("modal-open");
+});
+
+closeModalBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+    document.body.classList.remove("modal-open");
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
+    }
+});
+
+document.querySelectorAll('.editar-info-contacto-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const form = this.nextElementSibling;
+        if (form.style.display === 'none' || !form.style.display) {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    });
+});
+
+// validacion contraseñña
+
+const formCambiarContraseña = document.getElementById('form-cambiar-contraseña');
+const newPassword = document.getElementById('new-password');
+const confirmPassword = document.getElementById('confirm-password');
+
+formCambiarContraseña.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (newPassword.value !== confirmPassword.value) {
+        alert('Las contraseñas no coinciden');
+    } else {
+        // Enviar formulario
+        alert('Contraseña cambiada exitosamente');
+    }
+});
