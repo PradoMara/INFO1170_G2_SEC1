@@ -182,6 +182,13 @@ body, html {
     line-height: 1.6;
     margin-bottom: 10px;
 }
+.cambiar-contraseña{
+    margin-bottom: 20px;
+}
+.publicar-cv{
+    margin-top: 20px;
+}
+
 
 .cambiar-password-btn, .subir-cv-btn{
     padding: 10px 20px;
@@ -191,7 +198,6 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    gap: 0;
 }
 
 
@@ -253,7 +259,9 @@ body.modal-open {
     justify-content: center;
     align-items: center;
 }
-
+.modal.show {
+    display: flex; 
+}
 
 .modal-content {
     background-color: white;
