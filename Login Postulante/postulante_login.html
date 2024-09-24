@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Postulante</title>
+  <link rel="stylesheet" href="postulante_login.css">
+</head>
+<body>
+  <header>
+    <h1>Ingreso de Postulantes</h1>
+  </header>
+
+  <div class="container">
+    <form class="login-form" id="postulanteLoginForm">
+      <h2>Iniciar Sesión</h2>
+      <input type="email" id="email" placeholder="Correo Electrónico" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <div class="error-message" id="errorMessage"></div>
+      <input type="submit" value="Iniciar Sesión">
+      <a href="#">¿Olvidaste tu contraseña?</a>
+      <a href="registro.html" class="register-link">¿No tienes cuenta? Regístrate</a>
+    </form>
+  </div>
+
+  <script src="postulante_login.js"></script>
+</body>
+</html>
