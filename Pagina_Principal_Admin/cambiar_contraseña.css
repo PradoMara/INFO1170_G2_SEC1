@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #6dd5ed, #2193b0);
+    animation: fondoAnimacion 10s ease infinite;
+}
+
+@keyframes fondoAnimacion {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.campo {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.acciones-formulario {
+    margin-top: 30px;
+}
+
+button, a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-guardar {
+    background-color: #28a745;
+}
+
+.btn-guardar:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+.btn-cancelar {
+    background-color: #dc3545;
+}
+
+.btn-cancelar:hover {
+    background-color: #c82333;
+    transform: translateY(-3px);
+}
+
+
+.error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 15px;
+    display: none;
+    text-align: center;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.error.mostrar {
+    display: block;
+    animation: shake 0.5s ease;
+}

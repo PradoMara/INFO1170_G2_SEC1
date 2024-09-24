@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Araucanía Laboral</title>
+    <link rel="stylesheet" href="Editar_Perfil.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <!-- Logo y Nombre -->
+            <div class="logo-nombre">
+                <img src="img/logo.png" alt="Logo Araucanía Laboral" class="logo">
+                <span class="nombre-sitio">Araucanía Laboral</span>
+            </div>
+            <!-- Perfil de usuario (no clickable en esta página) -->
+            <div class="perfil-usuario">
+                <img src="img/perfil.png" alt="Perfil" class="icono-perfil">
+                <span class="nombre-usuario">Administrador</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="contenedor-editar-perfil">
+        <h2>Editar Perfil</h2>
+        <form action="guardar_perfil.php" method="POST">
+            <div class="campo">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" value="Administrador Principal">
+            </div>
+            <div class="campo">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" value="admin@araucaniaboral.cl">
+            </div>
+            <div class="campo">
+                <label for="rol">Rol:</label>
+                <input type="text" id="rol" name="rol" value="Super Administrador" disabled>
+            </div>
+            <div class="campo">
+                <label for="foto">Foto de Perfil:</label>
+                <input type="file" id="foto" name="foto">
+            </div>
+            <div class="acciones-formulario">
+                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                <button  class="btn-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="Editar_Perfil.js"></script>
+</body>
+</html>

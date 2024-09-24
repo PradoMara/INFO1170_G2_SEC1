@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Postulantes - Araucanía Laboral</title>
+    <link rel="stylesheet" href="Gestion_Postulante.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <div class="logo-nombre">
+                <img src="img/logo.png" alt="Logo Araucanía Laboral" class="logo">
+                <span class="nombre-sitio">Araucanía Laboral</span>
+            </div>
+            <a href="Perfil_Admin.html" class="perfil-enlace">  
+                <div class="perfil-usuario">
+                    <img src="img/perfil.png" alt="Perfil" class="icono-perfil">
+                    <span class="nombre-usuario">Administrador</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contenedor">
+        <h1 class="texto-bienvenida">Gestión de Postulantes</h1>
+
+        <div class="filtros">
+            <input type="text" id="busqueda" class="filtro" placeholder="Buscar postulante...">
+            <select id="filtro-edad" class="filtro">
+                <option value="">Filtrar por Edad</option>
+                <option value="15-18">15-18 años</option>
+                <option value="18-25">18-25 años</option>
+                <option value="26-35">26-35 años</option>
+                <option value="36-45">36-45 años</option>
+                <option value="46-60">46-60 años</option>
+                <option value="60+">Más de 60 años</option>
+            </select>
+            <select id="filtro-recientes" class="filtro">
+                <option value="">Filtrar por Recientes</option>
+                <option value="1">Última semana</option>
+                <option value="4">Último mes</option>
+                <option value="12">Último año</option>
+            </select>
+            <select id="filtro-abecedario" class="filtro">
+                <option value="">Filtrar por Abecedario</option>
+                <option value="A-Z">A-Z</option>
+                <option value="Z-A">Z-A</option>
+            </select>
+        </div>
+
+        <div class="lista-postulantes" id="lista-postulantes">
+            <div class="postulante" data-fecha="2023-09-10" data-edad="30">
+                <img src="img/perfil.png" alt="Foto Juan Pérez" class="foto-postulante">
+                <div class="info-postulante">
+                    <h3 class="nombre-postulante">Juan Pérez</h3>
+                    <p class="detalle-postulante">Email: juan.perez@example.com</p>
+                    <p class="detalle-postulante">Teléfono: +56 9 1234 5678</p>
+                    <p class="detalle-postulante">Edad: 30 años</p>
+                </div>
+                <div class="acciones-postulante">
+                    <button class="btn" onclick="verDetalles('Juan Pérez')">Ver Detalles</button>
+                    <button class="btn" onclick="editarPostulante('Juan Pérez')">Editar</button>
+                </div>
+            </div>
+            <div class="postulante" data-fecha="2024-18-9" data-edad="17">
+                <img src="img/perfil.png" alt="Foto Ana Gómez" class="foto-postulante">
+                <div class="info-postulante">
+                    <h3 class="nombre-postulante">Ana Gómez</h3>
+                    <p class="detalle-postulante">Email: ana.gomez@example.com</p>
+                    <p class="detalle-postulante">Teléfono: +56 9 2345 6789</p>
+                    <p class="detalle-postulante">Edad: 17 años</p>
+                </div>
+                <div class="acciones-postulante">
+                    <button class="btn" onclick="verDetalles('Ana Gómez')">Ver Detalles</button>
+                    <button class="btn" onclick="editarPostulante('Ana Gómez')">Editar</button>
+                </div>
+            </div>
+            <div class="postulante" data-fecha="2023-10-10" data-edad="36">
+                <img src="img/perfil.png" alt="Foto Carlos Fernández" class="foto-postulante">
+                <div class="info-postulante">
+                    <h3 class="nombre-postulante">Carlos Fernández</h3>
+                    <p class="detalle-postulante">Email: carlos.fernandez@example.com</p>
+                    <p class="detalle-postulante">Teléfono: +56 9 3456 7890</p>
+                    <p class="detalle-postulante">Edad: 36 años</p>
+                </div>
+                <div class="acciones-postulante">
+                    <button class="btn" onclick="verDetalles('Carlos Fernández')">Ver Detalles</button>
+                    <button class="btn" onclick="editarPostulante('Carlos Fernández')">Editar</button>
+                </div>
+            </div>
+        </div>
+        <div class="boton-volver">
+            <button id="btn-volver" class="btn">Volver a la Página Principal</button>
+        </div>
+        
+    </div>
+
+    <script src="Gestion_Postulante.js"></script>
+</body>
+</html>
