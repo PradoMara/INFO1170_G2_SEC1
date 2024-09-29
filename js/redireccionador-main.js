@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error al cargar las notificaciones:', error));
     };
 
-    // Mostrar notificaciones al hacer clic en el icono de notificaciones
+    //  notificaciones al hacer clic en el icono de notificaciones
     notificacionesBtn.addEventListener('click', cargarNotificaciones);
 
     // Mostrar notificaciones al pasar el mouse sobre el icono (opcional)
