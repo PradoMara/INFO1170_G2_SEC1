@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -8,17 +8,52 @@
         <link rel="stylesheet" href="gestion-valiedacion-empresa.css">
         <link rel="icon" type="image/png" href="/Images/loguito1.png">
     </head>
-    <header>
-        <h1>Gestion de la validacion de empresas.</h1>
-    </header>
     <body>
-        <div class="container">
-            <h1>Solicitudes de Validacion pendientes</h1>
+        <nav class="barra-navegacion">
+            <div class="contenedor-navegacion">
+                <div class="logo-nombre">
+                    
+                    <img src="/Images/logo-sin-fondo1.png" alt="Logo Araucanía Laboral" class="logo">
+                    
+                    <span class="nombre-sitio">Araucanía Laboral</span>
+                    
+                </div>
+                <a href="/Pagina_Principal_Admin/Pagina_Admin.html" class="perfil-enlace">  
+                    <div class="perfil-usuario">
+                        <img src="/Images/ICONO-PERFIL.png" alt="Perfil" class="icono-perfil">
+                        <span class="nombre-usuario">Administrador</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        
+        <div class="contenedor">
+            <h1 class="texto-bienvenida">Solicitudes de Validación Pendientes</h1>
+            <div class="filtros">
+                <input type="text" id="busqueda" class="filtro" placeholder="Buscar empresa...">
+                <select id="filtro-aceptado-rechazado" class="filtro">
+                    <option value="">Filtrar por Aceptado o Rechazado</option>
+                    <option value="15-18">Aceptados</option>
+                    <option value="18-25">Rechazados</option>
+                    
+                </select>
+                <select id="filtro-recientes" class="filtro">
+                    <option value="">Filtrar por Recientes</option>
+                    <option value="1">Última semana</option>
+                    <option value="4">Último mes</option>
+                    <option value="12">Último año</option>
+                </select>
+                <select id="filtro-abecedario" class="filtro">
+                    <option value="">Filtrar por Abecedario</option>
+                    <option value="A-Z">A-Z</option>
+                    <option value="Z-A">Z-A</option>
+                </select>
+            </div>
             <div id="solicitudes-container">
-                
-                <!--         solicitudes por js  -->
+                <!-- Aquí se mostrarán las solicitudes mediante JS -->
             </div>
         </div>
+
         <script src="gestion-validacion-empresa.js"></script>
     </body>
     <footer class="footer">

@@ -78,129 +78,45 @@ body{
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.texto-bienvenida{
-    text-align: center;
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-out;
-    
-}
-
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#solicitudes-container{
+    align-items: center;    
     display: flex;
     flex-direction: column;
-    gap:20px;
 
 }
-
-.solicitud{
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
+.boton{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; 
 }
-
-.solicitud h3{
-    margin: 0;
-    font-size: 20px;
-    color:#007bff;
-
-}
-
-.acciones{
-    display: flex;
-    gap: 10px;
-}
-
-button{
-    padding: 10px 20px;
-    border:none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-
-}
-
-button.aceptar{
-    background-color: #4caf50;
+button {
+    background-color: #007bff;
     color: white;
-    transition: background-color 0.3s;
-
-}
-
-button:hover{
-    transform: scale(1.05);
-
-}
-
-button.aceptar:hover{
-    background-color: #408a44;
-}
-
-button.rechazar:hover{
-    background-color: #d32f2f;
-}
-
-.footer{
-    background-color: #091420;
-    color:white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-
-}
-
-.footer p{
-    margin: 0;
-    font-size: 0.9em;
-}
-.filtros {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-}
-
-.filtro {
-    padding: 10px;
-    border: 1px solid #ccc;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#busqueda {
-    flex: 1;
+button:hover {
+    background-color: #0056b3;
 }
 
-.filtro {
-    margin-bottom: 20px;
-    text-align: center;
+.comentarios{
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+
 }
 
-.buscador {
-    padding: 10px;
+textarea{
     width: 80%;
     max-width: 600px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+
 }
+
+
