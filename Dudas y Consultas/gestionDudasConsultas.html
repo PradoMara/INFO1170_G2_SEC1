@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Consultas - Araucanía Laboral</title>
+  <link rel="stylesheet" href="gestionDudasConsultas.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="Logo.png" alt="Araucanía Laboral">
+      <h1>Araucanía Laboral</h1>
+    </div>
+    <div class="user-profile">
+      <span>Administrador</span>
+      <img src="user.jpeg" alt="Administrador">
+    </div>
+  </header>
+
+  <main>
+    <section class="gestion-consultas">
+      <h2>Gestión de Consultas</h2>
+
+      <div class="search-filter">
+        <input type="text" placeholder="Buscar consulta...">
+        <select>
+          <option>Filtrar por Recientes</option>
+          <option>Filtrar por Respondidas</option>
+          <option>Filtrar por Pendientes</option>
+        </select>
+      </div>
+
+      <div class="consulta-lista">
+        <div class="consulta">
+          <div class="icon">
+            <img src="user.jpeg" alt="Usuario">
+          </div>
+          <div class="details">
+            <h3>Juan Pérez</h3>
+            <p>Email: juan.perez@example.com</p>
+            <p>Consulta: ¿Cómo actualizo mi CV?</p>
+          </div>
+          <div class="buttons">
+            <button class="btn-ver">Ver Detalles</button>
+            <button class="btn-editar">Responder</button>
+          </div>
+        </div>
+
+        <div class="consulta">
+          <div class="icon">
+            <img src="user.jpeg" alt="Usuario">
+          </div>
+          <div class="details">
+            <h3>Ana Gómez</h3>
+            <p>Email: ana.gomez@example.com</p>
+            <p>Consulta: ¿Cómo puedo contactar a una empresa?</p>
+          </div>
+          <div class="buttons">
+            <button class="btn-ver">Ver Detalles</button>
+            <button class="btn-editar">Responder</button>
+          </div>
+        </div>
+      </div>
+      <div class="back-button">
+        <button onclick="window.location.href='gestionDudasConsultas.html';">Volver a Página Principal</button>
+      </div>      
+    </section>
+  </main>
+</body>
+</html>
