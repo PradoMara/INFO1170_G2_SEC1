@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Comentarios</title>
+    <link rel="stylesheet" href="comentarios.css">
+    <script defer src="comentarios.js"></script>
+</head>
+<body>
+    <header class="barra-superior">
+        <img src="LOGO-ARAUCANIALABORAL.png" alt="Logo" class="logo">
+        <h1 class="titulo">Gestión de Comentarios</h1>
+    </header>
+
+    <main class="container">
+        <section class="comentarios-seccion">
+            <h2>Comentarios recientes</h2>
+            <ul id="comentarios-lista">
+
+            </ul>
+        </section>
+
+        <section class="formulario-seccion">
+            <h2>Agregar un comentario</h2>
+            <form id="comentario-form">
+                <div class="form-group">
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" rows="4" placeholder="Escribe tu comentario aquí..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-enviar">Agregar Comentario</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Gestión de Comentarios. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
