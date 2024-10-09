@@ -2,8 +2,8 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
+    background: linear-gradient(to bottom right, #000000, #ffffff); 
+    color: #333; 
     line-height: 1.6;
 }
 
@@ -11,9 +11,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    background-color: #fff;
+    background-color: #000; 
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .logo {
@@ -25,22 +25,22 @@ body {
     text-align: center;
     margin: 0;
     font-size: 1.8em;
-    color: #333;
+    color: #fff; 
 }
 
 .container {
     max-width: 900px;
     margin: 60px auto;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
     font-size: 1.6em;
     margin-bottom: 20px;
-    color: #444;
+    color: #000;
 }
 
 textarea {
@@ -52,10 +52,12 @@ textarea {
     font-size: 1em;
     margin-bottom: 20px;
     resize: vertical;
+    background-color: #f7f7f7; 
+    color: #000; 
 }
 
 textarea:focus {
-    border-color: #1e63d0;
+    border-color: #1e63d0; 
     outline: none;
     box-shadow: 0 0 5px rgba(30, 99, 208, 0.3);
 }
@@ -65,8 +67,8 @@ textarea:focus {
 }
 
 .btn-enviar {
-    background-color: #1e63d0;
-    color: white;
+    background-color: #1e63d0; 
+    color: #fff; 
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
@@ -76,7 +78,7 @@ textarea:focus {
 }
 
 .btn-enviar:hover {
-    background-color: #0011ff;
+    background-color: #0011ff; 
 }
 
 ul {
@@ -85,29 +87,30 @@ ul {
 }
 
 li {
-    background-color: #f9f9f9;
+    background-color: rgba(68, 68, 68, 0.9); 
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    color: #fff; 
 }
 
 li::before {
     content: '“';
     font-size: 2em;
-    color: #1e63d0;
+    color: #1e63d0; 
     margin-right: 10px;
     vertical-align: middle;
 }
 
 .footer {
-    background-color: #fff;
+    background-color: #000; 
     text-align: center;
     padding: 15px;
-    border-top: 1px solid #ddd;
-    color: #666;
+    border-top: 1px solid #ddd; 
+    color: #fff; 
     position: fixed;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
 }

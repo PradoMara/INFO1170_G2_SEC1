@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #ece9e6, #ffffff);
+    background: linear-gradient(to bottom right, #000000, #ffffff); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-    background-color: #333;
+    background-color: #000; 
     color: white;
     padding: 10px 0;
     position: fixed;
@@ -28,7 +28,7 @@ body {
 }
 
 .header a {
-    color: white;
+    color: white; 
     text-decoration: none;
     padding: 0 15px;
     font-size: 16px;
@@ -39,10 +39,10 @@ body {
 }
 
 .container {
-    background-color: #e5edef;
+    background-color: #1a1a1a; 
     padding: 50px;
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); 
     text-align: center;
     width: 400px;
     max-width: 90%;
@@ -52,7 +52,7 @@ body {
 h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff; 
     margin-bottom: 30px;
 }
 
@@ -63,24 +63,26 @@ h1 {
 
 .form-group label {
     font-size: 14px;
-    color: #333;
+    color: #ffffff; 
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; 
     border-radius: 5px;
     font-size: 14px;
+    background-color: #333; 
+    color: white; 
 }
 
 button {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #000; 
+    color: white; 
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -88,7 +90,7 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #555; 
 }
 
 .help-link {
@@ -97,7 +99,7 @@ button:hover {
 }
 
 .help-link a {
-    color: #333; 
+    color: #ffffff; 
     font-size: 14px;
     text-decoration: none; 
 }
@@ -106,8 +108,13 @@ button:hover {
     text-decoration: underline; 
 }
 
+#help-section {
+    color: white; 
+}
+
+
 .footer {
-    background-color: #333;
+    background-color: #000; 
     color: white;
     padding: 10px;
     position: fixed;

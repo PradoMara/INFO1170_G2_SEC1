@@ -2,8 +2,8 @@ let notificationToDelete = null;
 
 function markAsRead(id) {
     const notification = document.getElementById(id);
-    notification.style.backgroundColor = '#e6e6e6';
-    notification.style.color = '#7a7a7a';
+    notification.style.backgroundColor = '#444444'; 
+    notification.style.color = '#ffffff';
 }
 
 function deleteNotification(id) {
