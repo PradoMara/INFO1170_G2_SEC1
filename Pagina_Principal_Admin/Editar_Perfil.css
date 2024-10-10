@@ -1,9 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #343a40;
 }
 
 .barra-navegacion {
@@ -35,7 +35,7 @@ body {
 }
 
 .nombre-sitio {
-    color: white;
+    color: #ffffff;
     font-size: 24px;
     font-weight: bold;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .nombre-usuario {
-    color: white;
+    color: #ffffff;
     font-size: 16px;
 }
 
@@ -56,7 +56,7 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -83,14 +83,14 @@ label {
     display: block;
     font-size: 18px;
     margin-bottom: 8px;
-    color: #333;
+    color: #343a40;
 }
 
 input[type="text"], input[type="email"], input[type="file"] {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #6c757d;
     font-size: 16px;
     box-sizing: border-box;
 }
@@ -103,7 +103,7 @@ input[type="file"] {
     margin-top: 20px;
 }
 
-button{
+button {
     font-size: 16px;
     padding: 12px 20px;
     margin: 10px;
@@ -115,7 +115,7 @@ button{
 
 .btn-guardar {
     background-color: #28a745;
-    color: white;
+    color: #ffffff;
 }
 
 .btn-guardar:hover {
@@ -125,7 +125,7 @@ button{
 
 .btn-cancelar {
     background-color: #dc3545;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
 }
 

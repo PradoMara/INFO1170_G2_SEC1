@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #1e1e2f;  
-    color: #f5f5f5; 
+    background-color: #f8f9fa;  
+    color: #343a40;  
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,37 +15,37 @@ body {
 }
 
 .header {
-    background-color: #3a3f5c;
-    color: #f5f5f5;
+    background-color: #007bff;  
+    color: #ffffff;  
     padding: 15px; 
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem; 
 }
 
 .descripcion-contenedor {
-    background-color: #3a3f5c;
-    border: 2px solid #3a3f5c;
+    background-color: #ffffff;  
+    border: 2px solid #6c757d;  
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
     width: 90%; 
     max-width: 800px; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .descripcion {
     font-size: 1rem; 
     line-height: 1.6;
-    color: #d1d1e0;
+    color: #343a40;  
 }
 
 .contenedor {
-    background-color: #2d2d44;
+    background-color: #ffffff;  
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     width: 90%; 
     max-width: 500px; 
     text-align: center;
@@ -61,7 +61,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     padding: 15px;
-    background-color: #3a3f5c;
+    background-color: #007bff; 
 }
 
 .logo-container {
@@ -77,7 +77,7 @@ header {
 .sitio-titulo {
     font-family: 'Georgia', serif;
     font-size: 1.6rem; 
-    color: #f5f5f5;
+    color: #ffffff;  
     margin-left: 15px;
     text-align: center;
     font-weight: bold;
@@ -86,7 +86,7 @@ header {
 
 h2 {
     font-size: 2rem; 
-    color: #f5f5f5;
+    color: #343a40;  
     margin-bottom: 40px;
 }
 
@@ -98,8 +98,8 @@ h2 {
 }
 
 .boton {
-    background-color: #5a63d4;
-    color: white;
+    background-color: #007bff;  
+    color: #ffffff;  
     padding: 12px 24px; 
     text-decoration: none;
     font-size: 1rem; 
@@ -110,7 +110,7 @@ h2 {
 }
 
 .boton:hover {
-    background-color: #4751a3;
+    background-color: #0056b3;  
 }
 
 .ayuda {
@@ -132,7 +132,7 @@ h2 {
 }
 
 .ventana-content {
-    background-color: #3f3f5c;
+    background-color: #0056b3;
     margin: 10% auto;
     padding: 20px;
     border-radius: 4px;
@@ -155,7 +155,7 @@ h2 {
 }
 
 .barra-contacto {
-    background-color: #3a3f5c;
+    background-color: #0056b3;
     color: #f5f5f5;
     text-align: center;
     padding: 10px;
@@ -164,7 +164,7 @@ h2 {
     width: 100%;
     z-index: 1000;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem; /* Texto más pequeño */
+    font-size: 0.9rem; 
 }
 
 .barra-contacto a {
