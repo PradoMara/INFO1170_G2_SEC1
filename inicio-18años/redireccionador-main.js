@@ -2,10 +2,6 @@ document.getElementById("postulaciones-btn").addEventListener("click", function(
     window.location.href = "postulaciones.html"; // Redirecciona a la página de postulaciones
 });
 
-document.getElementById("logo-user").addEventListener("click", function() {
-    window.location.href = "miperfil.html"; // Redirecciona a la página mi perfil
-});
-
 document.getElementById("cv-btn").addEventListener("click", function() {
     window.location.href = "cv.html"; // Redirecciona a la página del cv
 });
@@ -23,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para cargar notificaciones desde otro archivo HTML
     const cargarNotificaciones = () => {
-        fetch('buzon-notificaciones.html')
+        fetch('../perfil-18-años/buzon-notificaciones.html')
             .then(response => response.text())
             .then(data => {
                 notificacionesContainer.innerHTML = data;
