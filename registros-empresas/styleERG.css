@@ -1,0 +1,217 @@
+body, html {
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 60px;
+    margin:0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+#header {
+    background-color:             #0d6efd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding:                         10px 0; 
+    position:                         fixed;
+    top:                                  0;
+    width:                             100%;
+    z-index:                           1000;
+    border-bottom: 2px solid #007bff;
+}
+
+#conten{
+    margin-top: 120px;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-row{
+    display:                  flex;
+    justify-content: space-between;
+    align-items:            center;
+    background-color: transparent;
+    
+}
+
+.logo-container img {
+    height:                    50px;
+    width:                     auto;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+    border: none;
+    
+}
+
+.logo-container img:hover{
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.ayuda {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.btn-ayuda {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 8px 15px;
+    text-decoration: none;;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.btn-ayuda:hover {
+    
+    color: #ccc;
+}
+
+.form-container {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 700px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.password-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+.password-container input{
+    flex: 1;
+}
+
+.password-container img{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: auto;
+    background-color: transparent;
+}
+
+.help-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.help-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.help-link a:hover {
+    text-decoration: underline;
+}
+.obligatorio{
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}
+
+.campos-requeridos {
+    font-size: 12px;
+    color: #333;
+    margin-top: 10px;
+}
+.form-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+.form-footer a {
+    color: #007bff;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+
+#registro-empresa {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+#registro-empresa label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#registro-empresa input,
+#registro-empresa textarea {
+    margin-top: 5px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+#registro-empresa input:focus, 
+#registro-empresa textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.2); 
+}
+
+#registro-empresa button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0d6efd;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#registro-empresa button:hover {
+    background-color: #084298;
+    transform: scale(1.05);
+}
+
+#terminos-condiciones, #politica-privacidad {
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#terminos-condiciones:hover, #politica-privacidad:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+
+    #registro-empresa {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+    }
+}

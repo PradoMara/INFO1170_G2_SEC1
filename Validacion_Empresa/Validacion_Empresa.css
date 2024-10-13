@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    background: #f8f9fa;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 80px; 
+    padding-bottom: 60px; 
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.barra-superior {
+    background-color: #007bff;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-superior h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.barra-superior ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra-superior ul li {
+    margin-left: 20px;
+}
+
+.barra-superior ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.barra-superior ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 80px; 
+    height: auto;
+    margin-right: 15px;
+}
+
+.sitio-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenedor {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 100px auto 0 auto;
+}
+
+h2 {
+    color: #007bff;
+    font-size: 1.6rem; 
+    margin-bottom: 25px;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6c757d;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.enlaces-ayuda {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.enlaces-ayuda a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.enlaces-ayuda a:hover {
+    text-decoration: underline;
+}
+
+.mensaje-error {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.barra-contacto {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-contacto a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.barra-contacto a:hover {
+    text-decoration: underline;
+}

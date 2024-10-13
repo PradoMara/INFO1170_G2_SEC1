@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Validaciones de Postulantes - Araucanía Laboral</title>
+    <link rel="stylesheet" href="Gestion_Validacion_Postulante.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <div class="logo-nombre">
+                <img src="../Iconos/logo.png" alt="Logo Araucanía Laboral" class="logo">
+                <span class="nombre-sitio">Araucanía Laboral</span>
+            </div>
+            <a href="Perfil_Admin.html" class="perfil-enlace">  
+                <div class="perfil-usuario">
+                    <img src="../Iconos/ICONO-PERFIL.png" alt="Perfil" class="icono-perfil">
+                    <span class="nombre-usuario">Administrador</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contenedor">
+        <h1 class="texto-bienvenida">Gestión de Validaciones de Postulantes</h1>
+
+        <div class="filtros">
+            <input type="text" id="busqueda" class="filtro" placeholder="Buscar validaciones...">
+            <select id="filtro-estado" class="filtro">
+                <option value="">Filtrar por Estado</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="aprobado">Aprobado</option>
+                <option value="rechazado">Rechazado</option>
+            </select>
+            <select id="filtro-fecha" class="filtro">
+                <option value="">Filtrar por Fecha</option>
+                <option value="1">Última semana</option>
+                <option value="4">Último mes</option>
+                <option value="12">Último año</option>
+            </select>
+        </div>
+
+        <div class="lista-validaciones" id="lista-validaciones">
+            <div class="validacion" data-fecha="2023-09-10" data-estado="pendiente">
+                <img src="../Iconos/ICONO-PERFIL.png" alt="Foto Juan Pérez" class="foto-postulante">
+                <div class="info-validacion">
+                    <h3 class="nombre-postulante">Juan Pérez</h3>
+                    <p class="detalle-validacion">Email: juan.perez@example.com</p>
+                    <p class="detalle-validacion">Teléfono: +56 9 1234 5678</p>
+                    <p class="detalle-validacion">Estado: Pendiente</p>
+                </div>
+                <div class="acciones-validacion">
+                    <button class="btn" onclick="verDetalles('Juan Pérez')">Ver Detalles</button>
+                    <button class="btn" onclick="aprobarValidacion('Juan Pérez')">Aprobar</button>
+                    <button class="btn" onclick="rechazarValidacion('Juan Pérez')">Rechazar</button>
+                </div>
+            </div>
+
+            <div class="validacion" data-fecha="2023-09-15" data-estado="aprobado">
+                <img src="../Iconos/ICONO-PERFIL.png" alt="Foto Ana Gómez" class="foto-postulante">
+                <div class="info-validacion">
+                    <h3 class="nombre-postulante">Ana Gómez</h3>
+                    <p class="detalle-validacion">Email: ana.gomez@example.com</p>
+                    <p class="detalle-validacion">Teléfono: +56 9 2345 6789</p>
+                    <p class="detalle-validacion">Estado: Aprobado</p>
+                </div>
+                <div class="acciones-validacion">
+                    <button class="btn" onclick="verDetalles('Ana Gómez')">Ver Detalles</button>
+                </div>  
+            </div>
+            <div class="validacion" data-fecha="2023-09-10" data-estado="rechazado">
+                <img src="../Iconos/ICONO-PERFIL.png" alt="Foto Luiz Peres" class="foto-postulante">
+                <div class="info-validacion">
+                    <h3 class="nombre-postulante">Luiz Peres</h3>
+                    <p class="detalle-validacion">Email: Luiz.peres@example.com</p>
+                    <p class="detalle-validacion">Teléfono: +56 9 4537 2378</p>
+                    <p class="detalle-validacion">Estado: Rechazado</p>
+                </div>
+                <div class="acciones-validacion">
+                    <button class="btn" onclick="verDetalles('Luiz Peres')">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="boton-volver">
+            <button id="btn-volver" class="btn">Volver a la Página Principal</button>
+        </div>
+        
+    </div>
+
+    <script src="Gestion_Validacion_Postulante.js"></script>
+</body>
+</html>

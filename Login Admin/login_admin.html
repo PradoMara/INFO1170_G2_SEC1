@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Administrador</title>
+  <link rel="stylesheet" href="admin_login.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+        <img src="../Iconos/logo.png" alt="Logo" class="logo">
+        <h1>Panel del Administrador</h1>
+    </div>
+</header>
+
+  <div class="container">
+    <form class="login-form" id="adminLoginForm">
+      <h2>Iniciar Sesión</h2>
+      <input type="email" id="email" placeholder="Correo Electrónico" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <div class="error-message" id="errorMessage"></div>
+      <input type="submit" value="Iniciar Sesión">
+      <a href="#">¿Olvidaste tu contraseña?</a>
+    </form>
+  </div>
+
+  <script src="admin_login.js"></script>
+</body>
+</html>

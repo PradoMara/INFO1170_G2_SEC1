@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de empresa en Araucania Laboral.">
+    <title>Registro de empresas</title>
+    <link rel="stylesheet" href="styleERG.css">
+    <link rel="icon" type="image/png" href="/Images/loguito1.png">
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="header-row">
+                    <div class="logo-container">
+                        <a href="/inicio-18años/main.html">
+                            <img  type="image/png" src="../Iconos/logo.png" alt="Logo" class="logo" id="logo-home">
+                        </a>
+                    </div>
+                    
+                    <div class="ayuda">
+                        <a id="ayuda" class="btn-ayuda">¿Necesitas ayuda? Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="form-container">
+            <form id="registro-empresa" action="/registro" method="POST">
+                <p class="campos-requeridos">Los campos marcados con <span class="obligatorio">*</span> son obligatorios.</p>
+
+                <label for="nombre-empresa">Nombre de la Empresa <span class="obligatorio">*</span></label>
+                <input type="text" id="nombre-empresa" name="nombre-empresa" required>
+                <small id="error-nombre" class="error-message"></small>
+                
+                <label for="rut">RUT / ID Fiscal <span class="obligatorio">*</span></label>
+                <input type="text" id="rut" name="rut" required>
+                <small id="error-rut" class="error-message"></small>
+                
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <label for="ciudad">Ciudad <span class="obligatorio">*</span></label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                <small id="error-ciudad" class="error-message"></small>
+                
+                <label for="codigo-postal">Código Postal <span class="obligatorio">*</span></label>
+                <input type="text" id="codigo-postal" name="codigo-postal" required>
+                <small id="error-codigo" class="error-message"></small>
+                
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="email">Correo Electrónico <span class="obligatorio">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <small id="error-email" class="error-message"></small>
+                
+                <label for="contacto">Nombre del Contacto Principal <span class="obligatorio">*</span></label>
+                <input type="text" id="contacto" name="contacto" required>
+                <small id="error-contacto" class="error-message"></small>
+
+                <label for="puesto">Puesto del Contacto Principal</label>
+                <input type="text" id="puesto" name="puesto">
+                
+                <label for="descripcion">Descripción de la Empresa</label>
+                <textarea id="descripcion" name="descripcion"></textarea>
+                
+                <label for="contraseña">Contraseña <span class="obligatorio">*</span></label>
+                <div class="password-container">
+                    <input type="password" id="contraseña" name="contraseña" required>
+                    <img src="../Iconos/mostrar.png" alt="Mostrar" id="show-contraseña" class="toggle-password">
+                    <img src="../Iconos/ocultar.png" alt="Ocultar" id="hide-contraseña" class="toggle-password" style="display: none;">
+                </div>
+                <small id="error-contraseña" class="error-message"></small>
+
+                <label for="confirmar-contraseña">Confirmar Contraseña <span class="obligatorio">*</span></label>
+                <div class="password-container">
+                    <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required>
+                    <img src="../Iconos/mostrar.png" alt="Mostrar" id="show-confirmar-contraseña" class="toggle-password">
+                    <img src="../Iconos/ocultar.png" alt="Ocultar" id="hide-confirmar-contraseña" class="toggle-password" style="display: none;">
+                </div>
+                <small id="error-confirmar-contraseña" class="error-message"></small>
+
+                <label>
+                    <input type="checkbox" name="terminos" required>
+                    Acepto los <a id="terminos-condiciones" href="#" target="_blank">términos y condiciones</a> y la <a id="politica-privacidad" href="#" target="_blank">política de privacidad</a>.
+                    <span class="obligatorio">*</span>
+                </label>
+                
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                <div class="g-recaptcha" data-sitekey="6LcNyUUqAAAAAK-5ecc7e0cPU0pHc0EhaqF7PXPs"></div>
+                
+                <div class="help-link">
+                    <p>¿Necesitas ayuda? <a href="#" id="contactanos">Contáctanos</a></p>
+                </div>
+                
+                <button type="submit">Registrarse</button>
+                <script src="link-ERG.js"></script>
+            </form>
+        </div>
+        <footer>
+            <div class="form-footer">
+                <p>Al registrarte, aceptas nuestros <a id="terminos-footer">términos y condiciones</a>.</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    padding: 80px 20px 60px;
+}
+
+.barra-superior {
+    background-color: #007bff;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.sitio-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.contenedor-soporte {
+    margin-top: 100px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #343a40;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+p, ul, ol {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #343a40;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.barra-contacto {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-contacto a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.barra-contacto a:hover {
+    text-decoration: underline;
+}
+
+.boton-volver {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.boton-volver button {
+    width: 200px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-volver button:hover {
+    background-color: #0056b3;
+}
+
+.boton-volver button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.boton-volver button a:hover {
+    text-decoration: none;
+}

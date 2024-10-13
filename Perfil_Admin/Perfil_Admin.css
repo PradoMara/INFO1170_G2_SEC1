@@ -1,0 +1,164 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+
+.barra-navegacion {
+    background-color: #007bff;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.contenedor-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-nombre {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nombre-sitio {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Perfil de usuario */
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.icono-perfil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nombre-usuario {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Contenedor del perfil */
+.contenedor-perfil {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cabecera del perfil */
+.perfil-cabecera {
+    margin-bottom: 30px;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.nombre-perfil {
+    font-size: 24px;
+    margin: 0;
+}
+
+.correo-perfil {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+/* Detalles del perfil */
+.perfil-detalles {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.titulo-seccion {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Botones de acción */
+.perfil-acciones {
+    margin-top: 30px;
+}
+
+button {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-editar {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.btn-editar:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+.btn-password {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+
+.btn-password:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+    transform: translateY(-3px);
+}
+
