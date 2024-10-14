@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formularioValidacion');
 
     formulario.addEventListener('submit', function(evento) {
-        evento.preventDefault();
+        evento.preventDefault(); // Prevenir el envío inicial del formulario hasta que se validen todos los campos
         let esValido = true;
 
+        // Validación Razón Social
         const inputRazonSocial = document.getElementById('razonSocial');
         const errorRazonSocial = document.getElementById('errorRazonSocial');
         if (inputRazonSocial.value.trim() === '') {
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorRazonSocial.style.display = 'none';
         }
 
+        // Validación Número de Registro Tributario
         const inputRegistroTributario = document.getElementById('registroTributario');
         const errorRegistroTributario = document.getElementById('errorRegistroTributario');
         if (inputRegistroTributario.value.trim() === '') {
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorRegistroTributario.style.display = 'none';
         }
 
+        // Validación Dirección Fiscal/Social
         const inputDireccionFiscal = document.getElementById('direccionFiscal');
         const errorDireccionFiscal = document.getElementById('errorDireccionFiscal');
         if (inputDireccionFiscal.value.trim() === '') {
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorDireccionFiscal.style.display = 'none';
         }
 
+        // Validación Correo Electrónico Corporativo
         const inputEmailEmpresa = document.getElementById('emailEmpresa');
         const errorEmailEmpresa = document.getElementById('errorEmailEmpresa');
         const patronCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -46,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorEmailEmpresa.style.display = 'none';
         }
 
-        // Validación del archivo (logo o documento)
+        // Validación de archivo (logo o documento)
         const inputLogoEmpresa = document.getElementById('logoEmpresa');
         const errorLogoEmpresa = document.getElementById('errorLogoEmpresa');
         if (inputLogoEmpresa.files.length === 0) {
@@ -57,9 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
             errorLogoEmpresa.style.display = 'none';
         }
 
+        // Validación final y aviso
         if (esValido) {
             alert('Formulario enviado correctamente.');
-            formulario.submit();
+            formulario.submit(); // Enviar el formulario si todo es válido
         } else {
             alert('Por favor, complete todos los campos obligatorios antes de enviar.');
         }
