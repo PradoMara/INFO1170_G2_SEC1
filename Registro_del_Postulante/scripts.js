@@ -20,7 +20,7 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         if (age >= 16 && age < 18) {
             window.location.href = '../ValidacionMenorDeEdad/Validacion_Menor18.html';
         } else if (age >= 18) {
-            window.location.href = '../ValidacionEmpleadoMayorDe18/validacionEmpleadoMayor18.html';
+            window.location.href = '../ValidacionEmpleadoMayorDe18/ValidacionEmpleadoMayor18.html';
         }
     }
 });
