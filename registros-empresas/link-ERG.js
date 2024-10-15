@@ -22,11 +22,11 @@ togglePasswordVisibility('confirmar-contraseña', 'show-confirmar-contraseña', 
 
 
 document.getElementById("terminos-condiciones").addEventListener("click", function() {
-    window.location.href = "terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
+    window.location.href = "../Terminos y Condiciones/terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
 });
 
 document.getElementById("politica-privacidad").addEventListener("click", function() {
-    window.location.href = "PoliticaDePrivacidad.html"; // Redirecciona a la página de politica de privacidad
+    window.location.href = "../Politica de Privacidad/PoliticaDePrivacidad.html"; // Redirecciona a la página de politica de privacidad
 });
 
 document.getElementById("ayuda").addEventListener("click", function() {
@@ -34,11 +34,11 @@ document.getElementById("ayuda").addEventListener("click", function() {
 });
 
 document.getElementById("terminos-footer").addEventListener("click", function() {
-    window.location.href = "terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
+    window.location.href = "../Terminos y Condiciones/terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
 });
 
 document.getElementById("home").addEventListener("click", function() {
-    window.location.href = "main.html"; // Redirecciona a la página de inicio
+    window.location.href = "../Portada_AraucaniaLaboral/portada.html"; // Redirecciona a la página de inicio
 });
 
 document.getElementById('registro-empresa').addEventListener('submit', function(event) {
