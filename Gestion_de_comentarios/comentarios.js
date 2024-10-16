@@ -1,21 +1,15 @@
-document.getElementById("comentario-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    const comentarios = [
+        { autor: "Postulante 1", texto: "Excelente plataforma.", fecha: "2024-10-12" },
+        { autor: "Empresa ABC", texto: "Muy útil para encontrar talento local.", fecha: "2024-10-10" },
+        { autor: "Postulante 2", texto: "Facilita mucho la búsqueda de empleo.", fecha: "2024-10-09" }
+    ];
 
-    const comentarioTexto = document.getElementById("comentario").value.trim();
-    
-    if (comentarioTexto === "") {
-        alert("Por favor, escribe un comentario.");
-        return;
-    }
+    const listaComentarios = document.getElementById("comentarios-lista");
 
-    const fechaActual = new Date();
-    const opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
-
-    const nuevoComentario = document.createElement("li");
-    nuevoComentario.textContent = `${comentarioTexto} - ${fechaFormateada}`;
-
-    document.getElementById("comentarios-lista").appendChild(nuevoComentario);
-
-    document.getElementById("comentario").value = "";
+    comentarios.forEach(comentario => {
+        const li = document.createElement("li");
+        li.textContent = `${comentario.autor}: "${comentario.texto}" - ${comentario.fecha}`;
+        listaComentarios.appendChild(li);
+    });
 });

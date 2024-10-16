@@ -5,6 +5,9 @@ body {
     background: linear-gradient(to bottom right, #000000, #ffffff); 
     color: #333; 
     line-height: 1.6;
+    min-height: 100vh; /* Para que el contenido abarque al menos toda la pantalla */
+    display: flex;
+    flex-direction: column;
 }
 
 .barra-superior {
@@ -35,50 +38,13 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
+    flex-grow: 1;
 }
 
 h2 {
     font-size: 1.6em;
     margin-bottom: 20px;
     color: #000;
-}
-
-textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-family: inherit;
-    font-size: 1em;
-    margin-bottom: 20px;
-    resize: vertical;
-    background-color: #f7f7f7; 
-    color: #000; 
-}
-
-textarea:focus {
-    border-color: #1e63d0; 
-    outline: none;
-    box-shadow: 0 0 5px rgba(30, 99, 208, 0.3);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.btn-enviar {
-    background-color: #1e63d0; 
-    color: #fff; 
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-enviar:hover {
-    background-color: #0011ff; 
 }
 
 ul {
@@ -107,10 +73,18 @@ li::before {
     background-color: #000; 
     text-align: center;
     padding: 15px;
-    border-top: 1px solid #ddd; 
     color: #fff; 
-    position: fixed;
-    bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
+    margin-top: auto; /* Asegura que el footer esté en la parte inferior */
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }

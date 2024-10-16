@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Comentarios</title>
+    <title>Gestión de Comentarios - Administrador</title>
     <link rel="stylesheet" href="comentarios.css">
-    <script defer src="comentarios.js"></script>
 </head>
 <body>
     <header class="barra-superior">
@@ -17,26 +16,16 @@
         <section class="comentarios-seccion">
             <h2>Comentarios recientes</h2>
             <ul id="comentarios-lista">
-
+                <!-- Aquí se cargarán dinámicamente los comentarios desde la base de datos o archivo -->
             </ul>
-        </section>
-
-        <section class="formulario-seccion">
-            <h2>Agregar un comentario</h2>
-            <form id="comentario-form">
-                <div class="form-group">
-                    <label for="comentario">Comentario:</label>
-                    <textarea id="comentario" rows="4" placeholder="Escribe tu comentario aquí..." required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn-enviar">Agregar Comentario</button>
-                </div>
-            </form>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Gestión de Comentarios. Todos los derechos reservados.</p>
+        <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y Condiciones</a> |
+        <a href="../Politica_de_Privacidad/PoliticaDePrivacidad.html">Política de Privacidad</a>
     </footer>
+
+    <script src="comentarios.js"></script>
 </body>
 </html>
