@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnVolver) {
         btnVolver.addEventListener('click', function(event) {
             event.preventDefault();
-            window.location.href = 'Pagina_Admin.html'; 
+            window.location.href = '../Pagina_admin/Pagina_Admin.html'; 
         });
     }
 });

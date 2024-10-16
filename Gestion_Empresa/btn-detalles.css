@@ -125,4 +125,11 @@ textarea{
     color: #f1f1f1;
 }
 
+#volver {
+    background-color: #555; 
+    color: white;
+}
 
+#volver:hover {
+    background-color: #333; 
+}

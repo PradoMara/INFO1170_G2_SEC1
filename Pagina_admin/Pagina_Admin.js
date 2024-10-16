@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var btnVerEmpresas = document.getElementById('btnGestionEmpresa');
     btnVerEmpresas.addEventListener('click', function(event) {
         event.preventDefault();
-        redirigirA('Empresas', '../Gestion_empresa/Gestion_Empresa.html');
+        redirigirA('Empresas', '../Gestion_Empresa/gestion-empresas.html');
     });
 
     // Botón para verificar validaciones de postulantes
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var btnVerValidacionesEmpresas = document.getElementById('btnVerValidacionesEmpresas');
     btnVerValidacionesEmpresas.addEventListener('click', function(event) {
         event.preventDefault();
-        redirigirA('Validaciones de Empresas', '../Gestion_Validacion_Empresa/gestion-empresas.html');
+        redirigirA('Validaciones de Empresas', '../Gestion_Validacion_Empresa/gestion-validacion-empresa.html');
     });
 
     // Botón para ver dudas y consultas

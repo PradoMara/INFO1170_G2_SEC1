@@ -14,7 +14,7 @@ function rechazarValidacion(nombre) {
     alert("Validación de " + nombre + " rechazada.");
 }
 document.getElementById("btn-volver").addEventListener("click", function() {
-    window.location.href = "index.html"; 
+    window.location.href = "../Pagina_admin/Pagina_Admin.html"; 
 });
 
 // Filtrar por búsqueda, estado y fecha

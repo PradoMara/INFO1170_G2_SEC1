@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Plataforma laboral para conectar a empleadores y buscadores de empleo en la región de La Araucanía.">
-        <title>Gestion de Empresas</title>
-        <link rel="stylesheet" href="gestion-empresa.css">
+        <title>Gestion de Validacion de Empresas</title>
+        <link rel="stylesheet" href="gestion-valiedacion-empresa.css">
         <link rel="icon" type="image/png" href="/Images/loguito1.png">
     </head>
     <body>
@@ -31,7 +31,11 @@
             <h1 class="texto-bienvenida">Solicitudes de Validación Pendientes</h1>
             <div class="filtros">
                 <input type="text" id="busqueda" class="filtro" placeholder="Buscar empresa...">
-    
+                <select id="filtro-aceptado-rechazado" class="filtro">
+                    <option value="">Filtrar por Aceptado o Rechazado</option>
+                    <option value="15-18">Aceptados</option>
+                    <option value="18-25">Rechazados</option>
+                    
                 </select>
                 <select id="filtro-recientes" class="filtro">
                     <option value="">Filtrar por Recientes</option>
@@ -48,13 +52,9 @@
             <div id="solicitudes-container">
                 <!-- Aquí se mostrarán las solicitudes mediante JS -->
             </div>
-            <div class="container text-center pagination-container">
-                <ul class="pagination pagination-sm" id="pagination"></ul>
-            </div>
-            
         </div>
 
-        <script src="gestion-empresa.js"></script>
+        <script src="gestion-validacion-empresa.js"></script>
     </body>
     <footer class="footer">
         <div id="copy">

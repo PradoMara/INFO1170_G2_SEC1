@@ -1,14 +1,14 @@
 document.querySelector('.btn-editar').addEventListener('click', function() {
     alert('Redirigiendo a la página de edición de perfil.');
-    window.location.href = 'Editar_Perfil.html';
+    window.location.href = '../Editar_Perfil_Admin/Editar_Perfil.html';
 });
 
 document.querySelector('.btn-password').addEventListener('click', function() {
     alert('Redirigiendo a la página de cambio de contraseña.');
-    window.location.href = 'cambiar_contraseña.html';
+    window.location.href = '../Cambiar_Contraseña/cambiar_contraseña.html';
 });
 
 document.querySelector('.btn-logout').addEventListener('click', function() {
     alert('Redirigiendo a la página principal.');
-    window.location.href = 'Pagina_Admin.html';
+    window.location.href = '../Pagina_admin/Pagina_Admin.html';
 });
