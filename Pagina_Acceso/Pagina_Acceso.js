@@ -1,19 +1,12 @@
-var ventana = document.getElementById("ayudaVentana");
+// Redirigir a páginas cuando se hace clic en los botones
+document.getElementById('postulanteBoton').addEventListener('click', function() {
+    window.location.href = '../Registro_del_Postulante/registro.html'; 
+});
 
-var helpLink = document.querySelector(".ayuda");
+document.getElementById('empresaBoton').addEventListener('click', function() {
+    window.location.href = '../registros-empresas/empresaRg.html'; 
+});
 
-var span = document.getElementsByClassName("close")[0];
-
-helpLink.onclick = function() {
-    ventana.style.display = "block";
-}
-
-span.onclick = function() {
-    ventana.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == ventana) {
-        ventana.style.display = "none";
-    }
-}
+document.getElementById('adminBoton').addEventListener('click', function() {
+    window.location.href = '../Login_Admin/login_admin.html'; 
+});

@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion-bd/conexion.php';
+include 'conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $razonSocial = $_POST["razonSocial"];
