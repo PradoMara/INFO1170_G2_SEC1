@@ -1,15 +1,15 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(45deg, #000000, #ffffff); 
     margin: 0;
     padding: 0;
     color: #343a40;
 }
 
 .barra-navegacion {
-    background-color: #007bff;
+    background-color: #000000; 
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px #5c5050;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -32,12 +32,18 @@ body {
     width: 60px;
     height: 40px;
     margin-right: 10px;
+    color:#ffffff;
 }
 
 .nombre-sitio {
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
 }
 
 .icono-perfil {
@@ -50,15 +56,17 @@ body {
 .nombre-usuario {
     color: #ffffff;
     font-size: 16px;
+    margin-top: 5px;
 }
 
 .contenedor-editar-perfil {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    color:#ffffff;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
     text-align: center;
     animation: fadeIn 1s ease-out;
 }
@@ -75,6 +83,7 @@ body {
 }
 
 .campo {
+    color: #ffffff;
     margin-bottom: 20px;
     text-align: left;
 }
@@ -83,16 +92,18 @@ label {
     display: block;
     font-size: 18px;
     margin-bottom: 8px;
-    color: #343a40;
+    color: #ffffff;
 }
 
-input[type="text"], input[type="email"], input[type="file"] {
+input[type="text"], input[type="email"], input[type="file"] , input[type="rol"],input[type="submit"]{
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #6c757d;
+    border: 1px solid #ffffff;
     font-size: 16px;
     box-sizing: border-box;
+    background-color: #f8f9fa; 
+    color: #000000; 
 }
 
 input[type="file"] {

@@ -1,22 +1,23 @@
 body, html {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    padding-top: 60px;
+    padding-top: 100px;
     margin:0;
     background-color: #f4f6f8;
-    color: #333;
+    background: linear-gradient(to bottom right, #1e1e1e, #4e4e4e);
+    color: #f1f1f1;
+    overflow: auto;
 }
 #header {
-    background-color:             #0d6efd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding:                         10px 0; 
-    position:                         fixed;
-    top:                                  0;
-    width:                             100%;
-    z-index:                           1000;
-    border-bottom: 2px solid #007bff;
+    background-color: #121212;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #084298;
 }
-
 #conten{
     margin-top: 120px;
 }
@@ -24,22 +25,21 @@ body, html {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .header-row{
     display:                  flex;
     justify-content: space-between;
     align-items:            center;
-    background-color: transparent;
+    
     
 }
 
 .logo-container img {
     height:                    50px;
     width:                     auto;
-    transition: transform 0.3s ease;
-    background-color: transparent;
+    transition: transform 0.3s ease, filter 0.5s ease;
     border: none;
     
 }
@@ -55,28 +55,30 @@ body, html {
 }
 
 .btn-ayuda {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 8px 15px;
-    text-decoration: none;;
+    color: #f1f1f1;
+    text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 10px 20px;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-ayuda:hover {
-    
-    color: #ccc;
+    background-color: #f1f1f1;
+    color: #121212;
 }
 
 .form-container {
-    margin: 20px auto;
+    margin: 50px auto;
     padding: 30px;
     max-width: 700px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #333;
+    border: 1px solid #777;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .password-container{
@@ -127,8 +129,9 @@ body, html {
 
 .campos-requeridos {
     font-size: 12px;
-    color: #333;
+    color: #f1f1f1;
     margin-top: 10px;
+    font-weight: bold;
 }
 .form-footer {
     text-align: center;
@@ -161,15 +164,17 @@ body, html {
 #registro-empresa textarea {
     margin-top: 5px;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 6px;
+    background-color: #2c2c2c;
+    color: #f1f1f1;
     transition: border-color 0.3s ease;
 }
 #registro-empresa input:focus, 
 #registro-empresa textarea:focus {
     border-color: #0d6efd;
     outline: none;
-    box-shadow: 0 0 5px rgba(13, 110, 253, 0.2); 
+    box-shadow: 0 0 5px rgba(115, 171, 255, 0.842); 
 }
 
 #registro-empresa button {
@@ -178,7 +183,7 @@ body, html {
     border: none;
     border-radius: 6px;
     background-color: #0d6efd;
-    color: #fff;
+    color: #121212;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
