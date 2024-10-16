@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Plataforma laboral para conectar a empleadores y buscadores de empleo en la región de La Araucanía.">
+        <title>Detalles de la oferta</title>
+        <link rel="stylesheet" href="styleMain.css">
+        <link rel="icon" type="image/png" href="/Images/loguito1.png">
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="header-row">
+                    <div class="logo-container">
+                        <a href="main.html">
+                            <img src="/Images/logo-sin-fondo1.png" alt="Logo" class="logo" id="logo-home">
+                        </a>
+                    </div>
+                    <nav class="nav-menu">
+                        <ul class="nav-items">
+                            <li><a href="main.html">Home</a></li>
+                            <li><a href="/buscar-empleo/buscar-empleo.html">Buscar Empleo</a></li>
+                            <li><a href="iniciarsesionempresas.html">Empresa</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="user-account">
+                        <div class="Not-post">
+                            <button class="postulaciones"  id="postulaciones-btn" >Mis postulaciones</button>
+                            
+                            <img class="notificaciones" id="notificaciones-btn" src="https://cdn-icons-png.flaticon.com/512/60/60753.png" alt="Notificaciones"> 
+                            
+                        </div>
+                        <div class="user-dropdown">
+                            <a href="/perfil-18-años/miperfil.html">
+                                <img src="https://s3.amazonaws.com/cht2/public/img/account.png" alt="Usuario" class="user-img" id="logo-user">
+                            </a>
+                            <a href="login.html" class="dropdown-toggle" aria-expanded="false"></a>
+                            <div class="dropdown-menu">
+                                <span id="cv-btn">Editar CV</span>
+                                <span id="perfil-btn"> Mi cuenta</span>
+                                <span id="recomendacion-btn">Recomendaciones</span>
+                                <span id="cerrar-btn">Cerrar sesion</span>
+                            </div>                          
+                        </div>
+                    </div>
+                    <button class="menu-toggle">☰</button>
+                </div>
+            </div>
+        </header>
+        <main id="content" class="detalle-oferta-container">
+            <section class="detalle-oferta">
+                <h1 id="nombre-empresa-detalles">Detalles de la Oferta</h1> 
+                <div id="informacion-solicitud">
+                    
+                </div>
+    
+                
+                <textarea id="comentarios" rows="5" placeholder="Escribe un comentario..."></textarea>
+                <button id="guardar-comentarios" class="boton-postularse">Guardar Comentario</button>
+            </section>
+        </main>
+    
+        <
+        <footer class="footer">
+            <div id="copy">
+                <p>&copy; 2024 Araucanía Laboral. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    
+        <script src="detalle-oferta.js"></script>
+    </body>
+</html>

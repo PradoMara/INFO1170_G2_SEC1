@@ -1,0 +1,2 @@
+archivo prueba, luego se crearan los pdfs, por mientras solo estara ento, ya que esta simulando un archivo, cuando se haga la conexion a la bd se modificara
+este archivo solo es para probar el correcto funcionamiento. :D

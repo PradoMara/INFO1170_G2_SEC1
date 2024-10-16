@@ -1,6 +1,6 @@
 <?php
 $servername = "db.inf.uct.cl";
-$username = "";
+$username = "dprado";
 $password = "";
 $dbname  = "nombre de la base de datos";
 

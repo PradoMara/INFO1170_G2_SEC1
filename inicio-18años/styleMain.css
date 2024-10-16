@@ -1,9 +1,10 @@
 body, html {
-    background-color: #000;
+    background-color: linear-gradient(to bottom right, #1e1e1e, #4e4e4e);
     background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg);
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    color: #f1f1f1;
 
 }
 
@@ -13,14 +14,15 @@ body, html {
     padding:  0 20px ;
 }
 
-#header {
-    background-color:             #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding:                         10px 0; 
+#header {   
+    background-color:             #121212;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    padding:                         20px 0; 
     position:                         fixed;
     top:                                  0;
     width:                             100%;
     z-index:                           1000;
+    border-bottom:      2px solid #063a72;
 }
 #conten{
     margin-top: 120px;
@@ -34,12 +36,13 @@ body, html {
 .logo-container img {
     height:                    50px;
     width:                     auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.5s ease;
 
 }
 
 .logo-container img:hover{
     transform: scale(1.1);
+    filter: brightness(1.5)
 }
 
 .nav-menu{
@@ -58,12 +61,12 @@ body, html {
 
 .nav-items  li a{
     text-decoration:       none;
-    color: rgb(148, 141, 141);
+    color: #f1f1f1;
     font-size:            1.2em;
 }
 
 .nav-items  li a:hover{
-    color: #f1f1f1;
+    color: #7facdb;
 }
 
 .user-account {
@@ -154,19 +157,20 @@ body, html {
 
 }
 .section{
-    background-color: white;
+    background-color: #333;
+    color: #f1f1f1;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .ofertas-destacadas {
-    background-color: white;
+    background-color: #222;
     padding: 50px 20px;
 }
 
 .ofertas-destacadas h2 {
     font-size: 2em;
     margin-bottom: 30px;
-    color: #333;
     text-align: center;
 }
 
@@ -178,29 +182,29 @@ body, html {
 .tarjeta-oferta {
     height: auto;
     width: 1000px;
-    background-color: #fff;
+    background-color: #444;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     margin: 0 auto;
 }
 
 .tarjeta-oferta:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .titulo-oferta {
     font-size: 1.4em;
-    color: #333;
+    color: #0056b3;
     font-weight: bold;
 }
 
 .empresa-oferta, .ubicacion-oferta, .fecha-publicacion {
     font-size: 1em;
-    color: #666;
+    color: #f1f1f1;
     margin: 5px 0;
 }
 
@@ -220,7 +224,7 @@ body, html {
 }
 
 .footer{
-    background-color: #091420;
+    background-color: #1e1e1e;
     color:              white;
     text-align:          center;
     padding:             20px 0;    
@@ -329,7 +333,7 @@ body, html {
     justify-content: center;
     text-align:      center;
     padding:      10px 20px;
-    color:   rgb(0, 0, 0);
+    color:           #000; 
     border:            none;
     cursor:         pointer;
     border-radius:      20px;
@@ -412,4 +416,38 @@ body, html {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.detalle-oferta-container {
+    padding: 50px;
+    text-align: left;
+    color: #f1f1f1;
+}
+
+.detalle-oferta {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detalle-oferta h1, .detalle-oferta h2 {
+    color: #0e6dd1; 
+}
+
+.boton-postularse {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0e6dd1;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.boton-postularse:hover {
+    background-color: #0056b3;
 }
