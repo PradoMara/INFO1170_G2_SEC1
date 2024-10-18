@@ -2,12 +2,13 @@ body, html {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     padding-top: 100px;
-    margin:0;
+    margin: 0;
     background-color: #f4f6f8;
-    background: linear-gradient(to bottom right, #1e1e1e, #4e4e4e);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
     color: #f1f1f1;
     overflow: auto;
 }
+
 #header {
     background-color: #121212;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -18,9 +19,7 @@ body, html {
     z-index: 1000;
     border-bottom: 2px solid #084298;
 }
-#conten{
-    margin-top: 120px;
-}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -28,25 +27,35 @@ body, html {
     padding: 0 20px;
 }
 
-.header-row{
-    display:                  flex;
+.header-row {
+    display: flex;
     justify-content: space-between;
-    align-items:            center;
-    
-    
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logo-container img {
-    height:                    50px;
-    width:                     auto;
+    height: 50px;
+    width: auto;
     transition: transform 0.3s ease, filter 0.5s ease;
     border: none;
-    
 }
 
-.logo-container img:hover{
+.logo-container img:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
+}
+
+.logo-container h1 {
+    font-size: 28px; 
+    font-weight: bold;
+    color: #ffffff; 
+    margin: 0;
 }
 
 .ayuda {
@@ -75,23 +84,23 @@ body, html {
     margin: 50px auto;
     padding: 30px;
     max-width: 700px;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9); 
     border: 1px solid #777;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-.password-container{
+.password-container {
     position: relative;
     display: flex;
     align-items: center;
-
 }
-.password-container input{
+
+.password-container input {
     flex: 1;
 }
 
-.password-container img{
+.password-container img {
     position: absolute;
     right: 10px;
     cursor: pointer;
@@ -100,59 +109,25 @@ body, html {
     background-color: transparent;
 }
 
-.help-link {
+.enlaces-ayuda {
     text-align: center;
     margin-top: 15px;
-    font-size: 14px;
 }
 
-.help-link a {
-    color: #007bff;
+.enlaces-ayuda a {
+    color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
 }
 
-.help-link a:hover {
+.enlaces-ayuda a:hover {
     text-decoration: underline;
 }
-.obligatorio{
-    color: red;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.error-message {
-    color: red;
-    font-size: 12px;
-    display: none;
-    margin-top: 5px;
-}
-
-.campos-requeridos {
-    font-size: 12px;
-    color: #f1f1f1;
-    margin-top: 10px;
-    font-weight: bold;
-}
-.form-footer {
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    margin-top: 15px;
-}
-
-.form-footer a {
-    color: #007bff;
-}
-
-.form-footer a:hover {
-    text-decoration: underline;
-}
-
 
 #registro-empresa {
     display: flex;
     flex-direction: column;
-    gap:15px;
+    gap: 15px;
 }
 
 #registro-empresa label {
@@ -170,20 +145,21 @@ body, html {
     color: #f1f1f1;
     transition: border-color 0.3s ease;
 }
+
 #registro-empresa input:focus, 
 #registro-empresa textarea:focus {
-    border-color: #0d6efd;
+    border-color: #ffcc00;
     outline: none;
     box-shadow: 0 0 5px rgba(115, 171, 255, 0.842); 
 }
 
 #registro-empresa button {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background-color: #0d6efd;
-    color: #121212;
+    background-color: #172ad4;
+    color: #f1f1f1;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -195,12 +171,27 @@ body, html {
 }
 
 #terminos-condiciones, #politica-privacidad {
-    color: #0d6efd;
+    color: #ffcc00;
     text-decoration: none;
     font-size: 14px;
 }
 
 #terminos-condiciones:hover, #politica-privacidad:hover {
+    text-decoration: underline;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+}
+
+.form-footer a {
+    color: #ffcc00;
+}
+
+.form-footer a:hover {
     text-decoration: underline;
 }
 

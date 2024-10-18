@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #000000, #ffffff); 
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 80px; 
+    padding-bottom: 60px; 
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.barra-superior {
+    background-color: #000000; 
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 80px; 
+    height: auto;
+    margin-right: 15px;
+}
+
+.sitio-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: #ffffff; 
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenedor {
+    background-color: #000000; 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 100px auto 0 auto;
+}
+
+h2 {
+    color: #ffffff; 
+    font-size: 1.6rem; 
+    margin-bottom: 25px;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #ffffff; 
+}
+
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #ffffff; 
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cccccc; 
+}
+
+.enlaces-ayuda {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.enlaces-ayuda a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.enlaces-ayuda a:hover {
+    text-decoration: underline;
+}
+
+.barra-contacto {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.barra-contacto a {
+    color: #ffcc00; 
+    text-decoration: none;
+}
+
+.barra-contacto a:hover {
+    text-decoration: underline;
+}
