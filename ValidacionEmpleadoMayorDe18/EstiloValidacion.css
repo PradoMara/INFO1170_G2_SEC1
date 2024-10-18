@@ -18,7 +18,7 @@ body {
 
 .header {
     background-color: #000; 
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 .header a {
-    color: white; 
+    color: #ffcc00; 
     text-decoration: none;
     padding: 0 15px;
     font-size: 16px;
@@ -99,7 +99,7 @@ button:hover {
 }
 
 .help-link a {
-    color: #ffffff; 
+    color: #ffcc00; 
     font-size: 14px;
     text-decoration: none; 
 }
@@ -109,13 +109,13 @@ button:hover {
 }
 
 #help-section {
-    color: white; 
+    color: #ffcc00; 
 }
 
 
 .footer {
     background-color: #000; 
-    color: white;
+    color: #ffcc00; 
     padding: 10px;
     position: fixed;
     bottom: 0;
@@ -124,7 +124,7 @@ button:hover {
 }
 
 .footer a {
-    color: white;
+    color: #ffcc00; 
     text-decoration: none;
     padding: 0 15px;
 }

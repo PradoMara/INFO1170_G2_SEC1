@@ -1,79 +1,76 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const formulario = document.getElementById('formularioValidacion');
+    const formularioMenor = document.getElementById('formularioMenor');
 
-    formulario.addEventListener('submit', function(evento) {
+    formularioMenor.addEventListener('submit', function(evento) {
         evento.preventDefault();
         let esValido = true;
 
-        const inputRazonSocial = document.getElementById('razonSocial');
-        const errorRazonSocial = document.getElementById('errorRazonSocial');
-        if (inputRazonSocial.value.trim() === '') {
-            errorRazonSocial.textContent = 'La razón social es requerida.';
-            errorRazonSocial.style.display = 'block';
+        const inputRut = document.getElementById('rut');
+        const errorRut = document.getElementById('errorRut');
+        const patronRut = /^[0-9]{1,8}-[0-9kK]{1}$/; 
+        if (!patronRut.test(inputRut.value.trim())) {
+            errorRut.textContent = 'El RUT ingresado no es válido. Debe tener el formato 12345678-9.';
+            errorRut.style.display = 'block';
             esValido = false;
         } else {
-            errorRazonSocial.style.display = 'none';
+            errorRut.style.display = 'none';
         }
 
-        const inputRegistroTributario = document.getElementById('registroTributario');
-        const errorRegistroTributario = document.getElementById('errorRegistroTributario');
-        if (inputRegistroTributario.value.trim() === '') {
-            errorRegistroTributario.textContent = 'El número de registro tributario es requerido.';
-            errorRegistroTributario.style.display = 'block';
+        const inputEdad = document.getElementById('edad');
+        const errorEdad = document.getElementById('errorEdad');
+        if (inputEdad.value < 0 || inputEdad.value > 17) {
+            errorEdad.textContent = 'La edad debe ser entre 0 y 17 años.';
+            errorEdad.style.display = 'block';
             esValido = false;
         } else {
-            errorRegistroTributario.style.display = 'none';
+            errorEdad.style.display = 'none';
         }
 
-        const inputDireccionFiscal = document.getElementById('direccionFiscal');
-        const errorDireccionFiscal = document.getElementById('errorDireccionFiscal');
-        if (inputDireccionFiscal.value.trim() === '') {
-            errorDireccionFiscal.textContent = 'La dirección fiscal es requerida.';
-            errorDireccionFiscal.style.display = 'block';
+        const inputDireccion = document.getElementById('direccion');
+        const errorDireccion = document.getElementById('errorDireccion');
+        if (inputDireccion.value.trim() === '') {
+            errorDireccion.textContent = 'La dirección es requerida.';
+            errorDireccion.style.display = 'block';
             esValido = false;
         } else {
-            errorDireccionFiscal.style.display = 'none';
+            errorDireccion.style.display = 'none';
         }
 
-        const inputEmailEmpresa = document.getElementById('emailEmpresa');
-        const errorEmailEmpresa = document.getElementById('errorEmailEmpresa');
-        const patronCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!patronCorreo.test(inputEmailEmpresa.value.trim())) {
-            errorEmailEmpresa.textContent = 'El correo electrónico corporativo no es válido.';
-            errorEmailEmpresa.style.display = 'block';
+        const inputPermiso = document.getElementById('permisoFirmado');
+        const errorPermiso = document.getElementById('errorPermisoFirmado');
+        if (inputPermiso.files.length === 0) {
+            errorPermiso.textContent = 'Debes subir el permiso firmado por el tutor.';
+            errorPermiso.style.display = 'block';
             esValido = false;
         } else {
-            errorEmailEmpresa.style.display = 'none';
+            errorPermiso.style.display = 'none';
         }
 
-        // Validación del archivo (logo o documento)
-        const inputLogoEmpresa = document.getElementById('logoEmpresa');
-        const errorLogoEmpresa = document.getElementById('errorLogoEmpresa');
-        if (inputLogoEmpresa.files.length === 0) {
-            errorLogoEmpresa.textContent = 'Es necesario subir un logo o documento de verificación.';
-            errorLogoEmpresa.style.display = 'block';
+        const inputCedula = document.getElementById('fotoCedula');
+        const errorCedula = document.getElementById('errorFotoCedula');
+        if (inputCedula.files.length === 0) {
+            errorCedula.textContent = 'Debes subir la foto de la cédula de identidad.';
+            errorCedula.style.display = 'block';
             esValido = false;
         } else {
-            errorLogoEmpresa.style.display = 'none';
+            errorCedula.style.display = 'none';
+        }
+
+        const inputFotoMenor = document.getElementById('fotoMenor');
+        const errorFotoMenor = document.getElementById('errorFotoMenor');
+        if (inputFotoMenor.files.length === 0) {
+            errorFotoMenor.textContent = 'Debes subir una foto del menor de edad.';
+            errorFotoMenor.style.display = 'block';
+            esValido = false;
+        } else {
+            errorFotoMenor.style.display = 'none';
         }
 
         if (esValido) {
-            alert('Formulario enviado correctamente.');
-            formulario.submit();
+            alert('Validación enviada correctamente.');
+            window.location.href = '../Pagina_Principal_Menor_de_Edad/PaginaPrincipalMenoresDeEdad.html';
         } else {
-            alert('Por favor, complete todos los campos obligatorios antes de enviar.');
+            alert('Por favor, completa todos los campos obligatorios antes de enviar.');
         }
     });
-});
-document.getElementById('formularioMenor').addEventListener('submit', function(event) {
-    var edad = document.getElementById('edad').value;
-    var errorEdad = document.getElementById('errorEdad');
-
-    if (edad > 17) {
-        errorEdad.textContent = 'La edad no puede exceder los 17 años,si es asi porfavor ingrese denuevo su edad en la seccion de registro.';
-        errorEdad.style.display = 'block';
-        event.preventDefault(); 
-    } else {
-        errorEdad.style.display = 'none'; 
-    }
 });

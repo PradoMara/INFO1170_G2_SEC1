@@ -5,112 +5,81 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 80px; 
-    padding-bottom: 60px; 
-    height: 100%;
-    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #000000, #ffffff); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px; 
+    overflow-y: auto; 
 }
 
-.barra-superior {
-    background-color: #000000; 
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px 30px;
+.header {
+    background-color: #000; 
+    color: #ffffff;
+    padding: 10px 0;
     position: fixed;
     top: 0;
     width: 100%;
+    text-align: center;
     z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.barra-superior h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-.barra-superior ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.barra-superior ul li {
-    margin-left: 20px;
-}
-
-.barra-superior ul li a {
-    color: white;
+.header a {
+    color: #ffcc00; 
     text-decoration: none;
     font-size: 16px;
 }
 
-.barra-superior ul li a:hover {
+.header a:hover {
     text-decoration: underline;
 }
 
+.container {
+    background-color: #1a1a1a; 
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); 
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+    margin: 100px 0 20px 0;
+}
+
 .logo {
-    width: 80px; 
-    height: auto;
-    margin-right: 15px;
-}
-
-.sitio-titulo {
-    font-family: 'Georgia', serif;
-    font-size: 32px;
-    color: #ffffff; 
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.contenedor {
-    background-color: #000000; 
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    margin: 100px auto 0 auto;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
 }
 
 h2 {
+    font-size: 24px;
+    font-weight: bold;
     color: #ffffff; 
-    font-size: 1.6rem; 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-h5 {
-    color:#ffffff;
-}
-
-.grupo-input {
-    margin-bottom: 20px;
+.form-group {
+    margin-bottom: 15px;
     text-align: left;
 }
 
-label {
-    display: block;
+.form-group label {
     font-size: 14px;
-    margin-bottom: 5px;
     color: #ffffff; 
 }
 
-input[type="text"],
-input[type="email"],
-input[type="file"] {
+.form-group input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
     font-size: 14px;
+    background-color: #333; 
+    color: white; 
 }
 
 input:focus {
@@ -120,32 +89,33 @@ input:focus {
 
 button {
     width: 100%;
-    padding: 15px;
-    background-color: #ffffff;
-    color: #000000; 
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000; 
+    color: white; 
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #cccccc; 
+    background-color: #555; 
 }
 
-.enlaces-ayuda {
-    margin-top: 20px;
+.help-link {
     text-align: center;
+    margin-top: 20px;
 }
 
-.enlaces-ayuda a {
-    color: #ffcc00;
-    text-decoration: none;
+.help-link a {
+    color: #ffcc00; 
+    font-size: 14px;
+    text-decoration: none; 
 }
 
-.enlaces-ayuda a:hover {
-    text-decoration: underline;
+.help-link a:hover {
+    text-decoration: underline; 
 }
 
 .mensaje-error {
@@ -155,23 +125,22 @@ button:hover {
     display: none;
 }
 
-.barra-contacto {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+.footer {
+    background-color: #000; 
+    color: #ffcc00; 
+    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.barra-contacto a {
+.footer a {
     color: #ffcc00; 
     text-decoration: none;
+    padding: 0 15px;
 }
 
-.barra-contacto a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
