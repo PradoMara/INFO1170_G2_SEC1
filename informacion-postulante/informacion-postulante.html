@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="informacionPostulante">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Información del Postulante</title>
+    <link rel="stylesheet" href="informacion-postulante.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Información del postulante</h1>
+            </div>
+        </div>
+        <?php
+        include('obtener-postulante.php');
+        include('../conexion.php'); 
+
+        $id = $_GET['id'];
+        $postulante = obtenerPostulante($conn, $id);
+        ?>
+        <main>
+            <div class="postulante-info">
+                <p><strong>Nombre:</strong> <?= htmlspecialchars($postulante['nombre']); ?></p>
+                <p><strong>Email:</strong> <?= htmlspecialchars($postulante['email']); ?></p>
+                <p><strong>Descripción:</strong> <?= htmlspecialchars($postulante['descripcion']); ?></p>
+            </div>
+
+            <div class="buttons">
+                <form method="post" action="aceptar-rechazar-update.php">
+                    <input type="hidden" name="id" value="<?= htmlspecialchars($postulante['id']); ?>"> 
+                    <button type="submit" name="accion" value="aceptar" class="btn-aceptar">Aceptar</button>
+                    <button type="submit" name="accion" value="rechazar" class="btn-rechazar">Rechazar</button>
+                </form>                
+            </div>
+        </main>
+    </div>
+</body>
+</html>

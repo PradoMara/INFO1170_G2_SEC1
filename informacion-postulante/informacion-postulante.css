@@ -1,0 +1,58 @@
+html {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #000000, #ebe9e9); ;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background-color: rgb(255, 255, 255);
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    
+}
+h1 {
+    text-align: center;
+}
+.postulante-info {
+    margin-bottom: 20px;
+}
+.postulante-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.buttons {
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-aceptar {
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.btn-rechazar {
+    background-color: #f44336;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    opacity: 0.9;
+}   
+.btn-aceptar:hover {
+    background-color: #359c3a;
+}
+
+.btn-rechazar:hover {
+    background-color: #c41212;
+}
