@@ -11,6 +11,9 @@ document.querySelector('#guardar-password').addEventListener('click', function()
     }
 });
 
+
+
+
 // Subir CV
 document.querySelector('.subir-cv-btn').addEventListener('click', function() {
     document.querySelector('#upload-cv').click();
@@ -26,10 +29,6 @@ document.querySelector('#upload-cv').addEventListener('change', function() {
 });
 
 // Editar información de contacto
-document.querySelector('.editar-info-contacto-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('.form-editar-contacto').style.display = 'block';
-});
 
 document.querySelector('#guardar-contacto').addEventListener('click', function() {
     const nacionalidad = document.querySelector('#nacionalidad').value;
@@ -37,26 +36,53 @@ document.querySelector('#guardar-contacto').addEventListener('click', function()
     const fechaNacimiento = document.querySelector('#fecha-nacimiento').value;
     const telefono = document.querySelector('#telefono').value;
     const estadoCivil = document.querySelector('#estado-civil').value;
+    const userId = 1; // Cambia esto para obtener el ID del usuario actual
 
-    alert('Información de contacto actualizada.');
-    document.querySelector('.form-editar-contacto').style.display = 'none';
+    fetch('editar-informacion-contacto.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `nacionalidad=${nacionalidad}&rut=${rut}&fecha_nacimiento=${fechaNacimiento}&telefono=${telefono}&estado_civil=${estadoCivil}&user_id=${userId}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert('Información de contacto actualizada');
+        document.querySelector('.form-editar-contacto').style.display = 'none';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 });
 
+
 // Editar experiencia laboral
-document.querySelector('.editar-experiencia-btn').addEventListener('click', function() {
+ddocument.querySelector('.editar-experiencia-btn').addEventListener('click', function() {
     document.querySelector('.form-editar-experiencia').style.display = 'block';
 });
 
 document.querySelector('#guardar-experiencia').addEventListener('click', function() {
     const puesto = document.querySelector('#edit-puesto').value;
     const empresa = document.querySelector('#edit-empresa').value;
+    const userId = 1; // Cambia esto para obtener el ID del usuario actual
 
-    document.querySelector('#puesto').textContent = puesto;
-    document.querySelector('#empresa').textContent = empresa;
-
-    alert('Experiencia laboral actualizada.');
-    document.querySelector('.form-editar-experiencia').style.display = 'none';
+    fetch('editar-informacion-personal.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `puesto=${puesto}&empresa=${empresa}&user_id=${userId}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert('Experiencia laboral actualizada.');
+        document.querySelector('.form-editar-experiencia').style.display = 'none';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 });
+
 
 // Selección de primer trabajo
 document.querySelector('#primer-trabajo').addEventListener('change', function() {
@@ -72,20 +98,17 @@ const modal = document.getElementById("modal-contraseña");
 const openModalBtn = document.querySelector(".cambiar-password-btn");
 const closeModalBtn = document.querySelector(".close");
 
-// Abrir el modal
 openModalBtn.addEventListener("click", (e) => {
     e.preventDefault();
     modal.classList.add("show");
     document.body.classList.add("modal-open");
 });
 
-// Cerrar el modal al hacer clic en 'X'
 closeModalBtn.addEventListener("click", () => {
     modal.classList.remove("show");
     document.body.classList.remove("modal-open");
 });
 
-// Cerrar el modal al hacer clic fuera del contenido
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.classList.remove("show");
@@ -107,4 +130,9 @@ formCambiarContraseña.addEventListener('submit', (e) => {
         modal.classList.remove("show");
         document.body.classList.remove("modal-open");
     }
+});
+
+document.querySelector('.editar-perfil-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    // Mostrar el formulario de edición de perfil
 });
