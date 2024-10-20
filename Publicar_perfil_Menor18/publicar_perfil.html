@@ -20,10 +20,16 @@
     </header>
 
     <main class="profile-published">
-        <h1>¡Perfil publicado con éxito!</h1>
-        <p>Tu perfil ha sido publicado y ahora es visible para las empresas.</p>
-        <a href="../Pagina_Principal_Menor_de_Edad/PaginaPrincipalMenoresDeEdad.html" class="button">Ver Ofertas de Trabajo</a>
+        <form class="upload-cv-form">
+            <h1>Ahora puedes subir tu currículum en formato PDF o imagen.</h1>
+            <div class="file-input-container">
+                <label for="cvUpload">Sube tu CV:</label>
+                <input type="file" id="cvUpload" accept=".pdf,.png,.jpg,.jpeg">
+                <button type="submit" id="submitBtn">Subir CV</button>
+            </div>
+        </form>
     </main>
+    
 
     <footer>
         <div class="footer-content">
@@ -31,5 +37,6 @@
             <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y condiciones</a>
         </div>
     </footer>
+    <script src="publicar_perfil.js"></script>
 </body>
 </html>
