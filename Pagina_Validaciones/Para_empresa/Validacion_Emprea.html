@@ -16,7 +16,7 @@
 
     <div class="contenedor">
         <h2>Validación de Empresa</h2>
-        <form id="formularioValidacion" action="Validacion_Empresa.php" method="post" enctype="multipart/form-data" novalidate>
+        <form id="formularioValidacion" novalidate>
             <div class="grupo-input">
                 <label for="razonSocial">Razón Social</label>
                 <input type="text" id="razonSocial" name="razonSocial" required>
@@ -41,19 +41,11 @@
                 <span class="mensaje-error" id="errorEmailEmpresa"></span>
             </div>
 
-            <div class="grupo-input">
-                <label for="logoEmpresa">Subir Documento de Verificación</label>
-                <input type="file" id="logoEmpresa" name="logoEmpresa" accept="image/*, application/pdf" required>
-                <span class="mensaje-error" id="errorLogoEmpresa"></span>
-            </div>
-
             <button type="submit">Validar Empresa</button>
-            <div class="enlaces-ayuda">
-                <p><h4>¿Necesitas ayuda? </h><a href="Pagina_Soporte.html">Visita nuestra página de soporte</a>.</p>   
-                <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
-            </div>
+            <div id="mensaje" style="display:none;"></div> 
         </form>
     </div>
+
     <footer class="barra-contacto">
         <p>Contacto: <a href="mailto:integracion58@gmail.com">integracion58@gmail.com</a> | Teléfono: +56 9 9992 9342</p>
     </footer>
