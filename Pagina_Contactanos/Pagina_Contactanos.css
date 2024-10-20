@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #000000, #ffffff); 
+    color: #343a40;
+    padding: 80px 0 60px;  
+}
+
+.barra-superior {
+    background-color: #000000;  
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.sitio-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.contenedor-contacto {
+    margin-top: 100px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.grupo-input {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #343a40;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.mensaje-error {
+    display: none;
+    color: #ff4d4d;
+    font-size: 0.9rem;
+}
+
+#contador-caracteres {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+#resultado-mensaje {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #28a745;
+}
+
+.barra-contacto {
+    background-color: #000000; 
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-contacto a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.barra-contacto a:hover {
+    text-decoration: underline;
+}
