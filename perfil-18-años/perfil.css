@@ -2,8 +2,8 @@ body, html {
     font-family: 'Open sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #1e1e1e, #4e4e4e);
-    color: #f1f1f1;
+    background: linear-gradient(to bottom, #000000, #ffffff); 
+    color: #000000;
 }
 
 .container {
@@ -18,8 +18,22 @@ body, html {
     color: white;
     padding: 20px;
 }
-.logo{
+
+.logo {
     width: 80px;
+    height: auto;
+}
+
+.search-btn {
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 20px;
     height: auto;
 }
 
@@ -45,32 +59,8 @@ body, html {
     color: #f1f1f1;
 }
 
-.search-input:focus{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 )
-}
-
-.search-btn {
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-btn img {
-    width: 30px;
-    height: auto;
-    transition: background-color 0.3s ease;
-}
-
-.search-btn:hover {
-    background-color: #fff9f9;
-
-}
-
-.search-btn:hover img {
-    transform: scale(1.06);
+.search-input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu {
@@ -86,16 +76,14 @@ body, html {
 }
 
 .nav-menu a:hover {
-    text-decoration: underline;
-    color:#003a7a;
+    color: #003a7a;
 }
-
 
 .portada-perfil {
     width: 100%;
-    height: 250px;
+    height: 180px; 
     overflow: hidden;
-    margin-bottom: -100px;
+    margin-bottom: -80px; 
 }
 
 .portada {
@@ -105,11 +93,11 @@ body, html {
 }
 
 .perfil-section {
-    background-color: #333;
+    background-color: #f4f4f4; 
     padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin-top: -150px;
+    margin-top: -100px;
 }
 
 .perfil-header {
@@ -119,8 +107,8 @@ body, html {
 }
 
 .perfil-avatar {
-    width: 150px;
-    height: 150px;
+    width: 100px; 
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
@@ -134,201 +122,63 @@ body, html {
 .perfil-detalles h1 {
     margin: 0;
     color: #006dd1;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .perfil-detalles p {
     margin: 5px 0;
-    color: #f1f0f0;
+    color: #333333;
 }
 
-.perfil-info h2 {
+.perfil-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.informacion-personal {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5em;
     margin-bottom: 10px;
-    font-size: 1.8em;
+    font-weight: bold;
 }
 
-.perfil-info p, .informacion-contacto p {
-    margin-bottom: 15px;
+p {
+    font-size: 1.1em;
+    color: #444;
 }
 
+ul {
+    padding-left: 20px;
+}
 
 .editar-perfil-btn {
     padding: 10px 15px;
     background-color: #0056b3;
     color: white;
     text-decoration: none;
-    border:none;
+    border: none;
     border-radius: 5px;
     margin-top: 10px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-
 }
 
 .editar-perfil-btn:hover {
     background-color: #0057b350;
 }
 
-/* Información adicional */
-.informacion-personal, .modificar-exp {
-    margin: 40px 0;
-}
-
-.informacion-contacto h2, .perfil-info h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 15px;
-
-}
-
-.informacion-contacto p, .perfil-info p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-.cambiar-contraseña{
-    margin-bottom: 20px;
-}
-.publicar-cv{
-    margin-top: 20px;
-}
-
-
-.cambiar-password-btn, .subir-cv-btn{
-    padding: 10px 20px;
-    background-color: #4580c0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
-.cambiar-password-btn:hover, .subir-cv-btn:hover {
-    background-color: #376898;
-}
-
-.password-form input, .form-editar-contacto input, .form-editar-experiencia input, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    outline: none;
-    transition: box-shadow 0.3s ease;
-}
-
-.password-form input:focus, .form-editar-contacto input:focus, .form-editar-experiencia input:focus, select:focus {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.editar-info-contacto-btn, .editar-experiencia-btn{
-    padding: 10px 20px;
-    background-color: #4580c0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.correo-contacto {
-    color: #0056b3;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.correo-contacto:hover {
-    text-decoration: underline;
-    color: #003a7a;
-}
-
-
-body.modal-open {
-    filter: blur(5px);
-    pointer-events: none;
-}
-
-
-.modal {
-    display: none;
-    position: fixed; 
-    z-index: 100; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
-    justify-content: center;
-    align-items: center;
-}
-.modal.show {
-    display: flex; 
-}
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 400px;
-    position: relative;
-    z-index: 101;
-}
-
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Inputs y botones dentro del modal */
-#form-cambiar-contraseña input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #2c2c2c;
-}
-
-#form-cambiar-contraseña button {
-    width: 100%;
-    padding: 10px;
-    background-color: #006dd1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#form-cambiar-contraseña button:hover {
-    background-color: #0056b3;
-}
-
-
-#guardar-password, #guardar-contacto, #guardar-experiencia {
-    padding: 10px 15px;
-    background-color: #5cabff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#guardar-password:hover, #guardar-contacto:hover, #guardar-experiencia:hover {
-    background-color: #0056b3;
-}
-
 footer {
-    background-color: #1e1e1e;
+    background-color: #121212; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -336,6 +186,42 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.main-section, .perfil-section {
+    background: transparent; 
+}
+
+.perfil-section {
+    padding: 30px;
+    margin-top: -150px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#publicar-perfil-container {
+    text-align: center; /* Centra el contenido del contenedor */
+    margin-top: 30px;
+}
+
+
+.publicar-perfil-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center; 
+}
+
+.publicar-perfil-btn:hover {
+    background-color: #0057b3;
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
