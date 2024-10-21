@@ -178,3 +178,11 @@ CREATE TABLE Especialidad (
   PRIMARY KEY (id_Especialidad),
   FOREIGN KEY (id_Postulante) REFERENCES Postulante(id_Postulante)
 );
+
+CREATE TABLE Mensajes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50),
+    destinatario VARCHAR(50),
+    mensaje TEXT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
