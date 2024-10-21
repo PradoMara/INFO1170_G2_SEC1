@@ -1,6 +1,6 @@
 <?php
 
-include 'conexion.php';
+include '/conexion-bd/conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // $id_usuario = se obtiene del login del usuario

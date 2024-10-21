@@ -136,3 +136,12 @@ document.querySelector('.editar-perfil-btn').addEventListener('click', function(
     e.preventDefault();
     // Mostrar el formulario de edición de perfil
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('/conec/get_perfil.php')
+    .then(response => response.json())
+    .then(data => {
+        document.querySelector('.perfil-detalles h1').textContent = data.nombre;
+        document.querySelector('.perfil-detalles p').textContent = `${data.telefono} | ${data.email}`;
+    });
+});
