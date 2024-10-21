@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Consulta</title>
+    <link rel="stylesheet" href="verDetalles.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <div class="logo-nombre">
+                <img src="../Iconos/logo.png" alt="Logo Araucanía Laboral" class="logo">
+                <span class="nombre-sitio">Araucanía Laboral</span>
+            </div>
+            <a href="gestion-consultas.html" class="perfil-enlace">
+                <div class="perfil-usuario">
+                    <img src="../Iconos/ICONO-PERFIL.png" alt="Perfil" class="icono-perfil">
+                    <span class="nombre-usuario">Administrador</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contenedor">
+        <h1>Detalles de la Consulta</h1>
+        <div class="detalles-consulta" id="detalles-consulta">
+        </div>
+
+        <h3>Responder a la Consulta</h3>
+        <div class="respuesta-consulta">
+            <textarea id="respuesta" rows="5" cols="50" placeholder="Escribe tu respuesta aquí..."></textarea>
+        </div>
+        <button id="enviar-respuesta">Enviar Respuesta</button>
+        <div class="back-button">
+            <button id="volver">Volver a Consultas</button>
+        </div>
+    </div>
+
+    <script src="verDetalle.js"></script>
+</body>
+</html>
