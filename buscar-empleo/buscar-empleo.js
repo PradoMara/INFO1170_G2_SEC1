@@ -1,4 +1,4 @@
-// datos ttrabajo simulado 
+// datos ttrabajo simulado  
 const trabajos = [
     { titulo: "Desarrollador Web", ciudad: "Temuco", empresa: "Tech Company", tipo: "Tiempo Completo", fecha: "2023-09-01", categoria: "tecnologia" },
     { titulo: "Diseñador Gráfico", ciudad: "Santiago", empresa: "Creative Agency", tipo: "Freelance", fecha: "2023-09-15", categoria: "administracion" },
@@ -27,7 +27,7 @@ document.getElementById('provincia').addEventListener('change', function() {
         ciudades.forEach(ciudad => {
             const option = document.createElement('option');
             option.value = ciudad.toLowerCase();
-            option.textContent = ciudad;
+            option.textContent = ciudad; 
             ciudadSelect.appendChild(option);
         });
     }
@@ -122,3 +122,43 @@ document.addEventListener('DOMContentLoaded', () => {
     notificacionesBtn.addEventListener('mouseover', cargarNotificaciones);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const buscarBtn = document.getElementById('buscar-btn');
+    const filtrosBtn = document.getElementById('aplicar-filtros');
+
+    const buscarEmpleos = () => {
+        const titulo = document.getElementById('busqueda').value;
+        const ubicacion = document.getElementById('ubicacion').value;
+        const salarioMin = document.getElementById('salario-min').value;
+
+        // Construir la URL de la consulta
+        const url = `buscar_empleo.php?titulo=${titulo}&ubicacion=${ubicacion}&salario_min=${salarioMin}`;
+        
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const resultadosContainer = document.getElementById('lista-resultados');
+                resultadosContainer.innerHTML = '';
+
+                if (data.length > 0) {
+                    document.getElementById('cantidad-resultados').textContent = `Resultados encontrados: ${data.length}`;
+                    data.forEach(oferta => {
+                        const ofertaElement = document.createElement('div');
+                        ofertaElement.classList.add('resultado-item');
+                        ofertaElement.innerHTML = `
+                            <h3>${oferta.descripcion}</h3>
+                            <p><strong>Requisitos:</strong> ${oferta.requisitos}</p>
+                            <p><strong>Ubicación:</strong> ${oferta.ubicacion}</p>
+                            <p><strong>Salario:</strong> ${oferta.salario}</p>
+                        `;
+                        resultadosContainer.appendChild(ofertaElement);
+                    });
+                } else {
+                    document.getElementById('cantidad-resultados').textContent = 'No se encontraron resultados.';
+                }
+            });
+    };
+
+    buscarBtn.addEventListener('click', buscarEmpleos);
+    filtrosBtn.addEventListener('click', buscarEmpleos);
+});
