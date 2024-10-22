@@ -40,3 +40,69 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mostrar notificaciones al pasar el mouse sobre el icono (opcional)
     notificacionesBtn.addEventListener('mouseover', cargarNotificaciones);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Función para cargar ofertas destacadas   
+    const cargarOfertasDestacadas = () => {
+        fetch('get_ofertas.php?destacadas=true')
+            .then(response => response.json())
+            .then(data => {
+                const ofertasContainer = document.getElementById('ofertas-destacadas');
+                ofertasContainer.innerHTML = ''; // Limpiar antes de agregar nuevas ofertas
+
+                if (data.length > 0) {
+                    data.forEach(oferta => {
+                        const ofertaElement = document.createElement('div');
+                        ofertaElement.classList.add('tarjeta-oferta');
+                        ofertaElement.innerHTML = `
+                            <h3 class="titulo-oferta">${oferta.descripcion}</h3>
+                            <p class="empresa-oferta">Empresa: ${oferta.empresa}</p>
+                            <p class="ubicacion-oferta">Ubicación: ${oferta.ubicacion}</p>
+                            <span class="fecha-publicacion">Publicado el ${oferta.fecha_publicacion}</span>
+                            <a href="detalle-oferta.html?id=${oferta.id_Oferta}" class="boton-ver-mas">Ver más</a>
+                        `;
+                        ofertasContainer.appendChild(ofertaElement);
+                    });
+                } else {
+                    ofertasContainer.innerHTML = '<p>No hay ofertas destacadas en este momento.</p>';
+                }
+            });
+    };
+
+
+    const buscarOfertas = (busqueda) => {
+        fetch(`get_ofertas.php?busqueda=${busqueda}`)
+            .then(response => response.json())
+            .then(data => {
+                const ofertasContainer = document.getElementById('ofertas-destacadas');
+                ofertasContainer.innerHTML = ''; 
+
+                if (data.length > 0) {
+                    data.forEach(oferta => {
+                        const ofertaElement = document.createElement('div');
+                        ofertaElement.classList.add('tarjeta-oferta');
+                        ofertaElement.innerHTML = `
+                            <h3 class="titulo-oferta">${oferta.descripcion}</h3>
+                            <p class="empresa-oferta">Empresa: ${oferta.empresa}</p>
+                            <p class="ubicacion-oferta">Ubicación: ${oferta.ubicacion}</p>
+                            <span class="fecha-publicacion">Publicado el ${oferta.fecha_publicacion}</span>
+                            <a href="detalle-oferta.html?id=${oferta.id_Oferta}" class="boton-ver-mas">Ver más</a>
+                        `;
+                        ofertasContainer.appendChild(ofertaElement);
+                    });
+                } else {
+                    ofertasContainer.innerHTML = '<p>No se encontraron ofertas.</p>';
+                }
+            });
+    };
+
+    
+    document.getElementById('BuscadorForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const busqueda = document.getElementById('buscador').value;
+        buscarOfertas(busqueda);
+    });
+
+
+    cargarOfertasDestacadas();
+});
