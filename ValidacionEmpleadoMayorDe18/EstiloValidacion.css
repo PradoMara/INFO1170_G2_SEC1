@@ -112,7 +112,6 @@ button:hover {
     color: #ffcc00; 
 }
 
-
 .footer {
     background-color: #000; 
     color: #ffcc00; 
@@ -132,3 +131,14 @@ button:hover {
 .footer a:hover {
     text-decoration: underline;
 }
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
