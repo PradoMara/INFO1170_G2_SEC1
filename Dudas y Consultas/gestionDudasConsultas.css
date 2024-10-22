@@ -1,15 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(to bottom, #000000, #ffffff); /* Fondo difuminado */
     margin: 0;
     padding: 0;
+    color: #ffcc00; /* Texto principal en amarillo */
 }
 
 .header {
-    background-color: #333;
+    background-color: #000000; /* Fondo negro */
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     align-items: center;
 }
 
@@ -19,19 +20,19 @@ body {
 }
 
 .header .logo img {
-    width: 50px; 
+    width: 50px;
     height: auto;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .header .logo h1 {
-    color: white;
+    color: #ffcc00; /* Texto en amarillo */
     margin-left: 10px;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .header .user-profile {
-    color: white;
+    color: #ffcc00; /* Texto en amarillo */
     display: flex;
     align-items: center;
 }
@@ -40,7 +41,7 @@ body {
     width: 40px;
     margin-left: 10px;
     border-radius: 50%;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .gestion-consultas {
@@ -50,6 +51,7 @@ body {
 
 .gestion-consultas h2 {
     font-size: 24px;
+    color: #ffffff; /* Texto en amarillo */
 }
 
 .search-filter {
@@ -82,13 +84,13 @@ body {
 .consulta {
     display: flex;
     align-items: center;
-    background-color: white;
-    padding: 20px;  
-    margin-bottom: 20px;  
+    background-color: #242424;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 90%;  
-    max-width: 1000px;  
+    width: 90%;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -97,15 +99,17 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .consulta .details p {
-    font-size: 16px;  
+    font-size: 16px;
+    color: #ffffff; /* Texto en amarillo */
 }
 
 .consulta .details h3 {
-    font-size: 20px;  
+    font-size: 20px;
+    color: #ffffff; /* Título en amarillo */
 }
 
 .consulta p {
@@ -115,12 +119,12 @@ body {
 .buttons {
     display: flex;
     flex-direction: column;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .buttons button {
-    background-color: #007BFF;
-    color: white;
+    background-color: #444444;
+    color: #ffffff; /* Texto del botón en amarillo */
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -129,15 +133,15 @@ body {
 }
 
 .buttons button:hover {
-    background-color: #0056b3;
+    background-color: #555555;
 }
 
 .buttons .btn-ver {
-    background-color: #28a745;
+    background-color: #404240;
 }
 
 .buttons .btn-ver:hover {
-    background-color: #218838;
+    background-color: #555655;
 }
 
 .back-button {
@@ -146,8 +150,8 @@ body {
 }
 
 .back-button button {
-    background-color: #007BFF;
-    color: white;
+    background-color: #444444;
+    color: #ffffff; /* Texto del botón en amarillo */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -157,4 +161,13 @@ body {
 
 .back-button button:hover {
     background-color: #5a6268;
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Fondo negro */
+    color: #ffcc00; /* Texto en amarillo */
+    text-align: center;
+    padding: 10px;
+    width: 100%;
 }
