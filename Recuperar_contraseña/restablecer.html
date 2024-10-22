@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña</title>
+    <link rel="stylesheet" href="restablecer.css"> 
+</head>
+<body>
+    <header class="barra-superior">
+        <img src="../Iconos/logo.png" alt="Logo de Araucania Laboral" class="logo">
+    </header>
+
+    <main class="container">
+        <h1>Restablecer Contraseña</h1>
+        <form method="POST" action="restablecer.php">
+            <input type="hidden" name="token" value="<?php echo $_GET['token']; ?>">
+            <input type="password" name="nueva_contrasena" required placeholder="Nueva contraseña">
+            <button type="submit">Restablecer Contraseña</button>
+        </form>
+    </main>
+</body>
+</html>

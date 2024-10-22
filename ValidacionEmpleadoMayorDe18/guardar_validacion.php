@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include 'conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -10,12 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO validacion_empleados18 (rut, direccion, edad, numero_serie_carnet) 
             VALUES ('$rut', '$direccion', '$edad', '$numeroSerieCarnet')";
 
-    if ($conexion->query($sql) === TRUE) {
-        echo "Validación guardada exitosamente";
+    if (mysqli_query($conexion, $sql)) {
+        header("Location: ../inicio-18años/main.html");
+        exit();
     } else {
-        echo "Error en la inserción: " . $conexion->error;
+        echo "Error en la inserción: " . mysqli_error($conexion);
     }
 
-    $conexion->close();
+    // Cerrar la conexión
+    mysqli_close($conexion);
 }
 ?>

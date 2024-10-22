@@ -19,6 +19,12 @@ function validarFormulario() {
         return false;
     }
 
+    // Validación de la dirección
+    if (direccion.trim() === "") {
+        mostrarError('La dirección no puede estar vacía.', 'direccion');
+        return false;
+    }
+
     // Validación de la edad
     if (isNaN(edad) || edad < 18) {
         mostrarError('Debes tener al menos 18 años para postular.', 'edad');
@@ -40,6 +46,13 @@ function mostrarError(mensaje, campoId) {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
     errorDiv.textContent = mensaje;
+
+    // Revisar si ya existe un mensaje de error para el campo
+    const errorExistente = campo.nextElementSibling;
+    if (errorExistente && errorExistente.classList.contains('error-message')) {
+        errorExistente.remove(); // Eliminar el mensaje existente si lo hay
+    }
+
     campo.insertAdjacentElement('afterend', errorDiv);
     campo.focus();
 
