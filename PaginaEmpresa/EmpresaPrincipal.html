@@ -30,7 +30,7 @@
         </section>
 
         <section class="postulantes">
-            <div class="postulante-card">
+            <div class="postulante-card" data-id="1">
                 <h3>Juan Pérez</h3>
                 <p><strong>Profesión:</strong> Desarrollador Frontend</p>
                 <p><strong>Ubicación:</strong> Temuco</p>
@@ -38,7 +38,7 @@
                 <button>Contactar</button>
             </div>
 
-            <div class="postulante-card">
+            <div class="postulante-card" data-id="2">
                 <h3>María Gómez</h3>
                 <p><strong>Profesión:</strong> Analista de Datos</p>
                 <p><strong>Ubicación:</strong> Angol</p>
@@ -46,7 +46,7 @@
                 <button>Contactar</button>
             </div>
 
-            <div class="postulante-card">
+            <div class="postulante-card" data-id="3">
                 <h3>Juan Gutierrez</h3>
                 <p><strong>Profesión:</strong> Analista de Datos</p>
                 <p><strong>Ubicación:</strong> Temuco</p>
@@ -56,6 +56,20 @@
 
         </section>
     </main>
+
+    <!-- Modal para enviar mensaje -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enviar mensaje al postulante</h2>
+            <form id="mensajeForm" action="enviar_mensaje.php" method="POST">
+                <input type="hidden" name="postulante_id" id="postulante_id">
+                <label for="mensaje">Mensaje personalizado:</label>
+                <textarea name="mensaje" id="mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar solicitud de reunión</button>
+            </form>
+        </div>
+    </div>    
 
     <footer>
         <p>© 2024 Empresa ArucaniaLaboral. Todos los derechos reservados.</p>
