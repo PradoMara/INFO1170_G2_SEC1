@@ -8,18 +8,15 @@
 </head>
 <body>
 
-    <!-- Barra de navegación -->
     <nav class="barra-navegacion">
         <div class="contenedor-navegacion">
-            <!-- Logo y Nombre -->
             <div class="logo-nombre">
                 <img src="img/logo.png" alt="Logo Araucanía Laboral" class="logo">
                 <span class="nombre-sitio">Araucanía Laboral</span>
             </div>
-            <!-- Perfil de usuario (no clickable en esta página) -->
             <div class="perfil-usuario">
                 <img src="img/perfil.png" alt="Perfil" class="icono-perfil">
-                <span class="nombre-usuario">Administrador</span>
+                <span class="nombre-usuario" id="nombre-usuario"></span>
             </div>
         </div>
     </nav>
@@ -28,21 +25,25 @@
     <div class="contenedor-perfil">
         <div class="perfil-cabecera">
             <img src="img/perfil.png" alt="Foto de perfil" class="foto-perfil">
-            <h2 class="nombre-perfil">Administrador</h2>
-            <p class="correo-perfil">admin@araucaniaboral.cl</p>
+            <h2 class="nombre-perfil" id="nombre-completo"></h2>
+            <p class="correo-perfil" id="correo-admin"></p>
         </div>
 
         <div class="perfil-detalles">
             <h3 class="titulo-seccion">Detalles del Perfil</h3>
-            <p><strong>Nombre Completo:</strong> Administrador Principal</p>
-            <p><strong>Correo Electrónico:</strong> admin@araucaniaboral.cl</p>
-            <p><strong>Rol:</strong> Super Administrador</p>
+            <p><strong>Nombre Completo:</strong> <span id="nombre-detalle"></span></p>
+            <p><strong>Correo Electrónico:</strong> <span id="correo-detalle"></span></p>
+            <p><strong>Rol:</strong> <span id="rol-detalle"></span></p>
+            <p><strong>Teléfono:</strong> <span id="telefono-detalle"></span></p>
+            <p><strong>Acerca de mí:</strong> <span id="acerca-detalle"></span></p>
+            <p><strong>Experiencia:</strong> <span id="experiencia-detalle"></span></p>
+            <p><strong>Educación:</strong> <span id="educacion-detalle"></span></p>
         </div>
 
         <div class="perfil-acciones">
             <button class="btn-editar">Editar Perfil</button>
             <button class="btn-password">Cambiar Contraseña</button>
-            <button class="btn-logout">Volver atras</button>
+            <button class="btn-logout">Volver atrás</button>
         </div>
     </div>
 

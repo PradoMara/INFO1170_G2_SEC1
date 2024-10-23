@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil de Usuario para mayores de edad en la plataforma Araucanía Laboral.">
+    <title>Perfil de Usuario - Mayor de Edad</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="../Iconos/logo.png" alt="Logo" class="logo">
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="/inicio-18años/main.html">Inicio</a></li>
+                        <li><a href="/buscar-empleo/buscar-empleo.html">Ofertas de Trabajo</a></li>
+                        <li><a href="buzon-notificaciones.html">Notificaciones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="perfil-section">
+            <div class="container perfil-container">
+                <div class="perfil-header">
+                    <h1 id="nombre"></h1>
+                    <p id="telefono">Teléfono: </p>
+                    <p id="correo">Correo: </p>
+                    <p id="acerca-de">Acerca de mí: </p>
+                    <button class="editar-perfil-btn" id="editar-perfil">Editar Perfil</button>
+                    <button class="guardar-perfil-btn" id="guardar-perfil" style="display: none;">Guardar Perfil</button>
+                </div>
+
+                <div class="perfil-info">
+                    <h2>Experiencia</h2>
+                    <textarea id="experiencia" disabled></textarea>
+
+                    <h2>Educación</h2>
+                    <textarea id="educacion" disabled></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Araucanía Laboral - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="perfilMayorDeEdad.js"></script>
+</body> 
+</html>
