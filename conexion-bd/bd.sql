@@ -50,9 +50,16 @@ CREATE TABLE Empresa (
   rut_Empresa VARCHAR(50),
   des_Empresa VARCHAR(500),
   id_Usuario INT,
+  ciudad VARCHAR(50),
+  codigo_postal VARCHAR(20),
+  telefono VARCHAR(20),
+  email VARCHAR(100),
+  contacto_principal VARCHAR(100),
+  puesto_contacto VARCHAR(100),
   PRIMARY KEY (id_Empresa),
   FOREIGN KEY (id_Usuario) REFERENCES Usuarios(id_Usuario)
 );
+
 
 CREATE TABLE Politica_Privacidad (
   id_Privacidad INT,
