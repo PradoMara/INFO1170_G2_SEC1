@@ -8,23 +8,19 @@
 </head>
 <body>
   <header>
-    <div class="header-content">
-        <img src="../Iconos/logo.png" alt="Logo" class="logo">
-        <h1>Panel del Administrador</h1>
-    </div>
-</header>
+    <h1>Panel de Administrador</h1>
+  </header>
 
   <div class="container">
-    <form class="login-form" id="adminLoginForm">
+    <form class="login-form" id="adminLoginForm" method="POST" action="admin_login.php">
       <h2>Iniciar Sesión</h2>
-      <input type="email" id="email" placeholder="Correo Electrónico" required>
-      <input type="password" id="password" placeholder="Contraseña" required>
-      <div class="error-message" id="errorMessage"></div>
+      <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <div class="error-message" id="errorMessage">
+      </div>
       <input type="submit" value="Iniciar Sesión">
-      <a href="../Recuperar_contraseña/recuperar-contraseña.html">¿Olvidaste tu contraseña?</a>
+      <a href="#">¿Olvidaste tu contraseña?</a>
     </form>
   </div>
-
-  <script src="admin_login.js"></script>
 </body>
 </html>

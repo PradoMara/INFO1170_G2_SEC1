@@ -1,35 +1,19 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1e1e2f;
+  background: linear-gradient(to bottom, #000000, #ffffff); /* Fondo difuminado */
   color: #ffffff;
 }
 
 header {
-  background-color: #3a3f5c;
-  padding: 10px 20px; /* Ajusta el espacio alrededor del contenido */
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Mantiene el título centrado */
-  position: relative;
-}
-
-.logo {
-  position: absolute;
-  left: 20px; /* Coloca el logo en la esquina superior izquierda */
-  top: 50%;
-  transform: translateY(-50%); /* Centra verticalmente el logo */
-  max-height: 50px; /* Ajusta el tamaño del logo */
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
 }
 
 header h1 {
   margin: 0;
-  color: #ffffff;
-  text-align: center;
-  flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+  color: #ffcc00; /* Letras en amarillo */
 }
 
 .container {
@@ -40,7 +24,7 @@ header h1 {
 }
 
 .login-form {
-  background-color: #2d2d44;
+  background-color: #242424;
   padding: 30px;
   border-radius: 8px;
   width: 300px;
@@ -49,7 +33,7 @@ header h1 {
 
 .login-form h2 {
   text-align: center;
-  color: #ffffff;
+  color: #ffffff; /* Letras en amarillo */
 }
 
 .login-form input[type="email"],
@@ -59,12 +43,12 @@ header h1 {
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background-color: #1e1e2f;
+  background-color: #333232;
   color: #f5f5f5;
 }
 
 .login-form input[type="submit"] {
-  background-color: #5a63d4;
+  background-color: #007bff;
   color: #ffffff;
   border: none;
   padding: 10px;
@@ -83,7 +67,7 @@ header h1 {
 }
 
 a {
-  color: #ffcc00;
+  color: #ffcc00; /* Enlaces en amarillo */
   display: block;
   text-align: center;
   margin-top: 15px;

@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../Iconos/logo.png" alt="Logo">
+            <img src="Logo.png" alt="Logo">
         </div>
         <nav>
             <ul>
@@ -29,31 +29,8 @@
             <p>Revisa y contacta a los mejores candidatos para tu empresa.</p>
         </section>
 
-        <section class="postulantes">
-            <div class="postulante-card">
-                <h3>Juan Pérez</h3>
-                <p><strong>Profesión:</strong> Desarrollador Frontend</p>
-                <p><strong>Ubicación:</strong> Temuco</p>
-                <p><strong>Experiencia:</strong> 3 años</p>
-                <button>Contactar</button>
-            </div>
-
-            <div class="postulante-card">
-                <h3>María Gómez</h3>
-                <p><strong>Profesión:</strong> Analista de Datos</p>
-                <p><strong>Ubicación:</strong> Angol</p>
-                <p><strong>Experiencia:</strong> 5 años</p>
-                <button>Contactar</button>
-            </div>
-
-            <div class="postulante-card">
-                <h3>Juan Gutierrez</h3>
-                <p><strong>Profesión:</strong> Analista de Datos</p>
-                <p><strong>Ubicación:</strong> Temuco</p>
-                <p><strong>Experiencia:</strong> 2 años</p>
-                <button>Contactar</button>
-            </div>
-
+        <section class="postulantes" id="postulantes-container">
+            <!-- Aquí se cargarán dinámicamente los postulantes -->
         </section>
     </main>
 
@@ -61,6 +38,38 @@
         <p>© 2024 Empresa ArucaniaLaboral. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="EmpresaPrincipal.js"></script>
+    <script>
+        // Función para cargar postulantes desde PHP usando AJAX
+        function cargarPostulantes() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'cargar_postulantes.php', true);
+            xhr.onload = function () {
+                if (this.status === 200) {
+                    const postulantes = JSON.parse(this.responseText);
+
+                    let output = '';
+                    postulantes.forEach(postulante => {
+                        output += `
+                            <div class="postulante-card" data-id="${postulante.id}">
+                                <h3>${postulante.nombre}</h3>
+                                <p><strong>Profesión:</strong> ${postulante.profesion}</p>
+                                <p><strong>Ubicación:</strong> ${postulante.ubicacion}</p>
+                                <p><strong>Experiencia:</strong> ${postulante.experiencia} años</p>
+                                <button>Contactar</button>
+                            </div>
+                        `;
+                    });
+
+                    document.getElementById('postulantes-container').innerHTML = output;
+                } else {
+                    document.getElementById('postulantes-container').innerHTML = '<p>Error al cargar los postulantes</p>';
+                }
+            };
+            xhr.send();
+        }
+
+        // Llamar a la función al cargar la página
+        document.addEventListener('DOMContentLoaded', cargarPostulantes);
+    </script>
 </body>
 </html>

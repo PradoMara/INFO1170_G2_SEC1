@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buscar empleo en la página Araucanía Laboral.">
-    <title>Buscar Empleo</title>
-    <link rel="stylesheet" href="buscar-empleo.css">
-    <link rel="icon" type="image/png" href="/Images/loguito1.png">
-</head>
-<body>
-    <header id="header">
-        <div class="container">
-            <div class="header-row">
-                <div class="logo-container">
-                    <a href="../Portada_AraucaniaLaboral/portada.html" aria-label="Ir al inicio">
-                        <img src="../Iconos/logo.png" alt="Logo de Araucanía Laboral" class="logo" id="logo-home">
-                    </a>
-                </div>
-                <nav class="nav-menu">
-                    <ul class="nav-items">
-                        <li><a href="../inicio-18años/main.html">Home</a></li>
-                    </ul>
-                </nav>
-                <div class="user-account">
-                    <div class="Not-post">
-                        <button class="postulaciones" id="postulaciones-btn">Mis postulaciones</button>
-                        <button id="notificaciones-btn" aria-label="Notificaciones">
-                            <img class="notificaciones" src="../Iconos/IconoNotificacion.jpg" alt="Notificaciones">
-                        </button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Buscar empleo en la pagina Araucanía Laboral.">
+        <title>Buscar Empleo</title>
+        <link rel="stylesheet" href="buscar-empleo.css">
+        <link rel="icon" type="image/png" href="/Images/loguito1.png">
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <div class="header-row">
+                    <div class="logo-container">
+                        <a href="main.html">
+                            <img src="/Images/logo-sin-fondo1.png" alt="Logo" class="logo" id="logo-home">
+                        </a>
                     </div>
-                    <div class="user-dropdown">
-                        <button aria-expanded="false" id="dropdown-toggle">
-                            <img src="../Iconos/Perfil-Icono.png" alt="Usuario" class="user-img" id="logo-user">
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="#" id="cv-btn">Editar CV</a>
-                            <a href="#" id="perfil-btn">Mi cuenta</a>
-                            <a href="#" id="recomendacion-btn">Recomendaciones</a>
-                            <a href="#" id="cerrar-btn">Cerrar sesión</a>
+                    <nav class="nav-menu">
+                        <ul class="nav-items">
+                            <li><a href="/inicio-18años/main.html">Home</a></li>
+                        </ul>
+                    </nav>
+                    <div class="user-account">
+                        <div class="Not-post">
+                            <button class="postulaciones"  id="postulaciones-btn" >Mis postulaciones</button>
+                            
+                            <img class="notificaciones" id="notificaciones-btn" src="https://cdn-icons-png.flaticon.com/512/60/60753.png" alt="Notificaciones"> 
+                            
+                        </div>
+                        <div class="user-dropdown">
+                            
+                            <img src="https://s3.amazonaws.com/cht2/public/img/account.png" alt="Usuario" class="user-img" id="logo-user">
+                            
+                            <a href="login.html" class="dropdown-toggle" aria-expanded="false"></a>
+                            <div class="dropdown-menu">
+                                <span id="cv-btn">Editar CV</span>
+                                <span id="perfil-btn"> Mi cuenta</span>
+                                <span id="recomendacion-btn">Recomendaciones</span>
+                                <span id="cerrar-btn">Cerrar sesion</span>
+                            </div>                          
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <main id="main">
-        <section class="buscador-empleo">
-            <input type="text" id="busqueda" placeholder="Buscar trabajo por título, empresa o palabra clave" class="buscador-grande" aria-label="Buscar trabajo">
-            <button id="buscar-btn">Buscar</button>
-        </section>
-
-        <section class="filtros">
-            <h2>Filtrar por</h2>
-
-            <div class="filtro">
-                <label for="provincia">Provincia:</label>
-                <select id="provincia">
-                    <option value="todas">Todas las provincias</option>
-                    <option value="malleco">Malleco</option>
-                    <option value="cautin">Cautín</option>
-                </select>
+        </header>
+        <main id="main">
+            <section class="buscador-empleo">
+                <input type="text" id="busqueda" placeholder="Buscar trabajo por título, empresa o palabra clave" class="buscador-grande">
+                <button id="buscar-btn">Buscar</button>
+            </section>
+            <section class="filtros">
+                <h2>Filtrar por</h2>
+        
+                <div class="filtro">
+                    <label for="provincia">Provincia:</label>
+                    <select id="provincia">
+                        <option value="todas">Todas las provincias</option>
+                        <option value="malleco">Malleco</option>
+                        <option value="cautin">Cautín</option>
+                    </select>
+                </div>
+        
+                <div class="filtro">
+                    <label for="ciudad">Ciudad:</label>
+                    <select id="ciudad">
+                        <option value="todas">Todas las ciudades</option>
+                    </select>
+                </div>
+        
+                <div class="filtro">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" id="empresa" placeholder="Buscar por empresa">
+                </div>
+        
+                <div class="filtro">
+                    <label for="tipo">Tipo de Trabajo:</label>
+                    <select id="tipo">
+                        <option value="todos">Todos los tipos</option>
+                        <option value="tiempo-completo">Tiempo Completo</option>
+                        <option value="medio-tiempo">Medio Tiempo</option>
+                        <option value="freelance">Freelance</option>
+                    </select>
+                </div>
+        
+                <div class="filtro">
+                    <label for="fecha-publicacion">Fecha de Publicación:</label>
+                    <input type="date" id="fecha-publicacion">
+                </div>
+        
+                <div class="filtro">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="todas">Todas las categorías</option>
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="administracion">Administración</option>
+                        <option value="ventas">Ventas</option>
+                    </select>
+                </div>
+                <div class="filtro">
+                    <label for="salario-min">Salario Mínimo:</label>
+                    <input type="number" id="salario-min" placeholder="Ej: 500000">
+                </div>
+                
+                <button id="aplicar-filtros">Aplicar Filtros</button>
+            </section>
+        
+            <section class="resultados">
+                <h2 id="cantidad-resultados">Resultados encontrados: 0</h2>
+                <div id="lista-resultados"></div>
+            </section>
+        </main>
+        <div id="notificaciones-container" class="notificaciones-modal"></div>
+        <footer class="footer">
+            <div id="copy">
+                <p>&copy; 2024 Araucania Laboral. Todos los derechos reservados.</p>
             </div>
-
-            <div class="filtro">
-                <label for="ciudad">Ciudad:</label>
-                <select id="ciudad">
-                    <option value="todas">Todas las ciudades</option>
-                </select>
-            </div>
-
-            <div class="filtro">
-                <label for="empresa">Empresa:</label>
-                <input type="text" id="empresa" placeholder="Buscar por empresa">
-            </div>
-
-            <div class="filtro">
-                <label for="tipo">Tipo de Trabajo:</label>
-                <select id="tipo">
-                    <option value="todos">Todos los tipos</option>
-                    <option value="tiempo-completo">Tiempo Completo</option>
-                    <option value="medio-tiempo">Medio Tiempo</option>
-                    <option value="freelance">Freelance</option>
-                </select>
-            </div>
-
-            <div class="filtro">
-                <label for="fecha-publicacion">Fecha de Publicación:</label>
-                <input type="date" id="fecha-publicacion">
-            </div>
-
-            <div class="filtro">
-                <label for="categoria">Categoría:</label>
-                <select id="categoria">
-                    <option value="todas">Todas las categorías</option>
-                    <option value="tecnologia">Tecnología</option>
-                    <option value="administracion">Administración</option>
-                    <option value="ventas">Ventas</option>
-                </select>
-            </div>
-
-            <button id="aplicar-filtros">Aplicar Filtros</button>
-        </section>
-
-        <section class="resultados">
-            <h2 id="cantidad-resultados">Resultados encontrados: 0</h2>
-            <div id="lista-resultados"></div>
-        </section>
-    </main>
-
-    <div id="notificaciones-container" class="notificaciones-modal" aria-hidden="true"></div>
-
-    <footer class="barra-contacto">
-        <p>Contacto: <a href="mailto:integracion58@gmail.com">integracion58@gmail.com</a> | Teléfono: +56 9 9992 9342</p>
-    </footer>
-
-    <script src="buscar-empleo.js"></script>
-</body>
+        </footer>  
+        <script src="buscar-empleo.js"></script>
+    </body>
 </html>
