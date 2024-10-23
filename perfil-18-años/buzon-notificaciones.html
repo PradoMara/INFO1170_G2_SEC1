@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificaciones</title>
-    <link rel="stylesheet" href="/inicio-18años/styleMain.css">
+    <title>Buzón de Notificaciones</title>
+    <link rel="stylesheet" href="styleMain.css">
 </head>
 <body>
-    <div id="notificaciones-container" class="notificaciones-content">
-        <button class="close-btn" id="close-notificaciones-btn">&times;</button>
-        <h3>Notificaciones</h3>
+    <header class="barra-superior">
+        <div class="logo">
+            <img src="../Iconos/logo.png" alt="Logo de la página" class="img-logo">
+        </div>
+        <h1 class="titulo">Buzón de Notificaciones</h1>
+    </header>
+
+    <section class="notificaciones-static">
         <ul id="notificaciones-list">
-        </ul>   
-    </div>
+            <!-- Las notificaciones se cargarán aquí dinámicamente con JS -->
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <nav class="footer-links">
+            <a href="contacto.html">Contacto</a>
+            <span> | </span>
+            <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y Condiciones</a>
+        </nav>
+    </footer>
+
+    <script src="notificaciones.js"></script>
 </body>
 </html>

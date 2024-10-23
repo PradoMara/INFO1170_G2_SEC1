@@ -1,15 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const comentarios = [
-        { autor: "Postulante 1", texto: "Excelente plataforma.", fecha: "2024-10-12" },
-        { autor: "Empresa ABC", texto: "Muy útil para encontrar talento local.", fecha: "2024-10-10" },
-        { autor: "Postulante 2", texto: "Facilita mucho la búsqueda de empleo.", fecha: "2024-10-09" }
-    ];
-
     const listaComentarios = document.getElementById("comentarios-lista");
 
-    comentarios.forEach(comentario => {
-        const li = document.createElement("li");
-        li.textContent = `${comentario.autor}: "${comentario.texto}" - ${comentario.fecha}`;
-        listaComentarios.appendChild(li);
-    });
+    fetch('comentarios.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                listaComentarios.innerHTML = `<li>${data.error}</li>`;
+            } else {
+                data.forEach(comentario => {
+                    const li = document.createElement("li");
+                    
+                    const autor = document.createElement("span");
+                    autor.classList.add("comentario-autor");
+                    autor.textContent = `${comentario.autor}`;
+
+                    const texto = document.createElement("span");
+                    texto.classList.add("comentario-texto");
+                    texto.textContent = `: "${comentario.texto}"`;
+
+                    const fecha = document.createElement("span");
+                    fecha.classList.add("comentario-fecha");
+                    fecha.textContent = ` - ${comentario.fecha}`;
+
+                    li.appendChild(autor);
+                    li.appendChild(texto);
+                    li.appendChild(fecha);
+
+                    listaComentarios.appendChild(li);
+                });
+            }
+        })
+        .catch(error => {
+            listaComentarios.innerHTML = `<li>Error al cargar los comentarios</li>`;
+            console.error('Error al cargar los comentarios:', error);
+        });
 });

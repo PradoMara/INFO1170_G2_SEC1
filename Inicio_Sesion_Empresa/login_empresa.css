@@ -89,9 +89,10 @@ input[type="password"] {
 }
 
 input:focus {
-    border-color: #ffffff; 
+    border-color: #ffcc00;  
     outline: none;
 }
+
 
 button {
     width: 100%;

@@ -1,0 +1,103 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #000000 0%, #333333 50%, #ffffff 100%); 
+    background-attachment: fixed; 
+    color: #333333;
+}
+
+
+.barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; 
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    flex: 0 1 auto;
+    max-width: 100px;
+}
+
+.img-logo {
+    width: 100%;
+    height: auto;
+}
+
+.titulo {
+    flex: 1;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.notificaciones-static {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#notificaciones-list {
+    list-style: none;
+    padding: 0;
+}
+
+#notificaciones-list li {
+    background-color: #444444;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#notificaciones-list li p {
+    margin: 5px 0;
+}
+
+.notificaciones-list button {
+    background-color: #1e63d0;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.notificaciones-list button:hover {
+    background-color: #0011ff;
+}
+
+.footer {
+    background-color: #000000; 
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #dddddd;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

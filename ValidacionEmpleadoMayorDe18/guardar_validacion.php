@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error en la inserción: " . mysqli_error($conexion);
     }
 
-    // Cerrar la conexión
     mysqli_close($conexion);
 }
 ?>

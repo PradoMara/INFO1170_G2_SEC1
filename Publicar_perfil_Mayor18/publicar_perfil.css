@@ -114,3 +114,10 @@ body, html {
 .footer a:hover {
     text-decoration: underline;
 }
+
+#progress-bar {
+    font-size: 1.2em;
+    color: #006dd1;
+    margin-top: 15px;
+}
+
