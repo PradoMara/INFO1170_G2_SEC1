@@ -1,28 +1,28 @@
 body, html {
-    background: linear-gradient(to right, #000000, #ffffff);
-    background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg);
+    background-color: #5BC0BE;
+    background-image: url(https://media.istockphoto.com/id/1269684067/es/foto/poner-en-marcha-el-desarrollo-de-negocios-trabajo-en-equipo-discutiendo-sobre-el-informe-en.jpg?s=612x612&w=0&k=20&c=CYQC-eQ3w2kPy75a8YUQH7tbkWIHIo2WN7KcKEbHLZ4=);
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    color: #f1f1f1;
+    color: #ffffff;
 
 }
 
 .container {
     max-width: 1200px;
-    margin:    0 auto;
+    margin:    0 auto;  
     padding:  0 20px ;
 }
 
 #header {   
-    background-color:             #121212;
+    background-color:             #0B132B;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     padding:                         20px 0; 
     position:                         fixed;
     top:                                  0;
     width:                             100%;
     z-index:                           1000;
-    border-bottom:      2px solid #063a72;
+    border-bottom:      2px solid #084298;
 }
 #conten{
     margin-top: 120px;
@@ -61,7 +61,7 @@ body, html {
 
 .nav-items  li a{
     text-decoration:       none;
-    color: #f1f1f1;
+    color: #ffffff;
     font-size:            1.2em;
 }
 
@@ -157,14 +157,14 @@ body, html {
 
 }
 .section{
-    background-color: #333;
-    color: #f1f1f1;
+    background-color: #1C2541;
+    color: #ffffff;
     padding: 50px 20px;
     text-align: center;
 }
 
 .ofertas-destacadas {
-    background-color: #222;
+    background-color: #1C2541;
     padding: 50px 20px;
 }
 
@@ -182,13 +182,14 @@ body, html {
 .tarjeta-oferta {
     height: auto;
     width: 1000px;
-    background-color: #444;
+    background-color: #3A506B;
     padding: 20px;
     border: 1px solid #555;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     margin: 0 auto;
+    color: #ffffff;
 }
 
 .tarjeta-oferta:hover {
@@ -212,7 +213,7 @@ body, html {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #0e6dd1;
+    background-color: #314f74;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -220,11 +221,11 @@ body, html {
 }
 
 .boton-ver-mas:hover {
-    background-color: #063a72;
+    background-color: #0d4581;
 }
 
 .footer{
-    background-color: #1e1e1e;
+    background-color: #0B132B;
     color:              white;
     text-align:          center;
     padding:             20px 0;    
@@ -252,7 +253,7 @@ body, html {
 }
 
 .postulaciones:hover{
-    background-color: #d5d9dd;
+    background-color: #5BC0BE;
 }
 .notificaciones{
     height: 28px;
@@ -320,7 +321,7 @@ body, html {
     padding:            10px;
     width:             300px;
     height:             40px;
-    border: 1px solid #0e6dd1;
+    border: 1px solid #3A506B;
     border-radius:          20px;
 
 }
@@ -342,7 +343,7 @@ body, html {
 }
 
 #BuscadorForm button:hover{
-    background-color: #0056b3;
+    background-color: #084298;
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transform: scale(1.05)
@@ -425,23 +426,24 @@ body, html {
 }
 
 .detalle-oferta {
-    background-color: #333;
+    background-color: #1C2541;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     max-width: 800px;
     margin: 0 auto;
+    color: #ffffff;
 }
 
 .detalle-oferta h1, .detalle-oferta h2 {
-    color: #0e6dd1; 
+    color: #3A506B; 
 }
 
 .boton-postularse {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0e6dd1;
+    background-color: #3A506B;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -449,5 +451,5 @@ body, html {
 }
 
 .boton-postularse:hover {
-    background-color: #0056b3;
+    background-color: #084298;
 }

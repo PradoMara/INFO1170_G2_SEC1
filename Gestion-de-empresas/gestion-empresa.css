@@ -1,18 +1,18 @@
 body{
     font-family: "Poppins", sans-serif; 
-    background: linear-gradient(to right, #000000, #ffffff);
+    background-color: #5Bc0be;
     margin: 0;
     padding: 0;
-    color: #f1f1f1;
+    color: #ffffff;
 }
 
 .barra-navegacion{
-    background-color: #121212;
+    background-color: #0B132B;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100;   
 }
 
 .contenedor-navegacion{
@@ -40,7 +40,7 @@ body{
 }   
 
 .nombre-sitio{
-    color: white;
+    color: #ffffff;
     font-size: 24px;
     font-weight: bold;
 }
@@ -75,7 +75,7 @@ body{
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #333;
+    background-color: #1c2541;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
@@ -84,7 +84,7 @@ body{
 .texto-bienvenida{
     text-align: center;
     font-size: 28px;
-    color: #0e6dd1;
+    color: #3A506B;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-out;
     
@@ -109,7 +109,7 @@ body{
 }
 
 .solicitud{
-    background-color: #444;
+    background-color: #1C2541;
     border: 1px solid #333;
     padding: 20px;
     border-radius: 8px;
@@ -123,11 +123,11 @@ body{
 .solicitud h3{
     margin: 0;
     font-size: 20px;
-    color:#0c71dd;
+    color:#ffffff;
 
 }
 .solicitud p a {
-    color: #0e6dd1;
+    color: #ffffff;
 }
 .solicitud p a:hover {
     color: #0056b3;
@@ -169,7 +169,7 @@ button.rechazar:hover{
 }
 
 .footer{
-    background-color: #091420;
+    background-color: #0B132B;
     color:white;
     text-align: center;
     padding: 20px 0;
@@ -191,11 +191,11 @@ button.rechazar:hover{
 
 .filtro {
     padding: 10px;
-    border: 1px solid #666;
-    background-color: #2c2c2c;
+    border: 1px solid #161d31;
+    background-color: #3A506B;
     border-radius: 5px;
     font-size: 16px;
-    color: #f1f1f1;
+    color: #ffffff;
 }
 
 #busqueda {
@@ -207,12 +207,12 @@ button.rechazar:hover{
     text-align: center;
 }
 .filtro select {
-    background-color: #2c2c2c;
+    background-color: #1C2541;
     color: #f1f1f1;
 }
 
 .filtro select option {
-    background-color: #1e1e1e;
+    background-color:  #3A506B;
     color: #f1f1f1;
 }
 

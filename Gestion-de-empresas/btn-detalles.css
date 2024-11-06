@@ -1,13 +1,13 @@
 body{
     font-family: "Poppins", sans-serif; 
-    background: linear-gradient(to  right, #000000, #ffffff);
+    background-color: #5Bc0be;
     margin: 0;
     padding: 0;
-    color: #f1f1f1;
+    color: #ffffff;
 }
 
 .barra-navegacion{
-    background-color: #121212;
+    background-color: #0B132B;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -40,7 +40,7 @@ body{
 }   
 
 .nombre-sitio{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: bold;
 }
@@ -75,16 +75,17 @@ body{
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #333;
+    background-color: #1C2541;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     align-items: center;    
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 
 }
 #nombre-empresa-detalles {
-    color: #0e6dd1; 
+    color: #3A506B; 
 }
 .boton{
     display: flex;
@@ -93,7 +94,7 @@ body{
     gap:10px;
 }
 button {
-    background-color: #006dd1;
+    background-color: #3A506B;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -104,7 +105,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #084298;
 }
 
 .comentarios{
@@ -126,10 +127,10 @@ textarea{
 }
 
 #volver {
-    background-color: #555; 
+    background-color: #3A506B;; 
     color: white;
 }
 
 #volver:hover {
-    background-color: #333; 
+    background-color: #2f3d66; 
 }

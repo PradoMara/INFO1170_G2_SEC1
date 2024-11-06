@@ -1,22 +1,24 @@
 html {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #000000, #ebe9e9); ;
+    background-color: #5BC0BE;
     margin: 0;
     padding: 20px;
 }
 .container {
-    background-color: rgb(255, 255, 255);
+    background-color: #1c2541;
     max-width: 800px;
     margin: auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #476181;
 
     
 }
 h1 {
     text-align: center;
+    color: #ffffff; 
 }
 .postulante-info {
     margin-bottom: 20px;
@@ -37,12 +39,12 @@ button {
     cursor: pointer;
 }
 .btn-aceptar {
-    background-color: #4CAF50;
+    background-color: #3d803f;
     color: white;
     transition: background-color 0.3s ease;
 }
 .btn-rechazar {
-    background-color: #f44336;
+    background-color: #d13a30;
     color: white;
     transition: background-color 0.3s ease;
 }

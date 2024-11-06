@@ -2,7 +2,7 @@ body, html {
     font-family: 'Open sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #000000, #ffffff);
+    background-color: #5BC0BE;
     color: #f1f1f1;
 }
 
@@ -14,9 +14,10 @@ body, html {
 }
 
 .header {
-    background-color: #121212;
-    color: white;
+    background-color: #0B132B;
+    color: #ffffff;
     padding: 20px;
+    border-bottom: 2px solid #1C2541;
 }
 .logo{
     width: 80px;
@@ -41,12 +42,12 @@ body, html {
     width: 250px;
     margin-right: 10px;
     outline: none;
-    background-color: #2c2c2c;
+    background-color: #3A506B;
     color: #f1f1f1;
 }
 
 .search-input:focus{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2 )
+    box-shadow: 0 0 10px rgba(91, 192, 190, 0.5);
 }
 
 .search-btn {
@@ -65,7 +66,7 @@ body, html {
 }
 
 .search-btn:hover {
-    background-color: #fff9f9;
+    background-color: #ffffff;
 
 }
 
@@ -87,7 +88,7 @@ body, html {
 
 .nav-menu a:hover {
     text-decoration: underline;
-    color:#003a7a;
+    color:#5BC0BE;
 }
 
 
@@ -105,7 +106,7 @@ body, html {
 }
 
 .perfil-section {
-    background-color: #333;
+    background-color: #1C2541;
     padding: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -133,7 +134,7 @@ body, html {
 
 .perfil-detalles h1 {
     margin: 0;
-    color: #006dd1;
+    color: #5BC0BE;
     font-size: 2em;
 }
 
@@ -154,7 +155,7 @@ body, html {
 
 .editar-perfil-btn {
     padding: 10px 15px;
-    background-color: #0056b3;
+    background-color: #3A506B;
     color: white;
     text-decoration: none;
     border:none;
@@ -166,7 +167,7 @@ body, html {
 }
 
 .editar-perfil-btn:hover {
-    background-color: #0057b350;
+    background-color: #084298;
 }
 
 /* Información adicional */
@@ -196,7 +197,7 @@ body, html {
 
 .cambiar-password-btn, .subir-cv-btn{
     padding: 10px 20px;
-    background-color: #4580c0;
+    background-color: #3A506B;
     color: white;
     border: none;
     border-radius: 5px;
@@ -328,7 +329,7 @@ body.modal-open {
 }
 
 footer {
-    background-color: #1e1e1e;
+    background-color: #1C2541;
     color: white;
     padding: 20px;
     text-align: center;
