@@ -1,17 +1,17 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #000000;
-    background: linear-gradient(to bottom, #000000, #ffffff); 
+    background-color: #5BC0BE;
+    color: #FFFFFF;
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #1C2541;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
 .logo img {
@@ -26,22 +26,21 @@ header {
 
 .nav-links a {
     margin: 0 15px;
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
 }
 
 .profile-section {
     position: relative;
-    padding: 20px;
-    background: url('https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg') no-repeat center center;
-    background-size: cover;
+    padding: 30px;
+    background-color: #3A506B;
     text-align: center;
-    color: #ffffff; 
-}
-
-.profile-image {
-    margin-bottom: 10px;
+    color: #FFFFFF;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .profile-picture {
@@ -49,46 +48,70 @@ header {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #000000;
+    border: 3px solid #5BC0BE;
+    margin-bottom: 15px;
 }
 
 .profile-info h1 {
-    margin: 10px 0;
+    margin: 15px 0;
     font-size: 24px;
 }
 
 .profile-info p {
-    margin: 5px 0;
+    margin: 10px 0;
+    color: #D0E1F9;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #5BC0BE;
+    border-radius: 8px;
+    background-color: #1C2541;
+    color: #FFFFFF;
+    width: 100%; 
+    max-width: 300px; 
+    text-align: center;
+    margin: 8px auto; 
+    display: block;
 }
 
 .edit-button {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #5BC0BE;
+    color: #1C2541;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .edit-button:hover {
-    background-color: #0056b3;
+    background-color: #3A506B;
+    color: #FFFFFF;
 }
 
 .publish-button {
-    background-color: #28a745;
-    color: #ffffff;
+    background-color: #3A506B; 
+    color: #FFFFFF;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
-    margin: 20px 0;
+    margin: 20px auto;
+    display: inline-flex;
+    align-items: center;
 }
 
 .publish-button:hover {
-    background-color: #218838;
+    background-color: #1C2541; 
+    color: #5BC0BE;
 }
 
 main {
@@ -96,35 +119,36 @@ main {
 }
 
 section {
-    background-color: #ffffff;
+    background-color: #1C2541;
     padding: 15px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     margin-top: 0;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 ul {
     padding-left: 20px;
+    color: #D0E1F9;
 }
 
 footer {
-    background-color: #333;
-    color: #ffffff;
+    background-color: #1C2541;
+    color: #FFFFFF;
     padding: 15px;
     text-align: center;
 }
 
 footer a {
-    color: #ffffff;
+    color: #5BC0BE;
     text-decoration: none;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: #007bff;
+    text-decoration: underline;
 }

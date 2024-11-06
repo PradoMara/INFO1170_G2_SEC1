@@ -1,21 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #000000, #ffffff); 
+    background-color: #5BC0BE;
 }
 
 .barra-superior {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 1rem;
+    background-color: #1C2541;
 }
 
 .logo {
@@ -23,20 +30,23 @@ body {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 2rem;
+    background-color: #1C2541;
+    padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
+    color: #FFFFFF;
 }
 
 h1 {
     margin-bottom: 1.5rem;
-    color: #333;
-    font-size: 1.8rem;
+    color: #FFFFFF;
+    font-size: 1.5rem; 
+    white-space: nowrap;
 }
+
 
 form {
     display: flex;
@@ -47,16 +57,18 @@ form {
 input[type="password"] {
     padding: 0.75rem;
     font-size: 1rem;
-    border: 1px solid #333;
+    border: 1px solid #0B132B;
     border-radius: 5px;
     text-align: center;
     width: 100%;
+    background-color: #FFFFFF;
+    color: #0B132B;
 }
 
 button {
     padding: 0.75rem;
-    background-color: #000;
-    color: white;
+    background-color: #0B132B;
+    color: #FFFFFF;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
@@ -66,5 +78,28 @@ button {
 }
 
 button:hover {
-    background-color: #333;
+    background-color: #5BC0BE;
+}
+
+.footer {
+    background-color: #1C2541;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+    border-top: 1px solid #3A506B;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer a {
+    color: #5BC0BE;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #D0E1F9;
 }

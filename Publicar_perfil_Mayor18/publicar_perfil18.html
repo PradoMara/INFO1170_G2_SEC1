@@ -3,53 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Publicar perfil - Araucanía Laboral">
-    <title>Publicar Perfil</title>
+    <meta name="description" content="Confirmación de la publicación del perfil.">
+    <title>Perfil Publicado</title>
     <link rel="stylesheet" href="publicar_perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo-container">
-                <img src="../Iconos/logo.png" alt="Logo" class="logo">
-            </div>
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li><a href="../inicio-18años/main.html">Inicio</a></li>
-                    <li><a href="../buscar-empleo/buscar-empleo.html">Ofertas de Trabajo</a></li>
-                    <li><a href="../perfil-18-años/buzon-notificaciones.html">Notificaciones</a></li>
-                </ul>
-            </nav>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="../Iconos/logo.png" alt="Logo de la plataforma">
         </div>
+        <nav class="nav-links">
+            <a href="../Portada_AraucaniaLaboral/portada.html"><i class="fas fa-home"></i> Inicio</a>
+            <a href="../Pagina_Principal_Menor_de_Edad/PaginaPrincipalMenoresDeEdad.html"><i class="fas fa-briefcase"></i> Ofertas de Trabajo</a>
+            <a href="../Notificaciones_Postulante/notificaciones.html"><i class="fas fa-bell"></i> Notificaciones</a>
+        </nav>
     </header>
 
-    <main class="content-container">
-        <section class="perfil-publicado">
-            <div class="container">
-                <h2>Ahora puedes subir tu currículum en formato PDF o imagen.</h2>
-
-                <form id="form-subir-cv" enctype="multipart/form-data" aria-label="Formulario para subir tu currículum">
-                    <label for="upload-cv">Sube tu CV:</label>
-                    <input type="file" id="upload-cv" accept=".pdf, image/*" required aria-label="Selecciona un archivo">
-                    <button type="submit" class="subir-cv-btn">Subir CV</button>
-                </form>
-
-                <div id="progress-bar" style="display:none;">
-                    Subiendo archivo...
-                </div>
-
-                <p class="file-upload-status"></p>
+    <main class="profile-published">
+        <form class="upload-cv-form">
+            <h1>Ahora puedes subir tu currículum en formato PDF o imagen.</h1>
+            <div class="file-input-container">
+                <label for="cvUpload"><i class="fas fa-upload"></i> Sube tu CV:</label>
+                <input type="file" id="cvUpload" accept=".pdf,.png,.jpg,.jpeg">
+                <button type="submit" id="submitBtn"><i class="fas fa-cloud-upload-alt"></i> Subir CV</button>
             </div>
-        </section>
+        </form>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <a href="contacto.html">Contáctenos</a> | 
-            <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y condiciones</a>
+    <footer>
+        <div class="footer-content">
+            <a href="contacto.html"><i class="fas fa-envelope"></i> Contáctenos</a> | 
+            <a href="../Terminos_y_Condiciones/terminos_condiciones.html"><i class="fas fa-file-alt"></i> Términos y condiciones</a>
         </div>
     </footer>
-
-    <script src="publicar_perfil.js" defer></script>
+    <script src="publicar_perfil.js"></script>
 </body>
 </html>

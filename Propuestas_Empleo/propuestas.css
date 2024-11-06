@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000000, #ffffff);
+    background-color: #5BC0BE;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -12,8 +12,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
-    padding: 10px 20px;
+    background-color: #1C2541;
+    padding: 15px 30px;
 }
 
 .logo img {
@@ -21,30 +21,39 @@ body {
 }
 
 .nav-links a {
-    color: #ffcc00;
+    color: #ffffff;
     text-decoration: none;
     margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav-links a i {
+    margin-right: 5px;
 }
 
 .job-proposals {
     flex: 1;
     padding: 50px;
-    color: white;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .job-offer {
-    background-color: #444;
-    padding: 20px;
+    background-color: #0B132B;
+    padding: 30px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    max-width: 700px; 
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .job-offer h2 {
     margin-top: 0;
-}
-
-.buttons {
-    margin-top: 20px;
+    color: #FFFFFF;
+    font-size: 1.5em;
 }
 
 button {
@@ -53,7 +62,13 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
+    font-size: 16px;
+    width: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .accept {
@@ -72,20 +87,31 @@ button {
     background-color: #c82333;
 }
 
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
 footer {
-    background-color: #222;
+    background-color: #1C2541;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 footer a {
-    color: #ffcc00;
+    color: #5BC0BE;
     text-decoration: none;
     margin: 0 10px;
+}
+
+footer a i {
+    margin-right: 5px;
 }
 
 footer a:hover {

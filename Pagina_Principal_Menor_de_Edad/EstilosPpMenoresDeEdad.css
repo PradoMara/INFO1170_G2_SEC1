@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #5BC0BE; 
+    color: #FFFFFF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,33 +12,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #1C2541;
     padding: 10px 20px;
+    color: #FFFFFF;
 }
 
 .logo img {
     height: 60px;
 }
 
-.nav-links a {
-    margin: 0 15px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.user-options {
-    display: flex;
-    align-items: center;
-}
-
 .user-options a {
     margin-right: 20px;
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 .user-options a:hover {
-    color: #5a63d4;
+    color: #5BC0BE;
 }
 
 .icon {
@@ -50,31 +40,33 @@ body {
 
 .search-section {
     text-align: center;
-    padding: 100px 0;
-    background: url('https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg ') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    height: 250px;
-    background-color: #333333; /* Fondo de respaldo */
+    padding: 50px 20px;
+    background-color: #3A506B;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 600px;
 }
 
 .search-section h1 {
-    margin-bottom: 30px;
-    color: #ffffff;
+    margin-bottom: 20px;
+    color: #FFFFFF;
 }
 
 .search-bar {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .search-bar input {
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    max-width: 400px;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    background-color: #ffffff;
-    color: #000000;
+    max-width: 300px;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #0B132B; 
 }
 
 .search-bar input:focus {
@@ -82,52 +74,53 @@ body {
 }
 
 .search-bar button {
-    padding: 20px 20px;
-    background-color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1C2541; 
     border: none;
-    color: #000000;
-    border-radius: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
-    background-color: #e0e0e0;
+    background-color: #5BC0BE; 
 }
 
 .featured-jobs {
     padding: 20px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #1C2541;
+    color: #FFFFFF;
     flex: 1;
 }
 
 .featured-jobs h2 {
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .job-card {
-    background-color: #ffffff;
+    background-color: #3A506B; 
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #1C2541; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
 }
 
 .job-card h3 {
     margin: 0;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .job-card p {
     margin: 5px 0;
-    color: #000000;
+    color: #D0E1F9; 
 }
 
 .job-button {
-    background-color: #1e1616;
-    color: #ffffff;
+    background-color: #0B132B; 
+    color: #FFFFFF;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -136,26 +129,22 @@ body {
 }
 
 .job-button:hover {
-    background-color: #000000;
+    background-color: #1C2541; 
 }
 
 footer {
-    background-color: #000000;
+    background-color: #1C2541; 
     padding: 15px;
     text-align: center;
+    color: #FFFFFF;
 }
 
 footer a {
-    color: #ffffff;
+    color: #5BC0BE;
     text-decoration: none;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: #5a63d4;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    color: #D0E1F9; 
 }

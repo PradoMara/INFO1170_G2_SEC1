@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notificaciones</title>
     <link rel="stylesheet" href="notificaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="barra-superior">
@@ -19,40 +20,39 @@
         <p class="last-update">Última actualización: 19 de septiembre de 2024</p>
 
         <div class="notification" id="noti1">
-            <h2>Nueva oferta de empleo en Tienda Corona</h2>
-            <p>Se ha publicado una nueva oferta de trabajo en Tienda corona para el puesto de Creador de paginas web. Fecha límite de postulación: 25 de septiembre de 2024.</p>
-            <button onclick="markAsRead('noti1')">Marcar como leída</button>
-            <button onclick="deleteNotification('noti1')">Borrar</button>
+            <h2><i class="fas fa-briefcase"></i> Nueva oferta de empleo en Tienda Corona</h2>
+            <p>Se ha publicado una nueva oferta de trabajo en Tienda Corona para el puesto de Creador de páginas web. Fecha límite de postulación: 25 de septiembre de 2024.</p>
+            <button onclick="markAsRead('noti1')"><i class="fas fa-check"></i> Marcar como leída</button>
+            <button onclick="deleteNotification('noti1')"><i class="fas fa-trash-alt"></i> Borrar</button>
         </div>
 
         <div class="notification" id="noti2">
-            <h2>Actualización en tus postulaciones</h2>
+            <h2><i class="fas fa-sync-alt"></i> Actualización en tus postulaciones</h2>
             <p>Tu postulación al puesto de "Desarrollador Frontend" ha sido actualizada. Revisa el estado de tu solicitud en tu perfil.</p>
-            <button onclick="markAsRead('noti2')">Marcar como leída</button>
-            <button onclick="deleteNotification('noti2')">Borrar</button>
+            <button onclick="markAsRead('noti2')"><i class="fas fa-check"></i> Marcar como leída</button>
+            <button onclick="deleteNotification('noti2')"><i class="fas fa-trash-alt"></i> Borrar</button>
         </div>
 
         <div class="notification" id="noti3">
-            <h2>Mensaje de la administración</h2>
+            <h2><i class="fas fa-envelope"></i> Mensaje de la administración</h2>
             <p>Recuerda completar tu perfil con información actualizada para recibir mejores ofertas de empleo.</p>
-            <button onclick="markAsRead('noti3')">Marcar como leída</button>
-            <button onclick="deleteNotification('noti3')">Borrar</button>
+            <button onclick="markAsRead('noti3')"><i class="fas fa-check"></i> Marcar como leída</button>
+            <button onclick="deleteNotification('noti3')"><i class="fas fa-trash-alt"></i> Borrar</button>
         </div>
     </section>
 
     <footer class="footer">
         <nav class="footer-links">
-            <a href="contacto.html">Contacto</a>
-            <span> | </span>
-            <a href="../Terminos y Condiciones/terminos_condiciones.html">Términos y Condiciones</a>
+            <a href="contacto.html">Contacto</a> |
+            <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y Condiciones</a>
         </nav>
     </footer>
 
     <div id="modal" class="modal">
         <div class="modal-content">
             <p>¿Seguro que quieres borrar esta notificación?</p>
-            <button id="confirmDelete" onclick="confirmDelete()">Sí</button>
-            <button id="cancelDelete" onclick="cancelDelete()">No</button>
+            <button id="confirmDelete" onclick="confirmDelete()"><i class="fas fa-check"></i> Sí</button>
+            <button id="cancelDelete" onclick="cancelDelete()"><i class="fas fa-times"></i> No</button>
         </div>
     </div>
 

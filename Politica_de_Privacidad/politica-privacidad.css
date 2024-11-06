@@ -1,30 +1,24 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #5BC0BE; 
     margin: 0;
     padding-top: 80px;
     padding-bottom: 40px;
-    background: linear-gradient(45deg, #000000, #ffffff); 
-    background-size: cover;
-    background-attachment: fixed;
+    color: #FFFFFF;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.8); 
-    color: #ffffff; 
+    background-color: #1C2541;
+    color: #FFFFFF;
     padding: 20px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    display: flex; 
-    align-items: center; 
-}
-
-.logo {
-    max-width: 100px; 
-    height: auto;
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .sitio-titulo {
@@ -32,32 +26,51 @@ header {
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;
-    color: #ffffff;
+    color: #FFFFFF;
+    text-align: center;
+    flex: 1; 
+}
+
+.logo {
+    position: absolute;
+    left: 20px; 
+    max-width: 100px;
+    height: auto;
 }
 
 .contenedor-politica {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #1C2541; 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    color: #FFFFFF;
+}
+
+.contenedor-politica a {
+    color: #5BC0BE; 
+    text-decoration: none;
+}
+
+.contenedor-politica a:hover {
+    text-decoration: underline;
 }
 
 h2 {
-    color: #000000; 
+    color: #FFFFFF;
     font-size: 22px;
     margin-bottom: 10px;
 }
 
 h3 {
-    color: #000000; 
+    color: #FFFFFF;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-p, ul {
-    color: #000000; 
+p, ul, li {
+    color: #D0E1F9; 
     line-height: 1.6;
 }
 
@@ -65,60 +78,35 @@ ul {
     padding-left: 20px;
 }
 
-button {
-    background-color: #000000; 
-    color: white; 
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+.privacy-link, .correolink, footer a {
+    color: #5BC0BE;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: #333333; 
+.privacy-link:hover, .correolink:hover, footer a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
+    background-color: #1C2541; 
+    color: #FFFFFF;
     text-align: center;
     padding: 15px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 100;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
-    color: #ffffff; 
+    color: #FFFFFF;
 }
 
 footer a {
-    color: #ffcc00; 
+    color: #5BC0BE;
     text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; 
-}
-
-footer p span {
-    color: #ffcc00; 
-}
-
-
-.contenedor-politica {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 100px;
-}
-
-.contenedor-politica a {
-    color: #ffcc00; 
     text-decoration: underline;
 }

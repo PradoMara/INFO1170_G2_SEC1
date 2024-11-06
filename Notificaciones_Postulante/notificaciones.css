@@ -2,53 +2,48 @@ body {
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #000000, #ffffff); 
+    background-color: #5BC0BE;
     color: #333333;
 }
 
 .barra-superior {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #000000; 
+    justify-content: center;
+    background-color: #1C2541;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    flex: 0 1 auto;
-    max-width: 150px;
+    position: absolute;
+    left: 20px;
 }
 
 .img-logo {
-    width: 100%;
-    height: auto;
+    width: 100px;
 }
 
 .titulo {
-    flex: 1;
-    text-align: center;
     font-size: 2rem;
-    margin: 0;
-    color: #ffffff; 
+    color: #FFFFFF;
 }
 
 .container {
     padding: 40px;
     max-width: 800px;
-    margin: auto;
-    background: linear-gradient(to bottom right, #444444, #ffffff); 
-    color: #000000;
+    margin: 60px auto 80px; 
+    background-color: #1C2541;
+    color: #FFFFFF;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .notification {
-    background-color: #333333; 
-    color: #ffffff; 
+    background-color: #3A506B;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #444444; 
+    border: 1px solid #444444;
     border-radius: 5px;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -67,7 +62,7 @@ body {
 .notification button {
     margin-right: 10px;
     padding: 8px 15px;
-    background-color: #1e63d0;
+    background-color: #5BC0BE;
     color: white;
     border: none;
     border-radius: 4px;
@@ -75,7 +70,7 @@ body {
 }
 
 .notification button:hover {
-    background-color: #0011ff;
+    background-color: #3A506B;
 }
 
 .modal {
@@ -91,7 +86,7 @@ body {
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -101,17 +96,29 @@ body {
 .modal-content button {
     padding: 10px 20px;
     margin: 10px;
+    background-color: #5BC0BE;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .footer {
-    background-color: #000000; 
+    background-color: #1C2541;
     text-align: center;
     padding: 15px;
-    border-top: 1px solid #dddddd;
-    color: #ffffff;
+    color: #FFFFFF;
     position: fixed;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links a {
+    color: #5BC0BE;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }

@@ -6,20 +6,18 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 80px; 
-    padding-bottom: 60px; 
+    background-color: #5BC0BE;
+    color: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 60px;
     height: 100%;
     overflow-x: hidden;
 }
 
 .barra-superior {
-    background-color: #000000; 
-    color: white;
+    background-color: #1C2541;
+    color: #FFFFFF;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     padding: 15px 30px;
     position: fixed;
@@ -29,40 +27,35 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.barra-superior h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
 .logo {
-    width: 80px; 
+    width: 50px;
     height: auto;
     margin-right: 15px;
 }
 
 .sitio-titulo {
     font-family: 'Georgia', serif;
-    font-size: 32px;
-    color: #ffffff; 
-    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .contenedor {
-    background-color: #000000; 
+    background-color: #1C2541;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
     max-width: 500px;
+    width: 100%;
     text-align: center;
     margin: 100px auto 0 auto;
 }
 
 h2 {
-    color: #ffffff; 
-    font-size: 1.6rem; 
+    color: #FFFFFF;
+    font-size: 1.8rem;
     margin-bottom: 25px;
 }
 
@@ -75,7 +68,7 @@ label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
-    color: #ffffff; 
+    color: #D0E1F9;
 }
 
 input[type="text"],
@@ -83,22 +76,23 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #3A506B;
     border-radius: 8px;
     font-size: 14px;
+    background-color: #FFFFFF;
+    color: #333333;
 }
 
 input:focus {
-    border-color: #ffcc00;  
+    border-color: #5BC0BE;
     outline: none;
 }
-
 
 button {
     width: 100%;
     padding: 15px;
-    background-color: #ffffff;
-    color: #000000; 
+    background-color: #3A506B;
+    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -107,7 +101,7 @@ button {
 }
 
 button:hover {
-    background-color: #cccccc; 
+    background-color: #0B132B;
 }
 
 .enlaces-ayuda {
@@ -116,7 +110,7 @@ button:hover {
 }
 
 .enlaces-ayuda a {
-    color: #ffcc00;
+    color: #5BC0BE;
     text-decoration: none;
 }
 
@@ -125,8 +119,8 @@ button:hover {
 }
 
 .barra-contacto {
-    background-color: #000000;
-    color: white;
+    background-color: #1C2541;
+    color: #FFFFFF;
     text-align: center;
     padding: 15px 0;
     position: fixed;
@@ -137,10 +131,10 @@ button:hover {
 }
 
 .barra-contacto a {
-    color: #ffcc00; 
+    color: #5BC0BE;
     text-decoration: none;
 }
 
 .barra-contacto a:hover {
-    text-decoration: underline;
+    color: #FFFFFF;
 }

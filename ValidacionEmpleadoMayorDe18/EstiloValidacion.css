@@ -1,24 +1,24 @@
-.logo {
-    width: 100px;
-    margin-bottom: 20px;
-    margin-top: 20px; 
-}
-
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #000000, #ffffff); 
+    background-color: #5BC0BE; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
-    padding: 20px; 
-    overflow-y: auto; 
+    min-height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.logo {
+    width: 70px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .header {
-    background-color: #000; 
-    color: rgb(255, 255, 255);
+    background-color: #1C2541; 
+    color: #FFFFFF;
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 .header a {
-    color: #ffcc00; 
+    color: #5BC0BE; 
     text-decoration: none;
     padding: 0 15px;
     font-size: 16px;
@@ -39,10 +39,10 @@ body {
 }
 
 .container {
-    background-color: #1a1a1a; 
+    background-color: #1C2541; 
     padding: 50px;
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 400px;
     max-width: 90%;
@@ -52,7 +52,7 @@ body {
 h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #ffffff; 
+    color: #FFFFFF;
     margin-bottom: 30px;
 }
 
@@ -63,34 +63,35 @@ h1 {
 
 .form-group label {
     font-size: 14px;
-    color: #ffffff; 
+    color: #FFFFFF;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc; 
+    border: 1px solid #D0E1F9;
     border-radius: 5px;
     font-size: 14px;
-    background-color: #333; 
-    color: white; 
+    background-color: #3A506B; 
+    color: #FFFFFF;
 }
 
 button {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    background-color: #000; 
-    color: white; 
+    background-color: #0B132B; 
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555; 
+    background-color: #5BC0BE; 
 }
 
 .help-link {
@@ -99,22 +100,22 @@ button:hover {
 }
 
 .help-link a {
-    color: #ffcc00; 
+    color: #5BC0BE; 
     font-size: 14px;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .help-link a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 #help-section {
-    color: #ffcc00; 
+    color: #D0E1F9; 
 }
 
 .footer {
-    background-color: #000; 
-    color: #ffcc00; 
+    background-color: #1C2541; 
+    color: #5BC0BE; 
     padding: 10px;
     position: fixed;
     bottom: 0;
@@ -123,7 +124,7 @@ button:hover {
 }
 
 .footer a {
-    color: #ffcc00; 
+    color: #5BC0BE; 
     text-decoration: none;
     padding: 0 15px;
 }
@@ -141,4 +142,3 @@ button:hover {
     font-size: 12px;
     margin-top: 5px;
 }
-

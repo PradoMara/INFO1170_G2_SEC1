@@ -1,11 +1,11 @@
-body {
-    font-family: 'Georgia', serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #000000, #ffffff); 
-    color: #333; 
-    line-height: 1.6;
-    min-height: 100vh; 
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    background-color: #5BC0BE;
+    color: #333;
     display: flex;
     flex-direction: column;
 }
@@ -13,10 +13,10 @@ body {
 .barra-superior {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    background-color: #000; 
+    justify-content: space-between;
+    background-color: #1C2541;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -28,23 +28,25 @@ body {
     text-align: center;
     margin: 0;
     font-size: 1.8em;
-    color: #fff; 
+    color: #FFF;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 800px;
+    width: 90%;
     margin: 60px auto;
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: #1C2541;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     flex-grow: 1;
+    color: #FFF;
 }
 
 h2 {
     font-size: 1.6em;
     margin-bottom: 20px;
-    color: #000;
+    color: #FFF;
 }
 
 ul {
@@ -53,46 +55,56 @@ ul {
 }
 
 li {
-    background-color: rgba(68, 68, 68, 0.9); 
+    background-color: #3A506B;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    color: #fff; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #FFF;
 }
 
 li .comentario-autor {
     font-weight: bold;
-    color: #ffcc00;
+    color: #5BC0BE;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 li .comentario-texto {
-    color: #ffffff;
-    margin-left: 10px;
+    color: #FFF;
+    margin-top: 10px;
+    word-wrap: break-word; 
 }
 
 li .comentario-fecha {
     font-size: 0.9em;
-    color: #cccccc;
+    color: #D0E1F9;
     margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .footer {
-    background-color: #000; 
+    background-color: #1C2541;
     text-align: center;
     padding: 15px;
-    color: #fff; 
+    color: #FFF;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
-    margin-top: auto; 
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
 }
 
 .footer a {
-    color: #ffcc00;
+    color: #5BC0BE;
     text-decoration: none;
     margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    color: #FFF;
 }
