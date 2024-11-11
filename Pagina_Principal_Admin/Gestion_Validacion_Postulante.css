@@ -1,13 +1,13 @@
 body {
     font-family: 'Poppins', sans-serif; 
-    background: linear-gradient(45deg, #000000, #ffffff); 
+    background: #5BC0BE; 
     margin: 0;
     padding: 0;
-    color: #343a40; 
+    color: #1C2541; 
 }
 
 .barra-navegacion {
-    background-color: #000000;
+    background-color: #0B132B;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     position: sticky; 
@@ -83,9 +83,8 @@ body {
 }
 
 .icono-perfil {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    font-size: 40px; /* Tamaño del icono */
+    color: #FFFFFF; /* Color del icono */
     margin-right: 10px;
 }
 
@@ -105,7 +104,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
-    color: #000000;
+    color: #0B132B;
     animation: fadeIn 1s ease-out; 
 }
 
@@ -126,7 +125,7 @@ body {
 }
 
 .validacion {
-    background-color: #000000;
+    background-color: #1C2541;
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
     margin-bottom: 20px;
@@ -137,10 +136,9 @@ body {
 }
 
 .foto-postulante {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+    font-size: 100px; /* Tamaño del icono */
+    color: #FFFFFF; /* Color del icono */
+    margin-right: 10px;
 }
 
 .info-validacion {
@@ -171,7 +169,7 @@ body {
 }
 
 .boton-volver .btn {
-    background-color: #007bff;
+    background-color: #1C2541;
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -187,17 +185,18 @@ body {
 }
 
 .btn {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #6c819b;
+    color: #1C2541;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
     transform: translateY(-2px);
 }

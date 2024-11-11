@@ -1,13 +1,13 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
+    background: #5BC0BE; 
     margin: 0;
     padding: 0;
     color: #343a40;
 }
 
 .barra-navegacion {
-    background-color: #000000; 
+    background-color: #0B132B; 
     padding: 15px;
     box-shadow: 0 4px 10px #5c5050;
     position: sticky;
@@ -47,9 +47,8 @@ body {
 }
 
 .icono-perfil {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    font-size: 40px;
+    color: #FFFFFF;
     margin-right: 10px;
 }
 
@@ -63,7 +62,7 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #000000;
+    background-color: #0B132B;
     border-radius: 10px;
     color:#ffffff;
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
@@ -122,25 +121,26 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    
 }
 
 .btn-guardar {
-    background-color: #28a745;
-    color: #ffffff;
+    background-color:#6c819b;
+    color: #0B132B;
 }
 
 .btn-guardar:hover {
-    background-color: #218838;
+    background-color: #ffffff;
     transform: translateY(-3px);
 }
 
 .btn-cancelar {
-    background-color: #dc3545;
-    color: #ffffff;
+    background-color: #596778;
+    color: #0B132B;
     text-decoration: none;
 }
 
 .btn-cancelar:hover {
-    background-color: #c82333;
+    background-color: #ffffff;
     transform: translateY(-3px);
 }

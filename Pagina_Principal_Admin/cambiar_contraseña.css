@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #000000, #ffffff);
+    background: #5BC0BE;
     animation: fondoAnimacion 10s ease infinite;
 }
 
@@ -17,11 +17,11 @@ body {
 }
 
 .contenedor {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #0B132B;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px #524b4b;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     text-align: center;
     animation: slideIn 1s ease-out;
@@ -37,6 +37,13 @@ body {
         transform: translateY(0);
     }
 }
+
+.logo-formulario {
+    width: 150px; 
+    height: auto;
+    margin-bottom: 20px; 
+}
+
 
 h2 {
     color: #ffffff;
@@ -58,7 +65,7 @@ label {
 }
 
 input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #6c757d;
@@ -79,7 +86,7 @@ input[type="password"]:focus {
 
 button, a {
     display: inline-block;
-    width: 100%;
+    width: 40%;
     padding: 12px;
     border-radius: 8px;
     font-size: 16px;
@@ -88,24 +95,24 @@ button, a {
     text-align: center;
     transition: transform 0.2s ease, background-color 0.2s ease;
     text-decoration: none;
-    color: white;
+    color: #0B132B;
 }
 
 .btn-guardar {
-    background-color: #28a745;
+    background-color: #6c819b;
 }
 
 .btn-guardar:hover {
-    background-color: #218838;
+    background-color: #ffffff;
     transform: translateY(-3px);
 }
 
 .btn-cancelar {
-    background-color: #dc3545;
+    background-color: #596778;
 }
 
 .btn-cancelar:hover {
-    background-color: #c82333;
+    background-color: #ffffff;
     transform: translateY(-3px);
 }
 

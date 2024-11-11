@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff);
+    background: #5BC0BE;
     margin: 0;
     padding: 0;
     color: #f1f1f1;
 }
 
 .header {
-    background-color: #000000;
+    background-color: #0B132B;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px; 
@@ -37,11 +37,11 @@ body {
     align-items: center;
 }
 
-.header .user-profile img {
-    width: 40px;
-    margin-left: 10px;
-    border-radius: 50%;
-    opacity: 0.8; 
+
+.icono-perfil {
+    font-size: 40px; /* Tamaño del icono */
+    color: #FFFFFF; /* Color del icono */
+    margin-right: 10px;
 }
 
 .gestion-consultas {
@@ -51,7 +51,7 @@ body {
 
 .gestion-consultas h2 {
     font-size: 24px;
-    color: white;
+    color: #0B132B;
 }
 
 .search-filter {
@@ -82,7 +82,7 @@ body {
 .consulta {
     display: flex;
     align-items: center;
-    background-color: #000000;
+    background-color:  #1C2541;
     padding: 20px;  
     margin-bottom: 20px;  
     border-radius: 10px;
@@ -117,8 +117,8 @@ body {
 }
 
 .buttons button {
-    background-color: #007BFF;
-    color: white;
+    background-color:#6c819b;
+    color: #1C2541;
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -127,15 +127,15 @@ body {
 }
 
 .buttons button:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
 }
 
 .buttons .btn-ver {
-    background-color: #28a745;
+    background-color: #ffffff;
 }
 
 .buttons .btn-ver:hover {
-    background-color: #218838;
+    background-color: #ffffff;
 }
 
 .back-button {
@@ -144,7 +144,7 @@ body {
 }
 
 .back-button button {
-    background-color: #007BFF;
+    background-color:  #1C2541;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -154,5 +154,5 @@ body {
 }
 
 .back-button button:hover {
-    background-color: #5a6268;
+    background-color:#0056b3;
 }

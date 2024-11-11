@@ -6,13 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
+    background: #5BC0BE; 
     color: #343a40;
     padding: 80px 0 60px;  
 }
 
 .barra-superior {
-    background-color: #000000;  
+    background-color: #0B132B;  
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -44,7 +44,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background-color: #000000;
+    background-color: #0B132B;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     color: #ffffff;
@@ -69,8 +69,8 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    background-color: #343a40;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     font-size: 1rem;
     transition: border-color 0.3s;
 }
@@ -82,8 +82,8 @@ input:focus, textarea:focus {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #6c819b;
+    color:  #1C2541;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
 }
 
 .mensaje-error {
@@ -115,7 +115,7 @@ button:hover {
 }
 
 .barra-contacto {
-    background-color: #000000; 
+    background-color: #0B132B; 
     color: #ffffff;
     text-align: center;
     padding: 15px 0;

@@ -1,13 +1,13 @@
 body{
     font-family: "Poppins", sans-serif; 
-    background: linear-gradient(45deg, #000000, #ffffff);
+    background:  #5BC0BE;
     margin: 0;
     padding: 0;
     color: #f1f1f1;
 }
 
 .barra-navegacion{
-    background-color: #000000;
+    background-color: #0B132B;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -51,12 +51,9 @@ body{
 }
 
 .perfil-usuario{
-    display: block;
+    color: white;
+    display: flex;
     align-items: center;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease; 
 
 }
 
@@ -65,9 +62,8 @@ body{
 }
 
 .icono-perfil{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+    font-size: 40px; /* Tamaño del icono */
+    color: #FFFFFF; /* Color del icono */
     margin-right: 10px;
 }
 
@@ -75,7 +71,7 @@ body{
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #000000;
+    background-color: #1C2541;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     align-items: center;    
@@ -93,8 +89,8 @@ body{
     gap:10px;
 }
 button {
-    background-color: #006dd1;
-    color: white;
+    background-color: #6c819b;
+    color: #1C2541;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -104,7 +100,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
 }
 
 .comentarios{
@@ -121,8 +117,8 @@ textarea{
     padding: 10px;
     border: 1px solid #555;
     margin-top: 20px;
-    background-color: #000000;
-    color: #f1f1f1;
+    background-color:  #ffffff;
+    color: #000000;
 }
 
 

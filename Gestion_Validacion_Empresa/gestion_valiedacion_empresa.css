@@ -1,13 +1,13 @@
 body{
     font-family: "Poppins", sans-serif; 
-    background: linear-gradient(45deg, #000000, #ffffff); 
+    background: #5BC0BE; 
     margin: 0;
     padding: 0;
     color: #333;
 }
 
 .barra-navegacion{
-    background-color: #000000;
+    background-color: #0B132B;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -45,13 +45,20 @@ body{
     font-weight: bold;
 }
 
+.nombre-usuario {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
 .perfil-enlace{
     text-decoration: none;
     
 }
 
 .perfil-usuario{
-    display: block;
+    display: flex;
     align-items: center;
     cursor: pointer;
     padding: 8px 12px;
@@ -64,10 +71,9 @@ body{
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.icono-perfil{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
+.icono-perfil {
+    font-size: 40px; /* Tamaño del icono */
+    color: #FFFFFF; /* Color del icono */
     margin-right: 10px;
 }
 
@@ -75,7 +81,7 @@ body{
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #000000;
+    background-color: #1C2541;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
@@ -109,7 +115,7 @@ body{
 }
 
 .solicitud{
-    background-color: #333232;
+    background-color: #1C2541;
     border: 1px solid #333;
     padding: 20px;
     border-radius: 8px;
@@ -153,8 +159,8 @@ button{
 }
 
 button.aceptar{
-    background-color: #4caf50;
-    color: white;
+    background-color: #6c819b;
+    color: #1C2541;
     transition: background-color 0.3s;
 
 }
@@ -165,15 +171,15 @@ button:hover{
 }
 
 button.aceptar:hover{
-    background-color: #408a44;
+    background-color: #ffffff;
 }
 
 button.rechazar:hover{
-    background-color: #d32f2f;
+    background-color: #ffffff;
 }
 
 .footer{
-    background-color: #000000;
+    background-color: #1C2541;
     color:white;
     text-align: center;
     padding: 20px 0;
@@ -257,8 +263,8 @@ button.rechazar:hover{
 }
 
 .btn-detalles {
-    background-color: #0e6dd1; 
-    color: white;
+    background-color: #6c819b; 
+    color: #1C2541;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

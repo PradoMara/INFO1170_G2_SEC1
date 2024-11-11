@@ -6,13 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
+    background:#5BC0BE; 
     color: #343a40;
     padding: 80px 20px 60px;
 }
 
 .barra-superior {
-    background-color: #000000;  
+    background-color: #0B132B;  
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -44,7 +44,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background-color: #000000;
+    background-color: #0B132B;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -80,7 +80,7 @@ ol {
 }
 
 .barra-contacto {
-    background-color: #000000; 
+    background-color: #0B132B; 
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
