@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mensajería</title>
+    <link rel="stylesheet" href="mensajeria.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-window" id="output">
+            <!-- Los mensajes aparecerán aquí -->
+        </div>
+
+        <!-- Campo de texto para escribir mensajes -->
+        <div class="input-container"> 
+            <input type="text" id="message" placeholder="Escribe tu mensaje..." autofocus>
+            <button id="send">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para enviar el mensaje al servidor
+        document.getElementById('send').addEventListener('click', function() {
+            var message = document.getElementById('message').value;
+
+            if (message.trim() !== "") {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "enviar-mensaje.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        document.getElementById('message').value = ''; // Limpiar el campo de mensaje
+                    }
+                };
+                xhr.send("mensaje=" + encodeURIComponent(message));
+            } else {
+                alert("Escribe un mensaje.");
+            }
+        });
+
+        // Función para actualizar los mensajes en la ventana del chat
+        function actualizarMensajes() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "mensajeria.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('output').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        // Actualizar la ventana del chat cada 3 segundos
+        setInterval(actualizarMensajes, 3000);
+    </script>
+</body>
+</html>
+
