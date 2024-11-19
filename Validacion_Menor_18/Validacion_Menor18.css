@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
+    background: #5BC0BE;
     background-size: cover;
     background-attachment: fixed;
     padding-top: 80px; 
@@ -16,7 +16,7 @@ body {
 }
 
 .barra-superior {
-    background-color: #000000; 
+    background-color: #0B132B; 
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -71,7 +71,7 @@ body {
 }
 
 .contenedor {
-    background-color: #000000; 
+    background-color:#0B132B ; 
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -121,8 +121,8 @@ input:focus {
 button {
     width: 100%;
     padding: 15px;
-    background-color: #ffffff;
-    color: #000000; 
+    background-color: #6c819b;
+    color: #0B132B; 
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -131,7 +131,7 @@ button {
 }
 
 button:hover {
-    background-color: #cccccc; 
+    background-color: #FFFFFF; 
 }
 
 .enlaces-ayuda {
@@ -156,7 +156,7 @@ button:hover {
 }
 
 .barra-contacto {
-    background-color: #000000;
+    background-color: #0B132B;
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -174,4 +174,15 @@ button:hover {
 
 .barra-contacto a:hover {
     text-decoration: underline;
+}
+
+.vista-previa {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block; 
+    max-width: 100%; 
 }

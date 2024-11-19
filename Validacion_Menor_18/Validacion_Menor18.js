@@ -1,79 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const formulario = document.getElementById('formularioValidacion');
+    const archivoInput = document.getElementById('archivo');
+    const permisoInput = document.getElementById('permiso');
+    const vistaPreviaArchivo = document.getElementById('vistaPreviaArchivo');
+    const vistaPreviaPermiso = document.getElementById('vistaPreviaPermiso');
+    const respuestaElemento = document.getElementById('respuesta');
+    const form = document.getElementById('formValidacion');
 
-    formulario.addEventListener('submit', function(evento) {
-        evento.preventDefault();
-        let esValido = true;
+    const mostrarVistaPrevia = (input, contenedor) => {
+        const archivo = input.files[0];
+        contenedor.innerHTML = '';
 
-        const inputRazonSocial = document.getElementById('razonSocial');
-        const errorRazonSocial = document.getElementById('errorRazonSocial');
-        if (inputRazonSocial.value.trim() === '') {
-            errorRazonSocial.textContent = 'La razón social es requerida.';
-            errorRazonSocial.style.display = 'block';
-            esValido = false;
-        } else {
-            errorRazonSocial.style.display = 'none';
+        if (archivo) {
+            if (archivo.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    contenedor.innerHTML = `
+                        <img src="${e.target.result}" alt="Archivo seleccionado" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    `;
+                };
+                reader.readAsDataURL(archivo);
+            } else if (archivo.type === 'application/pdf') {
+                contenedor.innerHTML = `
+                    <p>Archivo PDF seleccionado: <strong>${archivo.name}</strong></p>
+                `;
+            } else {
+                contenedor.innerHTML = `
+                    <p>Archivo seleccionado: <strong>${archivo.name}</strong></p>
+                `;
+            }
         }
+    };
 
-        const inputRegistroTributario = document.getElementById('registroTributario');
-        const errorRegistroTributario = document.getElementById('errorRegistroTributario');
-        if (inputRegistroTributario.value.trim() === '') {
-            errorRegistroTributario.textContent = 'El número de registro tributario es requerido.';
-            errorRegistroTributario.style.display = 'block';
-            esValido = false;
-        } else {
-            errorRegistroTributario.style.display = 'none';
-        }
+    archivoInput.addEventListener('change', () => {
+        mostrarVistaPrevia(archivoInput, vistaPreviaArchivo);
+    });
 
-        const inputDireccionFiscal = document.getElementById('direccionFiscal');
-        const errorDireccionFiscal = document.getElementById('errorDireccionFiscal');
-        if (inputDireccionFiscal.value.trim() === '') {
-            errorDireccionFiscal.textContent = 'La dirección fiscal es requerida.';
-            errorDireccionFiscal.style.display = 'block';
-            esValido = false;
-        } else {
-            errorDireccionFiscal.style.display = 'none';
-        }
+    permisoInput.addEventListener('change', () => {
+        mostrarVistaPrevia(permisoInput, vistaPreviaPermiso);
+    });
 
-        const inputEmailEmpresa = document.getElementById('emailEmpresa');
-        const errorEmailEmpresa = document.getElementById('errorEmailEmpresa');
-        const patronCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!patronCorreo.test(inputEmailEmpresa.value.trim())) {
-            errorEmailEmpresa.textContent = 'El correo electrónico corporativo no es válido.';
-            errorEmailEmpresa.style.display = 'block';
-            esValido = false;
-        } else {
-            errorEmailEmpresa.style.display = 'none';
-        }
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
 
-        // Validación del archivo (logo o documento)
-        const inputLogoEmpresa = document.getElementById('logoEmpresa');
-        const errorLogoEmpresa = document.getElementById('errorLogoEmpresa');
-        if (inputLogoEmpresa.files.length === 0) {
-            errorLogoEmpresa.textContent = 'Es necesario subir un logo o documento de verificación.';
-            errorLogoEmpresa.style.display = 'block';
-            esValido = false;
-        } else {
-            errorLogoEmpresa.style.display = 'none';
-        }
+        try {
+            const respuesta = await fetch('Validacion_Menor18.php', {
+                method: 'POST',
+                body: formData,
+            });
 
-        if (esValido) {
-            alert('Formulario enviado correctamente.');
-            formulario.submit();
-        } else {
-            alert('Por favor, complete todos los campos obligatorios antes de enviar.');
+            const resultado = await respuesta.json();
+            respuestaElemento.textContent = resultado.message;
+            respuestaElemento.style.color = resultado.success ? 'green' : 'red';
+        } catch (error) {
+            respuestaElemento.textContent = 'Ocurrió un error inesperado.';
+            respuestaElemento.style.color = 'red';
+            console.error(error);
         }
     });
-});
-document.getElementById('formularioMenor').addEventListener('submit', function(event) {
-    var edad = document.getElementById('edad').value;
-    var errorEdad = document.getElementById('errorEdad');
-
-    if (edad > 17) {
-        errorEdad.textContent = 'La edad no puede exceder los 17 años,si es asi porfavor ingrese denuevo su edad en la seccion de registro.';
-        errorEdad.style.display = 'block';
-        event.preventDefault(); 
-    } else {
-        errorEdad.style.display = 'none'; 
-    }
 });

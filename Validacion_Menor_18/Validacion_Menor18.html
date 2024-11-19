@@ -3,60 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validación de Menor de Edad</title>
+    <title>Validación Menor de 18 Años</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="Validacion_Menor18.css">
 </head>
 <body>
-    <header>
-        <nav class="barra-superior">
-            <img src="logo.png" alt="Logo" class="logo">
-            <h1 class="sitio-titulo">AraucaniaLaboral</h1>            
-        </nav>
-    </header>
-
-    <div class="contenedor">
-        <h2>Validación de Menor de Edad</h2>
-        <form id="formularioMenor" action="#" method="post" enctype="multipart/form-data" novalidate>
-            <div class="grupo-input">
-                <label for="nombreCompleto">Nombre Completo</label>
-                <input type="text" id="nombreCompleto" name="nombreCompleto" required>
-                <span class="mensaje-error" id="errorNombreCompleto"></span>
-            </div>
-
-            <div class="grupo-input">
-                <label for="edad">Edad</label>
-                <input type="number" id="edad" name="edad" required min="0" max="17">
-                <span class="mensaje-error" id="errorEdad"></span>
-            </div>            
-
-            <div class="grupo-input">
-                <label for="permisoFirmado">Permiso Firmado por el Tutor</label>
-                <input type="file" id="permisoFirmado" name="permisoFirmado" accept="image/*, application/pdf" required>
-                <span class="mensaje-error" id="errorPermisoFirmado"></span>
-            </div>
-
-            <div class="grupo-input">
-                <label for="fotoCedula">Foto de Cédula de Identidad</label>
-                <input type="file" id="fotoCedula" name="fotoCedula" accept="image/*" required>
-                <span class="mensaje-error" id="errorFotoCedula"></span>
-            </div>
-
-            <div class="grupo-input">
-                <label for="fotoMenor">Foto del Menor de Edad</label>
-                <input type="file" id="fotoMenor" name="fotoMenor" accept="image/*" required>
-                <span class="mensaje-error" id="errorFotoMenor"></span>
-            </div>
-
-            <button type="submit">Validar Menor de Edad</button>
-            <div class="enlaces-ayuda">
-                <p><h5>¿Necesitas ayuda?</h5> <a href="Pagina_Soporte.html">Visita nuestra página de soporte</a>.</p>   
-                <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
-            </div>
-        </form>
+    <div class="barra-superior">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Validación </h1>
     </div>
-    <footer class="barra-contacto">
-        <p>Contacto: <a href="mailto:integracion58@gmail.com">integracion58@gmail.com</a> | Teléfono: +56 9 9992 9342</p>
-    </footer>
+    <div class="contenedor">
+        <h2>Formulario de Validación</h2>
+
+        <form id="formValidacion" enctype="multipart/form-data">
+            <div class="grupo-input">
+                <label for="fecha_nacimiento"><i class="fas fa-calendar-alt"></i> Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="archivo"><i class="fas fa-file-upload"></i> Imagen de cedula de identidad:</label>
+                <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf" required>
+                <!-- Vista previa del archivo seleccionado -->
+                <div id="vistaPreviaArchivo" class="vista-previa"></div>
+            </div>
+
+            <div class="grupo-input">
+                <label for="permiso"><i class="fas fa-handshake"></i> Documento de permiso legal:</label>
+                <input type="file" id="permiso" name="permiso" accept="image/*,application/pdf" required>
+                <div id="vistaPreviaPermiso" class="vista-previa"></div>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-paper-plane"></i> Enviar Validación
+            </button>
+        </form>
+
+        <div class="mensaje-error" id="respuesta"></div>
+    </div>
+
+    <div class="barra-contacto">
+        <p>¿Necesitas ayuda? <a href="#">Contáctanos</a></p>
+    </div>
 
     <script src="Validacion_Menor18.js"></script>
 </body>
