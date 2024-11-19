@@ -142,3 +142,12 @@ button:hover {
     font-size: 12px;
     margin-top: 5px;
 }
+
+.form-group input[type="file"] {
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #3A506B;
+    border: 1px solid #D0E1F9;
+    border-radius: 5px;
+    padding: 10px;
+}
