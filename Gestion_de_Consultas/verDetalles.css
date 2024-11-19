@@ -1,0 +1,119 @@
+body{
+    font-family: "Poppins", sans-serif; 
+    background: #5BC0BE;
+    margin: 0;
+    padding: 0;
+    color: #f1f1f1;
+}
+
+.barra-navegacion{
+    background-color: #0B132B;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.contenedor-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-nombre{
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+
+}
+.logo-nombre:hover {
+    transform: scale(1.1);
+}
+
+.logo{
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}   
+
+.nombre-sitio{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.perfil-enlace{
+    text-decoration: none;
+    
+}
+
+.perfil-usuario{
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.icono-perfil {
+    font-size: 40px; /* Tamaño del icono */
+    color: #FFFFFF; /* Color del icono */
+    margin-right: 10px;
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1C2541;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;    
+    display: flex;
+    flex-direction: column;
+
+}
+#nombre-empresa-detalles {
+    color: #ffffff; 
+}
+.boton{
+    display: flex;
+    align-items: center;
+}
+button {
+    background-color: #6c819b;
+    color:#1C2541;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: px;
+    transition: background-color 0.3s;
+    margin-top: 30px; 
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+.comentarios{
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+
+}
+
+textarea{
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+

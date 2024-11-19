@@ -2,16 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #000000, #ffffff); /* Fondo difuminado */
-    color: #ffcc00; /* Color de texto principal */
+    background-color: #2AB7B7; /* Fondo azul claro */
+    color: #ffffff; /* Color de texto principal */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #000000; /* Fondo negro completo */
-    color: #ffcc00; /* Texto en amarillo */
+    background-color: #0B2D4D; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto en blanco */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,21 +39,21 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     font-weight: normal;
-    color: #ffcc00; /* Amarillo */
+    color: #ffffff; /* Blanco */
     font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #cccc00; /* Un tono más claro al pasar el cursor */
+    color: #b3e0ff; /* Un tono más claro al pasar el cursor */
 }
 
 nav ul li a.active {
     font-weight: normal;
-    color: #ffcc00; /* Amarillo */
+    color: #ffffff; /* Blanco */
 }
 
 .user-options a {
-    color: #ffcc00; /* Amarillo */
+    color: #ffffff; /* Blanco */
     text-decoration: none;
     font-size: 16px;
 }
@@ -65,8 +65,8 @@ main {
 }
 
 .empresa-intro {
-    background-color: #302f2f;
-    color: #ffffff; /* Amarillo */
+    background-color: #1E3D5B;
+    color: #ffffff; /* Blanco */
     padding: 20px;
     text-align: center;
 }
@@ -90,7 +90,7 @@ main {
 }
 
 .postulante-card {
-    background-color: #242424;
+    background-color: #0B2D4D; /* Fondo azul oscuro */
     border: 1px solid #ccc;
     padding: 20px;
     width: 400px;
@@ -106,18 +106,18 @@ main {
 .postulante-card h3 {
     margin-top: 0;
     font-size: 22px;
-    color: #ffffff; 
+    color: #ffffff; /* Blanco */
 }
 
 .postulante-card p {
     margin: 10px 0;
     font-size: 18px;
-    color: #ffffff; 
+    color: #ffffff; /* Blanco */
 }
 
 button {
-    background-color: #007bff;
-    color: #ffffff; /* Amarillo */
+    background-color: #4E6378;
+    color: #ffffff; /* Blanco */
     border: none;
     padding: 12px 25px;
     cursor: pointer;
@@ -127,33 +127,33 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #6D8AA8;
 }
 
 /* Footer */
 footer {
-    background-color: #000000; /* Fondo negro completo */
-    color: #ffcc00; /* Texto en amarillo */
+    background-color: #0B2D4D; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto en blanco */
     text-align: center;
     padding: 10px;
     margin-top: auto;
     width: 100%;
 }
 
-
+/* Modal */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -195,8 +195,8 @@ footer {
 }
 
 #mensajeForm button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #4E6378;
+    color: #ffffff;
     border: none;
     padding: 12px 20px;
     font-size: 16px;
@@ -205,5 +205,5 @@ footer {
 }
 
 #mensajeForm button:hover {
-    background-color: #555;
+    background-color: #6D8AA8;
 }

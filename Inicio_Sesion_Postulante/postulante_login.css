@@ -1,19 +1,19 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #000000, #ffffff); /* Fondo difuminado */
+  background-color: #2AB7B7; /* Fondo azul claro */
   color: #ffffff;
 }
 
 header {
-  background-color: #000000;
+  background-color: #0B2D4D; /* Fondo azul oscuro */
   padding: 10px;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  color: #ffcc00; /* Letras en amarillo */
+  color: #ffffff; /* Letras en blanco */
 }
 
 .container {
@@ -24,7 +24,7 @@ header h1 {
 }
 
 .login-form {
-  background-color: #242424;
+  background-color: #0B2D4D; /* Fondo azul oscuro */
   padding: 30px;
   border-radius: 8px;
   width: 300px;
@@ -33,7 +33,7 @@ header h1 {
 
 .login-form h2 {
   text-align: center;
-  color: #ffffff; /* Letras en amarillo */
+  color: #ffffff; /* Letras en blanco */
 }
 
 .login-form input[type="email"],
@@ -45,12 +45,12 @@ textarea {
   margin: 10px 0;
   border: none;
   border-radius: 5px;
-  background-color: #333232;
-  color: #ffffff;
+  background-color: #E6E6E6; /* Fondo gris claro para los campos de texto */
+  color: #0B2D4D; /* Texto en azul oscuro */
 }
 
 .login-form input[type="submit"] {
-  background-color: #007bff;
+  background-color: #4E6378; /* Fondo azul medio */
   color: #ffffff;
   border: none;
   padding: 10px;
@@ -60,7 +60,7 @@ textarea {
 }
 
 .login-form input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #6D8AA8; /* Fondo azul más claro al pasar el ratón */
 }
 
 .error-message {
@@ -69,14 +69,14 @@ textarea {
 }
 
 a {
-  color: #ffcc00; /* Enlaces en amarillo */
+  color: #ffffff; /* Enlaces en blanco */
   display: block;
   text-align: center;
   margin-top: 15px;
 }
 
 .register-link {
-  color: #ffcc00; /* Enlace de registro en amarillo */
+  color: #ffffff; /* Enlace de registro en blanco */
   text-align: center;
   display: block;
   margin-top: 10px;
@@ -88,6 +88,6 @@ input, textarea {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  color: #ffffff;
-  background-color: #000000;
+  color: #0B2D4D; /* Texto en azul oscuro */
+  background-color: #E6E6E6; /* Fondo gris claro */
 }

@@ -18,7 +18,7 @@
     <main>
         <div class="form-container">
             <h2>Registro de Postulante</h2>
-            <form id="register-form" action="javascript:void(0);" method="POST" enctype="multipart/form-data">
+            <form id="register-form"> 
                 
                 <label for="name">Nombre Completo</label>
                 <input type="text" id="name" name="name" required>
@@ -43,7 +43,9 @@
                     <label for="terms">Acepto los <a href="../Terminos_y_Condiciones/terminos_condiciones.html">términos y condiciones</a></label>
                 </div>
                 
-                <p id="error-message" class="error-message"></p>
+                <!-- Mensaje de error o éxito -->
+                <p id="error-message" class="error-message" style="display:none; color: red;"></p>
+                <p id="success-message" class="success-message" style="display:none; color: green;"></p>
 
                 <div class="enlaces-ayuda">
                     <p><a href="../Inicio_Sesion_Postulante/Inicio_Sesion_Postulante.html">¿Ya tienes cuenta? Inicia Sesión</a></p>
@@ -53,7 +55,6 @@
             </form>
         </div>
     </main>
-    
 
     <footer>
         <div class="contact-bar">

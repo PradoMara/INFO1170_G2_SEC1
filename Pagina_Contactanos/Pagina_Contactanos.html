@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - AraucaniaLaboral</title>
+    <link rel="stylesheet" href="Pagina_Contactanos.css">
+</head>
+<body>
+    <header class="barra-superior">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1 class="sitio-titulo">AraucaniaLaboral - Contáctanos</h1>
+    </header>
+
+    <main class="contenedor-contacto">
+        <h2>Contáctanos</h2>
+        <p>Si tienes alguna duda o consulta, no dudes en enviarnos un mensaje.</p>
+
+        <form id="form-contacto" action="#" method="post">
+            <div class="grupo-input">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <small id="error-nombre" class="mensaje-error"></small>
+            </div>
+
+            <div class="grupo-input">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <small id="error-correo" class="mensaje-error"></small>
+            </div>
+
+            <div class="grupo-input">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" maxlength="500" required></textarea>
+                <small id="contador-caracteres">0/500 caracteres</small>
+                <small id="error-mensaje" class="mensaje-error"></small>
+            </div>
+
+            <button type="submit">Enviar Mensaje</button>
+            <p id="resultado-mensaje"></p>
+        </form>
+    </main>
+
+    <footer class="barra-contacto">
+        <p>Contacto:<a href="mailto:integracion58@gmail.com">integracion58@gmail.com</a> | Teléfono: +56 9 9992 9342</p>
+    </footer>
+
+    <script src="Pagina_Contactanos.js"></script>
+</body>
+</html>

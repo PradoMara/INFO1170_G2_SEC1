@@ -1,24 +1,31 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #000000, #ffffff); 
+}
+
+body {
+    background: #5BC0BE;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 80px; 
+    padding-top: 80px;
     height: 100%;
     overflow-x: hidden;
 }
 
 header .nav-bar {
-    background-color: #000000; 
+    background-color: #0B132B;
     padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centramos el contenido */
-    position: fixed; /* Fijo en la parte superior */
+    justify-content: center;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
 }
 
 .logo {
@@ -38,18 +45,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
-    padding: 20px; 
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 60px;
     box-sizing: border-box;
 }
 
 .form-container {
-    background-color: #000000;
+    background-color: #0B132B;
     padding: 2rem;
     border-radius: 10px;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -74,22 +83,23 @@ input, textarea {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    color: #ffffff;
-    background-color: #1e1e1e;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 button {
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #6c819b;
+    color: #0B132B;
     font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #cccccc;
+    background-color: #ffffff;
 }
 
 .terms {
@@ -121,10 +131,13 @@ button:hover {
 }
 
 footer .contact-bar {
-    background-color: #000000;
+    background-color: #0B132B;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     text-align: center;
-    position: fixed; 
+    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1000;
@@ -133,8 +146,8 @@ footer .contact-bar {
 
 footer .contact-bar a {
     color: #ffcc00;
-    margin: 0 10px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer .contact-bar a:hover {

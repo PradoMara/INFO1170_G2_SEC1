@@ -6,7 +6,7 @@
     <meta name="description" content="Perfil de usuario para menores de edad en la plataforma laboral.">
     <title>Perfil de Usuario - Menor de Edad</title>
     <link rel="stylesheet" href="EstilosDelPerfilMenorDeEdad.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
     <header class="top-bar">
@@ -14,11 +14,18 @@
             <img src="../Iconos/logo.png" alt="Logo de la plataforma">
         </div>
         <nav class="nav-links">
-            <a href="../Portada_AraucaniaLaboral/portada.html"><i class="fas fa-home"></i> Inicio</a>
-            <a href="../Pagina_Principal_Menor_de_Edad/PaginaPrincipalMenoresDeEdad.html"><i class="fas fa-briefcase"></i> Ofertas de Trabajo</a>
-            <a href="../Notificaciones_Postulante/notificaciones.html"><i class="fas fa-bell"></i> Notificaciones</a>
+            <a href="../Portada_AraucaniaLaboral/portada.html">
+                <i class="fas fa-home"></i> Inicio
+            </a>
+            <a href="../Pagina_Principal_Menor_de_Edad/PaginaPrincipalMenoresDeEdad.html">
+                <i class="fas fa-briefcase"></i> Ofertas de Trabajo
+            </a>
+            <a href="../Notificaciones_Postulante/notificaciones.html">
+                <i class="fas fa-bell"></i> Notificaciones
+            </a>
         </nav>
     </header>
+    
 
     <section class="profile-section">
         <div class="profile-header">
@@ -26,11 +33,21 @@
                 <img src="../Iconos/Perfil-Icono.png" alt="Imagen de perfil del usuario" class="profile-picture"> 
             </div>
             <div class="profile-info">
-                <h1><input type="text" id="nombre" value="Nombre del Menor" disabled></h1>
-                <p>Edad: <input type="number" id="edad" value="16" disabled></p>
-                <p>Ubicación: <input type="text" id="ubicacion" value="Temuco" disabled></p>
-                <button class="edit-button" id="editButton"><i class="fas fa-edit"></i> Editar Perfil</button>
-                <button class="save-button" id="saveButton" style="display:none;"><i class="fas fa-save"></i> Guardar Cambios</button>
+                <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                <input type="text" id="nombre" disabled>
+                
+                <label for="edad"><i class="fas fa-calendar-alt"></i> Edad:</label>
+                <input type="number" id="edad" disabled>
+                
+                <label for="ubicacion"><i class="fas fa-map-marker-alt"></i> Ubicación:</label>
+                <input type="text" id="ubicacion" disabled>
+                
+                <button class="edit-button" id="editButton">
+                    <i class="fas fa-edit"></i> Editar Perfil
+                </button>
+                <button class="save-button" id="saveButton" style="display:none;">
+                    <i class="fas fa-save"></i> Guardar Cambios
+                </button>
             </div>
         </div>
     </section>
@@ -38,56 +55,37 @@
     <main class="profile-details">
         <section class="about">
             <h2>Acerca de mí</h2>
-            <p>Estudiante de secundaria con interés en el mundo digital y la tecnología. Me encanta aprender sobre programación y diseño gráfico.</p>
+            <textarea id="acerca_de_mi" disabled></textarea>
         </section>
 
         <section class="skills">
             <h2>Habilidades</h2>
-            <ul>
-                <li>Diseño Gráfico (Photoshop, Illustrator)</li>
-                <li>Programación básica en HTML y CSS</li>
-                <li>Habilidad en redes sociales</li>
-                <li>Creatividad y resolución de problemas</li>
-            </ul>
+            <textarea id="habilidades" disabled></textarea>
         </section>
 
         <section class="experience">
             <h2>Experiencia</h2>
-            <p>No hay experiencia laboral formal.</p>
+            <textarea id="experiencia" disabled></textarea>
         </section>
 
         <section class="education">
             <h2>Educación</h2>
-            <p>Actualmente cursando 4to año de secundaria en el Liceo de Temuco.</p>
+            <textarea id="educacion" disabled></textarea>
         </section>
 
         <section class="activities">
             <h2>Actividades Extracurriculares</h2>
-            <ul>
-                <li>Miembro del club de robótica de la escuela</li>
-                <li>Participación en concursos de diseño</li>
-                <li>Voluntariado en proyectos comunitarios</li>
-            </ul>
+            <textarea id="actividades_extracurriculares" disabled></textarea>
         </section>
-
-        <div class="publish-profile">
-            <button class="publish-button" id="publishButton"><i class="fas fa-share-square"></i> Publicar Perfil</button>
-        </div>
     </main>
-
-    <script>
-        document.getElementById('publishButton').addEventListener('click', function() {
-            window.location.href = '../Publicar_perfil_Menor18/publicar_perfil.html'; 
-        });
-    </script>
 
     <footer>
         <div class="footer-content">
-            <a href="contacto.html"><i class="fas fa-envelope"></i> Contáctenos</a> | 
-            <a href="../Terminos_y_Condiciones/terminos_condiciones.html"><i class="fas fa-file-contract"></i> Términos y condiciones</a>
+            <a href="../Pagina_Contactanos/Pagina_Contactanos.html">Contáctenos</a> | 
+            <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y condiciones</a>
         </div>
     </footer>
 
-    <script src="perfilMenordeEdad.js"></script>
+    <script src="perfilMenorDeEdad.js"></script>
 </body>
 </html>

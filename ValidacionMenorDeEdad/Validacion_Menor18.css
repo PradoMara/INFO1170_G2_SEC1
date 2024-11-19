@@ -5,81 +5,112 @@
 }
 
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #000000, #ffffff); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
-    padding: 20px; 
-    overflow-y: auto; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #000000, #ffffff); 
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 80px; 
+    padding-bottom: 60px; 
+    height: 100%;
+    overflow-x: hidden;
 }
 
-.header {
-    background-color: #000; 
-    color: #ffffff;
-    padding: 10px 0;
+.barra-superior {
+    background-color: #000000; 
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
     position: fixed;
     top: 0;
     width: 100%;
-    text-align: center;
     z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header a {
-    color: #ffcc00; 
+.barra-superior h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.barra-superior ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra-superior ul li {
+    margin-left: 20px;
+}
+
+.barra-superior ul li a {
+    color: white;
     text-decoration: none;
     font-size: 16px;
 }
 
-.header a:hover {
+.barra-superior ul li a:hover {
     text-decoration: underline;
 }
 
-.container {
-    background-color: #1a1a1a; 
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); 
-    text-align: center;
-    width: 600px;
-    max-width: 90%;
-    margin: 100px 0 20px 0;
+.logo {
+    width: 80px; 
+    height: auto;
+    margin-right: 15px;
 }
 
-.logo {
-    width: 100px;
-    margin-bottom: 20px;
-    margin-top: 20px; 
+.sitio-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: #ffffff; 
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenedor {
+    background-color: #000000; 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 100px auto 0 auto;
 }
 
 h2 {
-    font-size: 24px;
-    font-weight: bold;
     color: #ffffff; 
-    margin-bottom: 30px;
+    font-size: 1.6rem; 
+    margin-bottom: 25px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+h5 {
+    color:#ffffff;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
     text-align: left;
 }
 
-.form-group label {
+label {
+    display: block;
     font-size: 14px;
+    margin-bottom: 5px;
     color: #ffffff; 
 }
 
-.form-group input {
+input[type="text"],
+input[type="email"],
+input[type="file"] {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc; 
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 14px;
-    background-color: #333; 
-    color: white; 
 }
 
 input:focus {
@@ -89,33 +120,32 @@ input:focus {
 
 button {
     width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #000; 
-    color: white; 
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000; 
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555; 
+    background-color: #cccccc; 
 }
 
-.help-link {
-    text-align: center;
+.enlaces-ayuda {
     margin-top: 20px;
+    text-align: center;
 }
 
-.help-link a {
-    color: #ffcc00; 
-    font-size: 14px;
-    text-decoration: none; 
+.enlaces-ayuda a {
+    color: #ffcc00;
+    text-decoration: none;
 }
 
-.help-link a:hover {
-    text-decoration: underline; 
+.enlaces-ayuda a:hover {
+    text-decoration: underline;
 }
 
 .mensaje-error {
@@ -125,22 +155,23 @@ button:hover {
     display: none;
 }
 
-.footer {
-    background-color: #000; 
-    color: #ffcc00; 
-    padding: 10px;
+.barra-contacto {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.footer a {
+.barra-contacto a {
     color: #ffcc00; 
     text-decoration: none;
-    padding: 0 15px;
 }
 
-.footer a:hover {
+.barra-contacto a:hover {
     text-decoration: underline;
 }
