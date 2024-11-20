@@ -1,25 +1,24 @@
 // Función para alternar visibilidad de contraseñas
-function togglePasswordVisibility(inputId, showIconId, hideIconId) {
-    const inputField = document.getElementById(inputId);
-    const showIcon = document.getElementById(showIconId);
-    const hideIcon = document.getElementById(hideIconId);
+function togglePasswordVisibility(inputId, iconId) {
+    const inputField = document.getElementById(inputId); // campo de entrada
+    const icon = document.getElementById(iconId); // icono de font awesome
 
-    showIcon.addEventListener('click', () => {
-        inputField.type = 'text';
-        showIcon.style.display = 'none';
-        hideIcon.style.display = 'block';
-    });
-
-    hideIcon.addEventListener('click', () => {
-        inputField.type = 'password';
-        showIcon.style.display = 'block';
-        hideIcon.style.display = 'none';
+    icon.addEventListener('click', () => {
+        if (inputField.type === 'password') {
+            inputField.type = 'text'; // cambiar el campo a texto para mostrar la contrasena
+            icon.classList.remove('fa-eye'); // remover el icono de ojo cerrado
+            icon.classList.add('fa-eye-slash'); // agregar el icono de ojo abierto
+        } else {
+            inputField.type = 'password'; // volver a ocultar la contrasena
+            icon.classList.remove('fa-eye-slash'); // remover el icono de ojo abierto
+            icon.classList.add('fa-eye'); // agregar el icono de ojo cerrado
+        }
     });
 }
 
-togglePasswordVisibility('contraseña', 'show-contraseña', 'hide-contraseña');
-togglePasswordVisibility('confirmar-contraseña', 'show-confirmar-contraseña', 'hide-confirmar-contraseña');
-
+// aplicar la funcion a los campos correspondientes
+togglePasswordVisibility('contraseña', 'icono-contraseña');
+togglePasswordVisibility('confirmar-contraseña', 'icono-confirmar-contraseña');
 
 document.getElementById("terminos-condiciones").addEventListener("click", function() {
     window.location.href = "terminos_condiciones.html"; // Redirecciona a la página de terminos y condiciones
@@ -140,4 +139,31 @@ document.getElementById('registro-empresa').addEventListener('submit', function(
     }
 
 
+});
+
+document.getElementById("contraseña").addEventListener("input", function () {
+    const contraseña = this.value;
+    const barra = document.getElementById("indicador-seguridad");
+    const mensaje = document.getElementById("mensaje-seguridad");
+
+    // Función para evaluar la contraseña
+    const fortaleza = evaluarFortaleza(contraseña);
+
+    // Actualizar la barra y el mensaje según la fortaleza
+    if (fortaleza < 2) {
+        barra.style.width = "33%";
+        barra.style.backgroundColor = "red";
+        mensaje.textContent = "Contraseña débil";
+        mensaje.style.color = "red";
+    } else if (fortaleza === 2) {
+        barra.style.width = "66%";
+        barra.style.backgroundColor = "yellow";
+        mensaje.textContent = "Contraseña moderada";
+        mensaje.style.color = "orange";
+    } else {
+        barra.style.width = "100%";
+        barra.style.backgroundColor = "green";
+        mensaje.textContent = "Contraseña fuerte";
+        mensaje.style.color = "green";
+    }
 });

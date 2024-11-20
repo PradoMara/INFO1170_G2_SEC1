@@ -27,9 +27,10 @@
         </header>
         <div class="form-container">
             <form id="registro-empresa" action="procesar-registro.php" method="POST">
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 <p class="campos-requeridos">Los campos marcados con <span class="obligatorio">*</span> son obligatorios.</p>
 
-                <label for="nombre-empresa">Nombre de la Empresa <i class="fas fa-building"></i> <span class="obligatorio">*</span></label>
+                <label for="nombre-empresa"><i class="fas fa-building"></i> Nombre de la Empresa  <span class="obligatorio">*</span></label>
                 <input type="text" placeholder="Nombre de la empresa" id="nombre-empresa" name="nombre-empresa" required>
                 <small id="error-nombre" class="error-message"></small>
                 
@@ -37,7 +38,7 @@
                 <input type="text" id="rut" name="rut" placeholder="Rut fiscal" required>
                 <small id="error-rut" class="error-message"></small>
                 
-                <label for="direccion">Dirección <i class="fa-solid fa-location-dot"></i></label>
+                <label for="direccion"><i class="fa-solid fa-location-dot"></i> Dirección </i></label>
                 <input type="text" id="direccion" name="direccion" placeholder="Direccion" required>
                 
                 <label for="ciudad">Ciudad <span class="obligatorio">*</span></label>
@@ -48,10 +49,10 @@
                 <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Codigo postal" required>
                 <small id="error-codigo" class="error-message"></small>
                 
-                <label for="telefono">Teléfono <i class="fa-solid fa-phone"></i></label>
+                <label for="telefono"><i class="fa-solid fa-phone"></i> Teléfono </i></label>
                 <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
                 
-                <label for="email">Correo Electrónico <i class="fas fa-envelope"></i> <span class="obligatorio">*</span></label>
+                <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico <span class="obligatorio">*</span></label>
                 <input type="email" id="email" name="email" placeholder="Correo electronico" required>
                 <small id="error-email" class="error-message"></small>
                 
@@ -65,21 +66,20 @@
                 <label for="descripcion">Descripción de la Empresa</label>
                 <textarea id="descripcion" name="descripcion"></textarea>
                 
-                <label for="contraseña">Contraseña <i class="fas fa-lock"></i> <span class="obligatorio">*</span></label>
+                <label for="contraseña"><i class="fas fa-lock"></i> Contraseña <span class="obligatorio">*</span></label>
                 <div class="password-container">
-                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
-                    <i class="fas fa-eye toggle-password" id="show-contraseña"></i>
-                    <i class="fas fa-eye-slash toggle-password" id="hide-contraseña" style="display: none;"></i>
+                    <input type="password" id="contraseña" placeholder="Ingrese su contraseña">
+                    <i id="icono-contraseña" class="fas fa-eye"></i>
                 </div>
                 <small id="error-contraseña" class="error-message"></small>
 
-                <label for="confirmar-contraseña">Confirmar Contraseña <i class="fas fa-lock"></i><span class="obligatorio">*</span></label>
+                <label for="confirmar-contraseña"><i class="fas fa-lock"></i> Confirmar Contraseña <span class="obligatorio">*</span></label>
                 <div class="password-container">
-                    <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" placeholder="Confirmar contraseña" required>
-                    <i class="fas fa-eye toggle-password" id="show-contraseña"></i>
-                    <i class="fas fa-eye-slash toggle-password" id="hide-contraseña" style="display: none;"></i>
+                    <input type="password" id="confirmar-contraseña" placeholder="Confirme su contraseña">
+                    <i id="icono-confirmar-contraseña" class="fas fa-eye"></i>
                 </div>
                 <small id="error-confirmar-contraseña" class="error-message"></small>
+
 
                 <label>
                     <input type="checkbox" name="terminos" required>
@@ -88,11 +88,12 @@
                 </label>
             
                 <div class="help-link">
-                    <p>¿Necesitas ayuda? <a href="#" id="contactanos">Contáctanos</a></p>
+                    <p>¿Necesitas ayuda? <a  rel="noopener noreferrer" href="#" id="contactanos">Contáctanos</a></p>
                 </div>
                 
                 <button type="submit">Registrarse</button>
                 <script src="link-ERG.js"></script>
+                <script src="validacion-pag-empresa.js"></script>
             </form>
         </div>
         <footer>

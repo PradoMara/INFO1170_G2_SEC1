@@ -1,43 +1,58 @@
 <?php
 include '../conexion-bd/conexion.php';
+ 
+// validar el token csrf 
+if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+    die(json_encode(['error' => 'token CSRF invalido o ausente']));
+}
 
-// Obtener y sanitizar las entradas
-$nombre_empresa = isset($_POST['nombre_empresa']) ? trim($_POST['nombre_empresa']) : '';
-$rut = isset($_POST['rut']) ? trim($_POST['rut']) : '';
-$direccion = isset($_POST['direccion']) ? trim($_POST['direccion']) : '';
-$ciudad = isset($_POST['ciudad']) ? trim($_POST['ciudad']) : '';
-$codigo_postal = isset($_POST['codigo_postal']) ? trim($_POST['codigo_postal']) : '';
-$telefono = isset($_POST['telefono']) ? trim($_POST['telefono']) : '';
-$email = isset($_POST['email']) ? trim($_POST['email']) : '';
-$contacto = isset($_POST['contacto']) ? trim($_POST['contacto']) : '';
-$puesto = isset($_POST['puesto']) ? trim($_POST['puesto']) : '';
-$descripcion = isset($_POST['descripcion']) ? trim($_POST['descripcion']) : '';
+// obtener y validar las entradas de forma estricta
+$nombre_empresa = isset($_POST['nombre_empresa']) ? htmlspecialchars(trim($_POST['nombre_empresa'])) : '';
+$rut = isset($_POST['rut']) ? htmlspecialchars(trim($_POST['rut'])) : '';
+$direccion = isset($_POST['direccion']) ? htmlspecialchars(trim($_POST['direccion'])) : '';
+$ciudad = isset($_POST['ciudad']) ? htmlspecialchars(trim($_POST['ciudad'])) : '';
+$codigo_postal = isset($_POST['codigo_postal']) ? htmlspecialchars(trim($_POST['codigo_postal'])) : '';
+$telefono = isset($_POST['telefono']) ? htmlspecialchars(trim($_POST['telefono'])) : '';
+$email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL) : '';
+$contacto = isset($_POST['contacto']) ? htmlspecialchars(trim($_POST['contacto'])) : '';
+$puesto = isset($_POST['puesto']) ? htmlspecialchars(trim($_POST['puesto'])) : '';
+$descripcion = isset($_POST['descripcion']) ? htmlspecialchars(trim($_POST['descripcion'])) : '';
 $id_usuario = isset($_POST['id_usuario']) ? intval($_POST['id_usuario']) : 0;
 
-// vaalidar campos obligatorios
-if (empty($nombre_empresa) || empty($rut) || empty($direccion) || empty($ciudad) || empty($telefono) || empty($email) || $id_usuario == 0) {
-    echo "Todos los campos obligatorios deben ser completados.";
-    exit;
+// validar campos obligatorios
+if (empty($nombre_empresa) || empty($rut) || empty($direccion) || empty($ciudad) || empty($email) || !$email) {
+    die(json_encode(['error' => 'campos obligatorios faltantes o invalidos']));
 }
 
-// preparar la consulta
-$sql = "INSERT INTO Empresa (nombre_Empresa, direccion, rut_Empresa, ciudad, codigo_postal, telefono, email, contacto_principal, puesto_contacto, des_Empresa, id_Usuario) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-$stmt = $conn->prepare($sql);
-
-if ($stmt) {
-    $stmt->bind_param("ssssssssssi", $nombre_empresa, $direccion, $rut, $ciudad, $codigo_postal, $telefono, $email, $contacto, $puesto, $descripcion, $id_usuario);
-
-    if ($stmt->execute()) {
-        echo "Registro completado exitosamente";
-    } else {
-        echo "Error al registrar: " . $stmt->error;
-    }
-
-    $stmt->close();
-} else {
-    echo "Error en la preparación de la consulta: " . $conn->error;
+// generar token csrf para evitar ataques csrf
+session_start();
+if (!isset($_SESSION['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+    die(json_encode(['error' => 'token csrf invalido']));
 }
 
-$conn->close();
+// preparar la consulta segura con pdo
+try {
+    $stmt = $pdo->prepare('INSERT INTO empresas (nombre_empresa, rut, direccion, ciudad, codigo_postal, telefono, email, contacto, puesto, descripcion, id_usuario) 
+                           VALUES (:nombre_empresa, :rut, :direccion, :ciudad, :codigo_postal, :telefono, :email, :contacto, :puesto, :descripcion, :id_usuario)');
+    
+    $stmt->execute([
+        ':nombre_empresa' => $nombre_empresa,
+        ':rut' => $rut,
+        ':direccion' => $direccion,
+        ':ciudad' => $ciudad,
+        ':codigo_postal' => $codigo_postal,
+        ':telefono' => $telefono,
+        ':email' => $email,
+        ':contacto' => $contacto,
+        ':puesto' => $puesto,
+        ':descripcion' => $descripcion,
+        ':id_usuario' => $id_usuario,
+    ]);
+
+    echo json_encode(['success' => 'registro insertado correctamente']);
+} catch (Exception $e) {
+    // registrar el error en un archivo seguro para su revision
+    error_log('error al insertar registro: ' . $e->getMessage());
+    die(json_encode(['error' => 'error interno del servidor']));
+}
 ?>
