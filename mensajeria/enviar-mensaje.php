@@ -1,21 +1,23 @@
 <?php
-include ('/conexion-bd/conexion.php');
+include '/conexion-bd/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $usuario = $_POST['usuario'];
     $mensaje = $_POST['mensaje'];
+    $destinatario = $_POST['destinatario'];
 
-    if (!empty($mensaje)) {
-        $usuario = 1; 
-        $sql = "INSERT INTO Mensajes (usuario, mensaje) VALUES (?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $usuario, $mensaje);
-        $stmt->execute();
-    }
+    // insertar el mensaje en la base de datos
+    $stmt = $conexion->prepare("INSERT INTO Mensajes (usuario, mensaje, destinatario) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $usuario, $mensaje, $destinatario);
+
     if ($stmt->execute()) {
-        echo "Mensaje enviado correctamente";
+        echo "Mensaje enviado.";
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error al enviar el mensaje: " . $stmt->error;
     }
-    
+
+    // cerrar la conexion
+    $stmt->close();
+    $conexion->close();
 }
 ?>

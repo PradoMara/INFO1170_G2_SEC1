@@ -3,17 +3,26 @@
 include '/conexion-bd/conexion.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // $id_usuario = se obtiene del login del usuario
-    $nueva_contraseña= $_POST['new-password'];
+    $id_usuario = $_SESSION['id_usuario'];
+    $nueva_contraseña = $_POST['new-password'];
     $confirmar_contraseña = $_POST['confirm-password'];
 
-    $sql = "UPDATE Usuario SET 
-    contraseña = '$nueva_contraseña', 
-    WHERE id_usuario = '$id_usuario'", $nueva_contraseña = $confirmar_contraseña;
-    if ($conn->query($sql) === TRUE) {
-        echo "LA contraseña fue cambiada correctamente.<br>";
+    if ($nueva_contraseña === $confirmar_contraseña) {
+        $contraseña_hash = password_hash($nueva_contraseña, PASSWORD_DEFAULT);
+
+        $stmt = $conn->prepare("UPDATE Usuarios SET contraseña = ? WHERE id_usuario = ?");
+        $stmt->bind_param("si", $contraseña_hash, $id_usuario);
+
+        if ($stmt->execute()) {
+            echo "La contraseña fue cambiada correctamente.<br>";
+        } else {
+            echo "Error al cambiar contraseña: " . $stmt->error . "<br>";
+        }
+
+        $stmt->close();
+        $conn->close();
     } else {
-        echo "Error al cambiar contraseña: " . $conn->error . "<br>";
+        echo "Las contraseñas no coinciden.<br>";
     }
 }
 ?>

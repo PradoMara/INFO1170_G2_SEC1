@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $estado_civil = $_POST['estado_civil'];
     $user_id = $_POST['user_id'];
 
-    $sql = "UPDATE usuarios SET nacionalidad=?, rut=?, fecha_nacimiento=?, telefono=?, estado_civil=? WHERE id=?";
+    $sql = "UPDATE Usuarios SET nacionalidad=?, rut=?, fecha_nacimiento=?, telefono=?, estado_civil=? WHERE id=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssssi", $nacionalidad, $rut, $fecha_nacimiento, $telefono, $estado_civil, $user_id);
 

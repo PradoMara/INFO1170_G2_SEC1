@@ -1,10 +1,24 @@
 <?php
 include('/conexion-bd/conexion.php');
 
-$sql = "SELECT usuario, mensaje, fecha FROM Mensajes ORDER BY fecha DESC";
-$result = $conn->query($sql);
+$destinatario = $_GET['destinatario'];
 
-while ($row = $result->fetch_assoc()) {
-    echo "<p><strong>" . htmlspecialchars($row['usuario']) . ":</strong> " . htmlspecialchars($row['mensaje']) . "</p>";
+// Ccnsulta para obtener mensajes dirigidos al destinatario o mensajes globales
+$stmt = $conexion->prepare("SELECT usuario, mensaje, fecha FROM Mensajes WHERE destinatario = ? OR destinatario IS NULL ORDER BY fecha ASC");
+$stmt->bind_param("s", $destinatario);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+// Crear un array para los mensajes
+$mensajes = [];
+while ($fila = $resultado->fetch_assoc()) {
+    $mensajes[] = $fila;
 }
+
+// devolver los mensajes en formato JSON
+echo json_encode($mensajes);
+
+// Cerrar la conexion
+$stmt->close();
+$conexion->close();
 ?>

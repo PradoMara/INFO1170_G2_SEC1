@@ -1,17 +1,36 @@
 <?php
-include '/conexion-bd/conexion.php';
+include '../conexion-bd/conexion.php'; 
 
-$id_Empresa = $_POST['id_Empresa'];
-$nombre = $_POST['nombre_Empresa'];
-$direccion = $_POST['direccion'];
-$rut = $_POST['rut_Empresa'];
-$descripcion = $_POST['des_Empresa'];
+// obtener y sanitizar las entradas
+$id_Empresa = isset($_POST['id_Empresa']) ? intval($_POST['id_Empresa']) : 0;
+$nombre = isset($_POST['nombre_Empresa']) ? trim($_POST['nombre_Empresa']) : '';
+$direccion = isset($_POST['direccion']) ? trim($_POST['direccion']) : '';
+$rut = isset($_POST['rut_Empresa']) ? trim($_POST['rut_Empresa']) : '';
+$descripcion = isset($_POST['des_Empresa']) ? trim($_POST['des_Empresa']) : '';
 
-$sql = "UPDATE Empresa SET nombre_Empresa = '$nombre', direccion = '$direccion', rut_Empresa = '$rut', des_Empresa = '$descripcion' WHERE id_Empresa = $id_Empresa";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Empresa actualizada correctamente.";
-} else {
-    echo "Error al actualizar empresa: " . $conn->error;
+// validar campos obligatorios
+if ($id_Empresa == 0 || empty($nombre) || empty($direccion) || empty($rut)) {
+    echo "Todos los campos obligatorios deben ser completados.";
+    exit;
 }
+
+// preparar la consulta SQL utilizando sentencias preparadas
+$sql = "UPDATE Empresa SET nombre_Empresa = ?, direccion = ?, rut_Empresa = ?, des_Empresa = ? WHERE id_Empresa = ?";
+$stmt = $conn->prepare($sql);
+
+if ($stmt) {
+    $stmt->bind_param("ssssi", $nombre, $direccion, $rut, $descripcion, $id_Empresa);
+
+    if ($stmt->execute()) {
+        echo "Empresa actualizada correctamente.";
+    } else {
+        echo "Error al actualizar empresa: " . $stmt->error;
+    }
+
+    $stmt->close();
+} else {
+    echo "Error en la preparación de la consulta: " . $conn->error;
+}
+
+$conn->close();
 ?>

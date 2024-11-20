@@ -9,17 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $telefono = $_POST['telefono'];
     $estado_civil = $_POST['estado_civil'];
     $user_id = $_POST['user_id'];
+
+    $sql = "UPDATE Usuarios SET nacionalidad = ?, rut = ?, fecha_nacimiento = ?, telefono = ?, estado_civil = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssi", $nacionalidad, $rut, $fecha_nacimiento, $telefono, $estado_civil, $user_id);
+
+    if ($stmt->execute()) {
+        echo "Perfil actualizado correctamente.";
+    } else {
+        echo "Error al actualizar el perfil: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
 }
-
-$sql = "UPDATE usuarios SET nacionalidad=?, rut=?, fecha_nacimiento=?, telefono=?, estado_civil=? WHERE id=?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sssssi", $nacionalidad, $rut, $fecha_nacimiento, $telefono, $estado_civil, $user_id);
-
-if ($stmt->execute()) {
-    echo "Perfil actualizado correctamente.";
-} else {
-    echo "Error al actualizar el perfil: " . $conn->error;
-}
-
-$conn->close();
 ?>
