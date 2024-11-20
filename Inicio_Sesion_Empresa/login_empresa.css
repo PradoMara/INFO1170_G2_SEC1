@@ -138,3 +138,22 @@ button:hover {
 .barra-contacto a:hover {
     color: #FFFFFF;
 }
+
+.oculto {
+    display: none;
+}
+
+#codigo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #1C2541;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}

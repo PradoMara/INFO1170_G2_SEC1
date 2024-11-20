@@ -28,13 +28,47 @@ document.getElementById('login-empresa-form').addEventListener('submit', functio
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            window.location.href = "perfil_empresa.html"; 
+            // Ocultar formulario de login y mostrar formulario de código
+            document.getElementById('login-container').classList.add('oculto');
+            document.getElementById('codigo-container').classList.remove('oculto');
+            localStorage.setItem('email', email); // Guardar email temporalmente
         } else {
-            alert(data.message); 
+            alert(data.message);
         }
     })
     .catch(error => {
         console.error('Error:', error);
         alert("Hubo un problema al intentar iniciar sesión.");
+    });
+});
+
+document.getElementById('verificar-codigo-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const codigo = document.getElementById('codigo').value;
+    const email = localStorage.getItem('email');
+
+    fetch('verificar_codigo.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+            'email': email,
+            'codigo': codigo
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            window.location.href = "perfil_empresa.html";
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("Hubo un problema al verificar el código.");
     });
 });

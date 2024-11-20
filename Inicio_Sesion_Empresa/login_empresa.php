@@ -1,11 +1,9 @@
 <?php
 
 include 'conexion.php';
-
-header('Content-Type: application/json'); 
+header('Content-Type: application/json');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $email = mysqli_real_escape_string($conexion, $_POST['email']);
     $password = mysqli_real_escape_string($conexion, $_POST['password']);
 
@@ -21,7 +19,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
 
         if (password_verify($password, $row['password'])) {
-            echo json_encode(["success" => true]);
+            // Generar código 2FA
+            $codigo2FA = rand(100000, 999999);
+            $sqlUpdate = "UPDATE empresas SET codigo_2fa = '$codigo2FA' WHERE email = '$email'";
+            mysqli_query($conexion, $sqlUpdate);
+
+            // Enviar correo con el código 2FA
+            $to = $email;
+            $subject = "Código de autenticación de Araucanía Laboral";
+            $message = "Tu código de autenticación es: $codigo2FA";
+            $headers = "From: integracion58@gmail.com";
+
+            if (mail($to, $subject, $message, $headers)) {
+                echo json_encode(["success" => true, "message" => "Código 2FA enviado a tu correo.", "redirect" => "verificar_codigo.php"]);
+            } else {
+                echo json_encode(["success" => false, "message" => "No se pudo enviar el correo con el código."]);
+            }
         } else {
             echo json_encode(["success" => false, "message" => "Contraseña incorrecta."]);
         }
@@ -33,5 +46,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 mysqli_close($conexion);
-
 ?>
