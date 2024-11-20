@@ -144,3 +144,35 @@ button {
     background-color: #ffffff;
     transform: translateY(-3px);
 }
+
+.input-icono {
+    position: relative;
+}
+
+.input-icono i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #6c819b; 
+    font-size: 18px;
+}
+
+.input-icono input[type="text"],
+.input-icono input[type="email"],
+.input-icono textarea {
+    padding-left: 40px; 
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #000000;
+    min-height: 80px;
+}

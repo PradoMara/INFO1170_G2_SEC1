@@ -1,9 +1,12 @@
 <?php
 
-include "conexion.php"
+include "conexion.php";
 
-if ($conexion->connect_error) {
-    die(json_encode(['success' => false, 'message' => 'Error de conexión a la base de datos.']));
+header('Content-Type: application/json');
+
+if (!$conexion || $conexion->connect_error) {
+    echo json_encode(['success' => false, 'message' => 'Error de conexión a la base de datos.']);
+    exit;
 }
 
 if (isset($_FILES['archivo'], $_FILES['permiso']) && $_FILES['archivo']['error'] === UPLOAD_ERR_OK && $_FILES['permiso']['error'] === UPLOAD_ERR_OK) {
@@ -15,13 +18,18 @@ if (isset($_FILES['archivo'], $_FILES['permiso']) && $_FILES['archivo']['error']
     $tipoPermiso = $_FILES['permiso']['type'];
     $contenidoPermiso = file_get_contents($_FILES['permiso']['tmp_name']);
 
-    $stmt = $conexion->prepare("INSERT INTO Validaciones (fecha_nacimiento, tipo_archivo, archivo, tipo_permiso, permiso) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conexion->prepare("INSERT INTO ValidacionMenor18 (fecha_nacimiento, tipo_archivo, archivo, tipo_permiso, permiso) VALUES (?, ?, ?, ?, ?)");
+    if (!$stmt) {
+        echo json_encode(['success' => false, 'message' => 'Error al preparar la consulta: ' . $conexion->error]);
+        exit;
+    }
+
     $stmt->bind_param("sssss", $fechaNacimiento, $tipoArchivo, $contenidoArchivo, $tipoPermiso, $contenidoPermiso);
 
     if ($stmt->execute()) {
         echo json_encode(['success' => true, 'message' => 'Validación registrada exitosamente.']);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Error al guardar los datos en la base de datos.']);
+        echo json_encode(['success' => false, 'message' => 'Error al guardar los datos en la base de datos: ' . $stmt->error]);
     }
 
     $stmt->close();
@@ -29,6 +37,5 @@ if (isset($_FILES['archivo'], $_FILES['permiso']) && $_FILES['archivo']['error']
     echo json_encode(['success' => false, 'message' => 'Debe seleccionar ambos archivos (archivo principal y permiso legal).']);
 }
 
-// Cerrar conexión
 $conexion->close();
 ?>

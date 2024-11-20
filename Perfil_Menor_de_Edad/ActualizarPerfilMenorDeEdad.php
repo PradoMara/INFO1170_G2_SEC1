@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $educacion = $_POST['educacion'];
     $actividades_extracurriculares = $_POST['actividades_extracurriculares'];
 
-    $sql = "UPDATE Postulantee
+    $sql = "UPDATE PostulanteMenor
             SET nombre = ?, edad = ?, ubicacion = ?, acerca_de_mi = ?, habilidades = ?, experiencia = ?, educacion = ?, actividades_extracurriculares = ?
             WHERE id_postulante = ?";
     $stmt = $conn->prepare($sql);

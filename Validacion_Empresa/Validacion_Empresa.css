@@ -179,3 +179,12 @@ button:hover {
 .barra-contacto a:hover {
     text-decoration: underline;
 }
+
+label i, h2 i, h1 i, footer i {
+    margin-right: 8px;
+    color: #fcfcfc; 
+}
+
+button i {
+    margin-right: 8px;
+}

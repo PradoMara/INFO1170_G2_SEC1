@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id_postulante = $_GET['id']; 
 
     $sql = "SELECT nombre, edad, ubicacion, acerca_de_mi, habilidades, experiencia, educacion, actividades_extracurriculares 
-            FROM Postulantee
+            FROM PostulanteMenor
             WHERE id_postulante = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id_postulante);

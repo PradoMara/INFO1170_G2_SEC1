@@ -162,3 +162,27 @@ h2 {
 .barra-contacto a:hover {
     text-decoration: underline;
 }
+
+header h1 i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.descripcion i {
+    margin-right: 8px;
+    color: #5BC0BE;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+.barra-contacto i {
+    margin-right: 5px;
+    color: #ffcc00;
+}

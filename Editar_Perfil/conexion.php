@@ -1,9 +1,14 @@
 <?php
-$servername = "mysql.inf.uct.cl";
-$username = "ecaranza"; 
-$password = "wd65dZXb1IXFKw-Lb"; 
-$dbname = "A2024_ecaranza"; 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$host = "db.inf.uct.cl";
+$user = "dprado";
+$password = "9uwlZuJJWPHjj+uYU";
+$bd     = "A2024_dprado";
 
+$conn = new mysqli($host, $user, $password, $bd);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+echo "ok";  
 ?>

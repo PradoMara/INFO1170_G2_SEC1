@@ -206,3 +206,27 @@ body {
     background-color: #ffffff;
     transform: translateY(-2px);
 }
+
+.input-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-icono i {
+    color: #ffffff; 
+}
+
+.input-icono select, .input-icono input {
+    padding-left: 35px;
+}
+
+.detalle-postulante i {
+    margin-right: 5px;
+    color: #ffffff; 
+}
+
+.btn i {
+    margin-right: 5px;
+}

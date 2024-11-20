@@ -114,6 +114,15 @@ textarea{
     margin-top: 20px;
     background-color: #ffffff;
     color: #000000;
+    resize: none;
 }
 
+h1 i, h3 i {
+    margin-right: 10px;
+    color: #ffffff; 
+}
+
+button i {
+    margin-right: 8px;
+}
 

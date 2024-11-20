@@ -110,3 +110,22 @@ footer a {
 footer a:hover {
     color: #007bff;
 }
+
+.nav-links a i {
+    margin-right: 5px;
+}
+
+.profile-info p i, 
+.about h2 i, 
+.skills h2 i, 
+.experience h2 i, 
+.education h2 i, 
+.activities h2 i {
+    margin-right: 10px;
+    color: #ffc107;
+}
+
+/* Botones con íconos */
+button i {
+    margin-right: 8px;
+}

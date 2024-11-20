@@ -20,7 +20,7 @@ body {
     padding: 15px 30px;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 1000%;
     z-index: 1000;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -129,4 +129,28 @@ ol {
 
 .boton-volver button a:hover {
     text-decoration: none;
+}
+
+header h1 i {
+    margin-right: 10px;
+    color: #5BC0BE;
+}
+
+h2 i, h3 i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.faq p i, .guia-paso li i {
+    margin-right: 5px;
+    color: #ffc107;
+}
+
+.boton-volver button i {
+    margin-right: 8px;
+}
+
+footer p i {
+    margin-right: 5px;
+    color: #ffc107;
 }

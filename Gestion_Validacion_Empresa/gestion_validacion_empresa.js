@@ -18,19 +18,26 @@ function cargarSolicitudes(pagina = 1) {
                 const solicitudDiv = document.createElement('div');
                 solicitudDiv.classList.add('solicitud');
                 solicitudDiv.innerHTML = `
-                    <div class="solicitud-info">
-                        <h3>Nombre de la Empresa: <span>${solicitud.razonSocial}</span></h3>
-                        <p>RUT: <span>${solicitud.registroTributario}</span></p>
-                        <p>Dirección: <span>${solicitud.direccionFiscal}</span></p>
-                        <p>Correo Electrónico Corporativo: <span>${solicitud.correoCooperativo}</span></p>
-                        <p>Estado: <span>${solicitud.estado}</span></p>
-                        <div class="acciones">
-                            <button class="btn-aceptar" onclick="validarEmpresa('aceptar', ${solicitud.id_Empresa})">Aceptar</button>
-                            <button class="btn-rechazar" onclick="validarEmpresa('rechazar', ${solicitud.id_Empresa})">Rechazar</button>
-                            <button class="btn-detalles" onclick="verDetalles(${solicitud.id_Empresa})">Ver Detalles</button>
-                        </div>
+                <div class="solicitud-info">
+                    <h3><i class="fas fa-building"></i> Nombre de la Empresa: <span>${solicitud.razonSocial}</span></h3>
+                    <p><i class="fas fa-id-card"></i> RUT: <span>${solicitud.registroTributario}</span></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: <span>${solicitud.direccionFiscal}</span></p>
+                    <p><i class="fas fa-envelope"></i> Correo Electrónico Corporativo: <span>${solicitud.correoCooperativo}</span></p>
+                    <p><i class="fas fa-info-circle"></i> Estado: <span>${solicitud.estado}</span></p>
+                    <div class="acciones">
+                        <button class="btn-aceptar" onclick="validarEmpresa('aceptar', ${solicitud.id_Empresa})">
+                            <i class="fas fa-check"></i> Aceptar
+                        </button>
+                        <button class="btn-rechazar" onclick="validarEmpresa('rechazar', ${solicitud.id_Empresa})">
+                            <i class="fas fa-times"></i> Rechazar
+                        </button>
+                        <button class="btn-detalles" onclick="verDetalles(${solicitud.id_Empresa})">
+                            <i class="fas fa-eye"></i> Ver Detalles
+                        </button>
                     </div>
-                `;
+                </div>
+            `;
+            
                 contenedor.appendChild(solicitudDiv);
             });
 
@@ -111,13 +118,13 @@ function cargarDetallesEmpresa(idEmpresa) {
             if (data) {
                 nombreEmpresaDetalles.textContent = data.razonSocial;
                 informacionSolicitud.innerHTML = `
-                    <p><strong>RUT:</strong> ${data.registroTributario}</p>
-                    <p><strong>Dirección:</strong> ${data.direccionFiscal}</p>
-                    <p><strong>Correo Electrónico Corporativo:</strong> ${data.correoCooperativo}</p>
-                    <p><strong>Estado:</strong> ${data.estado}</p>
+                    <p><i class="fas fa-id-card"></i> <strong>RUT:</strong> ${data.registroTributario}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> ${data.direccionFiscal}</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Correo Electrónico Corporativo:</strong> ${data.correoCooperativo}</p>
+                    <p><i class="fas fa-info-circle"></i> <strong>Estado:</strong> ${data.estado}</p>
                 `;
             } else {
-                informacionSolicitud.innerHTML = '<p>Detalles de la empresa no encontrados.</p>';
+                informacionSolicitud.innerHTML = '<p><i class="fas fa-exclamation-circle"></i> Detalles de la empresa no encontrados.</p>';
             }
         })
         .catch(error => {
@@ -125,6 +132,7 @@ function cargarDetallesEmpresa(idEmpresa) {
             alert('Ocurrió un error al cargar los detalles.');
         });
 }
+
 
 if (idEmpresa) {
     cargarDetallesEmpresa(idEmpresa);

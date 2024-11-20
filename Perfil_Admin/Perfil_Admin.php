@@ -8,7 +8,7 @@ if (!$idAdmin) {
     exit;
 }
 
-$sql = "SELECT nombre, correo, rol, telefono, acerca_de, experiencia, educacion FROM Administradoor WHERE id = ?";
+$sql = "SELECT nombre, correo, rol, telefono, acerca_de, experiencia, educacion FROM Administrador WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $idAdmin);
 $stmt->execute();

@@ -277,3 +277,45 @@ button.rechazar:hover{
     background-color: #0056b3;
     transform: scale(1.05); 
 }
+
+.input-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-icono i {
+    color: #f1f1f1; 
+}
+
+.input-icono select, .input-icono input {
+    padding-left: 35px;
+}
+
+h1 i {
+    margin-right: 10px;
+    color: #ffffff; 
+}
+
+.solicitud h3 i {
+    margin-right: 5px;
+    color: #ffffff; 
+}
+
+button i {
+    margin-right: 5px;
+}
+
+.btn-aceptar i {
+    color: #6c819b;
+}
+
+.btn-rechazar i {
+    color: #e63946;
+}
+
+.btn-detalles i {
+    color: #0056b3;
+}

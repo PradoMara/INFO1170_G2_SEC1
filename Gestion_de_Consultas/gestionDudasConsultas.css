@@ -156,3 +156,23 @@ body {
 .back-button button:hover {
     background-color:#0056b3;
 }
+
+.input-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.input-icono i {
+    position: absolute;
+    left: 10px;
+    color: #ddd; 
+    font-size: 18px;
+}
+
+.input-icono input[type="text"],
+.input-icono select {
+    padding-left: 35px; 
+    margin: 0 10px;
+}

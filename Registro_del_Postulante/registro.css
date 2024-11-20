@@ -140,3 +140,12 @@ footer .contact-bar a {
 footer .contact-bar a:hover {
     text-decoration: underline;
 }
+
+label i, .terms label i, .enlaces-ayuda p i, h1 i, h2 i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+button i {
+    margin-right: 8px;
+}

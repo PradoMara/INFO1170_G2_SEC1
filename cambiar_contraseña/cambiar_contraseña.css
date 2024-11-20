@@ -65,7 +65,7 @@ label {
 }
 
 input[type="password"] {
-    width: 95%;
+    width: 90%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #6c757d;
@@ -135,4 +135,21 @@ button, a {
 .error.mostrar {
     display: block;
     animation: shake 0.5s ease;
+}
+
+.input-icono {
+    position: relative;
+}
+
+.input-icono i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #6c819b; 
+    font-size: 18px;
+}
+
+.input-icono input[type="password"] {
+    padding-left: 40px; 
 }

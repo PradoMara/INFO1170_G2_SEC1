@@ -157,3 +157,27 @@ button {
     background-color: #ffffff;
     transform: translateY(-3px);
 }
+
+.nombre-sitio i {
+    margin-right: 10px;
+    color: #5BC0BE;
+}
+
+.titulo-seccion i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.perfil-detalles p i {
+    margin-right: 5px;
+    color: #ffc107;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+.foto-perfil {
+    font-size: 100px;
+    color: #5BC0BE;
+}

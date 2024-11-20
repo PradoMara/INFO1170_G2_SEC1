@@ -3,93 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Validaciones de Postulantes - Araucanía Laboral</title>
+    <title>Gestión de Validaciones</title>
     <link rel="stylesheet" href="Gestion_Validacion_Postulante.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="barra-navegacion">
-        <div class="contenedor-navegacion">
-            <div class="logo-nombre">
-                <img src="../Iconos/logo.png" alt="Logo Araucanía Laboral" class="logo">
-                <span class="nombre-sitio">Araucanía Laboral</span>
-            </div>
-            <a href="../Perfil_Admin/Perfil_Admin.html" class="perfil-enlace">  
-                <div class="perfil-usuario">
-                    <i class="fas fa-user-circle icono-perfil"></i>
-                    <span class="nombre-usuario">Administrador</span>
-                </div>
-            </a>
+    <header>
+        <nav>
+            <h1>Araucanía Laboral</h1>
+            <p>Gestión de Validaciones</p>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor-busqueda">
+            <input type="text" placeholder="Buscar validación..." id="buscar">
+            <button id="filtro-recientes">Filtrar por Recientes</button>
         </div>
-    </nav>
-
-    <div class="contenedor">
-        <h1 class="texto-bienvenida">Gestión de Validaciones de Postulantes</h1>
-
-        <div class="filtros">
-            <input type="text" id="busqueda" class="filtro" placeholder="Buscar validaciones...">
-            <select id="filtro-estado" class="filtro">
-                <option value="">Filtrar por Estado</option>
-                <option value="pendiente">Pendiente</option>
-                <option value="aprobado">Aprobado</option>
-                <option value="rechazado">Rechazado</option>
-            </select>
-            <select id="filtro-fecha" class="filtro">
-                <option value="">Filtrar por Fecha</option>
-                <option value="1">Última semana</option>
-                <option value="4">Último mes</option>
-                <option value="12">Último año</option>
-            </select>
+        <div id="contenedor-tarjetas" class="contenedor-tarjetas">
         </div>
-
-        <div class="lista-validaciones" id="lista-validaciones">
-            <div class="validacion" data-fecha="2023-09-10" data-estado="pendiente">
-                <i class="fas fa-user-circle foto-postulante"></i>
-                <div class="info-validacion">
-                    <h3 class="nombre-postulante">Juan Pérez</h3>
-                    <p class="detalle-validacion">Email: juan.perez@example.com</p>
-                    <p class="detalle-validacion">Teléfono: +56 9 1234 5678</p>
-                    <p class="detalle-validacion">Estado: Pendiente</p>
-                </div>
-                <div class="acciones-validacion">
-                    <button class="btn"  onclick="verDetalles('Juan Pérez')"><i class="fas fa-eye"></i> Ver Detalles</button>
-                    <button class="btn" onclick="aprobarValidacion('Juan Pérez')"><i class="fas fa-check"></i>Aprobar</button>
-                    <button class="btn" onclick="rechazarValidacion('Juan Pérez')"><i class="fas fa-times"></i>Rechazar</button>
-                </div>
-            </div>
-
-            <div class="validacion" data-fecha="2023-09-15" data-estado="aprobado">
-                <i class="fas fa-user-circle foto-postulante"></i>
-                <div class="info-validacion">
-                    <h3 class="nombre-postulante">Ana Gómez</h3>
-                    <p class="detalle-validacion">Email: ana.gomez@example.com</p>
-                    <p class="detalle-validacion">Teléfono: +56 9 2345 6789</p>
-                    <p class="detalle-validacion">Estado: Aprobado</p>
-                </div>
-                <div class="acciones-validacion">
-                    <button class="btn" onclick="verDetalles('Ana Gómez')">Ver Detalles</button>
-                </div>  
-            </div>
-            <div class="validacion" data-fecha="2023-09-10" data-estado="rechazado">
-                <i class="fas fa-user-circle foto-postulante"></i>
-                <div class="info-validacion">
-                    <h3 class="nombre-postulante">Luiz Peres</h3>
-                    <p class="detalle-validacion">Email: Luiz.peres@example.com</p>
-                    <p class="detalle-validacion">Teléfono: +56 9 4537 2378</p>
-                    <p class="detalle-validacion">Estado: Rechazado</p>
-                </div>
-                <div class="acciones-validacion">
-                    <button class="btn" onclick="verDetalles('Luiz Peres')">Ver Detalles</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="boton-volver">
-            <button id="btn-volver" class="btn"><i class="fas fa-arrow-left"></i>Volver a la Página Principal</button>
-        </div>
-        
-    </div>
-
+    </main>
     <script src="Gestion_Validacion_Postulante.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("No puedes registrarte si tienes menos de 16 años.");
     }
 
-    $sql = "INSERT INTO Postulantee (nombre, correo, telefono, edad, password) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO PostulanteMenor (nombre, correo, telefono, edad, password) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssis", $nombre, $email, $telefono, $edad, $password);
 

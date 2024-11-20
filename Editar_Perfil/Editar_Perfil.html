@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- Barra de navegación -->
     <nav class="barra-navegacion">
         <div class="contenedor-navegacion">
             <div class="logo-nombre">
@@ -28,27 +27,45 @@
         <form id="form-editar-perfil">
             <div class="campo">
                 <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <div class="input-icono">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
             </div>
             <div class="campo">
                 <label for="correo">Correo Electrónico</label>
-                <input type="email" id="correo" name="correo" required>
+                <div class="input-icono">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
             </div>
             <div class="campo">
                 <label for="telefono">Teléfono</label>
-                <input type="text" id="telefono" name="telefono">
+                <div class="input-icono">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="telefono" name="telefono">
+                </div>
             </div>
             <div class="campo">
                 <label for="acerca_de">Acerca de mí</label>
-                <textarea id="acerca_de" name="acerca_de"></textarea>
+                <div class="input-icono">
+                    <i class="fas fa-info-circle"></i>
+                    <textarea id="acerca_de" name="acerca_de"></textarea>
+                </div>
             </div>
             <div class="campo">
                 <label for="experiencia">Experiencia</label>
-                <textarea id="experiencia" name="experiencia"></textarea>
+                <div class="input-icono">
+                    <i class="fas fa-briefcase"></i>
+                    <textarea id="experiencia" name="experiencia"></textarea>
+                </div>
             </div>
             <div class="campo">
                 <label for="educacion">Educación</label>
-                <textarea id="educacion" name="educacion"></textarea>
+                <div class="input-icono">
+                    <i class="fas fa-graduation-cap"></i>
+                    <textarea id="educacion" name="educacion"></textarea>
+                </div>
             </div>
             <div class="acciones-formulario">
                 <button type="submit" class="btn-guardar">Guardar</button>

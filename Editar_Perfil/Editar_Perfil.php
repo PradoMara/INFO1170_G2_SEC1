@@ -10,7 +10,7 @@ $acerca_de = $_POST['acerca_de'];
 $experiencia = $_POST['experiencia'];
 $educacion = $_POST['educacion'];
 
-$sql = "UPDATE Administradoor SET nombre = ?, correo = ?, telefono = ?, acerca_de = ?, experiencia = ?, educacion = ? WHERE id = ?";
+$sql = "UPDATE Administrador SET nombre = ?, correo = ?, telefono = ?, acerca_de = ?, experiencia = ?, educacion = ? WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssssssi", $nombre, $correo, $telefono, $acerca_de, $experiencia, $educacion, $idAdmin);
 
