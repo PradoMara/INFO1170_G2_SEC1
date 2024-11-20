@@ -1,19 +1,21 @@
 :root {
-    --fondo-principal: linear-gradient(to bottom, #000000, #ffffff); /* Fondo difuminado */
-    --fondo-barra-superior: #000000;
-    --fondo-formulario: #222222;
-    --boton-color: #007bff;
-    --boton-hover: #0056b3;
-    --texto-principal: #ffcc00;
-    --texto-secundario: #ffffff; /* Color amarillo para encabezados */
+    --fondo-principal: #2AB7B7;
+    --fondo-barra-superior: #0B2D4D;
+    --fondo-formulario: #0B2D4D;
+    --boton-color: #4E6378;
+    --boton-hover: #6D8AA8;
+    --texto-principal: #ffffff; /* Blanco */
     --error-color: red;
-    --enlace-barra: #ffcc00; /* Color amarillo para enlaces */
+    --caja-color: #ffffff;
+    --texto-caja-color: #0B2D4D; /* Azul oscuro */
+    --icon-color: #0B2D4D; /* Azul oscuro */
+    --enlace-color: #ffffff; /* Blanco para enlaces clickeables */
 }
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: var(--fondo-principal);
+    font-family: Arial, sans-serif;
+    background-color: var(--fondo-principal);
     color: var(--texto-principal);
 }
 
@@ -37,18 +39,17 @@ main {
 }
 
 .form-container {
-    background-color: #242424;
+    background-color: var(--fondo-formulario);
     padding: 2rem;
     border-radius: 10px;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--texto-secundario); /* Amarillo */
 }
 
 form {
@@ -56,37 +57,63 @@ form {
     flex-direction: column;
 }
 
+.input-group {
+    margin-bottom: 1rem;
+}
+
 label {
     margin-bottom: 0.5rem;
-    color: var(--texto-secundario); /* Amarillo */
 }
 
-input, textarea {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: none;
+.input-icon {
+    display: flex;
+    align-items: center;
+    background-color: var(--caja-color); /* Blanco */
+    border: 2px solid var(--caja-color); /* Blanco */
     border-radius: 5px;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #000000;
+    padding: 0.5rem;
+    color: var(--texto-caja-color);
 }
 
-input[type="file"] {
+.input-icon i {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: var(--icon-color); /* Azul oscuro */
+}
+
+input {
     border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--texto-caja-color); /* Azul oscuro */
 }
 
 button {
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: var(--boton-color);
+    color: var(--texto-principal); /* Blanco */
     font-size: 1rem;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--boton-hover);
+}
+
+/* Estilo para enlaces clickeables */
+a {
+    color: var(--enlace-color); /* Blanco */
+    text-decoration: none; /* Sin subrayado por defecto */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
 }
 
 .terms {
@@ -94,13 +121,7 @@ button:hover {
 }
 
 .terms label {
-    display: inline;
-    color: var(--texto-secundario); /* Amarillo */
-}
-
-.terms a {
-    color: var(--enlace-barra); /* Amarillo */
-    text-decoration: none;
+    color: var(--texto-principal); /* Blanco */
 }
 
 .error-message {
@@ -109,7 +130,6 @@ button:hover {
     display: none;
 }
 
-/* Footer */
 footer .contact-bar {
     background-color: var(--fondo-barra-superior);
     padding: 1rem;
@@ -117,13 +137,12 @@ footer .contact-bar {
 }
 
 footer .contact-bar a {
-    color: var(--enlace-barra); /* Amarillo */
+    color: var(--enlace-color); /* Blanco */
     margin: 0 10px;
-    text-decoration: none;
 }
 
 footer .contact-bar a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayado al pasar el ratón */
 }
 
 /* Estilos para el enlace de inicio de sesión */
@@ -133,10 +152,9 @@ footer .contact-bar a:hover {
 }
 
 .login-link a {
-    color: var(--enlace-barra); /* Amarillo */
-    text-decoration: none;
+    color: var(--enlace-color); /* Blanco */
 }
 
 .login-link a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayado al pasar el ratón */
 }

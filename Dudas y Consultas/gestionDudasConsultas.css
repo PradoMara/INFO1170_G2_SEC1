@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000000, #ffffff); /* Fondo difuminado */
+    background-color: #2AB7B7; /* Fondo azul claro */
     margin: 0;
     padding: 0;
-    color: #ffcc00; /* Texto principal en amarillo */
+    color: #ffffff; /* Texto principal en blanco */
 }
 
 .header {
-    background-color: #000000; /* Fondo negro */
+    background-color: #0B2D4D; /* Fondo azul oscuro */
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -23,24 +23,25 @@ body {
     width: 50px;
     height: auto;
     opacity: 0.8;
+    background-color: transparent; /* Asegura que el fondo del logo no interfiera */
 }
 
 .header .logo h1 {
-    color: #ffcc00; /* Texto en amarillo */
+    color: #ffffff; /* Texto en blanco */
     margin-left: 10px;
     font-size: 20px;
 }
 
 .header .user-profile {
-    color: #ffcc00; /* Texto en amarillo */
+    color: #ffffff; /* Texto en blanco */
     display: flex;
     align-items: center;
 }
 
-.header .user-profile img {
-    width: 40px;
+.header .user-profile i {
+    font-size: 1.5rem; /* Tamaño del ícono */
     margin-left: 10px;
-    border-radius: 50%;
+    color: #ffffff; /* Blanco */
     opacity: 0.8;
 }
 
@@ -49,9 +50,16 @@ body {
     padding: 20px;
 }
 
+/* Icono de usuario en consultas */
+.consulta .icon i {
+    font-size: 3rem; /* Tamaño del ícono */
+    color: #ffffff; /* Blanco */
+    margin-right: 10px;
+}
+
 .gestion-consultas h2 {
     font-size: 24px;
-    color: #ffffff; /* Texto en amarillo */
+    color: #ffffff; /* Texto en blanco */
 }
 
 .search-filter {
@@ -84,7 +92,7 @@ body {
 .consulta {
     display: flex;
     align-items: center;
-    background-color: #242424;
+    background-color: #0B2D4D; /* Fondo azul oscuro */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -104,12 +112,12 @@ body {
 
 .consulta .details p {
     font-size: 16px;
-    color: #ffffff; /* Texto en amarillo */
+    color: #ffffff; /* Texto en blanco */
 }
 
 .consulta .details h3 {
     font-size: 20px;
-    color: #ffffff; /* Título en amarillo */
+    color: #ffffff; /* Título en blanco */
 }
 
 .consulta p {
@@ -123,8 +131,8 @@ body {
 }
 
 .buttons button {
-    background-color: #444444;
-    color: #ffffff; /* Texto del botón en amarillo */
+    background-color: #4E6378; /* Botón azul medio */
+    color: #ffffff; /* Texto del botón en blanco */
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -133,15 +141,15 @@ body {
 }
 
 .buttons button:hover {
-    background-color: #555555;
+    background-color: #6D8AA8; /* Azul más claro al pasar el ratón */
 }
 
 .buttons .btn-ver {
-    background-color: #404240;
+    background-color: #4E6378; /* Botón azul medio */
 }
 
 .buttons .btn-ver:hover {
-    background-color: #555655;
+    background-color: #6D8AA8; /* Azul más claro */
 }
 
 .back-button {
@@ -150,8 +158,8 @@ body {
 }
 
 .back-button button {
-    background-color: #444444;
-    color: #ffffff; /* Texto del botón en amarillo */
+    background-color: #4E6378; /* Botón azul medio */
+    color: #ffffff; /* Texto del botón en blanco */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -160,13 +168,13 @@ body {
 }
 
 .back-button button:hover {
-    background-color: #5a6268;
+    background-color: #6D8AA8; /* Azul más claro */
 }
 
 /* Footer */
 footer {
-    background-color: #000000; /* Fondo negro */
-    color: #ffcc00; /* Texto en amarillo */
+    background-color: #0B2D4D; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto en blanco */
     text-align: center;
     padding: 10px;
     width: 100%;
