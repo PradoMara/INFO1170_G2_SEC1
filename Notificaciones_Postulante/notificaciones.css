@@ -1,3 +1,4 @@
+/* General */
 body {
     font-family: 'Georgia', serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #333333;
 }
 
+/* Barra superior */
 .barra-superior {
     display: flex;
     align-items: center;
@@ -21,24 +23,27 @@ body {
 }
 
 .img-logo {
-    width: 100px;
+    width: 80px; /* Reducir tamaño en pantallas pequeñas */
 }
 
 .titulo {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #FFFFFF;
+    text-align: center;
 }
 
+/* Contenedor principal */
 .container {
-    padding: 40px;
+    padding: 20px;
     max-width: 800px;
-    margin: 60px auto 80px; 
+    margin: 60px auto 80px;
     background-color: #1C2541;
     color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Notificaciones */
 .notification {
     background-color: #3A506B;
     padding: 20px;
@@ -50,13 +55,13 @@ body {
 }
 
 .notification h2 {
-    font-size: 1.4em;
+    font-size: 1.2rem;
     margin: 0;
 }
 
 .notification p {
     margin-top: 10px;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .notification button {
@@ -73,6 +78,7 @@ body {
     background-color: #3A506B;
 }
 
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -103,6 +109,7 @@ body {
     cursor: pointer;
 }
 
+/* Footer */
 .footer {
     background-color: #1C2541;
     text-align: center;
@@ -121,4 +128,80 @@ body {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .barra-superior {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .img-logo {
+        width: 60px; /* Reducir tamaño del logo */
+        margin-bottom: 10px;
+    }
+
+    .titulo {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 50px auto;
+    }
+
+    .notification {
+        padding: 15px;
+    }
+
+    .notification h2 {
+        font-size: 1.1rem;
+    }
+
+    .notification p {
+        font-size: 0.95rem;
+    }
+
+    .notification button {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-logo {
+        width: 50px; /* Reducir más el tamaño del logo */
+    }
+
+    .titulo {
+        font-size: 1.4rem;
+    }
+
+    .notification h2 {
+        font-size: 1rem;
+    }
+
+    .notification p {
+        font-size: 0.85rem;
+    }
+
+    .notification button {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
 }

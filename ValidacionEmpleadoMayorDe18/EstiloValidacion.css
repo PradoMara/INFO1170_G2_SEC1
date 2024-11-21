@@ -1,23 +1,23 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #5BC0BE; 
+    background-color: #5BC0BE;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
     overflow-y: auto;
+    overflow-x: hidden; /* Prevenir desplazamientos horizontales */
 }
 
 .logo {
-    width: 70px; 
+    width: 80px; /* Logo ligeramente más grande */
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .header {
-    background-color: #1C2541; 
+    background-color: #1C2541;
     color: #FFFFFF;
     padding: 10px 0;
     position: fixed;
@@ -28,7 +28,7 @@ body {
 }
 
 .header a {
-    color: #5BC0BE; 
+    color: #5BC0BE;
     text-decoration: none;
     padding: 0 15px;
     font-size: 16px;
@@ -39,49 +39,57 @@ body {
 }
 
 .container {
-    background-color: #1C2541; 
+    background-color: #1C2541;
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 400px;
-    max-width: 90%;
-    margin: 100px 0 20px 0;
+    width: 500px; /* Ancho aumentado */
+    max-width: 95%; /* Máximo ancho en pantallas pequeñas */
+    margin: 100px auto 20px auto;
+    box-sizing: border-box; /* Ajuste para padding */
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 26px; /* Tamaño de texto aumentado */
     font-weight: bold;
     color: #FFFFFF;
     margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que las etiquetas y campos estén centrados */
+    width: 100%;
 }
 
 .form-group label {
     font-size: 14px;
     color: #FFFFFF;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left; /* Las etiquetas permanecen alineadas a la izquierda */
 }
 
 .form-group input {
-    width: 100%;
+    width: 100%; /* Los inputs ocupan el ancho completo */
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #D0E1F9;
     border-radius: 5px;
     font-size: 14px;
-    background-color: #3A506B; 
+    background-color: #3A506B;
     color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 20px;
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
@@ -91,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: #5BC0BE; 
+    background-color: #5BC0BE;
 }
 
 .help-link {
@@ -100,7 +108,7 @@ button:hover {
 }
 
 .help-link a {
-    color: #5BC0BE; 
+    color: #5BC0BE;
     font-size: 14px;
     text-decoration: none;
 }
@@ -110,21 +118,22 @@ button:hover {
 }
 
 #help-section {
-    color: #D0E1F9; 
+    color: #D0E1F9;
 }
 
 .footer {
-    background-color: #1C2541; 
-    color: #5BC0BE; 
+    background-color: #1C2541;
+    color: #5BC0BE;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 1000;
 }
 
 .footer a {
-    color: #5BC0BE; 
+    color: #5BC0BE;
     text-decoration: none;
     padding: 0 15px;
 }
@@ -150,4 +159,50 @@ button:hover {
     border: 1px solid #D0E1F9;
     border-radius: 5px;
     padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        margin: 80px auto 20px auto;
+        width: 90%; /* Ajustar el ancho en pantallas medianas */
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .form-group input,
+    button {
+        font-size: 14px;
+    }
+
+    .header a {
+        font-size: 14px;
+    }
+
+    .footer a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
 }

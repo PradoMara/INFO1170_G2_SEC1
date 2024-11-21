@@ -37,16 +37,17 @@ body {
     text-align: center;
     max-width: 500px;
     width: 100%;
+    margin-top: 80px; /* Separación debajo del header */
+    margin-bottom: 20px; /* Separación antes del footer */
     color: #FFFFFF;
 }
 
 h1 {
     margin-bottom: 1.5rem;
     color: #FFFFFF;
-    font-size: 1.5rem; 
+    font-size: 1.8rem; /* Ajustar tamaño del título */
     white-space: nowrap;
 }
-
 
 form {
     display: flex;
@@ -102,4 +103,56 @@ button:hover {
 
 .footer a:hover {
     color: #D0E1F9;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+        margin-top: 100px; /* Ajustar separación debajo del header */
+        max-width: 90%; /* Ajustar ancho para pantallas medianas */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajustar tamaño del título */
+    }
+
+    input[type="password"] {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        margin-top: 120px; /* Mayor separación en dispositivos pequeños */
+    }
+
+    h1 {
+        font-size: 1.3rem; /* Reducir tamaño del título */
+    }
+
+    input[type="password"] {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
 }

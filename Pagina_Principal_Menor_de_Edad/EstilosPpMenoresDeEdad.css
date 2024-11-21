@@ -1,13 +1,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #5BC0BE; 
+    background-color: #5BC0BE;
     color: #FFFFFF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevenir desplazamiento horizontal */
 }
 
+/* Barra superior */
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -15,6 +17,7 @@ body {
     background-color: #1C2541;
     padding: 10px 20px;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .logo img {
@@ -38,6 +41,7 @@ body {
     cursor: pointer;
 }
 
+/* Sección de búsqueda */
 .search-section {
     text-align: center;
     padding: 50px 20px;
@@ -46,6 +50,7 @@ body {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     max-width: 600px;
+    width: 100%;
 }
 
 .search-section h1 {
@@ -66,7 +71,7 @@ body {
     border: 2px solid #FFFFFF;
     border-radius: 5px;
     background-color: #FFFFFF;
-    color: #0B132B; 
+    color: #0B132B;
 }
 
 .search-bar input:focus {
@@ -75,7 +80,7 @@ body {
 
 .search-bar button {
     padding: 10px 20px;
-    background-color: #1C2541; 
+    background-color: #1C2541;
     border: none;
     color: #FFFFFF;
     border-radius: 5px;
@@ -84,28 +89,43 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #5BC0BE; 
+    background-color: #5BC0BE;
 }
 
+/* Ofertas destacadas */
 .featured-jobs {
     padding: 20px;
     background-color: #1C2541;
     color: #FFFFFF;
-    flex: 1;
+    width: 100%;
 }
 
 .featured-jobs h2 {
     color: #FFFFFF;
+    text-align: center;
+}
+
+#job-container {
+    display: flex;
+    flex-wrap: wrap; /* Tarjetas en varias filas */
+    justify-content: center; /* Centrar las tarjetas */
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 1000px; /* Limitar el ancho total */
 }
 
 .job-card {
-    background-color: #3A506B; 
+    background-color: #3A506B;
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px;
     border-radius: 10px;
-    border: 2px solid #1C2541; 
+    border: 2px solid #1C2541;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #FFFFFF;
+    flex: 1 1 calc(33.33% - 30px); /* Ajustar tamaño para 3 tarjetas por fila */
+    max-width: calc(33.33% - 30px); /* Máximo ancho por tarjeta */
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .job-card h3 {
@@ -115,11 +135,11 @@ body {
 
 .job-card p {
     margin: 5px 0;
-    color: #D0E1F9; 
+    color: #D0E1F9;
 }
 
 .job-button {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: #FFFFFF;
     padding: 10px;
     border: none;
@@ -129,14 +149,16 @@ body {
 }
 
 .job-button:hover {
-    background-color: #1C2541; 
+    background-color: #1C2541;
 }
 
+/* Footer */
 footer {
-    background-color: #1C2541; 
+    background-color: #1C2541;
     padding: 15px;
     text-align: center;
     color: #FFFFFF;
+    width: 100%;
 }
 
 footer a {
@@ -146,5 +168,21 @@ footer a {
 }
 
 footer a:hover {
-    color: #D0E1F9; 
+    color: #D0E1F9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .search-section {
+        padding: 30px 10px;
+    }
+
+    #job-container {
+        flex-direction: column; /* Tarjetas en columna */
+    }
+
+    .job-card {
+        flex: 1 1 100%; /* Cada tarjeta ocupa todo el ancho */
+        max-width: 100%; /* Máximo ancho total */
+    }
 }

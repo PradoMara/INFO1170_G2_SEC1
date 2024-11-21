@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #5BC0BE; 
+    background-color: #5BC0BE;
 }
 
 .barra-superior {
@@ -10,8 +10,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #1C2541; 
-    border-bottom: 2px solid #3A506B; 
+    background-color: #1C2541;
+    border-bottom: 2px solid #3A506B;
 }
 
 .logo {
@@ -31,7 +31,7 @@ body {
 }
 
 .banner {
-    background-color: #3A506B; 
+    background-color: #3A506B;
     color: white;
     text-align: center;
     padding: 4rem 0;
@@ -56,7 +56,7 @@ body {
 .container p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #D0E1F9; 
+    color: #D0E1F9;
 }
 
 form {
@@ -68,15 +68,15 @@ form {
 input[type="email"] {
     padding: 0.75rem;
     font-size: 1rem;
-    border: 1px solid #0B132B; 
+    border: 1px solid #0B132B;
     border-radius: 5px;
     text-align: center;
-    width: calc(100% - 25px); 
+    width: calc(100% - 25px);
     background-color: #FFFFFF;
-    color: #0B132B; 
-    margin: 0 auto; 
+    color: #0B132B;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
-
 
 button {
     padding: 0.75rem;
@@ -97,7 +97,7 @@ button:hover {
 #mensaje {
     margin-top: 1rem;
     font-size: 1rem;
-    color: #5BC0BE; 
+    color: #5BC0BE;
 }
 
 #mensaje.error {
@@ -105,13 +105,13 @@ button:hover {
 }
 
 .footer {
-    background-color: #1C2541; 
+    background-color: #1C2541;
     color: #FFFFFF;
     text-align: center;
     padding: 1rem;
     font-size: 1rem;
     font-weight: normal;
-    border-top: 1px solid #3A506B; 
+    border-top: 1px solid #3A506B;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -119,11 +119,69 @@ button:hover {
 }
 
 .footer a {
-    color: #5BC0BE; 
+    color: #5BC0BE;
     text-decoration: none;
     font-weight: bold;
 }
 
 .footer a:hover {
-    color: #D0E1F9; 
+    color: #D0E1F9;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .banner {
+        padding: 3rem 1rem; /* Reducir padding en pantallas medianas */
+    }
+
+    .titulo-banner {
+        font-size: 2rem; /* Ajustar tamaño del título */
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    input[type="email"] {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 2rem 1rem; /* Reducir padding en pantallas pequeñas */
+    }
+
+    .titulo-banner {
+        font-size: 1.8rem; /* Ajustar tamaño del título */
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    input[type="email"] {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
 }

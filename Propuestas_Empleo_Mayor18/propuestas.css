@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -12,31 +13,34 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1C2541; 
+    background-color: #1C2541;
     padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {
-    height: 60px;
+    height: 50px;
 }
 
 .nav-links a {
-    color: #FFFFFF; 
+    color: #FFFFFF;
     text-decoration: none;
     margin-left: 20px;
+    font-size: 1rem;
 }
 
 .job-proposals {
     flex: 1;
-    padding: 50px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
+    flex-direction: column;
 }
 
 .job-offer {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     padding: 30px;
     border-radius: 10px;
     max-width: 600px;
@@ -56,6 +60,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -68,14 +73,15 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.9rem;
 }
 
 .accept {
-    background-color: #28a745; 
+    background-color: #28a745;
 }
 
 .accept:hover {
-    background-color: #218838; 
+    background-color: #218838;
 }
 
 .reject {
@@ -83,25 +89,80 @@ button {
 }
 
 .reject:hover {
-    background-color: #c82333; 
+    background-color: #c82333;
 }
 
 footer {
-    background-color: #1C2541; 
+    background-color: #1C2541;
     color: #FFFFFF;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer a {
-    color: #5BC0BE; 
+    color: #5BC0BE;
     text-decoration: none;
     margin: 0 10px;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-offer {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .top-bar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .job-offer {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }

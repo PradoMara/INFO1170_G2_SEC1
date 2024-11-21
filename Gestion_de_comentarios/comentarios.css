@@ -10,17 +10,21 @@ html, body {
     flex-direction: column;
 }
 
+/* Encabezado */
 .barra-superior {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #1C2541;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permitir ajuste en pantallas pequeñas */
+    gap: 15px;
 }
 
 .logo {
     height: 50px;
+    flex-shrink: 0; /* Evitar que se reduzca demasiado */
 }
 
 .titulo {
@@ -31,6 +35,7 @@ html, body {
     color: #FFF;
 }
 
+/* Contenedor principal */
 .container {
     max-width: 800px;
     width: 90%;
@@ -41,6 +46,7 @@ html, body {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     flex-grow: 1;
     color: #FFF;
+    text-align: center;
 }
 
 h2 {
@@ -49,6 +55,7 @@ h2 {
     color: #FFF;
 }
 
+/* Lista de comentarios */
 ul {
     list-style: none;
     padding: 0;
@@ -61,6 +68,7 @@ li {
     margin-bottom: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     color: #FFF;
+    text-align: left; /* Alineación para los comentarios */
 }
 
 li .comentario-autor {
@@ -69,12 +77,6 @@ li .comentario-autor {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-li .comentario-texto {
-    color: #FFF;
-    margin-top: 10px;
-    word-wrap: break-word; 
 }
 
 li .comentario-fecha {
@@ -86,6 +88,13 @@ li .comentario-fecha {
     gap: 5px;
 }
 
+li .comentario-texto {
+    color: #FFF;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+/* Footer */
 .footer {
     background-color: #1C2541;
     text-align: center;
@@ -107,4 +116,87 @@ li .comentario-fecha {
 
 .footer a:hover {
     color: #FFF;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .barra-superior {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 40px; /* Reducir tamaño del logo */
+    }
+
+    .titulo {
+        font-size: 1.5em; /* Reducir tamaño del texto */
+    }
+
+    .container {
+        padding: 30px;
+        margin: 50px auto;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    li .comentario-autor {
+        font-size: 1em;
+    }
+
+    li .comentario-fecha {
+        font-size: 0.85em;
+    }
+
+    li .comentario-texto {
+        font-size: 0.95em;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-superior {
+        padding: 15px;
+    }
+
+    .logo {
+        height: 35px; /* Reducir más el tamaño del logo */
+    }
+
+    .titulo {
+        font-size: 1.3em;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 40px auto;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    li .comentario-autor {
+        font-size: 0.9em;
+    }
+
+    li .comentario-fecha {
+        font-size: 0.8em;
+    }
+
+    li .comentario-texto {
+        font-size: 0.85em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 8px;
+    }
 }

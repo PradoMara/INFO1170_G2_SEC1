@@ -12,6 +12,7 @@ body {
     color: #FFFFFF;
 }
 
+/* Encabezado */
 header.top-bar {
     background-color: #1C2541;
     color: #FFFFFF;
@@ -19,27 +20,32 @@ header.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo img {
-    height: 50px;
+    height: 40px; /* Reducido para pantallas pequeñas */
 }
 
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links a {
     color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px; /* Reducido para pantallas pequeñas */
 }
 
 .nav-links a i {
     margin-right: 5px;
 }
 
+/* Contenedor principal */
 main.profile-published {
     flex: 1;
     display: flex;
@@ -48,15 +54,17 @@ main.profile-published {
     padding: 20px;
 }
 
+/* Título */
 h1 {
     color: #FFFFFF;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+/* Formulario de subida de CV */
 .upload-cv-form {
     background-color: #1C2541;
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
@@ -66,7 +74,7 @@ h1 {
 }
 
 .upload-cv-form h1 {
-    font-size: 1.5em;
+    font-size: 1.3em; /* Ajustado para pantallas pequeñas */
     font-weight: bold;
     color: #FFFFFF;
     margin-bottom: 20px;
@@ -81,7 +89,7 @@ h1 {
 }
 
 .upload-cv-form label {
-    font-size: 18px;
+    font-size: 16px; /* Ajustado para pantallas pequeñas */
     color: #D0E1F9;
     display: flex;
     align-items: center;
@@ -89,20 +97,21 @@ h1 {
 }
 
 .upload-cv-form input[type="file"] {
-    padding: 10px;
-    font-size: 16px;
+    padding: 8px;
+    font-size: 14px;
     color: #333;
     background-color: #FFF;
     border: 1px solid #D0E1F9;
     border-radius: 5px;
     cursor: pointer;
+    width: 90%; /* Adaptado para pantallas pequeñas */
 }
 
 .upload-cv-form button {
     background-color: #3A506B;
     color: #FFFFFF;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 15px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -116,6 +125,7 @@ h1 {
     background-color: #5BC0BE;
 }
 
+/* Footer */
 footer {
     background-color: #1C2541;
     color: #FFFFFF;
@@ -129,6 +139,7 @@ footer {
 footer a {
     color: #5BC0BE;
     text-decoration: none;
+    font-size: 14px; /* Reducido para pantallas pequeñas */
 }
 
 footer a i {
@@ -137,4 +148,65 @@ footer a i {
 
 footer a:hover {
     color: #FFFFFF;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .upload-cv-form {
+        padding: 20px;
+        max-width: 90%; /* Más ancho en pantallas pequeñas */
+    }
+
+    .upload-cv-form h1 {
+        font-size: 1.2em;
+    }
+
+    .upload-cv-form label {
+        font-size: 14px;
+    }
+
+    .upload-cv-form input[type="file"] {
+        font-size: 12px;
+    }
+
+    .upload-cv-form button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-cv-form {
+        padding: 15px;
+    }
+
+    .upload-cv-form h1 {
+        font-size: 1.1em;
+    }
+
+    .upload-cv-form input[type="file"] {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .upload-cv-form button {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    footer a {
+        font-size: 11px;
+    }
 }
