@@ -271,3 +271,34 @@ button.rechazar:hover{
     background-color: #0056b3;
     transform: scale(1.05); 
 }
+
+/* pagina responsiva? */
+
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .barra-navegacion {
+        padding: 10px;
+    }
+
+    .logo-nombre {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedor-navegacion {
+        align-items: center;
+    }
+
+    .barra-navegacion {
+        padding: 8px;
+    }
+
+    .logo-nombre {
+        margin-bottom: 8px;
+    }
+}

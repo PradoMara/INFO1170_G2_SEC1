@@ -358,3 +358,65 @@ body, html {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* pa que sea resoponsivo */
+
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        width: 50px;
+    }
+    .nombre-sitio {
+        font-size: 20px;
+        text-align: center;
+    }
+    .solicitud {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .filtros {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .buscador {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-navegacion {
+        gap: 10px;
+    }
+    .logo {
+        width: 40px;
+    }
+    .nombre-sitio {
+        font-size: 18px;
+    }
+    .solicitud h3 {
+        font-size: 18px;
+    }
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .pagination li a {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .buscador {
+        width: 100%;
+    }
+    .btn-detalles {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

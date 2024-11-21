@@ -134,3 +134,50 @@ textarea{
 #volver:hover {
     background-color: #2f3d66; 
 }
+
+
+/* pa que sea responsivo */
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        width: 50px;
+    }
+    .nombre-sitio {
+        font-size: 20px;
+    }
+    .contenedor {
+        padding: 15px;
+    }
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    textarea {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .logo {
+        width: 40px;
+    }
+    .nombre-sitio {
+        font-size: 18px;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    textarea {
+        width: 100%;
+        padding: 8px;
+    }
+}

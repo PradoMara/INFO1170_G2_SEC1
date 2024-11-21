@@ -452,3 +452,53 @@ body, html {
 .boton-postularse:hover {
     background-color: #084298;
 }
+
+
+/* pa que sea responsive */
+@media (max-width: 1024px) {
+    .tarjeta-oferta {
+        width: 80%;
+    }
+    .logo-container img {
+        height: 40px;
+    }
+    .header-row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .header-row {
+        justify-content: center;
+    }
+    .ofertas-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .buscador-container h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-oferta {
+        width: 95%;
+        padding: 15px;
+    }
+    .header-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-items li a {
+        font-size: 1em;
+    }
+    .buscador-container h1 {
+        font-size: 1.2em;
+    }
+}

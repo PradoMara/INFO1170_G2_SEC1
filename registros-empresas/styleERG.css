@@ -203,6 +203,7 @@ body, html {
     text-decoration: underline;
 }
 
+/* pa que sean responsivos */
 @media (max-width: 768px) {
     .header-row {
         flex-direction: column;
@@ -215,7 +216,25 @@ body, html {
 
     #registro-empresa {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-row {
+        align-items: center;
+    }
+
+    .logo-container img {
+        height: 35px;
+    }
+
+    #registro-empresa button {
         width: 100%;
-        padding: 10px;
+        font-size: 16px;
+    }
+
+    #terminos-condiciones,
+    #politica-privacidad {
+        font-size: 12px;
     }
 }

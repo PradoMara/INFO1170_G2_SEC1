@@ -25,7 +25,7 @@ if (empty($nombre_empresa) || empty($rut) || empty($direccion) || empty($ciudad)
 }
 
 // generar token csrf para evitar ataques csrf
-session_start();
+session_start();    
 if (!isset($_SESSION['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
     die(json_encode(['error' => 'token csrf invalido']));
 }
