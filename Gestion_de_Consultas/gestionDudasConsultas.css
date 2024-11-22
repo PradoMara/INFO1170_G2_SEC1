@@ -10,7 +10,7 @@ body {
     background-color: #0B132B;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     align-items: center;
 }
 
@@ -20,15 +20,15 @@ body {
 }
 
 .header .logo img {
-    width: 50px; 
+    width: 50px;
     height: auto;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .header .logo h1 {
     color: white;
     margin-left: 10px;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .header .user-profile {
@@ -37,10 +37,9 @@ body {
     align-items: center;
 }
 
-
 .icono-perfil {
-    font-size: 40px; /* Tamaño del icono */
-    color: #FFFFFF; /* Color del icono */
+    font-size: 40px;
+    color: #FFFFFF;
     margin-right: 10px;
 }
 
@@ -64,12 +63,12 @@ body {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    background-color: #333; 
-    color: #f1f1f1; 
+    background-color: #333;
+    color: #f1f1f1;
 }
 
 .search-filter input[type="text"]::placeholder {
-    color: #ddd; 
+    color: #ddd;
 }
 
 .consulta-lista {
@@ -82,13 +81,13 @@ body {
 .consulta {
     display: flex;
     align-items: center;
-    background-color:  #1C2541;
-    padding: 20px;  
-    margin-bottom: 20px;  
+    background-color: #1C2541;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 90%;  
-    max-width: 1000px;  
+    width: 90%;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -97,12 +96,12 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .consulta .details p {
     font-size: 16px;
-    color: #f1f1f1;  
+    color: #f1f1f1;
 }
 
 .consulta .details h3 {
@@ -113,11 +112,11 @@ body {
 .buttons {
     display: flex;
     flex-direction: column;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .buttons button {
-    background-color:#6c819b;
+    background-color: #6c819b;
     color: #1C2541;
     border: none;
     padding: 10px;
@@ -144,7 +143,7 @@ body {
 }
 
 .back-button button {
-    background-color:  #1C2541;
+    background-color: #1C2541;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -154,7 +153,7 @@ body {
 }
 
 .back-button button:hover {
-    background-color:#0056b3;
+    background-color: #0056b3;
 }
 
 .input-icono {
@@ -167,12 +166,94 @@ body {
 .input-icono i {
     position: absolute;
     left: 10px;
-    color: #ddd; 
+    color: #ddd;
     font-size: 18px;
 }
 
 .input-icono input[type="text"],
 .input-icono select {
-    padding-left: 35px; 
+    padding-left: 35px;
     margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .logo h1 {
+        font-size: 18px;
+    }
+
+    .gestion-consultas h2 {
+        font-size: 20px;
+    }
+
+    .search-filter {
+        flex-direction: column;
+    }
+
+    .search-filter input[type="text"], .search-filter select {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .consulta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .consulta .details {
+        margin-top: 10px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .buttons button {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header .logo img {
+        width: 40px;
+    }
+
+    .header .logo h1 {
+        font-size: 16px;
+    }
+
+    .gestion-consultas h2 {
+        font-size: 18px;
+    }
+
+    .consulta {
+        padding: 10px;
+    }
+
+    .consulta .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .consulta .details h3 {
+        font-size: 18px;
+    }
+
+    .consulta .details p {
+        font-size: 14px;
+    }
+
+    .back-button button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }

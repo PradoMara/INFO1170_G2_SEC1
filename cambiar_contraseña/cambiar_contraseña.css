@@ -22,7 +22,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 20px #524b4b;
     max-width: 500px;
-    width: 100%;
+    width: 90%; 
     text-align: center;
     animation: slideIn 1s ease-out;
 }
@@ -39,16 +39,15 @@ body {
 }
 
 .logo-formulario {
-    width: 150px; 
+    width: 100px;
     height: auto;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
-
 
 h2 {
     color: #ffffff;
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .campo {
@@ -65,7 +64,7 @@ label {
 }
 
 input[type="password"] {
-    width: 90%;
+    width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #6c757d;
@@ -86,7 +85,7 @@ input[type="password"]:focus {
 
 button, a {
     display: inline-block;
-    width: 40%;
+    width: 100%; 
     padding: 12px;
     border-radius: 8px;
     font-size: 16px;
@@ -151,5 +150,40 @@ button, a {
 }
 
 .input-icono input[type="password"] {
-    padding-left: 40px; 
+    padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    input[type="password"] {
+        font-size: 14px;
+    }
+    button, a {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .logo-formulario {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+    .contenedor {
+        padding: 15px;
+    }
+    button, a {
+        padding: 8px;
+        font-size: 12px;
+    }
+    input[type="password"] {
+        font-size: 12px;
+    }
 }

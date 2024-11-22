@@ -9,14 +9,14 @@ body {
     background: #5BC0BE;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 80px; 
-    padding-bottom: 60px; 
+    padding-top: 80px;
+    padding-bottom: 60px;
     height: 100%;
     overflow-x: hidden;
 }
 
 .barra-superior {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -56,7 +56,7 @@ body {
 }
 
 .logo {
-    width: 80px; 
+    width: 80px;
     height: auto;
     margin-right: 15px;
 }
@@ -64,14 +64,14 @@ body {
 .sitio-titulo {
     font-family: 'Georgia', serif;
     font-size: 32px;
-    color: #ffffff; 
+    color: #ffffff;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .contenedor {
-    background-color:#0B132B ; 
+    background-color: #0B132B;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -82,13 +82,13 @@ body {
 }
 
 h2 {
-    color: #ffffff; 
-    font-size: 1.6rem; 
+    color: #ffffff;
+    font-size: 1.6rem;
     margin-bottom: 25px;
 }
 
 h5 {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .grupo-input {
@@ -100,7 +100,7 @@ label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 input[type="text"],
@@ -114,7 +114,7 @@ input[type="file"] {
 }
 
 input:focus {
-    border-color: #ffffff; 
+    border-color: #ffffff;
     outline: none;
 }
 
@@ -122,16 +122,17 @@ button {
     width: 100%;
     padding: 15px;
     background-color: #6c819b;
-    color: #0B132B; 
+    color: #0B132B;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
+    transform: translateY(-3px);
 }
 
 .enlaces-ayuda {
@@ -168,7 +169,7 @@ button:hover {
 }
 
 .barra-contacto a {
-    color: #ffcc00; 
+    color: #ffcc00;
     text-decoration: none;
 }
 
@@ -179,10 +180,53 @@ button:hover {
 .vista-previa {
     margin-top: 10px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1px dashed #ccc;
     border-radius: 5px;
     text-align: center;
-    display: inline-block; 
-    max-width: 100%; 
+    display: inline-block;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .barra-superior h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 20px;
+        margin: 80px auto 0 auto;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .barra-superior ul li {
+        margin-left: 10px;
+    }
+
+    .barra-contacto {
+        font-size: 0.8rem;
+    }
 }

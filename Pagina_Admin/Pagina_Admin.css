@@ -1,16 +1,16 @@
 body {
-    font-family: 'Poppins', sans-serif; 
-    background:#5BC0BE; 
+    font-family: 'Poppins', sans-serif;
+    background: #5BC0BE;
     margin: 0;
     padding: 0;
-    color: #1C2541; 
+    color: #1C2541;
 }
 
 .barra-navegacion {
     background-color: #0B132B;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
-    position: sticky; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -26,7 +26,7 @@ body {
 .logo-nombre {
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -36,7 +36,7 @@ body {
 }
 
 .nombre-sitio {
-    color: #FFFFFF; 
+    color: #FFFFFF;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
@@ -54,23 +54,23 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
     padding: 8px 12px;
     border-radius: 20px;
 }
 
 .perfil-usuario:hover {
-    background-color: rgba(91, 192, 190, 0.2); 
+    background-color: rgba(91, 192, 190, 0.2);
 }
 
 .icono-perfil {
-    font-size: 40px; 
-    color: #FFFFFF; 
+    font-size: 40px;
+    color: #FFFFFF;
     margin-right: 10px;
 }
 
 .nombre-usuario {
-    color: #FFFFFF; 
+    color: #FFFFFF;
     font-size: 16px;
 }
 
@@ -84,8 +84,8 @@ body {
     text-align: center;
     margin-bottom: 3px;
     font-size: 28px;
-    color: #0B132B; 
-    animation: fadeIn 1s ease-out; 
+    color: #0B132B;
+    animation: fadeIn 1s ease-out;
 }
 
 @keyframes fadeIn {
@@ -106,17 +106,17 @@ body {
 }
 
 .tarjeta {
-    background-color: #1C2541; 
+    background-color: #1C2541;
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 6); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     width: 30%;
     margin: 15px 0;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -127,19 +127,19 @@ body {
 .titulo-tarjeta {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     border-bottom: 2px solid #3A506B;
     padding-bottom: 8px;
 }
 
 .texto-tarjeta {
     margin-bottom: 15px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 .btn {
-    background-color: #6c819b; 
-    color: #0B132B; 
+    background-color: #6c819b;
+    color: #0B132B;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -152,13 +152,12 @@ body {
 .btn:hover {
     background-color: #FFFFFF;
     border: 1px solid #3A506B;
-    transform: scale(1.05);
-    transform: translateY(-2px);
+    transform: scale(1.05) translateY(-2px);
 }
 
 .iconos-tarjeta {
     font-size: 24px;
-    color: #5BC0BE; 
+    color: #5BC0BE;
     margin-right: 8px;
     transition: color 0.3s ease;
 }
@@ -179,4 +178,60 @@ button i {
 .titulo-tarjeta i {
     margin-right: 5px;
     vertical-align: middle;
-}   
+}
+
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+    }
+
+    .nombre-sitio {
+        font-size: 20px;
+    }
+
+    .tarjeta {
+        width: 45%;
+    }
+
+    .text-bienvenida {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-navegacion {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .nombre-sitio {
+        font-size: 16px;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .texto-bienvenida {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

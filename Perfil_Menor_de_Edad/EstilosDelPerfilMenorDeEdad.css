@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    background-color:#5BC0BE ;
+    background-color: #5BC0BE;
 }
 
 header {
@@ -35,7 +35,7 @@ header {
     background: url('https://www.todofondos.net/wp-content/uploads/1920x1080-Fondo-de-pantalla-negro-mate-1920x1080-PX.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .profile-image {
@@ -125,7 +125,56 @@ footer a:hover {
     color: #ffc107;
 }
 
-/* Botones con íconos */
 button i {
     margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .edit-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-info h1 {
+        font-size: 18px;
+    }
+
+    .edit-button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }

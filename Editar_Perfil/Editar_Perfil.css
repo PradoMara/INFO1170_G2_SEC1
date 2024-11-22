@@ -21,6 +21,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .logo-nombre {
@@ -29,15 +30,15 @@ body {
 }
 
 .logo {
-    width: 60px;
-    height: 40px;
+    width: 50px; 
+    height: auto;
     margin-right: 10px;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .nombre-sitio {
     color: #ffffff;
-    font-size: 24px;
+    font-size: 20px; 
     font-weight: bold;
 }
 
@@ -47,24 +48,25 @@ body {
 }
 
 .icono-perfil {
-    font-size: 40px;
+    font-size: 32px; 
     color: #FFFFFF;
     margin-right: 10px;
 }
 
 .nombre-usuario {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px; 
     margin-top: 5px;
 }
 
 .contenedor-editar-perfil {
     max-width: 800px;
+    width: 90%; 
     margin: 50px auto;
     padding: 20px;
     background-color: #0B132B;
     border-radius: 10px;
-    color:#ffffff;
+    color: #ffffff;
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
     text-align: center;
     animation: fadeIn 1s ease-out;
@@ -89,17 +91,17 @@ body {
 
 label {
     display: block;
-    font-size: 18px;
+    font-size: 16px; 
     margin-bottom: 8px;
     color: #ffffff;
 }
 
-input[type="text"], input[type="email"], input[type="file"] , input[type="rol"],input[type="submit"]{
+input[type="text"], input[type="email"], input[type="file"], input[type="submit"] {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ffffff;
-    font-size: 16px;
+    font-size: 14px; 
     box-sizing: border-box;
     background-color: #f8f9fa; 
     color: #000000; 
@@ -109,23 +111,35 @@ input[type="file"] {
     padding: 5px;
 }
 
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: 14px; 
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #000000;
+    min-height: 80px;
+}
+
 .acciones-formulario {
     margin-top: 20px;
 }
 
 button {
-    font-size: 16px;
-    padding: 12px 20px;
-    margin: 10px;
+    font-size: 14px; 
+    padding: 10px 16px; 
+    margin: 10px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    
 }
 
 .btn-guardar {
-    background-color:#6c819b;
+    background-color: #6c819b;
     color: #0B132B;
 }
 
@@ -164,15 +178,52 @@ button {
     padding-left: 40px; 
 }
 
-textarea {
-    resize: none;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ffffff;
-    font-size: 16px;
-    box-sizing: border-box;
-    background-color: #f8f9fa;
-    color: #000000;
-    min-height: 80px;
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .nombre-sitio {
+        font-size: 18px;
+    }
+
+    .contenedor-editar-perfil {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-navegacion {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px; 
+    }
+
+    .nombre-sitio {
+        font-size: 16px;
+    }
+
+    .contenedor-editar-perfil {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 12px;
+    }
 }

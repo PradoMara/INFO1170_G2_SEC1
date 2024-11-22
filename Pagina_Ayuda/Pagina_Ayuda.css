@@ -6,13 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #5BC0BE; 
+    background: #5BC0BE;
     color: #343a40;
     padding: 80px 20px 60px;
 }
 
 .barra-superior {
-    background-color:#0B132B; 
+    background-color: #0B132B;
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -20,7 +20,7 @@ body {
     padding: 15px 30px;
     position: fixed;
     top: 0;
-    width: 1000%;
+    width: 100%;
     z-index: 1000;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -105,7 +105,7 @@ ol {
 .boton-volver button {
     width: 200px;
     padding: 10px;
-    background-color:#6c819b;
+    background-color: #6c819b;
     color: #1C2541;
     border: none;
     border-radius: 8px;
@@ -153,4 +153,75 @@ h2 i, h3 i {
 footer p i {
     margin-right: 5px;
     color: #ffc107;
+}
+
+@media (max-width: 768px) {
+    .barra-superior {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .sitio-titulo {
+        font-size: 20px;
+    }
+
+    .contenedor-soporte {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .boton-volver button {
+        width: 180px;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-superior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 40px;
+        margin: 0 auto 10px;
+    }
+
+    .sitio-titulo {
+        font-size: 18px;
+    }
+
+    .contenedor-soporte {
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .boton-volver button {
+        width: 160px;
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .barra-contacto {
+        font-size: 0.8rem;
+    }
 }

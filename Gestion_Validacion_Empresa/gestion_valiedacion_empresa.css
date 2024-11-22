@@ -1,12 +1,12 @@
-body{
-    font-family: "Poppins", sans-serif; 
-    background: #5BC0BE; 
+body {
+    font-family: "Poppins", sans-serif;
+    background: #5BC0BE;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
-.barra-navegacion{
+.barra-navegacion {
     background-color: #0B132B;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -15,7 +15,7 @@ body{
     z-index: 100;
 }
 
-.contenedor-navegacion{
+.contenedor-navegacion {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,23 +23,23 @@ body{
     margin: 0 auto;
 }
 
-.logo-nombre{
+.logo-nombre {
     display: flex;
     align-items: center;
     transition: transform 0.3s;
-
 }
+
 .logo-nombre:hover {
     transform: scale(1.1);
 }
 
-.logo{
+.logo {
     width: 60px;
     height: auto;
     margin-right: 10px;
-}   
+}
 
-.nombre-sitio{
+.nombre-sitio {
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -51,70 +51,64 @@ body{
     align-items: center;
 }
 
-
-.perfil-enlace{
+.perfil-enlace {
     text-decoration: none;
-    
 }
 
-.perfil-usuario{
+.perfil-usuario {
     display: flex;
     align-items: center;
     cursor: pointer;
     padding: 8px 12px;
     border-radius: 20px;
-    transition: background-color 0.3s ease; 
-
+    transition: background-color 0.3s ease;
 }
 
-.perfil-usuario:hover{
+.perfil-usuario:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .icono-perfil {
-    font-size: 40px; /* Tamaño del icono */
-    color: #FFFFFF; /* Color del icono */
+    font-size: 40px;
+    color: #FFFFFF;
     margin-right: 10px;
 }
 
-.contenedor{
+.contenedor {
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
     background-color: #1C2541;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-
 }
 
-.texto-bienvenida{
+.texto-bienvenida {
     text-align: center;
     font-size: 28px;
     color: #ffffff;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-out;
-    
 }
 
-@keyframes fadeIn{
-    from{
+@keyframes fadeIn {
+    from {
         opacity: 0;
         transform: translateY(-20px);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-#solicitudes-container{
+#solicitudes-container {
     display: flex;
     flex-direction: column;
-    gap:20px;
-
+    gap: 20px;
 }
 
-.solicitud{
+.solicitud {
     background-color: #1C2541;
     border: 1px solid #333;
     padding: 20px;
@@ -123,74 +117,71 @@ body{
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
 }
-.solicitud p{
+
+.solicitud p {
     font-size: 16px;
     color: #f1f1f1;
 }
 
-.solicitud h3{
+.solicitud h3 {
     margin: 0;
     font-size: 20px;
-    color:#ffffff;
-
+    color: #ffffff;
 }
+
 .solicitud p a {
     color: #ffffff;
 }
+
 .solicitud p a:hover {
     color: #ffffff;
 }
 
-
-.acciones{
+.acciones {
     display: flex;
     gap: 10px;
 }
 
-button{
+button {
     padding: 10px 20px;
-    border:none;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-
 }
 
-button.aceptar{
+button.aceptar {
     background-color: #6c819b;
     color: #1C2541;
     transition: background-color 0.3s;
-
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
-
 }
 
-button.aceptar:hover{
+button.aceptar:hover {
     background-color: #ffffff;
 }
 
-button.rechazar:hover{
+button.rechazar:hover {
     background-color: #ffffff;
 }
 
-.footer{
+.footer {
     background-color: #1C2541;
-    color:white;
+    color: white;
     text-align: center;
     padding: 20px 0;
     width: 100%;
-
 }
 
-.footer p{
+.footer p {
     margin: 0;
     font-size: 0.9em;
 }
+
 .filtros {
     margin-bottom: 20px;
     display: flex;
@@ -207,6 +198,7 @@ button.rechazar:hover{
     font-size: 16px;
     color: #f1f1f1;
 }
+
 #busqueda {
     flex: 1;
 }
@@ -215,6 +207,7 @@ button.rechazar:hover{
     margin-bottom: 20px;
     text-align: center;
 }
+
 .filtro select {
     background-color: #2c2c2c;
     color: #f1f1f1;
@@ -263,7 +256,7 @@ button.rechazar:hover{
 }
 
 .btn-detalles {
-    background-color: #6c819b; 
+    background-color: #6c819b;
     color: #1C2541;
     padding: 10px 20px;
     border: none;
@@ -275,7 +268,7 @@ button.rechazar:hover{
 
 .btn-detalles:hover {
     background-color: #0056b3;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .input-icono {
@@ -287,7 +280,7 @@ button.rechazar:hover{
 }
 
 .input-icono i {
-    color: #f1f1f1; 
+    color: #f1f1f1;
 }
 
 .input-icono select, .input-icono input {
@@ -296,12 +289,12 @@ button.rechazar:hover{
 
 h1 i {
     margin-right: 10px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .solicitud h3 i {
     margin-right: 5px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 button i {
@@ -318,4 +311,81 @@ button i {
 
 .btn-detalles i {
     color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .nombre-sitio {
+        font-size: 20px;
+    }
+
+    .contenedor {
+        padding: 15px;
+    }
+
+    #solicitudes-container {
+        gap: 15px;
+    }
+
+    .solicitud {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .acciones {
+        justify-content: center;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .buscador {
+        width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-navegacion {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .nombre-sitio {
+        font-size: 16px;
+    }
+
+    .texto-bienvenida {
+        font-size: 22px;
+    }
+
+    .solicitud h3 {
+        font-size: 18px;
+    }
+
+    .buscador {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
 }

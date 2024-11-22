@@ -1,16 +1,16 @@
 body {
-    font-family: 'Poppins', sans-serif; 
-    background:#5BC0BE; 
+    font-family: 'Poppins', sans-serif;
+    background: #5BC0BE;
     margin: 0;
     padding: 0;
-    color: #343a40; 
+    color: #343a40;
 }
 
 .barra-navegacion {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    position: sticky; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -26,7 +26,7 @@ body {
 .logo-nombre {
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -73,13 +73,13 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
     padding: 8px 12px;
     border-radius: 20px;
 }
 
 .perfil-usuario:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .icono-perfil {
@@ -104,7 +104,7 @@ body {
     margin-bottom: 30px;
     font-size: 28px;
     color: #0B132B;
-    animation: fadeIn 1s ease-out; 
+    animation: fadeIn 1s ease-out;
 }
 
 @keyframes fadeIn {
@@ -134,7 +134,7 @@ body {
 .postulante {
     background-color: #0B132B;
     border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
     display: flex;
@@ -167,7 +167,7 @@ body {
 .acciones-postulante {
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .boton-volver {
@@ -215,7 +215,7 @@ body {
 }
 
 .input-icono i {
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .input-icono select, .input-icono input {
@@ -224,9 +224,80 @@ body {
 
 .detalle-postulante i {
     margin-right: 5px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .btn i {
     margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nombre-sitio {
+        font-size: 20px;
+    }
+
+    .postulante {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .info-postulante {
+        max-width: 100%;
+    }
+
+    .acciones-postulante {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .buscador {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-navegacion {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 30px;
+    }
+
+    .nombre-sitio {
+        font-size: 16px;
+    }
+
+    .texto-bienvenida {
+        font-size: 22px;
+    }
+
+    .postulante {
+        padding: 15px;
+    }
+
+    .foto-postulante {
+        font-size: 60px;
+    }
+
+    .nombre-postulante {
+        font-size: 18px;
+    }
+
+    .buscador {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
 }

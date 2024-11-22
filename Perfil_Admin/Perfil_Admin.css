@@ -1,6 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: #5BC0BE; 
+    background: #5BC0BE;
     margin: 0;
     padding: 0;
     color: #343a40;
@@ -85,7 +85,7 @@ body {
 
 .foto-perfil {
     font-size: 100px;
-    color: #FFFFFF;
+    color: #5BC0BE;
     margin-right: 10px;
 }
 
@@ -112,7 +112,6 @@ body {
     margin-bottom: 10px;
     color: #ffffff;
 }
-
 
 .perfil-acciones {
     margin-top: 30px;
@@ -177,7 +176,62 @@ button i {
     margin-right: 8px;
 }
 
-.foto-perfil {
-    font-size: 100px;
-    color: #5BC0BE;
+@media (max-width: 768px) {
+    .contenedor-navegacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .nombre-sitio {
+        font-size: 20px;
+    }
+
+    .contenedor-perfil {
+        padding: 15px;
+    }
+
+    .perfil-cabecera {
+        text-align: center;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-navegacion {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .nombre-sitio {
+        font-size: 16px;
+    }
+
+    .contenedor-perfil {
+        margin: 30px auto;
+        padding: 10px;
+    }
+
+    .nombre-perfil {
+        font-size: 20px;
+    }
+
+    .correo-perfil {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
 }

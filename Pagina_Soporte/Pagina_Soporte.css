@@ -6,13 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#5BC0BE; 
+    background: #5BC0BE;
     color: #343a40;
     padding: 80px 20px 60px;
 }
 
 .barra-superior {
-    background-color: #0B132B;  
+    background-color: #0B132B;
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -70,17 +70,15 @@ p, ul, ol {
 ul {
     list-style-type: disc;
     margin-left: 20px;
-    color: #ffffff;
 }
 
 ol {
     list-style-type: decimal;
     margin-left: 20px;
-    color: #ffffff;
 }
 
 .barra-contacto {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
@@ -91,10 +89,9 @@ ol {
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.grupo-input{
-    color:#ffffff;
+.grupo-input {
+    color: #ffffff;
 }
-
 
 .barra-contacto a {
     color: #ffc107;
@@ -137,4 +134,63 @@ ol {
 
 .boton-volver button a:hover {
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contenedor-soporte {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .boton-volver button {
+        width: 180px;
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-superior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 50px;
+        margin: 0 auto 10px;
+    }
+
+    .sitio-titulo {
+        font-size: 20px;
+    }
+
+    .contenedor-soporte {
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .boton-volver button {
+        width: 160px;
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .barra-contacto {
+        font-size: 0.8rem;
+    }
 }

@@ -1,11 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #5dc1b9; 
+    background-color: #5dc1b9;
 }
 
 header {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: white;
     padding: 15px;
     text-align: center;
@@ -33,7 +33,7 @@ main {
     margin-left: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #14213d; 
+    background-color: #14213d;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -50,7 +50,7 @@ main {
 }
 
 .tarjeta {
-    background-color: #14213d; 
+    background-color: #14213d;
     color: white;
     padding: 15px;
     border-radius: 10px;
@@ -78,14 +78,14 @@ main {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #5dc1b9; 
-    color: #14213d; 
+    background-color: #5dc1b9;
+    color: #14213d;
     font-size: 16px;
     cursor: pointer;
 }
 
 .tarjeta button:hover {
-    background-color: #48a39b; 
+    background-color: #48a39b;
 }
 
 header h1 i {
@@ -106,4 +106,65 @@ button i {
 #detalles-validacion p i {
     margin-right: 8px;
     color: #14213d;
+}
+
+@media (max-width: 768px) {
+    .contenedor-busqueda input {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .tarjeta h3 {
+        font-size: 18px;
+    }
+
+    .tarjeta p {
+        font-size: 14px;
+    }
+
+    .tarjeta button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    header {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-busqueda input {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .contenedor-busqueda button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta h3 {
+        font-size: 16px;
+    }
+
+    .tarjeta p {
+        font-size: 12px;
+    }
+
+    .tarjeta button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
 }

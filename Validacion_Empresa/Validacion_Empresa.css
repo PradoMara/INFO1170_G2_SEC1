@@ -6,18 +6,18 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #5BC0BE; 
+    background: #5BC0BE;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 80px; 
-    padding-bottom: 60px; 
+    padding-top: 80px;
+    padding-bottom: 60px;
     height: 100%;
     overflow-x: hidden;
     color: #343a40;
 }
 
 .barra-superior {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -57,7 +57,7 @@ body {
 }
 
 .logo {
-    width: 80px; 
+    width: 80px;
     height: auto;
     margin-right: 15px;
 }
@@ -84,7 +84,7 @@ body {
 
 h2 {
     color: #ffffff;
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     margin-bottom: 25px;
 }
 
@@ -92,11 +92,10 @@ h4 {
     color: #ffffff;
 }
 
-
 .grupo-input {
     margin-bottom: 20px;
     text-align: left;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 label {
@@ -130,7 +129,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
@@ -182,9 +181,52 @@ button:hover {
 
 label i, h2 i, h1 i, footer i {
     margin-right: 8px;
-    color: #fcfcfc; 
+    color: #fcfcfc;
 }
 
 button i {
     margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .barra-superior h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 20px;
+        margin: 80px auto 0 auto;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .barra-superior ul li {
+        margin-left: 10px;
+    }
+
+    .barra-contacto {
+        font-size: 0.8rem;
+    }
 }

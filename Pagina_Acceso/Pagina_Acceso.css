@@ -6,53 +6,53 @@
 }
 
 body {
-    background: #5BC0BE; 
-    color: #ffffff; 
+    background: #5BC0BE;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .header {
-    background-color: #0B132B;  
-    color: #ffffff;  
-    padding: 15px; 
+    background-color: #0B132B;
+    color: #ffffff;
+    padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 
 .descripcion-contenedor {
-    background-color: #0B132B;  
-    border: 2px solid #000000;  
+    background-color: #0B132B;
+    border: 2px solid #000000;
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
-    width: 90%; 
-    max-width: 8000px; 
+    width: 90%;
+    max-width: 800px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #343a40; 
+    color: #343a40;
 }
 
 .descripcion {
-    font-size: 1rem; 
+    font-size: 1rem;
     line-height: 1.6;
-    color: #ffffff;  
+    color: #ffffff;
     font-size: 20px;
 }
 
 .contenedor {
-    background-color: #0B132B;  
+    background-color: #0B132B;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    width: 90%; 
-    max-width: 500px; 
+    width: 90%;
+    max-width: 500px;
     text-align: center;
     margin: 20px auto;
-    color: #343a40; 
+    color: #343a40;
 }
 
 main {
@@ -64,7 +64,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     padding: 15px;
-    background-color: #000000; 
+    background-color: #000000;
 }
 
 .logo-container {
@@ -73,14 +73,14 @@ header {
 }
 
 .logo {
-    width: 80px; 
+    width: 80px;
     height: auto;
 }
 
 .sitio-titulo {
     font-family: 'Georgia', serif;
-    font-size: 1.6rem; 
-    color: #ffffff; 
+    font-size: 1.6rem;
+    color: #ffffff;
     margin-left: 15px;
     text-align: center;
     font-weight: bold;
@@ -88,24 +88,24 @@ header {
 }
 
 h2 {
-    font-size: 2rem; 
-    color: #ffffff;  
+    font-size: 2rem;
+    color: #ffffff;
     margin-bottom: 40px;
 }
 
 .botones {
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
     margin-bottom: 30px;
 }
 
 .boton {
-    background-color: #6c819b;  
-    color: #1C2541;  
-    padding: 12px 24px; 
+    background-color: #6c819b;
+    color: #1C2541;
+    padding: 12px 24px;
     text-decoration: none;
-    font-size: 1rem; 
+    font-size: 1rem;
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -113,12 +113,12 @@ h2 {
 }
 
 .boton:hover {
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 .ayuda {
     color: #d1d1e0;
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
@@ -130,8 +130,8 @@ h2 {
 }
 
 .ayuda a:hover {
-    text-decoration: underline; 
-    color: #ffcc00; 
+    text-decoration: underline;
+    color: #ffcc00;
 }
 
 .close:hover,
@@ -142,8 +142,8 @@ h2 {
 }
 
 .barra-contacto {
-    background-color: #0B132B;  
-    color: #f5f5f5;  
+    background-color: #0B132B;
+    color: #f5f5f5;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -151,11 +151,11 @@ h2 {
     width: 100%;
     z-index: 1000;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
 }
 
 .barra-contacto a {
-    color: #ffcc00;  
+    color: #ffcc00;
     text-decoration: none;
 }
 
@@ -185,4 +185,56 @@ button i {
 .barra-contacto i {
     margin-right: 5px;
     color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .descripcion-contenedor,
+    .contenedor {
+        width: 95%;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .sitio-titulo {
+        font-size: 1.2rem;
+    }
+
+    .boton {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .descripcion-contenedor,
+    .contenedor {
+        width: 100%;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .sitio-titulo {
+        font-size: 1rem;
+    }
+
+    .boton {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .barra-contacto {
+        font-size: 0.8rem;
+    }
 }

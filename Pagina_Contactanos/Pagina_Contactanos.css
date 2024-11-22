@@ -6,13 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #5BC0BE; 
+    background: #5BC0BE;
     color: #343a40;
-    padding: 80px 0 60px;  
+    padding: 80px 0 60px;
 }
 
 .barra-superior {
-    background-color: #0B132B;  
+    background-color: #0B132B;
     color: #ffffff;
     display: flex;
     justify-content: flex-start;
@@ -83,7 +83,7 @@ button {
     width: 100%;
     padding: 10px;
     background-color: #6c819b;
-    color:  #1C2541;
+    color: #1C2541;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -115,7 +115,7 @@ button:hover {
 }
 
 .barra-contacto {
-    background-color: #0B132B; 
+    background-color: #0B132B;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
@@ -168,3 +168,51 @@ footer p i {
     color: #ffc107;
 }
 
+@media (max-width: 768px) {
+    .contenedor-contacto {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-superior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 50px;
+        margin: 0 auto 10px;
+    }
+
+    .sitio-titulo {
+        font-size: 20px;
+    }
+
+    .contenedor-contacto {
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .barra-contacto {
+        font-size: 0.8rem;
+    }
+}
