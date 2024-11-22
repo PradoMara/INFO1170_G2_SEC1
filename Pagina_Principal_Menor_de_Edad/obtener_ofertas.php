@@ -1,19 +1,31 @@
 <?php
-
 include 'conexion.php';
 
-$sql = "SELECT * FROM ofertas_empleo WHERE disponible = 1 ORDER BY fecha_publicacion DESC";
-$resultado = mysqli_query($conexion, $sql);
+try {
+    $sql = "SELECT * FROM ofertas_empleo WHERE disponible = 1 ORDER BY fecha_publicacion DESC";
+    $stmt = $conexion->prepare($sql);
 
-$ofertas = [];
+    if ($stmt->execute()) {
+        $resultado = $stmt->get_result();
+        $ofertas = [];
 
-if (mysqli_num_rows($resultado) > 0) {
-    while ($fila = mysqli_fetch_assoc($resultado)) {
-        $ofertas[] = $fila;
+        while ($fila = $resultado->fetch_assoc()) {
+            $ofertas[] = $fila;
+        }
+
+        echo json_encode([
+            'success' => true,
+            'data' => $ofertas,
+        ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    } else {
+        throw new Exception("Error al ejecutar la consulta");
     }
+} catch (Exception $e) {
+    echo json_encode([
+        'success' => false,
+        'message' => $e->getMessage(),
+    ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+} finally {
+    $conexion->close();
 }
-
-echo json_encode($ofertas);
-
-mysqli_close($conexion);
 ?>

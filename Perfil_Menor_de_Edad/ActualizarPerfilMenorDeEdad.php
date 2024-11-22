@@ -1,32 +1,59 @@
 <?php
 include 'conexion.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id_postulante = $_POST['id'];
-    $nombre = $_POST['nombre'];
-    $edad = $_POST['edad'];
-    $ubicacion = $_POST['ubicacion'];
-    $acerca_de_mi = $_POST['acerca_de_mi'];
-    $habilidades = $_POST['habilidades'];
-    $experiencia = $_POST['experiencia'];
-    $educacion = $_POST['educacion'];
-    $actividades_extracurriculares = $_POST['actividades_extracurriculares'];
+    try {
+        $id_postulante = filter_var($_POST['id'], FILTER_VALIDATE_INT);
+        $nombre = htmlspecialchars(trim($_POST['nombre']));
+        $edad = filter_var($_POST['edad'], FILTER_VALIDATE_INT);
+        $ubicacion = htmlspecialchars(trim($_POST['ubicacion']));
+        $acerca_de_mi = htmlspecialchars(trim($_POST['acerca_de_mi']));
+        $habilidades = htmlspecialchars(trim($_POST['habilidades']));
+        $experiencia = htmlspecialchars(trim($_POST['experiencia']));
+        $educacion = htmlspecialchars(trim($_POST['educacion']));
+        $actividades_extracurriculares = htmlspecialchars(trim($_POST['actividades_extracurriculares']));
 
-    $sql = "UPDATE Postulantee
-            SET nombre = ?, edad = ?, ubicacion = ?, acerca_de_mi = ?, habilidades = ?, experiencia = ?, educacion = ?, actividades_extracurriculares = ?
-            WHERE id_postulante = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sissssssi", $nombre, $edad, $ubicacion, $acerca_de_mi, $habilidades, $experiencia, $educacion, $actividades_extracurriculares, $id_postulante);
+        if (!$id_postulante || !$nombre || !$edad || !$ubicacion) {
+            echo json_encode(["error" => "Datos insuficientes o inválidos."]);
+            exit;
+        }
 
-    if ($stmt->execute()) {
-        echo "Perfil actualizado correctamente";
-    } else {
-        echo "Error al actualizar el perfil: " . $stmt->error;
+        $sql = "UPDATE Postulantee
+                SET nombre = ?, edad = ?, ubicacion = ?, acerca_de_mi = ?, habilidades = ?, experiencia = ?, educacion = ?, actividades_extracurriculares = ?
+                WHERE id_postulante = ?";
+        $stmt = $conn->prepare($sql);
+
+        if (!$stmt) {
+            throw new Exception("Error al preparar la consulta");
+        }
+
+        $stmt->bind_param(
+            "sissssssi",
+            $nombre,
+            $edad,
+            $ubicacion,
+            $acerca_de_mi,
+            $habilidades,
+            $experiencia,
+            $educacion,
+            $actividades_extracurriculares,
+            $id_postulante
+        );
+
+        if ($stmt->execute()) {
+            echo json_encode(["success" => "Perfil actualizado correctamente."]);
+        } else {
+            throw new Exception("Error al actualizar el perfil.");
+        }
+    } catch (Exception $e) {
+        echo json_encode(["error" => $e->getMessage()]);
+    } finally {
+        if (isset($stmt) && $stmt !== false) {
+            $stmt->close();
+        }
+        $conn->close();
     }
-
-    $stmt->close();
 } else {
-    echo "Método no permitido";
+    echo json_encode(["error" => "Método no permitido."]);
 }
-
-$conn->close();
 ?>

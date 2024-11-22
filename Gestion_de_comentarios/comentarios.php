@@ -1,19 +1,35 @@
 <?php
-include 'conexion.php'; 
+include 'conexion.php';
 
-$sql = "SELECT autor, texto, fecha FROM comentarios ORDER BY fecha DESC";
-$resultado = mysqli_query($conexion, $sql);
+header('Content-Type: application/json'); // Asegura que la respuesta sea JSON
 
-$comentarios = [];
+try {
+    // Consulta SQL para obtener comentarios
+    $sql = "SELECT autor, texto, fecha FROM comentarios ORDER BY fecha DESC";
+    $resultado = $conexion->query($sql);
 
-if ($resultado) {
-    while ($fila = mysqli_fetch_assoc($resultado)) {
+    if (!$resultado) {
+        throw new Exception("Error al ejecutar la consulta: " . $conexion->error);
+    }
+
+    $comentarios = [];
+    while ($fila = $resultado->fetch_assoc()) {
         $comentarios[] = $fila;
     }
-    echo json_encode($comentarios); 
-} else {
-    echo json_encode(["error" => "No se pudieron obtener los comentarios."]);
-}
 
-mysqli_close($conexion);
+    // Respuesta en JSON con los comentarios
+    echo json_encode([
+        "success" => true,
+        "data" => $comentarios,
+    ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+} catch (Exception $e) {
+    // Manejo de errores
+    echo json_encode([
+        "success" => false,
+        "message" => $e->getMessage(),
+    ]);
+} finally {
+    // Cerrar la conexión a la base de datos
+    $conexion->close();
+}
 ?>

@@ -1,54 +1,90 @@
 <?php
-include 'conexion.php'; 
+include 'conexion.php';
 
-function obtenerNotificaciones() {
-    global $conexion;
+header('Content-Type: application/json'); // Asegura que la respuesta sea JSON
+
+/**
+ * Obtiene todas las notificaciones ordenadas por fecha.
+ *
+ * @param mysqli $conexion La conexión a la base de datos.
+ * @return array Lista de notificaciones.
+ */
+function obtenerNotificaciones($conexion) {
     $sql = "SELECT * FROM notificaciones ORDER BY fecha DESC";
-    $resultado = mysqli_query($conexion, $sql);
+    $resultado = $conexion->query($sql);
     
     $notificaciones = [];
-    while ($fila = mysqli_fetch_assoc($resultado)) {
+    while ($fila = $resultado->fetch_assoc()) {
         $notificaciones[] = $fila;
     }
     
     return $notificaciones;
 }
 
-function marcarComoLeida($id) {
-    global $conexion;
+/**
+ * Marca una notificación como leída.
+ *
+ * @param mysqli $conexion La conexión a la base de datos.
+ * @param int $id El ID de la notificación.
+ * @return bool True si se ejecutó correctamente, false en caso contrario.
+ */
+function marcarComoLeida($conexion, $id) {
     $sql = "UPDATE notificaciones SET leida = 1 WHERE id = ?";
-    $stmt = mysqli_prepare($conexion, $sql);
-    mysqli_stmt_bind_param($stmt, 'i', $id);
-    return mysqli_stmt_execute($stmt);
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param('i', $id);
+    return $stmt->execute();
 }
 
-function eliminarNotificacion($id) {
-    global $conexion;
+/**
+ * Elimina una notificación.
+ *
+ * @param mysqli $conexion La conexión a la base de datos.
+ * @param int $id El ID de la notificación.
+ * @return bool True si se ejecutó correctamente, false en caso contrario.
+ */
+function eliminarNotificacion($conexion, $id) {
     $sql = "DELETE FROM notificaciones WHERE id = ?";
-    $stmt = mysqli_prepare($conexion, $sql);
-    mysqli_stmt_bind_param($stmt, 'i', $id);
-    return mysqli_stmt_execute($stmt);
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param('i', $id);
+    return $stmt->execute();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id = $_POST['id'];
-    
-    if (isset($_POST['accion'])) {
-        $accion = $_POST['accion'];
-        
-        if ($accion === 'marcar_leida') {
-            if (marcarComoLeida($id)) {
-                echo json_encode(['success' => true]);
-            } else {
-                echo json_encode(['success' => false]);
-            }
-        } elseif ($accion === 'eliminar') {
-            if (eliminarNotificacion($id)) {
-                echo json_encode(['success' => true]);
-            } else {
-                echo json_encode(['success' => false]);
-            }
+    try {
+        $id = filter_var($_POST['id'], FILTER_VALIDATE_INT);
+        $accion = isset($_POST['accion']) ? $_POST['accion'] : null;
+
+        if (!$id || !$accion) {
+            echo json_encode(['success' => false, 'message' => 'Datos insuficientes']);
+            exit;
         }
+
+        switch ($accion) {
+            case 'marcar_leida':
+                if (marcarComoLeida($conexion, $id)) {
+                    echo json_encode(['success' => true, 'message' => 'Notificación marcada como leída']);
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'Error al marcar como leída']);
+                }
+                break;
+
+            case 'eliminar':
+                if (eliminarNotificacion($conexion, $id)) {
+                    echo json_encode(['success' => true, 'message' => 'Notificación eliminada']);
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'Error al eliminar la notificación']);
+                }
+                break;
+
+            default:
+                echo json_encode(['success' => false, 'message' => 'Acción no válida']);
+        }
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
+    } finally {
+        $conexion->close();
     }
+} else {
+    echo json_encode(['success' => false, 'message' => 'Método no permitido']);
 }
 ?>
