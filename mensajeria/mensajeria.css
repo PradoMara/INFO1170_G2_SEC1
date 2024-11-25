@@ -1,3 +1,7 @@
+body{
+    font-family: "Arial", sans-serif;
+}
+
 #chatContainer {
     width: 100%;
     max-width: 600px;

@@ -2,7 +2,7 @@ body, html {
     background-color: #5BC0BE;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Arial", sans-serif;
     color: #ffffff;
 
 }
@@ -150,7 +150,7 @@ body, html {
 }
 
 .buscador-container h1{
-    font-family: "Poppins", sans-serif;
+    font-family: "Arial", sans-serif;
     font-size:                     2em;
     margin-bottom:                30px;
 
