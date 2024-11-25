@@ -248,3 +248,28 @@ button:hover {
         padding: 10px;
     }
 }
+
+/* Contenedor de la contraseña */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Espacio para el ícono */
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Tamaño del ícono */
+    color: #5BC0BE; /* Color del ícono */
+    transition: color 0.3s ease;
+}
+
+.toggle-icon:hover {
+    color: #FFFFFF; /* Cambia el color al pasar el cursor */
+}

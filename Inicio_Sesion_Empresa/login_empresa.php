@@ -9,24 +9,23 @@ error_reporting(E_ALL);
 // Configuración de cabecera
 header('Content-Type: application/json');
 
-// Validar método POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = mysqli_real_escape_string($conexion, $_POST['email']);
-    $password = mysqli_real_escape_string($conexion, $_POST['password']);
+    $email = mysqli_real_escape_string($conexion, trim($_POST['email']));
+    $password = trim($_POST['password']);
 
-    // Consulta SQL
-    $sql = "SELECT * FROM empresas WHERE email = '$email'";
-    $result = mysqli_query($conexion, $sql);
-
-    if (!$result) {
-        echo json_encode(["success" => false, "message" => "Error en la consulta SQL: " . mysqli_error($conexion)]);
+    if (empty($email) || empty($password)) {
+        echo json_encode(["success" => false, "message" => "Por favor, completa todos los campos."]);
         exit();
     }
 
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
+    $stmt = $conexion->prepare("SELECT * FROM empresas WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        // Verificar contraseña
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
         if (password_verify($password, $row['password'])) {
             echo json_encode(["success" => true, "message" => "Inicio de sesión exitoso.", "redirect" => "../Pagina_empresa/EmpresaPrincipal.html"]);
         } else {
@@ -35,6 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         echo json_encode(["success" => false, "message" => "El correo no está registrado."]);
     }
+
+    $stmt->close();
 } else {
     echo json_encode(["success" => false, "message" => "Método no permitido."]);
 }

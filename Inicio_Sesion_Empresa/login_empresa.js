@@ -1,5 +1,20 @@
 console.log("El archivo login_empresa.js se cargó correctamente.");
 
+// Funcionalidad de mostrar/ocultar contraseña
+document.addEventListener('DOMContentLoaded', () => {
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+
+        // Cambiar el ícono según el estado de la contraseña
+        togglePassword.innerHTML = isPassword ? '<i class="fas fa-eye-slash"></i>' : '<i class="fas fa-eye"></i>';
+    });
+});
+
+// Enviar formulario
 document.getElementById("login-empresa-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
