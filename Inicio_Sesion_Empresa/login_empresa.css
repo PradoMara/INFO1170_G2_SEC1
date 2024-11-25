@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #5BC0BE;
     color: #FFFFFF;
     padding-top: 80px;
@@ -39,7 +42,7 @@ body {
 }
 
 .sitio-titulo {
-    font-family: 'Georgia', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     color: #FFFFFF;
     font-weight: bold;

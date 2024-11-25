@@ -6,7 +6,7 @@
     <title>Inicio de Sesión - Empresa</title>
     <link rel="stylesheet" href="login_empresa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="barra-superior">
@@ -14,7 +14,7 @@
         <h1 class="sitio-titulo">Araucanía Laboral</h1>
     </div>
 
-    <div class="contenedor" id="login-container">
+    <div class="contenedor">
         <h2><i class="fas fa-user-tie"></i> Iniciar Sesión - Empresa</h2>
         <form id="login-empresa-form">
             <div class="grupo-input">
@@ -25,7 +25,6 @@
                 <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
                 <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
             </div>
-            <div class="g-recaptcha" data-sitekey="6LfL6YgqAAAAAEtANrTV2vTRmLW6c5jGWmdlkbmP"></div>
             <button type="submit"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
             <div class="enlaces-ayuda">
                 <p><a href="../Recuperar_contraseña/recuperar-contraseña.html"><i class="fas fa-unlock"></i> ¿Olvidaste tu contraseña?</a></p>
@@ -34,15 +33,8 @@
         </form>
     </div>
 
-    <div class="contenedor oculto" id="codigo-container">
-        <h2><i class="fas fa-key"></i> Verificar Código de Autenticación</h2>
-        <form id="verificar-codigo-form">
-            <div class="grupo-input">
-                <label for="codigo"><i class="fas fa-shield-alt"></i> Ingresa el código recibido</label>
-                <input type="number" id="codigo" name="codigo" required placeholder="Código 2FA">
-            </div>
-            <button type="submit"><i class="fas fa-check-circle"></i> Verificar</button>
-        </form>
+    <div class="barra-contacto">
+        <p><i class="fas fa-envelope"></i> Contacto: <a href="mailto:integracion58@gmail.com">integracion58@gmail.com</a> | <i class="fas fa-phone"></i> Teléfono: +56 9 1234 5678</p>
     </div>
 
     <script src="login_empresa.js"></script>
