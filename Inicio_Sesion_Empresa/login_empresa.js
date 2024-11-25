@@ -1,74 +1,70 @@
-document.getElementById('login-empresa-form').addEventListener('submit', function(event) {
+console.log("El archivo login_empresa.js se cargó correctamente.");
+
+document.getElementById("login-empresa-form").addEventListener("submit", function (event) {
     event.preventDefault();
+    console.log("El botón Iniciar Sesión ha sido presionado.");
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const recaptchaResponse = grecaptcha.getResponse();
 
-    if (email === "" || password === "") {
-        alert("Por favor, completa todos los campos.");
+    if (!recaptchaResponse) {
+        alert("Por favor, verifica que no eres un robot.");
         return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Por favor, ingresa un correo electrónico válido.");
-        return;
-    }
+    console.log("Datos ingresados:", { email, password, recaptchaResponse });
 
-    fetch('login_empresa.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
+    fetch("login_empresa.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
-            'email': email,
-            'password': password
+            email: email,
+            password: password,
+            "g-recaptcha-response": recaptchaResponse
         })
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // Ocultar formulario de login y mostrar formulario de código
-            document.getElementById('login-container').classList.add('oculto');
-            document.getElementById('codigo-container').classList.remove('oculto');
-            localStorage.setItem('email', email); // Guardar email temporalmente
-        } else {
-            alert(data.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("Hubo un problema al intentar iniciar sesión.");
-    });
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Error en la solicitud: " + response.statusText);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log("Respuesta del servidor:", data);
+            if (data.success) {
+                document.getElementById("login-container").classList.add("oculto");
+                document.getElementById("codigo-container").classList.remove("oculto");
+                localStorage.setItem("email", email);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch((error) => {
+            console.error("Error en la solicitud:", error);
+        });
 });
 
-document.getElementById('verificar-codigo-form').addEventListener('submit', function(event) {
+document.getElementById("verificar-codigo-form").addEventListener("submit", function (event) {
     event.preventDefault();
+    const codigo = document.getElementById("codigo").value;
+    const email = localStorage.getItem("email");
 
-    const codigo = document.getElementById('codigo').value;
-    const email = localStorage.getItem('email');
-
-    fetch('verificar_codigo.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams({
-            'email': email,
-            'codigo': codigo
+    fetch("verificar_codigo.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email: email, codigo: codigo })
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Respuesta del servidor:", data);
+            if (data.success) {
+                window.location.href = data.redirect;
+            } else {
+                alert(data.message);
+            }
         })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.message);
-            window.location.href = "perfil_empresa.html";
-        } else {
-            alert(data.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert("Hubo un problema al verificar el código.");
-    });
+        .catch((error) => {
+            console.error("Error en la verificación:", error);
+        });
 });
