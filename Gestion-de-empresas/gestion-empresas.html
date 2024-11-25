@@ -32,8 +32,6 @@
             <h1 class="texto-bienvenida">Solicitudes de Validación Pendientes</h1>
             <div class="filtros">
                 <input type="text" id="busqueda" class="filtro" placeholder="Buscar empresa...">
-    
-                </select>
                 <select id="filtro-recientes" class="filtro">
                     <option value="">Filtrar por Recientes</option>
                     <option value="1">Última semana</option>
@@ -45,6 +43,9 @@
                     <option value="A-Z">A-Z</option>
                     <option value="Z-A">Z-A</option>
                 </select>
+            </div>
+            <div class="descargar-container">
+                <button id="descargar-datos" class="boton-descarga">Descargar datos en CSV</button>
             </div>
             <div id="solicitudes-container">
                 <!-- Aquí se mostrarán las solicitudes mediante JS -->

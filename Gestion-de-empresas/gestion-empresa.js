@@ -248,6 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    document.getElementById('descargar-datos').addEventListener('click', descargarDatos);
 
     const actualizarEmpresa = (id_Empresa) => {
   
