@@ -1,48 +1,48 @@
-// enviar un mensaje
-document.getElementById("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const input = document.getElementById("input");
+document.addEventListener('DOMContentLoaded', () => {
+    const chatForm = document.getElementById('chatForm');
+    const chatMessages = document.getElementById('chatMessages');
+    const remitente = document.getElementById('remitente').value;
+    const destinatario = document.getElementById('destinatario').value;
 
-    // hacer la solicitud para enviar el mensaje
-    fetch("enviar-mensaje.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams({
-            usuario: "Usuario1", // cambiar por el usuario dinámico
-            mensaje: input.value,
-            destinatario: "Usuario2" // cambiar por el destinatario dinamico
-        })
-    }).then(() => {
-        input.value = ""; // limpiar el campo de texto
-        cargarMensajes(); // actualizar mensajes
-    });
-});
+    // Cargar mensajes al iniciar
+    const cargarMensajes = async () => {
+        const response = await fetch(`obtener-mensaje.php?remitente=${remitente}&destinatario=${destinatario}`);
+        const data = await response.json();
 
-// Obtener los mensajes y mostrarlos
-function cargarMensajes() {
-    fetch("obtener-mensaje.php?destinatario=Usuario1") // Cambiar por el usuario actual
-        .then(response => response.json())
-        .then(data => {
-            const messages = document.getElementById("messages");
-            messages.innerHTML = ""; // Limpiar mensajes existentes
-
-            // Añadir los mensajes al contenedor
-            data.forEach(msg => {
-                const item = document.createElement("div");
-                item.textContent = `${msg.usuario}: ${msg.mensaje}`;
-                messages.appendChild(item);
+        if (data.status === 'success') {
+            chatMessages.innerHTML = '';
+            data.messages.forEach(msg => {
+                const div = document.createElement('div');
+                div.classList.add(msg.remitente === remitente ? 'mensaje-propio' : 'mensaje-ajeno');
+                div.innerHTML = `<p><strong>${msg.remitente}:</strong> ${msg.mensaje}</p><small>${msg.fecha_envio}</small>`;
+                chatMessages.appendChild(div);
             });
+        }
+    };
 
-            // Desplazarse al final automáticamente
-            messages.scrollTop = messages.scrollHeight;
+    // Enviar mensaje
+    chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const mensaje = document.getElementById('mensaje').value;
+
+        const response = await fetch('enviar-mensaje.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ remitente, destinatario, mensaje })
         });
-}
 
-// Actualizar los mensajes cada 2 segundos
-setInterval(cargarMensajes, 2000);
-cargarMensajes(); // Cargar mensajes al iniciar
+        const data = await response.json();
+        if (data.status === 'success') {
+            cargarMensajes();
+            chatForm.reset();
+        } else {
+            alert(data.message);
+        }
+    });
 
+    // Actualizar mensajes cada 5 segundos
+    setInterval(cargarMensajes, 5000);
+    cargarMensajes();
+});
 
 

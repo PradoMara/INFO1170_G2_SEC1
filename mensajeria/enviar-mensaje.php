@@ -1,23 +1,24 @@
 <?php
-include '/conexion-bd/conexion.php';
+require_once '/conexion-bd/conexion.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $usuario = $_POST['usuario'];
-    $mensaje = $_POST['mensaje'];
-    $destinatario = $_POST['destinatario'];
+    $remitente = $_POST['remitente'] ?? '';
+    $destinatario = $_POST['destinatario'] ?? '';
+    $mensaje = $_POST['mensaje'] ?? '';
 
-    // insertar el mensaje en la base de datos
-    $stmt = $conexion->prepare("INSERT INTO Mensajes (usuario, mensaje, destinatario) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $usuario, $mensaje, $destinatario);
+    if ($remitente && $destinatario && $mensaje) {
+        $query = $conn->prepare("INSERT INTO mensajes (remitente, destinatario, mensaje, fecha_envio) VALUES (?, ?, ?, NOW())");
+        $query->bind_param("sss", $remitente, $destinatario, $mensaje);
 
-    if ($stmt->execute()) {
-        echo "Mensaje enviado.";
+        if ($query->execute()) {
+            echo json_encode(["status" => "success", "message" => "Mensaje enviado"]);
+        } else {
+            echo json_encode(["status" => "error", "message" => "Error al enviar el mensaje"]);
+        }
     } else {
-        echo "Error al enviar el mensaje: " . $stmt->error;
+        echo json_encode(["status" => "error", "message" => "Datos incompletos"]);
     }
-
-    // cerrar la conexion
-    $stmt->close();
-    $conexion->close();
+} else {
+    echo json_encode(["status" => "error", "message" => "Método no permitido"]);
 }
 ?>

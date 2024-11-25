@@ -1,24 +1,26 @@
 <?php
-include('/conexion-bd/conexion.php');
+require_once '/conexion-bd/conexion.php'; 
 
-$destinatario = $_GET['destinatario'];
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $remitente = $_GET['remitente'] ?? '';
+    $destinatario = $_GET['destinatario'] ?? '';
 
-// Ccnsulta para obtener mensajes dirigidos al destinatario o mensajes globales
-$stmt = $conexion->prepare("SELECT usuario, mensaje, fecha FROM Mensajes WHERE destinatario = ? OR destinatario IS NULL ORDER BY fecha ASC");
-$stmt->bind_param("s", $destinatario);
-$stmt->execute();
-$resultado = $stmt->get_result();
+    if ($remitente && $destinatario) {
+        $query = $conn->prepare("SELECT remitente, mensaje, fecha_envio FROM mensajes WHERE (remitente = ? AND destinatario = ?) OR (remitente = ? AND destinatario = ?) ORDER BY fecha_envio ASC");
+        $query->bind_param("ssss", $remitente, $destinatario, $destinatario, $remitente);
+        $query->execute();
+        $result = $query->get_result();
 
-// Crear un array para los mensajes
-$mensajes = [];
-while ($fila = $resultado->fetch_assoc()) {
-    $mensajes[] = $fila;
+        $mensajes = [];
+        while ($row = $result->fetch_assoc()) {
+            $mensajes[] = $row;
+        }
+
+        echo json_encode(["status" => "success", "messages" => $mensajes]);
+    } else {
+        echo json_encode(["status" => "error", "message" => "Datos incompletos"]);
+    }
+} else {
+    echo json_encode(["status" => "error", "message" => "Método no permitido"]);
 }
-
-// devolver los mensajes en formato JSON
-echo json_encode($mensajes);
-
-// Cerrar la conexion
-$stmt->close();
-$conexion->close();
 ?>
