@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     background-color: #2AB7B7; /* Fondo azul claro */
     margin: 0;
     padding: 0;
@@ -27,6 +27,7 @@ body {
 }
 
 .header .logo h1 {
+    font-family: 'Poppins', sans-serif; /* Aseguramos que el texto del logo también use Poppins */
     color: #ffffff; /* Texto en blanco */
     margin-left: 10px;
     font-size: 20px;
@@ -58,6 +59,7 @@ body {
 }
 
 .gestion-consultas h2 {
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     font-size: 24px;
     color: #ffffff; /* Texto en blanco */
 }
@@ -111,11 +113,13 @@ body {
 }
 
 .consulta .details p {
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     font-size: 16px;
     color: #ffffff; /* Texto en blanco */
 }
 
 .consulta .details h3 {
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     font-size: 20px;
     color: #ffffff; /* Título en blanco */
 }
@@ -132,6 +136,7 @@ body {
 
 .buttons button {
     background-color: #4E6378; /* Botón azul medio */
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     color: #ffffff; /* Texto del botón en blanco */
     border: none;
     padding: 10px;
@@ -159,6 +164,7 @@ body {
 
 .back-button button {
     background-color: #4E6378; /* Botón azul medio */
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     color: #ffffff; /* Texto del botón en blanco */
     border: none;
     padding: 10px 20px;
@@ -174,8 +180,96 @@ body {
 /* Footer */
 footer {
     background-color: #0B2D4D; /* Fondo azul oscuro */
+    font-family: 'Poppins', sans-serif; /* Cambiado a Poppins */
     color: #ffffff; /* Texto en blanco */
     text-align: center;
     padding: 10px;
     width: 100%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column; /* Apilar elementos en lugar de alinearlos horizontalmente */
+        text-align: center;
+    }
+
+    .header .logo img {
+        width: 40px; /* Reducir el tamaño del logo en tablets */
+    }
+
+    .header .logo h1 {
+        font-size: 18px; /* Reducir tamaño de texto del logo */
+    }
+
+    .consulta {
+        flex-direction: column; /* Apilar el contenido de la consulta */
+        text-align: center;
+    }
+
+    .consulta .icon img {
+        margin-bottom: 10px; /* Agregar espacio entre el ícono y el texto */
+    }
+
+    .buttons {
+        flex-direction: row; /* Botones en fila */
+        justify-content: center;
+        gap: 10px; /* Separación entre botones */
+    }
+
+    .buttons button {
+        padding: 8px; /* Reducir padding en botones */
+    }
+}
+
+@media (max-width: 768px) {
+    .gestion-consultas h2 {
+        font-size: 20px; /* Reducir tamaño del título en dispositivos más pequeños */
+    }
+
+    .search-filter input[type="text"],
+    .search-filter select {
+        width: 100%; /* Adaptar a ancho completo */
+        margin: 5px 0; /* Separación entre filtros */
+    }
+
+    .consulta {
+        padding: 15px; /* Reducir padding interno */
+    }
+
+    .consulta .details h3 {
+        font-size: 18px; /* Reducir el tamaño de los títulos de detalles */
+    }
+
+    .consulta .details p {
+        font-size: 14px; /* Reducir el tamaño de los párrafos */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo img {
+        width: 30px; /* Aún más pequeño para móviles */
+    }
+
+    .header .logo h1 {
+        font-size: 16px; /* Ajustar texto del logo */
+    }
+
+    .consulta {
+        padding: 10px; /* Más compacto en móviles */
+    }
+
+    .consulta .details h3,
+    .consulta .details p {
+        font-size: 14px; /* Texto más pequeño en móviles */
+    }
+
+    .buttons {
+        flex-direction: column; /* Botones apilados */
+    }
+
+    .back-button button {
+        font-size: 14px; /* Reducir tamaño del botón regresar */
+        padding: 8px; /* Más compacto */
+    }
 }

@@ -14,7 +14,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--fondo-principal);
     color: var(--texto-principal);
 }
@@ -158,3 +158,69 @@ footer .contact-bar a:hover {
 .login-link a:hover {
     text-decoration: underline; /* Subrayado al pasar el ratón */
 }
+
+/* Media queries para responsividad */
+@media (max-width: 1024px) {
+    .container {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .login-form {
+      width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 20px; /* Reducir el tamaño del título */
+    }
+  
+    .login-form h2 {
+      font-size: 18px; /* Reducir tamaño de los encabezados */
+    }
+  
+    .input-group input {
+      font-size: 14px; /* Reducir tamaño de texto en entradas */
+    }
+  
+    .login-form input[type="submit"] {
+      padding: 8px; /* Botón más compacto */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 5px; /* Menos espacio alrededor del encabezado */
+    }
+  
+    header h1 {
+      font-size: 16px; /* Título más pequeño en móviles */
+    }
+  
+    .login-form {
+      padding: 15px;
+      border-radius: 5px; /* Bordes menos redondeados */
+    }
+  
+    .input-group {
+      flex-direction: column; /* Apilar iconos y campos de texto */
+      align-items: stretch;
+    }
+  
+    .input-group i {
+      margin-right: 0;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  
+    .login-form input[type="submit"] {
+      font-size: 14px; /* Botón más pequeño */
+      padding: 10px;
+    }
+  
+    a {
+      font-size: 14px; /* Texto más pequeño para enlaces */
+    }
+  }

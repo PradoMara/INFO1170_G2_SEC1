@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #2AB7B7; /* Fondo azul claro */
@@ -207,3 +207,98 @@ footer {
 #mensajeForm button:hover {
     background-color: #6D8AA8;
 }
+
+.rating {
+    direction: rtl; /* Permite hacer clic desde la derecha hacia la izquierda */
+    unicode-bidi: bidi-override;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.rating span {
+    display: inline-block;
+    color: #ddd; /* Color de estrella desactivada */
+}
+
+.rating span:hover,
+.rating span:hover ~ span {
+    color: gold; /* Color de estrellas al pasar el mouse */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1024px) {
+    .empresa-intro h1 {
+      font-size: 20px; /* Título más pequeño en pantallas medianas */
+    }
+  
+    .postulante-card {
+      width: 350px; /* Reducción de tamaño en tablets */
+    }
+  
+    .modal-content {
+      width: 90%; /* Ajuste modal en pantallas más pequeñas */
+    }
+  
+    button {
+      padding: 10px 20px; /* Botón más compacto en tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 15px;
+    }
+  
+    .logo img {
+      width: 80px; /* Logo más pequeño */
+    }
+  
+    .nav ul {
+      gap: 15px; /* Menos espacio entre los enlaces */
+    }
+  
+    .postulante-card {
+      width: 90%; /* Más compacto en pantallas pequeñas */
+      height: auto; /* Ajusta la altura según el contenido */
+    }
+  
+    .empresa-intro h1 {
+      font-size: 18px; /* Ajustar tamaño del título */
+    }
+  
+    .empresa-intro p {
+      font-size: 14px; /* Ajuste en el texto */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 5px 10px; /* Reducir padding en móviles */
+    }
+  
+    .logo img {
+      width: 60px; /* Aún más pequeño en móviles */
+    }
+  
+    .nav ul {
+      flex-direction: column; /* Los enlaces se apilan */
+      gap: 10px; /* Menos espacio entre los enlaces */
+    }
+  
+    .postulante-card {
+      width: 100%; /* Ocupa todo el ancho disponible */
+    }
+  
+    .empresa-intro {
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px; /* Botón más pequeño */
+    }
+  
+    .modal-content {
+      width: 95%; /* Modal aún más estrecho en pantallas muy pequeñas */
+    }
+  }
