@@ -230,3 +230,12 @@ button i {
         font-size: 0.8rem;
     }
 }
+
+input[type="file"] {
+    padding: 10px;
+    background-color: #1C2541;
+    color: #ffffff;
+    border: 1px solid #6c757d;
+    border-radius: 8px;
+    cursor: pointer;
+}

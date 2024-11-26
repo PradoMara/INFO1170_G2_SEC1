@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros - AraucaniaLaboral</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="acerca_de_nosotros.css"> <!-- Aquí puedes enlazar tu CSS -->
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0B132B;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="60" height="40">
+                AraucaniaLaboral
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#equipo">Nuestro Propósito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal: Sobre Nosotros -->
+    <section id="sobre-nosotros" class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="display-4 text-center text-dark mb-4">¿Quiénes somos?</h2>
+                <p class="lead text-justify text-dark">
+                    AraucaniaLaboral es una plataforma innovadora destinada a facilitar el encuentro entre empresas y personas en búsqueda de empleo. Nuestro objetivo es crear un espacio dinámico, seguro y accesible para todos los usuarios, garantizando un proceso de contratación eficiente y transparente.
+                </p>
+                <p class="lead text-justify text-dark">
+                    Contamos con un sistema de validación robusto que asegura la seguridad y confianza tanto para los postulantes como para las empresas. Además, la plataforma está diseñada para personas mayores de 16 años, con diferentes catálogos según la edad, permitiendo que todos tengan acceso a oportunidades laborales.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="admin.png" alt="Equipo colaborando" class="img-fluid rounded shadow">
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Carrusel de Propósito -->
+    <section id="equipo" class="container py-5">
+        <h2 class="text-center text-dark mb-4">Nuestro Propósito</h2>
+        <div id="purposeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="text-center">
+                        <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
+                        <h5 class="text-dark">Conectar a Empresas con Talento</h5>
+                        <p class="text-muted">A través de nuestra plataforma, las empresas pueden encontrar candidatos adecuados para sus vacantes, mientras que los postulantes tienen la oportunidad de acceder a ofertas de trabajo que se ajusten a sus habilidades y experiencia.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                        <h5 class="text-dark">Seguridad y Confianza</h5>
+                        <p class="text-muted">Nuestro sistema de validación garantiza que todos los usuarios sean verificados antes de acceder a la plataforma, promoviendo un ambiente seguro y confiable tanto para las empresas como para los postulantes.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <i class="fas fa-comments fa-3x text-info mb-3"></i>
+                        <h5 class="text-dark">Facilidad de Uso y Comunicación</h5>
+                        <p class="text-muted">Con nuestra interfaz amigable, los postulantes y las empresas pueden comunicarse directamente para resolver dudas y establecer contacto de manera efectiva, sin complicaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#purposeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#purposeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container py-5 text-center">
+        <h2 class="display-4 text-dark mb-4">¡Contáctanos!</h2>
+        <p class="lead text-dark mb-4">Si tienes alguna duda o consulta, no dudes en comunicarte con nosotros. Estamos aquí para ayudarte.</p>
+        <a href="mailto:contacto@araucanialaboral.cl" class="btn btn-outline-dark btn-lg">
+            <i class="fas fa-envelope"></i> Enviar un correo
+        </a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-center text-light py-3">
+        <p>&copy; 2024 AraucaniaLaboral. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

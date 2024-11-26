@@ -143,3 +143,55 @@ if (idEmpresa) {
         cargarSolicitudes();  
     }
 }
+function showPopup(message, onConfirm) {
+    const popup = document.getElementById('confirmationPopup');
+    const messageElement = document.getElementById('popupMessage');
+    const confirmButton = document.getElementById('confirmButton');
+    const cancelButton = document.getElementById('cancelButton');
+  
+    messageElement.textContent = message;
+    popup.style.display = 'block';
+  
+    confirmButton.onclick = () => {
+      popup.style.display = 'none';
+      if (onConfirm) onConfirm();
+    };
+  
+    cancelButton.onclick = () => {
+      popup.style.display = 'none';
+    };
+  }
+  
+  function validarEmpresa(accion, idEmpresa) {
+    showPopup(`¿Estás seguro de ${accion === 'aceptar' ? 'aceptar' : 'rechazar'} esta empresa?`, () => {
+      const datos = new FormData();
+      datos.append('accion', accion);
+      datos.append('idEmpresa', idEmpresa);
+  
+      fetch('actualizar_estado_validacion.php', {
+        method: 'POST',
+        body: datos,
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error('Error al procesar la solicitud');
+          return response.text();
+        })
+        .then(() => {
+          alert(`Empresa ${accion === 'aceptar' ? 'aceptada' : 'rechazada'} correctamente.`);
+          cargarSolicitudes();
+        })
+        .catch((error) => {
+          console.error('Error al actualizar el estado de la empresa:', error);
+          alert('Ocurrió un error. Revisa la consola.');
+        });
+    });
+  }
+  
+  function verDetalles(idEmpresa) {
+    window.location.href = `btn_detalles.html?id=${idEmpresa}`;
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    cargarSolicitudes();
+  });
+  

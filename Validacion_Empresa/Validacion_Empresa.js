@@ -5,14 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.addEventListener('submit', function(evento) {
         evento.preventDefault(); 
 
+        document.getElementById('errorRazonSocial').textContent = '';
+        document.getElementById('errorRegistroTributario').textContent = '';
+        document.getElementById('errorDireccionFiscal').textContent = '';
+        document.getElementById('errorEmailEmpresa').textContent = '';
+        document.getElementById('errorArchivoEmpresa').textContent = '';
+
         let esValido = true;
 
         const razonSocial = document.getElementById('razonSocial').value;
         const registroTributario = document.getElementById('registroTributario').value;
         const direccionFiscal = document.getElementById('direccionFiscal').value;
         const emailEmpresa = document.getElementById('emailEmpresa').value;
+        const archivoEmpresa = document.getElementById('archivoEmpresa').files[0];
 
-        // Validar campos
         if (razonSocial.trim() === '') {
             document.getElementById('errorRazonSocial').textContent = 'La razón social es requerida.';
             esValido = false;
@@ -30,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('errorEmailEmpresa').textContent = 'El correo electrónico corporativo no es válido.';
             esValido = false;
         }
+        if (!archivoEmpresa) {
+            document.getElementById('errorArchivoEmpresa').textContent = 'Debe subir un archivo.';
+            esValido = false;
+        }
 
         if (esValido) {
             const formData = new FormData();
@@ -37,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('registroTributario', registroTributario);
             formData.append('direccionFiscal', direccionFiscal);
             formData.append('emailEmpresa', emailEmpresa);
+            formData.append('archivoEmpresa', archivoEmpresa);
 
             fetch('Validacion_Empresa.php', {
                 method: 'POST',
@@ -58,3 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const formulario = document.getElementById('formularioValidacion');
+
+    formulario.addEventListener('submit', function(evento) {
+        if (!confirm("¿Está seguro de que desea enviar este formulario?")) {
+            evento.preventDefault();    
+        }
+    });
+});
+

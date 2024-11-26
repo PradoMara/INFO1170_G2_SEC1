@@ -77,3 +77,99 @@ function verDetalles(nombre) {
 function editarPostulante(nombre) {
     alert('Editando postulante: ' + nombre);
 }*/
+function showPopup(message, onConfirm) {
+    const popup = document.getElementById('confirmationPopup');
+    const messageElement = document.getElementById('popupMessage');
+    const confirmButton = document.getElementById('confirmButton');
+    const cancelButton = document.getElementById('cancelButton');
+  
+    messageElement.textContent = message;
+    popup.style.display = 'block';
+  
+    confirmButton.onclick = () => {
+      popup.style.display = 'none';
+      if (onConfirm) onConfirm();
+    };
+  
+    cancelButton.onclick = () => {
+      popup.style.display = 'none';
+    };
+  }
+  
+  function validarPostulante(accion, idPostulante) {
+    showPopup(`¿Estás seguro de ${accion === 'aceptar' ? 'aceptar' : 'rechazar'} a este postulante?`, () => {
+      const datos = new FormData();
+      datos.append('accion', accion);
+      datos.append('idPostulante', idPostulante);
+  
+      fetch('obtenerDetallesValidacion.php', {
+        method: 'POST',
+        body: datos,
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error('Error al procesar la solicitud');
+          return response.text();
+        })
+        .then(() => {
+          alert(`Postulante ${accion === 'aceptar' ? 'aceptado' : 'rechazado'} correctamente.`);
+          cargarPostulantes();
+        })
+        .catch((error) => {
+          console.error('Error al actualizar el estado del postulante:', error);
+          alert('Ocurrió un error. Revisa la consola.');
+        });
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    cargarPostulantes();
+  });
+
+  function showPopup(message, onConfirm) {
+    const popup = document.getElementById('confirmationPopup');
+    const messageElement = document.getElementById('popupMessage');
+    const confirmButton = document.getElementById('confirmButton');
+    const cancelButton = document.getElementById('cancelButton');
+  
+    messageElement.textContent = message;
+    popup.style.display = 'block';
+  
+    confirmButton.onclick = () => {
+      popup.style.display = 'none';
+      if (onConfirm) onConfirm();
+    };
+  
+    cancelButton.onclick = () => {
+      popup.style.display = 'none';
+    };
+  }
+  
+  function gestionarPostulante(accion, idPostulante) {
+    showPopup(`¿Estás seguro de ${accion === 'eliminar' ? 'eliminar' : 'aprobar'} a este postulante?`, () => {
+      const datos = new FormData();
+      datos.append('accion', accion);
+      datos.append('idPostulante', idPostulante);
+  
+      fetch('conexion.php', {
+        method: 'POST',
+        body: datos,
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error('Error al procesar la solicitud');
+          return response.text();
+        })
+        .then(() => {
+          alert(`Postulante ${accion === 'eliminar' ? 'eliminado' : 'aprobado'} correctamente.`);
+          cargarPostulantes();
+        })
+        .catch((error) => {
+          console.error('Error al gestionar al postulante:', error);
+          alert('Ocurrió un error. Revisa la consola.');
+        });
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    cargarPostulantes();
+  });
+  

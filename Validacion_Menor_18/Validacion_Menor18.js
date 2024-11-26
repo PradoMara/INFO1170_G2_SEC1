@@ -59,3 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('formlarioValidacion'); 
+    
+    form.addEventListener('submit', function(evento) {
+        if (!confirm("¿Está seguro de que desea enviar este formulario para validación?")) {
+            evento.preventDefault(); 
+        }
+    });
+});

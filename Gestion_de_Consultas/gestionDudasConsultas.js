@@ -42,3 +42,51 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+function showPopup(message, onConfirm) {
+    const popup = document.getElementById('confirmationPopup');
+    const messageElement = document.getElementById('popupMessage');
+    const confirmButton = document.getElementById('confirmButton');
+    const cancelButton = document.getElementById('cancelButton');
+  
+    messageElement.textContent = message;
+    popup.style.display = 'block';
+  
+    confirmButton.onclick = () => {
+      popup.style.display = 'none';
+      if (onConfirm) onConfirm();
+    };
+  
+    cancelButton.onclick = () => {
+      popup.style.display = 'none';
+    };
+  }
+  
+  function actualizarEstadoConsulta(idConsulta, nuevoEstado) {
+    showPopup(`¿Estás seguro de cambiar el estado de esta consulta a "${nuevoEstado}"?`, () => {
+      const datos = new FormData();
+      datos.append('idConsulta', idConsulta);
+      datos.append('nuevoEstado', nuevoEstado);
+  
+      fetch('actualizarEstadoConsulta.php', {
+        method: 'POST',
+        body: datos,
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error('Error al procesar la solicitud');
+          return response.text();
+        })
+        .then(() => {
+          alert(`Estado de la consulta actualizado a "${nuevoEstado}" correctamente.`);
+          cargarConsultas();
+        })
+        .catch((error) => {
+          console.error('Error al actualizar el estado de la consulta:', error);
+          alert('Ocurrió un error. Revisa la consola.');
+        });
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    cargarConsultas();
+  });
+  
