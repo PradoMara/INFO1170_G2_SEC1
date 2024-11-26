@@ -205,3 +205,25 @@ body {
         padding: 10px;
     }
 }
+
+/* Filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filtro {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #3A506B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtro:hover {
+    background-color: #5BC0BE;
+}

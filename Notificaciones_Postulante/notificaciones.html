@@ -15,25 +15,35 @@
         <h1 class="titulo">Notificaciones</h1>
     </header>
 
-    <section class="container">
+    <!-- Filtros de notificaciones -->
+    <section class="filtros">
+        <button class="filtro" data-filtro="todas">Todas</button>
+        <button class="filtro" data-filtro="leidas">Leídas</button>
+        <button class="filtro" data-filtro="no-leidas">No leídas</button>
+        <button class="filtro" data-filtro="ofertas">Ofertas de empleo</button>
+        <button class="filtro" data-filtro="mensajes">Mensajes</button>
+    </section>
+
+    <section class="container" id="notificaciones-container">
         <h1>Últimas notificaciones</h1>
         <p class="last-update">Última actualización: 19 de septiembre de 2024</p>
 
-        <div class="notification" id="noti1">
+        <!-- Notificaciones cargadas dinámicamente -->
+        <div class="notification" data-tipo="ofertas" data-leida="false" id="noti1">
             <h2><i class="fas fa-briefcase"></i> Nueva oferta de empleo en Tienda Corona</h2>
             <p>Se ha publicado una nueva oferta de trabajo en Tienda Corona para el puesto de Creador de páginas web. Fecha límite de postulación: 25 de septiembre de 2024.</p>
             <button onclick="markAsRead('noti1')"><i class="fas fa-check"></i> Marcar como leída</button>
             <button onclick="deleteNotification('noti1')"><i class="fas fa-trash-alt"></i> Borrar</button>
         </div>
 
-        <div class="notification" id="noti2">
+        <div class="notification" data-tipo="postulaciones" data-leida="true" id="noti2">
             <h2><i class="fas fa-sync-alt"></i> Actualización en tus postulaciones</h2>
             <p>Tu postulación al puesto de "Desarrollador Frontend" ha sido actualizada. Revisa el estado de tu solicitud en tu perfil.</p>
             <button onclick="markAsRead('noti2')"><i class="fas fa-check"></i> Marcar como leída</button>
             <button onclick="deleteNotification('noti2')"><i class="fas fa-trash-alt"></i> Borrar</button>
         </div>
 
-        <div class="notification" id="noti3">
+        <div class="notification" data-tipo="mensajes" data-leida="false" id="noti3">
             <h2><i class="fas fa-envelope"></i> Mensaje de la administración</h2>
             <p>Recuerda completar tu perfil con información actualizada para recibir mejores ofertas de empleo.</p>
             <button onclick="markAsRead('noti3')"><i class="fas fa-check"></i> Marcar como leída</button>
@@ -47,14 +57,6 @@
             <a href="../Terminos_y_Condiciones/terminos_condiciones.html">Términos y Condiciones</a>
         </nav>
     </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <p>¿Seguro que quieres borrar esta notificación?</p>
-            <button id="confirmDelete" onclick="confirmDelete()"><i class="fas fa-check"></i> Sí</button>
-            <button id="cancelDelete" onclick="cancelDelete()"><i class="fas fa-times"></i> No</button>
-        </div>
-    </div>
 
     <script src="notificaciones.js"></script>
 </body>
