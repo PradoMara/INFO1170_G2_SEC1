@@ -23,7 +23,6 @@
             <a href="../Perfil_Menor_de_Edad/PerfilMenorDeEdad.html"><i class="fas fa-user icon"></i></a>
         </div>
     </header>
-    
 
     <section class="search-section">
         <h1>Encuentra tu nuevo empleo</h1>
@@ -32,11 +31,10 @@
             <button type="submit">Buscar</button>
         </form>
     </section>
-    
-    
-
     <main class="featured-jobs">
         <h2>Ofertas Destacadas</h2>
+        <div id="job-container">
+        <!-- Ejemplo de muchas ofertas destacadas -->
         <div class="job-card">
             <h3>Desarrollador Frontend</h3>
             <p>Empresa ABC</p>
@@ -45,7 +43,7 @@
             <button class="job-button">Ver más</button>
         </div>
         <div class="job-card">
-            <h3>Venta de Artículos</h3>
+            <h3>Vendedor de Artículos</h3>
             <p>Tienda H&H</p>
             <p>Temuco</p>
             <p>Publicado el 10/10/2024</p>
@@ -58,9 +56,62 @@
             <p>Publicado el 10/06/2024</p>
             <button class="job-button">Ver más</button>
         </div>
+        <div class="job-card">
+            <h3>Asistente de Ventas</h3>
+            <p>Tienda X</p>
+            <p>Valdivia</p>
+            <p>Publicado el 01/11/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        <div class="job-card">
+            <h3>Repartidor</h3>
+            <p>Empresa Y</p>
+            <p>Concepción</p>
+            <p>Publicado el 05/10/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        <div class="job-card">
+            <h3>Diseñador Gráfico</h3>
+            <p>Empresa Creativa</p>
+            <p>Santiago</p>
+            <p>Publicado el 15/09/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        <div class="job-card">
+            <h3>Atención al Cliente</h3>
+            <p>Call Center XYZ</p>
+            <p>Temuco</p>
+            <p>Publicado el 20/10/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        <div class="job-card">
+            <h3>Barista</h3>
+            <p>Café Latte</p>
+            <p>Puerto Montt</p>
+            <p>Publicado el 18/10/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        <div class="job-card">
+            <h3>Ayudante de Cocina</h3>
+            <p>Restaurante Gourmet</p>
+            <p>Valparaíso</p>
+            <p>Publicado el 25/09/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        <div class="job-card">
+            <h3>Animador de Eventos</h3>
+            <p>Entretenimientos S.A.</p>
+            <p>Santiago</p>
+            <p>Publicado el 30/09/2024</p>
+            <button class="job-button">Ver más</button>
+        </div>
+        </div>
     </main>
 
-    <script src="ofertas.js"></script>
+    <!-- Botón Volver Arriba -->
+    <button id="volver-arriba" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <footer>
         <div class="footer-content">
@@ -69,5 +120,27 @@
         </div>
     </footer>
     
+    <script src="ofertas.js"></script>
+    <script>
+        // Botón Volver Arriba
+        const volverArribaBtn = document.getElementById("volver-arriba");
+
+        // Mostrar el botón cuando se desplaza hacia abajo
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                volverArribaBtn.style.display = "block";
+            } else {
+                volverArribaBtn.style.display = "none";
+            }
+        });
+
+        // Volver al inicio al hacer clic en el botón
+        volverArribaBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Desplazamiento suave
+            });
+        });
+    </script>
 </body>
 </html>

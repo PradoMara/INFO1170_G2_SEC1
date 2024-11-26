@@ -27,4 +27,19 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error al cargar las ofertas:', error));
     }
+
+    // Manejar botón "Volver arriba"
+    const volverArriba = document.getElementById('volver-arriba');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            volverArriba.style.display = 'flex'; // Mostrar el botón
+        } else {
+            volverArriba.style.display = 'none'; // Ocultar el botón
+        }
+    });
+
+    volverArriba.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Animación suave al inicio
+    });
 });
