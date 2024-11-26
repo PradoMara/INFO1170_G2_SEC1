@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const experiencia = document.getElementById('experiencia');
     const educacion = document.getElementById('educacion');
     const actividadesExtracurriculares = document.getElementById('actividades_extracurriculares');
+    const fotoPerfilInput = document.getElementById('foto_perfil');
+    const fotoActual = document.getElementById('fotoActual');
 
     function cargarDatosPerfil(id_postulante) {
         fetch(`perfilMenorDeEdad.php?id=${id_postulante}`)
@@ -23,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     experiencia.value = data.experiencia;
                     educacion.value = data.educacion;
                     actividadesExtracurriculares.value = data.actividades_extracurriculares;
+                    if (data.foto_perfil) {
+                        fotoActual.src = data.foto_perfil;
+                    }
                 } else {
                     console.error(data.error);
                 }
@@ -42,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         experiencia.disabled = false;
         educacion.disabled = false;
         actividadesExtracurriculares.disabled = false;
+        fotoPerfilInput.disabled = false;
 
         saveButton.style.display = 'inline-block';
         editButton.style.display = 'none';
@@ -49,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     saveButton.addEventListener('click', function () {
         const formData = new FormData();
-        formData.append('id', id_postulante);  
+        formData.append('id', id_postulante);
         formData.append('nombre', nombre.value);
         formData.append('edad', edad.value);
         formData.append('ubicacion', ubicacion.value);
@@ -58,20 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
         formData.append('experiencia', experiencia.value);
         formData.append('educacion', educacion.value);
         formData.append('actividades_extracurriculares', actividadesExtracurriculares.value);
+        if (fotoPerfilInput.files.length > 0) {
+            formData.append('foto_perfil', fotoPerfilInput.files[0]);
+        }
 
         fetch('actualizarPerfilMenorDeEdad.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.text())
-        .then(data => {
-            console.log('Perfil actualizado:', data);
-            alert('Cambios guardados correctamente');
-        })
-        .catch(error => {
-            console.error('Error al actualizar el perfil:', error);
-            alert('Hubo un error al guardar los cambios.');
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Cambios guardados correctamente');
+                    if (data.foto_perfil) {
+                        fotoActual.src = data.foto_perfil;
+                    }
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error al actualizar el perfil:', error);
+                alert('Hubo un error al guardar los cambios.');
+            });
 
         nombre.disabled = true;
         edad.disabled = true;
@@ -81,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
         experiencia.disabled = true;
         educacion.disabled = true;
         actividadesExtracurriculares.disabled = true;
+        fotoPerfilInput.disabled = true;
 
         saveButton.style.display = 'none';
         editButton.style.display = 'inline-block';

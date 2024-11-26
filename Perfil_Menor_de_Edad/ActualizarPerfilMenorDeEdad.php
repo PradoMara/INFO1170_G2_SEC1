@@ -13,14 +13,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $educacion = htmlspecialchars(trim($_POST['educacion']));
         $actividades_extracurriculares = htmlspecialchars(trim($_POST['actividades_extracurriculares']));
 
-        if (!$id_postulante || !$nombre || !$edad || !$ubicacion) {
-            echo json_encode(["error" => "Datos insuficientes o inválidos."]);
-            exit;
+        // Manejo de subida de imagen
+        $foto_perfil = null;
+        if (isset($_FILES['foto_perfil']) && $_FILES['foto_perfil']['error'] === UPLOAD_ERR_OK) {
+            $nombreArchivo = $_FILES['foto_perfil']['name'];
+            $tmpName = $_FILES['foto_perfil']['tmp_name'];
+            $directorioDestino = 'uploads/perfiles/';
+
+            if (!file_exists($directorioDestino)) {
+                mkdir($directorioDestino, 0777, true);
+            }
+
+            $rutaArchivo = $directorioDestino . uniqid() . '-' . $nombreArchivo;
+
+            if (move_uploaded_file($tmpName, $rutaArchivo)) {
+                $foto_perfil = $rutaArchivo;
+            } else {
+                echo json_encode(["error" => "Error al subir la imagen."]);
+                exit;
+            }
         }
 
-        $sql = "UPDATE Postulantee
-                SET nombre = ?, edad = ?, ubicacion = ?, acerca_de_mi = ?, habilidades = ?, experiencia = ?, educacion = ?, actividades_extracurriculares = ?
-                WHERE id_postulante = ?";
+        $sql = "UPDATE Usuarios 
+                SET nombre = ?, edad = ?, direccion = ?, acerca_de_mi = ?, habilidades = ?, experiencia = ?, educacion = ?, actividades_extracurriculares = ?, foto_perfil = COALESCE(?, foto_perfil)
+                WHERE id_Usuario = ?";
         $stmt = $conn->prepare($sql);
 
         if (!$stmt) {
@@ -37,11 +53,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $experiencia,
             $educacion,
             $actividades_extracurriculares,
+            $foto_perfil,
             $id_postulante
         );
 
         if ($stmt->execute()) {
-            echo json_encode(["success" => "Perfil actualizado correctamente."]);
+            echo json_encode(["success" => "Perfil actualizado correctamente.", "foto_perfil" => $foto_perfil]);
         } else {
             throw new Exception("Error al actualizar el perfil.");
         }
