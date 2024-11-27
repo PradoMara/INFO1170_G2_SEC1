@@ -1,17 +1,36 @@
 // datos ttrabajo simulado  
 const trabajos = [
     { titulo: "Desarrollador Web", ciudad: "Temuco", empresa: "Tech Company", tipo: "Tiempo Completo", fecha: "2023-09-01", categoria: "tecnologia" },
-    { titulo: "Diseñador Gráfico", ciudad: "Santiago", empresa: "Creative Agency", tipo: "Freelance", fecha: "2023-09-15", categoria: "administracion" },
+    { titulo: "Diseñador Gráfico", ciudad: "Villarrica", empresa: "Creative Agency", tipo: "Freelance", fecha: "2023-09-15", categoria: "diseño" },
     { titulo: "Vendedor", ciudad: "Angol", empresa: "Retail Store", tipo: "Medio Tiempo", fecha: "2023-09-10", categoria: "ventas" },
-    // ma trabajo
+    { titulo: "Ingeniero Civil", ciudad: "Temuco", empresa: "Constructora ABC", tipo: "Tiempo Completo", fecha: "2023-09-12", categoria: "ingenieria" },
+    { titulo: "Profesor de Inglés", ciudad: "Pucón", empresa: "Colegio Internacional", tipo: "Tiempo Parcial", fecha: "2023-09-08", categoria: "educacion" },
+    { titulo: "Enfermera", ciudad: "Villarrica", empresa: "Clínica Villarrica", tipo: "Tiempo Completo", fecha: "2023-09-18", categoria: "salud" },
+    { titulo: "Cajero Bancario", ciudad: "Lautaro", empresa: "Banco Nacional", tipo: "Tiempo Completo", fecha: "2023-09-05", categoria: "finanzas" },
+    { titulo: "Chef", ciudad: "Pucón", empresa: "Restaurante Gourmet", tipo: "Tiempo Completo", fecha: "2023-09-20", categoria: "gastronomia" },
+    { titulo: "Recepcionista", ciudad: "Temuco", empresa: "Hotel Central", tipo: "Tiempo Completo", fecha: "2023-09-03", categoria: "administracion" },
+    { titulo: "Operario de Producción", ciudad: "Angol", empresa: "Fábrica de Muebles", tipo: "Tiempo Completo", fecha: "2023-09-11", categoria: "produccion" },
+    { titulo: "Contador", ciudad: "Nueva Imperial", empresa: "Consultora Financiera", tipo: "Tiempo Parcial", fecha: "2023-09-14", categoria: "finanzas" },
+    { titulo: "Conductor Profesional", ciudad: "Collipulli", empresa: "Transporte XYZ", tipo: "Tiempo Completo", fecha: "2023-09-07", categoria: "transporte" },
+    { titulo: "Asistente Social", ciudad: "Victoria", empresa: "Municipalidad de Victoria", tipo: "Tiempo Completo", fecha: "2023-09-16", categoria: "servicios sociales" },
+    { titulo: "Jardinero", ciudad: "Pitrufquén", empresa: "Parque Central", tipo: "Medio Tiempo", fecha: "2023-09-09", categoria: "mantenimiento" },
+    { titulo: "Técnico en Informática", ciudad: "Temuco", empresa: "Soluciones TI", tipo: "Tiempo Completo", fecha: "2023-09-13", categoria: "tecnologia" },
+    { titulo: "Mesero", ciudad: "Villarrica", empresa: "Café del Lago", tipo: "Medio Tiempo", fecha: "2023-09-02", categoria: "atencion al cliente" },
+    { titulo: "Kinesiólogo", ciudad: "Temuco", empresa: "Centro de Rehabilitación", tipo: "Tiempo Completo", fecha: "2023-09-06", categoria: "salud" },
+    { titulo: "Agente de Ventas", ciudad: "Angol", empresa: "Empresa de Seguros", tipo: "Comisionista", fecha: "2023-09-17", categoria: "ventas" },
+    { titulo: "Auxiliar de Aseo", ciudad: "Loncoche", empresa: "Oficinas Centrales", tipo: "Medio Tiempo", fecha: "2023-09-04", categoria: "limpieza" },
+    { titulo: "Profesor de Matemáticas", ciudad: "Curacautín", empresa: "Liceo Técnico", tipo: "Tiempo Completo", fecha: "2023-09-19", categoria: "educacion" },
+    { titulo: "Analista de Recursos Humanos", ciudad: "Temuco", empresa: "Empresa de Servicios", tipo: "Tiempo Completo", fecha: "2023-09-21", categoria: "recursos humanos" },
 ];
+
 
 // Datos de las ciudades por provincia
 const provincias = {
     malleco: ["Angol", "Collipulli", "Traiguén"],
     cautin: ["Temuco", "Villarrica", "Pucón", "Lautaro"]
 };
-
+const itemsPorPagina = 5; // Número de resultados por página
+let paginaActual = 1;
 // Actualizar las ciudades según la provincia seleccionada
 document.getElementById('provincia').addEventListener('change', function() {
     const provinciaSeleccionada = this.value;
@@ -162,3 +181,5 @@ document.addEventListener('DOMContentLoaded', () => {
     buscarBtn.addEventListener('click', buscarEmpleos);
     filtrosBtn.addEventListener('click', buscarEmpleos);
 });
+
+
