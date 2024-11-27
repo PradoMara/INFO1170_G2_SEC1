@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Feedback - Araucanía Laboral</title>
+    <link rel="stylesheet" href="Gestion_Feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <div class="logo-nombre">
+                <img src="logo.png" alt="Logo Araucanía Laboral" class="logo">
+                <span class="nombre-sitio"><i class="fas fa-briefcase"></i> Araucanía Laboral</span>
+            </div>
+    
+            <!-- Perfil del administrador a la derecha -->
+            <a href="../Perfil_Admin/Perfil_Admin.html" class="perfil-enlace">
+                <div class="perfil-usuario">
+                    <i class="fas fa-user-circle icono-perfil"></i>
+                    <span class="nombre-usuario">Administrador</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+    
+
+    <div class="contenedor">
+        <h1 class="texto-bienvenida"><i class="fas fa-comments"></i> Gestión de Feedback</h1>
+        <div id="feedback-lista" class="lista-feedback">
+        </div>
+    </div>
+
+    <script src="Gestion_Feedback.js"></script>
+</body>
+</html>
